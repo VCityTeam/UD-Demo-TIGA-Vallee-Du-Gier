@@ -1,10 +1,65 @@
 # DemoFull
 
+## Installing the demo applications
+### Pre-requisites
+
+* **Ubuntu**
+
+  * Install and update npm
+
+    ```bash
+    sudo apt-get install npm    ## Will pull NodeJS
+    sudo npm install -g n     
+    sudo n latest
+    ```
+
+  * References: [how can I update Nodejs](https://askubuntu.com/questions/426750/how-can-i-update-my-nodejs-to-the-latest-version), and [install Ubuntu](http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
+
+* **Windows**
+  
+  * Installing from the [installer](https://nodejs.org/en/download/)
+  * Installing with the [CLI](https://en.wikipedia.org/wiki/Command-line_interface)
+
+    ```bash
+    iex (new-object net.webclient).downstring(‘https://get.scoop.sh’)
+    scoop install nodejs
+    ```
+
+## Installing DemoFull
+
+More information can be found [here](./DemoFull/Readme.md). DemoFull application can be locally (on your desktop) started in the following way
+```
+npm install
+npm run debug      # integrates building
+```
+and then use your favorite (web) browser to open
+`http://localhost:8000/`.
+
+Note that technically the `npm run debug` command will use the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) npm package that
+ - runs node application that in turn launched a vanilla http sever in local (on your desktop) 
+ - launches a watcher (surveying changes in sources)
+ - in case of change that repacks an updated bundle
+ - that triggers a client (hot) reload 
+
+### Notes on the DemoFull
+FIXME: unmature section
+
+Some modules used by the DemoFull require some server-side components to be installed on
+some server (possibly your desktop). For example
+ * the 3D objects (buildings) are (by default) serverd by a LIRIS server
+   and thus require no specific configuratione there is nothing more to do
+ * handling of documents will require you to [install the API_enhanced_city](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md).
+ * you can also modify the [application configuration file](DemoFull/assets/config/config.json)
+
+##CLEAN ME
+
 ## Making our UD-Viz demo application
 The present `DemoFull` directory holds all the required elements constituting an independent JavaScript 
 application (using among others the UD-Viz package).
 It is thus a good example of what you need to provide in order to build a custom application
 based on UD-Viz. 
+
+##CLEAN ME
 
 ### Replicating DemoFull to your sandbox: the straigthforward strategy
 A simple way of building such a custom application would be to copy the `DemoFull` directory
