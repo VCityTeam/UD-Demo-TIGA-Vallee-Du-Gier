@@ -9,9 +9,9 @@ language: node_js
 node_js:
   - 14
 
-# before_install:
-#   - sudo apt-get -y install curl
-
+env:
+  - FAILURE_THRESHOLD=1
+  
 jobs:
   include:
     - stage: DemoFull
@@ -26,6 +26,15 @@ jobs:
     - stage: SimpleServer
       script:
         - cd SimpleServer && npm install && npm run travis
+     - stage: "Markdown link checks"
+       script:
+        - remark -u validate-links .
+        - export warnings=`remark -u validate-links UD-Viz-demo 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
+          if [ $warnings -gt $FAILURE_THRESHOLD ]; then
+            exit 1;
+          fi
+    # Failed trial to trigger downstream repositories re-builds...
+    #
     # - stage: trigger downstream
     #   script:
     #   - |
