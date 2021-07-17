@@ -1,11 +1,8 @@
 # UD-Viz-demo
-[UD-Viz-demo](https://github.com/VCityTeam/UD-Viz-demo/) is a set of
-demonstrations illustating some possible usages of the [UD-Viz JS library](https://github.com/VCityTeam/UD-Viz/).
+[UD-Viz-Template](https://github.com/VCityTeam/UD-Viz-Template/) is a JavaScript application
+illustating the main features of the [UD-Viz JS library](https://github.com/VCityTeam/UD-Viz/).
 
 The sub-directory DemoFull holds a **pure** [front-end](https://en.wikipedia.org/wiki/Front_end_and_back_end) independent application, in opposition the sub-directory SimpleServer that holds a **pure** [back-end](https://en.wikipedia.org/wiki/Front_end_and_back_end) independent application.
-
-`Imuv/client` is a [front-end](https://en.wikipedia.org/wiki/Front_end_and_back_end) application requiring `Imuv/server`
-its [back-end](https://en.wikipedia.org/wiki/Front_end_and_back_end) node application providing an http server and a websocket communication layer (expecting Imuv client connections),
 
 ## Installing the demo applications
 ### Pre-requisites
@@ -59,7 +56,7 @@ some server (possibly your desktop). For example
  * handling of documents will require you to [install the API_enhanced_city](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md).
  * you can also modify the [application configuration file](DemoFull/assets/config/config.json)
 
-
+FIXME: move this content to UD-Imuv
 ## Pre-requisites to install Imuv
 Install [imagemagick](https://imagemagick.org/index.php) and [graphicsmagick](http://www.graphicsmagick.org/) binary sub dependencies since the server needs [gm](https://www.npmjs.com/package/gm?activeTab=readme).
 
