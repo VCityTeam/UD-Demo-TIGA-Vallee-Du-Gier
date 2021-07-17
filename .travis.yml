@@ -12,6 +12,9 @@ node_js:
 env:
   - FAILURE_THRESHOLD=1
   
+install:
+  - npm install --global remark-cli remark-validate-links
+  
 jobs:
   include:
     - stage: DemoFull
