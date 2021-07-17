@@ -29,7 +29,7 @@ jobs:
      - stage: "Markdown link checks"
        script:
         - remark -u validate-links .
-        - export warnings=`remark -u validate-links UD-Viz-demo 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
+        - export warnings=`remark -u validate-links . 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
           if [ $warnings -gt $FAILURE_THRESHOLD ]; then
             exit 1;
           fi
