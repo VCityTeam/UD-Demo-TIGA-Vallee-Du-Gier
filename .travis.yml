@@ -21,7 +21,8 @@ jobs:
     - stage: SimpleServer
       script:
         - cd SimpleServer && npm install && npm run travis
-    - language: node_js
+    - stage: "Markdown link checks"
+      language: node_js
       node_js: 12
       script:
         - npm install --global remark-cli remark-validate-links
