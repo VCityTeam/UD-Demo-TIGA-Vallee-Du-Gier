@@ -12,12 +12,6 @@ jobs:
     - stage: DemoFull
       script:
         - cd DemoFull && npm install && npm run travis
-    - stage: Imuv/client
-      script:
-        - cd Imuv/client && npm install && npm run travis
-    - stage: Imuv/server
-      script:
-        - cd Imuv/server && npm install && npm run travis
     - stage: SimpleServer
       script:
         - cd SimpleServer && npm install && npm run travis
