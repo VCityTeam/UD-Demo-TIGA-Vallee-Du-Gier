@@ -1,7 +1,7 @@
 /** @format */
 console.log('Code boot here');
 
-import { BaseDemo } from './Helpers/BaseDemo';
+import { WidgetTemplate } from 'ud-viz/src/Templates/WidgetTemplate/WidgetTemplate';
 
-const app = new BaseDemo();
+const app = new WidgetTemplate();
 app.start('../assets/config/config.json');
