@@ -1,11 +1,24 @@
-# DemoFull
+# A template application of the UD-Viz package
 
-## Installing the demo applications
-### Pre-requisites 
+This repository holds a template (demonstration) application of the [UD-Viz](https://github.com/VCityTeam/UD-Viz)
+JavaScript package. The goel of this template application is to
+
+- illustrate the main features of [UD-Viz](https://github.com/VCityTeam/UD-Viz),
+- provide code that demonstrates how such features can be configured/extended/embeded
+  and eventually combined/integrated within a full autonomous application,
+- illustrate the JavaScript ecosystem required for building and running it,
+- be used as a template for creating/declining your own application.
+
+Because thhis template application is fully functionnal maybe the simplest way to
+understand what it does is to build it and run it.
+
+## Pre-requisites for installing the template application
+
+As for any JavaScript application, the central building/running tool is [npm (Node Package Manager)](https://en.wikipedia.org/wiki/Npm_(software)) whose installation process is OS dependent: 
 
 * **Ubuntu**
 
-  * Install and update npm
+  * Installation
 
     ```bash
     sudo apt-get install npm    ## Will pull NodeJS
@@ -25,9 +38,9 @@
     scoop install nodejs
     ```
 
-## Installing DemoFull
+## Installing and running the template application
 
-More information can be found [here](./DemoFull/Readme.md). DemoFull application can be locally (on your desktop) started in the following way
+The template application can be locally (on your desktop) started in the following way
 ```
 npm install
 npm run debug      # integrates building
@@ -35,23 +48,22 @@ npm run debug      # integrates building
 and then use your favorite (web) browser to open
 `http://localhost:8000/`.
 
-Note that technically the `npm run debug` command will use the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) npm package that
+Note that technically the `npm run debug` command will use the [webpack-dev-server npm package](https://github.com/webpack/webpack-dev-server) that
  - runs node application that in turn launched a vanilla http sever in local (on your desktop) 
  - launches a watcher (surveying changes in sources)
  - in case of change that repacks an updated bundle
  - that triggers a client (hot) reload 
 
-### Notes on the DemoFull
-FIXME: unmature section
-
+## Technical notes concerning the template application
 Some modules used by the DemoFull require some server-side components to be installed on
 some server (possibly your desktop). For example
  * the 3D objects (buildings) are (by default) serverd by a LIRIS server
    and thus require no specific configuratione there is nothing more to do
  * handling of documents will require you to [install the API_enhanced_city](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md).
- * you can also modify the [application configuration file](DemoFull/assets/config/config.json)
+ * you can also modify the [application configuration file](assets/config/config.json)
 
-##CLEAN ME
+--- 
+FIXME for the bottom of this page
 
 ## Making our UD-Viz demo application
 The present `DemoFull` directory holds all the required elements constituting an independent JavaScript 
