@@ -62,39 +62,48 @@ some server (possibly your desktop). For example
  * handling of documents will require you to [install the API_enhanced_city](https://github.com/VCityTeam/UD-Serv/blob/master/API_Enhanced_City/INSTALL.md).
  * you can also modify the [application configuration file](assets/config/config.json)
 
---- 
-FIXME for the bottom of this page
 
-## Making our UD-Viz demo application
-The present `DemoFull` directory holds all the required elements constituting an independent JavaScript 
-application (using among others the UD-Viz package).
-It is thus a good example of what you need to provide in order to build a custom application
-based on UD-Viz. 
+## Making your own UD-Viz based application
+The present `UD-Viz-Template` repository holds all the required elements constituting an independent JavaScript 
+application (using the UD-Viz package among others) as well as the technical means to build and run (and debug)
+that application.
+In order to realize your own UD-Viz based application it thus suffice to duplicate this repository and start
+adjusting, modifying, extending and deriving the code of your duplicate.
 
-##CLEAN ME
+First create a new repository, e.g. `https://github.com/exampleuser/MyApp.git` (the git repository does not need to be hosted at github) to host your new application.
 
-### Replicating DemoFull to your sandbox: the straigthforward strategy
-A simple way of building such a custom application would be to copy the `DemoFull` directory
-into your own sandbox repository and start customizing it.
-The starting instructions thus boil down to
+Then [replicate this git repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository) which can be done with e.g. the following commands :
 
-```bash
-git clone https://github.com/VCityTeam/UD-Viz-demo.git
-git clone MyDemoApp.git
-cd MyDemoApp
-cp -r ../UD-Viz-demo/DemoFull MyDemoApp
-git commit
-git push
 ```
-and then proceed with customizing `MyDemoApp`.
+# Create a scratch directory
+mkdir foo; cd foo 
 
-The main entry point for this customization of this new `MyDemoApp` is the 
-[BaseDemo.js file](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/src/Helpers/BaseDemo.js)
-that you can
- * adapt in order to change e.g. the left sidedbar widgets (refer to the 
-   [`_this.addModuleView(...)`](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/src/Helpers/BaseDemo.js#L76)
-   calls),
- * extend with your own components/features
+# Make a bare clone of this repository
+git clone --bare https://github.com/VCityTeam/UD-Viz-Template.git
+
+# Mirror-push to the new repository
+cd UD-Viz-Template.git
+git push --mirror https://github.com/exampleuser/MyApp.git
+
+# Remove the temporary scratch directory
+cd ../..
+rm -rf foo  
+
+# Cleanly clone your new repository
+git clone https://github.com/exampleuser/MyApp.git
+```
+
+You can then proceed with using your `MyApp` with exactly the same instructions 
+as for this `UD-Viz-Template` application that is
+ * [`npm install` (install the dependencies)](https://github.com/VCityTeam/UD-Viz-demo#installing-the-demo-applications)
+ * [`npm run debug` (building and running the application)](https://github.com/VCityTeam/UD-Viz-demo/blob/master/README.md#installing-demofull)
+ * optionnaly you can lint your code with [eslint](https://eslint.org/) by running the `npm run eslint` command.
+This new repository now holds a buildable (`npm install`) and runnable (`npm run debug`) application (just follow the `Readme.md` 
+as you did for UD-Viz-Template), that you can start adapting to suit your needs.
+
+The main entry point in order to customization your new `MyApp` application is the 
+[src/bootstrap.js file](https://github.com/VCityTeam/UD-Viz-Template/blob/master/src/bootstrap.js)
+that is centered on [UD-Viz's Template.Allwidgets class](https://github.com/VCityTeam/UD-Viz/blob/master/src/Templates/AllWidget/AllWidget.js).
 
 Then you can also adapt the 
 [`assets/config/config.json`](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/assets/config/config.json)
@@ -107,10 +116,18 @@ configuration file that defines e.g.
     - the default `camera` position within the scene,
     - ...
 
-You can then proceed with build your `MyDemoApp` with exactly the same instructions 
-as for the `DemoFull` demo that is
- * [install the dependencies](https://github.com/VCityTeam/UD-Viz-demo#installing-the-demo-applications)
- * [building and running the application](https://github.com/VCityTeam/UD-Viz-demo/blob/master/README.md#installing-demofull)
+--- 
+FIXME for all the bottom of this page
+
+Ensuite trois cas d'utilisation:
+
+1. on veut créer une demo a partir de brique existante mais on veut configuré lesquelles, dans ce cas on peut utilisé un template et lui filé la config adapté. comme pour le AllWidget template avec une config qui va décrire quel widget est utilisé. EBO: on va conserver la config ?
+
+2. on veut créer une demo mais le code n'existe pas, dans ce cas la meilleure méthode est rajouter son code dans ud-viz et de dev avec les deux repo side by side. on peut aussi rajouter son code dans son projet et se demerder avec l'api proposé par les template pour y incorporer son code. typiquement on pourrait dev son propre widget (grace a du code + bas niveau si necessaire, dans ce cas widget) de ud-viz et ensuite l'ajouter via l'api de allwidget template.
+3. le besoin n'est pas couvert par un template existant. pareil meilleure méthode créer le template dans ud-viz a partir de code + bas niveau de ud-viz (game, widget, views) et de dev side by side sinon dans son projet créer les classes manquantes a partir du code ud-viz plus bas (toujours widget, game, view)
+
+quand je dis meilleure méthode c'est mieux car le projet ud-viz beneficie directement de features réutilisable par les autres dev, et ca évite une étape d'intégration si jamais on désirait l'intégrer plus tard.
+
 
 ### When working with a docker container: the [`diff`](https://en.wikipedia.org/wiki/Diff) alternative strategy
 If you demo is defined within a [docker container](https://en.wikipedia.org/wiki/Docker_(software)) then an alternative strategy
