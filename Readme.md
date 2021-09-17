@@ -106,7 +106,7 @@ The main entry point in order to customization your new `MyApp` application is t
 that is centered on [UD-Viz's Template.Allwidgets class](https://github.com/VCityTeam/UD-Viz/blob/master/src/Templates/AllWidget/AllWidget.js).
 
 Then you can also adapt the 
-[`assets/config/config.json`](https://github.com/VCityTeam/UD-Viz-demo/blob/master/DemoFull/assets/config/config.json)
+[`assets/config/config.json`](/assets/config/config.json)
 configuration file that defines e.g.
  * links to the used `assets` for the icons, logos of your application,
  * the `extents` i.e. the geographical portion of the territory that will be displayed,
