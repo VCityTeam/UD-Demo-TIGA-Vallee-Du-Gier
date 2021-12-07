@@ -1,7 +1,7 @@
 # A template application of the UD-Viz package
 
 This repository holds a template (demonstration) application of the [UD-Viz](https://github.com/VCityTeam/UD-Viz)
-JavaScript package. The goel of this template application is to
+JavaScript package. The goal of this template application is to
 
 - illustrate the main features of [UD-Viz](https://github.com/VCityTeam/UD-Viz),
 - provide code that demonstrates how such features can be configured/extended/embeded
@@ -9,12 +9,12 @@ JavaScript package. The goel of this template application is to
 - illustrate the JavaScript ecosystem required for building and running it,
 - be used as a template for creating/declining your own application.
 
-Because thhis template application is fully functionnal maybe the simplest way to
+Because this template application is fully functional maybe the simplest way to
 understand what it does is to build it and run it.
 
 ## Pre-requisites for installing the template application
 
-As for any JavaScript application, the central building/running tool is [npm (Node Package Manager)](https://en.wikipedia.org/wiki/Npm_(software)) whose installation process is OS dependent: 
+As for any JavaScript application, the central building/running tool is [npm (Node Package Manager)](https://en.wikipedia.org/wiki/Npm_(software)) version `6.14.15`: 
 
 * **Ubuntu**
 
@@ -22,20 +22,25 @@ As for any JavaScript application, the central building/running tool is [npm (No
 
     ```bash
     sudo apt-get install npm    ## Will pull NodeJS
-    sudo npm install -g n     
+    sudo npm install -g n
     sudo n latest
+    sudo npm install -g npm@6.14.15
     ```
 
   * References: [how can I update Nodejs](https://askubuntu.com/questions/426750/how-can-i-update-my-nodejs-to-the-latest-version), and [install Ubuntu](http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
 
 * **Windows**
   
-  * Installing from the [installer](https://nodejs.org/en/download/)
+  * Installing from the [installer](https://nodejs.org/en/download/). Afterwards, set the npm version:
+    ```bash
+    npm install -g npm@6.14.15
+    ```
   * Installing with the [CLI](https://en.wikipedia.org/wiki/Command-line_interface)
 
     ```bash
     iex (new-object net.webclient).downstring(‘https://get.scoop.sh’)
     scoop install nodejs
+    npm install -g npm@6.14.15
     ```
 
 ## Installing and running the template application
