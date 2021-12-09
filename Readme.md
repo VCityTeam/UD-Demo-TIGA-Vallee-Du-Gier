@@ -12,36 +12,12 @@ JavaScript package. The goal of this template application is to
 Because this template application is fully functional maybe the simplest way to
 understand what it does is to build it and run it.
 
-## Pre-requisites for installing the template application
+## Install npm
+For the npm installation refer [here](https://github.com/VCityTeam/UD-SV/blob/master/Tools/ToolNpm.md)
 
-As for any JavaScript application, the central building/running tool is [npm (Node Package Manager)](https://en.wikipedia.org/wiki/Npm_(software)) version `6.14.15`: 
+Required npm version: UD-Viz-Template has been reported to work with npm versions npm 6.X.
 
-* **Ubuntu**
-
-  * Installation
-
-    ```bash
-    sudo apt-get install npm    ## Will pull NodeJS
-    sudo npm install -g n
-    sudo n latest
-    sudo npm install -g npm@6.14.15
-    ```
-
-  * References: [how can I update Nodejs](https://askubuntu.com/questions/426750/how-can-i-update-my-nodejs-to-the-latest-version), and [install Ubuntu](http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
-
-* **Windows**
-  
-  * Installing from the [installer](https://nodejs.org/en/download/). Afterwards, set the npm version:
-    ```bash
-    npm install -g npm@6.14.15
-    ```
-  * Installing with the [CLI](https://en.wikipedia.org/wiki/Command-line_interface)
-
-    ```bash
-    iex (new-object net.webclient).downstring(‘https://get.scoop.sh’)
-    scoop install nodejs
-    npm install -g npm@6.14.15
-    ```
+Reminder: `npm install -g npm@6.14.15` enables to [switch npm version](https://github.com/VCityTeam/UD-SV/blob/master/Tools/ToolNpm.md#task-switch-npm-version)
 
 ## Installing and running the template application
 
