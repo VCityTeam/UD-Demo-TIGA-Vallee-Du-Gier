@@ -19,7 +19,7 @@ app.start('../assets/config/config.json').then((config) => {
   app.addModuleView('about', about);
 
   ////// HELP MODULE
-  const help = new udviz.Widgets.HelpWindow(config.helpWindow);
+  const help = new udviz.Widgets.Extensions.HelpWindow(config.helpWindow);
   app.addModuleView('help', help);
 
   ////// AUTHENTICATION MODULE

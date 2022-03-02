@@ -2,7 +2,10 @@
   "assets": {
     "iconFolder": "./assets/icons",
     "imageFolder": "./assets/img",
-    "logos": ["logo-liris.png", "logo-univ-lyon.png"]
+    "logos": [
+      "logo-liris.png",
+      "logo-univ-lyon.png"
+    ]
   },
   "3DTilesLayers": [
     {
@@ -92,6 +95,12 @@
     "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Lyon_2015-gltf-repaired_TileSet/tileset.json",
     "color": "0xFFFFFF",
     "initTilesManager": "true"
+  },
+  "helpWindow": {
+    "htmlPaths": [
+      "../assets/html/contribute.html",
+      "../assets/html/camera.html"
+    ]
   },
   "temporalModule": {
     "view": "SLIDERWINDOW",
