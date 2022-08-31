@@ -5,12 +5,6 @@ import * as udviz from 'ud-viz';
 const app = new udviz.Templates.AllWidget();
 
 app.start('../assets/config/config.json').then((config) => {
-  app.addBaseMapLayer();
-
-  app.addElevationLayer();
-
-  app.setupAndAdd3DTilesLayers();
-
   ////// REQUEST SERVICE
   const requestService = new udviz.Components.RequestService();
 
