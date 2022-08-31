@@ -40,8 +40,8 @@ app.start('../assets/config/config.json').then((config) => {
   ////// DOCUMENTS VISUALIZER EXTENSION (to orient the document)
   const imageOrienter = new udviz.Widgets.DocumentVisualizerWindow(
     documentModule,
-    app.view,
-    app.controls
+    app.view3D.getItownsView(),
+    app.view3D.getItownsView().controls
   );
 
   ////// CONTRIBUTE EXTENSION
@@ -49,8 +49,8 @@ app.start('../assets/config/config.json').then((config) => {
     documentModule,
     imageOrienter,
     requestService,
-    app.view,
-    app.controls,
+    app.view3D.getItownsView(),
+    app.view3D.getItownsView().controls,
     app.config
   );
 
@@ -86,8 +86,8 @@ app.start('../assets/config/config.json').then((config) => {
   );
   const geocodingView = new udviz.Widgets.Extensions.GeocodingView(
     geocodingService,
-    app.controls,
-    app.view
+    app.view3D.getItownsView().controls,
+    app.view3D.getItownsView()
   );
   app.addModuleView('geocoding', geocodingView, {
     binding: 's',
@@ -96,7 +96,7 @@ app.start('../assets/config/config.json').then((config) => {
 
   ////// CITY OBJECTS MODULE
   let cityObjectModule = new udviz.Widgets.CityObjectModule(
-    app.layerManager,
+    app.view3D.layerManager,
     app.config
   );
   app.addModuleView('cityObjects', cityObjectModule.view);
@@ -106,14 +106,14 @@ app.start('../assets/config/config.json').then((config) => {
     documentModule,
     cityObjectModule,
     requestService,
-    app.view,
-    app.controls,
+    app.view3D.getItownsView(),
+    app.view3D.getItownsView().controls,
     app.config
   );
 
   ////// 3DTILES DEBUG
-  const debug3dTilesWindow = new udviz.Widgets.Extensions.Debug3DTilesWindow(
-    app.layerManager
+  const debug3dTilesWindow = new udviz.Widgets.Debug3DTilesWindow(
+    app.view3D.layerManager
   );
   app.addModuleView('3dtilesDebug', debug3dTilesWindow, {
     name: '3DTiles Debug',
@@ -121,13 +121,13 @@ app.start('../assets/config/config.json').then((config) => {
 
   ////// CAMERA POSITIONER
   const cameraPosition = new udviz.Widgets.CameraPositionerView(
-    app.view,
-    app.controls
+    app.view3D.getItownsView(),
+    app.view3D.getItownsView().controls
   );
   app.addModuleView('cameraPositioner', cameraPosition);
 
   ////// LAYER CHOICE MODULE
-  const layerChoice = new udviz.Widgets.LayerChoice(app.layerManager);
+  const layerChoice = new udviz.Widgets.LayerChoice(app.view3D.layerManager);
   app.addModuleView('layerChoice', layerChoice);
 
   const inputManager = new udviz.Components.InputManager();
