@@ -4,7 +4,7 @@ import * as udviz from 'ud-viz';
 
 const app = new udviz.Templates.AllWidget();
 
-app.start('../assets/config/config.json').then((config) => {
+app.start('../assets/config/config.json').then(() => {
   ////// REQUEST SERVICE
   const requestService = new udviz.Components.RequestService();
 
