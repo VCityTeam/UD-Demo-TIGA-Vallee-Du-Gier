@@ -4,25 +4,7 @@ import * as udviz from 'ud-viz';
 
 const app = new udviz.Templates.AllWidget();
 
-app.start('../assets/config/config.json').then(() => {
-  ////// REQUEST SERVICE
-  const requestService = new udviz.Components.RequestService();
-
-  ////// GEOCODING EXTENSION
-  const geocodingService = new udviz.Widgets.Extensions.GeocodingService(
-    requestService,
-    app.extent,
-    app.config
-  );
-  const geocodingView = new udviz.Widgets.Extensions.GeocodingView(
-    geocodingService,
-    app.view3D.getItownsView().controls,
-    app.view3D.getItownsView()
-  );
-  app.addModuleView('geocoding', geocodingView, {
-    binding: 's',
-    name: 'Address Search',
-  });
+app.start('../assets/config/config.json').then((config) => {
 
   ////// CITY OBJECTS MODULE
   let cityObjectModule = new udviz.Widgets.CityObjectModule(
@@ -49,4 +31,13 @@ app.start('../assets/config/config.json').then(() => {
   ////// LAYER CHOICE MODULE
   const layerChoice = new udviz.Widgets.LayerChoice(app.view3D.layerManager);
   app.addModuleView('layerChoice', layerChoice);
+
+  ////// BaseMap Widget
+  const baseMap = new udviz.Widgets.BaseMap(
+    app.view3D.getItownsView(),
+    config['baseMapLayers'],
+    app.extent,
+    app.config['projection']
+  );
+  app.addModuleView('baseMap', baseMap);
 });
