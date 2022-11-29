@@ -40,4 +40,32 @@ app.start('../assets/config/config.json').then((config) => {
     app.config['projection']
   );
   app.addModuleView('baseMap', baseMap);
+
+  const wfsCartoSource = new udviz.itowns.WFSSource({
+    url: 'https://wxs.ign.fr/cartovecto/geoportail/wfs?',
+    version: '2.0.0',
+    typeName: 'BDCARTO_BDD_WLD_WGS84G:zone_habitat_mairie',
+    crs: 'EPSG:3946',
+    ipr: 'IGN',
+    format: 'application/json',
+  });
+
+  const wfsCartoStyle = new udviz.itowns.Style({
+    zoom: { min: 0, max: 20 },
+    text: {
+      field: '{toponyme}',
+      color: 'white',
+      transform: 'uppercase',
+      size: 15,
+      haloColor: 'rgba(20,20,20, 0.8)',
+      haloWidth: 3,
+    },
+  });
+
+  const wfsCartoLayer = new udviz.itowns.LabelLayer('wfsCarto', {
+    source: wfsCartoSource,
+    style: wfsCartoStyle,
+  });
+
+  app.view3D.getItownsView().addLayer(wfsCartoLayer);
 });
