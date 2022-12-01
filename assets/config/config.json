@@ -57,6 +57,22 @@
       "image": "../assets/img/ign_ortho.png"
     }
   ],
+  "GeoJSONLayers": [
+    {
+      "id": "communes",
+      "url": "../assets/geojson/COMMUNES_GIER_3946.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "white",
+          "opacity": 0.2
+        },
+        "stroke": {
+          "color": "blue"
+        }
+      }
+    }
+  ],
   "camera": {
     "position": {
       "range": "10000",
@@ -64,30 +80,6 @@
       "tilt": "40",
       "x": "1825894",
       "y": "5147974"
-    }
-  },
-  "geocoding": {
-    "url": "https://nominatim.openstreetmap.org/search",
-    "credit": "© OpenStreetMap contributors under <a href=\"https://www.openstreetmap.org/copyright\">ODbL</a>",
-    "requestTimeIntervalMs": "1000",
-    "result": {
-      "format": "json",
-      "basePath": "",
-      "lng": "lon",
-      "lat": "lat"
-    },
-    "parameters": {
-      "q": {
-        "fill": "query"
-      },
-      "format": {
-        "fill": "value",
-        "value": "json"
-      },
-      "viewbox": {
-        "fill": "extent",
-        "format": "WEST,SOUTH,EAST,NORTH"
-      }
     }
   },
   "cityObjects": {
