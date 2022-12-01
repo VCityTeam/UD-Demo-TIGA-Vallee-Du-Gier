@@ -5,7 +5,6 @@ import * as udviz from 'ud-viz';
 const app = new udviz.Templates.AllWidget();
 
 app.start('../assets/config/config.json').then((config) => {
-
   ////// CITY OBJECTS MODULE
   let cityObjectModule = new udviz.Widgets.CityObjectModule(
     app.view3D.layerManager,
@@ -41,19 +40,17 @@ app.start('../assets/config/config.json').then((config) => {
   );
   app.addModuleView('baseMap', baseMap);
 
-  const wfsCartoSource = new udviz.itowns.WFSSource({
-    url: 'https://wxs.ign.fr/cartovecto/geoportail/wfs?',
-    version: '2.0.0',
-    typeName: 'BDCARTO_BDD_WLD_WGS84G:zone_habitat_mairie',
+  // Declare the data source for the layer
+  const labelSource = new udviz.itowns.FileSource({
+    url: '../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson',
     crs: 'EPSG:3946',
-    ipr: 'IGN',
     format: 'application/json',
   });
 
-  const wfsCartoStyle = new udviz.itowns.Style({
+  const labelStyle = new udviz.itowns.Style({
     zoom: { min: 0, max: 20 },
     text: {
-      field: '{toponyme}',
+      field: '{COMMUNE}',
       color: 'white',
       transform: 'uppercase',
       size: 15,
@@ -62,10 +59,10 @@ app.start('../assets/config/config.json').then((config) => {
     },
   });
 
-  const wfsCartoLayer = new udviz.itowns.LabelLayer('wfsCarto', {
-    source: wfsCartoSource,
-    style: wfsCartoStyle,
+  const labelLayer = new udviz.itowns.LabelLayer('wfsCarto', {
+    source: labelSource,
+    style: labelStyle,
   });
 
-  app.view3D.getItownsView().addLayer(wfsCartoLayer);
+  app.view3D.getItownsView().addLayer(labelLayer);
 });
