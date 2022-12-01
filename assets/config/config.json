@@ -18,10 +18,10 @@
     }
   ],
   "extents": {
-    "min_x": "1805875",
-    "max_x": "1851620",
-    "min_y": "5119356",
-    "max_y": "5180494"
+    "min_x": "1806000",
+    "max_x": "1839000",
+    "min_y": "5119000",
+    "max_y": "5166000"
   },
   "projection": "EPSG:3946",
   "maxSubdivisionLevel": 15,
@@ -37,7 +37,7 @@
       "name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
       "version": "1.3.0",
       "format": "image/jpeg",
-      "layer_name": "Base_Map",
+      "layer_name": "Carte_IGN_1",
       "image": "../assets/img/ign_ortho.png"
     },
     {
@@ -45,15 +45,23 @@
       "name": "ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO",
       "version": "1.3.0",
       "format": "image/jpeg",
-      "layer_name": "Base_Map",
+      "layer_name": "Ortho_IGN",
       "image": "https://download.data.grandlyon.com/catalogue/srv/fre//resources.get?uuid=7e0bab06-ff3b-453e-9b72-e16b8f08d926&fname=ortho2018_s.png"
     },
     {
       "url": "https://wxs.ign.fr/cartes/geoportail/r/wms",
-      "name": "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN50.1950",
+      "name": "GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1",
       "version": "1.3.0",
       "format": "image/jpeg",
-      "layer_name": "Base_Map",
+      "layer_name": "Carte_IGN_2",
+      "image": "../assets/img/ign_ortho.png"
+    },
+    {
+      "url": "https://wxs.ign.fr/parcellaire/geoportail/r/wms",
+      "name": "CADASTRALPARCELS.PARCELS",
+      "version": "1.3.0",
+      "format": "image/jpeg",
+      "layer_name": "Parcelle_IGN",
       "image": "../assets/img/ign_ortho.png"
     }
   ],
