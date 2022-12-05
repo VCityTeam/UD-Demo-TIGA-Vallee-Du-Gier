@@ -100,47 +100,47 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "red",
+          "color": "purple",
           "opacity": 0.6
         },
         "stroke": {
-          "color": "red"
+          "color": "purple"
         }
       }
     }
   ],
   "LabelLayers": [
     {
-      "id": "noms_communes",
-      "url": "../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
+      "id": "noms_entreprises",
+      "url": "../assets/geojson/1_Gier_centroides_bati_indus_3946.geojson",
       "style": {
         "zoom": {
           "min": 0,
-          "max": 20
+          "max": 10
         },
         "text": {
-          "field": "{COMMUNE}",
-          "color": "white",
+          "field": "{RaisonSoci}",
+          "color": "rgb(255,150,150)",
           "transform": "uppercase",
-          "size": 25,
+          "size": 15,
           "haloColor": "rgba(20,20,20, 0.8)",
           "haloWidth": 3
         }
       }
     },
     {
-      "id": "noms_entreprises",
-      "url": "../assets/geojson/1_Gier_centroides_bati_indus_3946.geojson",
+      "id": "noms_communes",
+      "url": "../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
       "style": {
         "zoom": {
-          "min": 100,
-          "max": 100
+          "min": 20,
+          "max": 200
         },
         "text": {
-          "field": "{RaisonSoci}",
-          "color": "red",
+          "field": "{COMMUNE}",
+          "color": "white",
           "transform": "uppercase",
-          "size": 15,
+          "size": 25,
           "haloColor": "rgba(20,20,20, 0.8)",
           "haloWidth": 3
         }
