@@ -1,6 +1,7 @@
 /** @format */
 
 import * as udviz from 'ud-viz';
+import { addLabelLayers } from './labelLayer';
 
 const app = new udviz.Templates.AllWidget();
 
@@ -40,29 +41,5 @@ app.start('../assets/config/config.json').then((config) => {
   );
   app.addModuleView('baseMap', baseMap);
 
-  // Declare the data source for the layer
-  const labelSource = new udviz.itowns.FileSource({
-    url: '../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson',
-    crs: 'EPSG:3946',
-    format: 'application/json',
-  });
-
-  const labelStyle = new udviz.itowns.Style({
-    zoom: { min: 0, max: 20 },
-    text: {
-      field: '{COMMUNE}',
-      color: 'white',
-      transform: 'uppercase',
-      size: 15,
-      haloColor: 'rgba(20,20,20, 0.8)',
-      haloWidth: 3,
-    },
-  });
-
-  const labelLayer = new udviz.itowns.LabelLayer('wfsCarto', {
-    source: labelSource,
-    style: labelStyle,
-  });
-
-  app.view3D.getItownsView().addLayer(labelLayer);
+  addLabelLayers(config, app.view3D.getItownsView());
 });

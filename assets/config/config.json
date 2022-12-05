@@ -79,6 +79,72 @@
           "color": "blue"
         }
       }
+    },
+    {
+      "id": "zae",
+      "url": "../assets/geojson/3-sem_deef_zae_gier_3946.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "green",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "green"
+        }
+      }
+    },
+    {
+      "id": "multi_emprises",
+      "url": "../assets/geojson/4-EtablissementsIndusBatMultiplesEmprisesFoncieres_3946.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "red",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "red"
+        }
+      }
+    }
+  ],
+  "LabelLayers": [
+    {
+      "id": "noms_communes",
+      "url": "../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
+      "style": {
+        "zoom": {
+          "min": 0,
+          "max": 20
+        },
+        "text": {
+          "field": "{COMMUNE}",
+          "color": "white",
+          "transform": "uppercase",
+          "size": 25,
+          "haloColor": "rgba(20,20,20, 0.8)",
+          "haloWidth": 3
+        }
+      }
+    },
+    {
+      "id": "noms_entreprises",
+      "url": "../assets/geojson/1_Gier_centroides_bati_indus_3946.geojson",
+      "style": {
+        "zoom": {
+          "min": 100,
+          "max": 100
+        },
+        "text": {
+          "field": "{RaisonSoci}",
+          "color": "red",
+          "transform": "uppercase",
+          "size": 15,
+          "haloColor": "rgba(20,20,20, 0.8)",
+          "haloWidth": 3
+        }
+      }
     }
   ],
   "camera": {
