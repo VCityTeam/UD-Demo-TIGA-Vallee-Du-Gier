@@ -16,6 +16,7 @@ export function addLabelLayers(config, itownsView) {
     const labelLayer = new udviz.itowns.LabelLayer(layer.id, {
       source: labelSource,
       style: labelStyle,
+      zoom: layer.zoom,
     });
 
     itownsView.addLayer(labelLayer);
