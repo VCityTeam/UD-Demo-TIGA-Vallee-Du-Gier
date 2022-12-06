@@ -132,6 +132,9 @@
     {
       "id": "noms_communes",
       "url": "../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
+      "zoom": {
+        "min": 1
+      },
       "style": {
         "text": {
           "field": "{COMMUNE}",
