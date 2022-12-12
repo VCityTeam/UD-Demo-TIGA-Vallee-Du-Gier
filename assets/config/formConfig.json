@@ -3,20 +3,44 @@
         {
             "name": "default",
             "startIndex": 0,
-            "endIndex": 1,
+            "endIndex": 2,
             "nodes": [
                 {
-                    "path": "../assets/form/01.txt"
+                    "path": "../assets/form/01.txt",
+                    "previous": 0,
+                    "next": 1
+                },
+                {
+                    "path": "../assets/form/02.txt",
+                    "previous": 0,
+                    "next": 2
+                },
+                {
+                    "path": "../assets/form/03.txt",
+                    "previous": 1,
+                    "next": 2
                 }
             ]
         },
         {
             "name": "test",
             "startIndex": 0,
-            "endIndex": 1,
+            "endIndex": 2,
             "nodes": [
                 {
-                    "path": "../assets/form/01.txt"
+                    "path": "../assets/form/03.txt",
+                    "previous": 0,
+                    "next": 1
+                },
+                {
+                    "path": "../assets/form/02.txt",
+                    "previous": 0,
+                    "next": 2
+                },
+                {
+                    "path": "../assets/form/01.txt",
+                    "previous": 1,
+                    "next": 2
                 }
             ]
         }
