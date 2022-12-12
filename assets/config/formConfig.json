@@ -1,0 +1,18 @@
+{
+    "graphs": [
+        {
+            "name": "default",
+            "start": {
+                "index": 0
+            },
+            "end": {
+                "index": 1
+            },
+            "nodes": [
+                {
+                    "path": "../form/01.txt"
+                }
+            ]
+        }
+    ]
+}
