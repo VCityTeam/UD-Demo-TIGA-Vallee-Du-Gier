@@ -2,12 +2,9 @@ import * as udviz from 'ud-viz';
 import { addLabelLayers } from './labelLayer';
 import { initTextPanel } from './form';
 
-let formConfig = null;
 fetch('../assets/config/formConfig.json')
   .then((response) => response.json())
   .then((json) => {
-    formConfig = json;
-    console.log(formConfig);
     let entryPanel = document.createElement('div');
     entryPanel.id = 'entry_panel';
     entryPanel.style.float = 'left';
@@ -25,6 +22,14 @@ fetch('../assets/config/formConfig.json')
       });
       entryPanel.appendChild(button);
     });
+
+    let openVisitButton = document.createElement('button');
+    openVisitButton.innerHTML = 'Open Visit';
+    openVisitButton.addEventListener('click', function () {
+      entryPanel.style.height = '0';
+      startApp();
+    });
+    entryPanel.appendChild(openVisitButton);
     document.body.appendChild(entryPanel);
   });
 
@@ -32,14 +37,16 @@ function startApp(formGraph) {
   const app = new udviz.Templates.AllWidget();
 
   app.start('../assets/config/config.json').then((config) => {
-    let allWidgetDiv = document.getElementById('_all_widget');
-    allWidgetDiv.style.width = '70%';
-    allWidgetDiv.style.float = 'right';
-
     document.body.style.width = '100%';
     document.body.style.display = 'block';
 
-    initTextPanel(formGraph);
+    if (formGraph) {
+      let allWidgetDiv = document.getElementById('_all_widget');
+      allWidgetDiv.style.width = '70%';
+      allWidgetDiv.style.float = 'right';
+
+      initTextPanel(formGraph);
+    }
 
     ////// CITY OBJECTS MODULE
     let cityObjectModule = new udviz.Widgets.CityObjectModule(

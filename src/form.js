@@ -12,6 +12,7 @@ export function initTextPanel(formGraph) {
   textPanel.style.width = '30%';
   textPanel.style.backgroundColor = 'white';
 
-  fillWithHtmlFromFile('../assets/form/01.txt', textPanel);
+  const start = formGraph.nodes[formGraph.startIndex];
+  fillWithHtmlFromFile(start.path, textPanel);
   document.body.appendChild(textPanel);
 }
