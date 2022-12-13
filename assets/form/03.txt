@@ -1,46 +1,39 @@
 <div class="rendered-form">
-    <div class="formbuilder-radio-group form-group field-radio-group-1670858145971">
-        <label for="radio-group-1670858145971" class="formbuilder-radio-group-label">Question 1 ?
-            <br>
-        </label>
-        <div class="radio-group">
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858145971" access="false" id="radio-group-1670858145971-0" value="option-1" type="radio">
-                <label for="radio-group-1670858145971-0">Option 1</label>
-            </div>
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858145971" access="false" id="radio-group-1670858145971-1" value="option-2" type="radio">
-                <label for="radio-group-1670858145971-1">Option 2</label>
-            </div>
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858145971" access="false" id="radio-group-1670858145971-2" value="option-3" type="radio">
-                <label for="radio-group-1670858145971-2">Option 3</label>
-            </div>
-        </div>
+    <div class="formbuilder-select form-group field-select-1670925160494">
+        <label for="select-1670925160494" class="formbuilder-select-label">Select</label>
+        <select class="form-control" name="select-1670925160494" id="select-1670925160494">
+            <option value="option-1" selected="true" id="select-1670925160494-0">Option 1</option>
+            <option value="option-2" id="select-1670925160494-1">Option 2</option>
+            <option value="option-3" id="select-1670925160494-2">Option 3</option>
+        </select>
     </div>
     <div class="">
-        <p access="false" id="control-2741323">Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.
+        <p access="false" id="control-5320931">Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.
             <br>
-            <br> Considered an invitation do introduced sufficient understood instrument it. Of decisively friendship in as collecting at. No affixed be husband ye females brother garrets proceed. Least child who seven happy yet balls young. Discovery sweetness principle discourse shameless bed one excellent. Sentiments of surrounded friendship dispatched connection is he. Me or produce besides hastily up as pleased. Bore less when had and john shed hope.
-            <br>
-            <br> An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its. </p>
+            <div>
+                <br>
+            </div>
+            <div>Considered an invitation do introduced sufficient understood instrument it. Of decisively friendship in as collecting at. No affixed be husband ye females brother garrets proceed. Least child who seven happy yet balls young. Discovery sweetness principle discourse shameless bed one excellent. Sentiments of surrounded friendship dispatched connection is he. Me or produce besides hastily up as pleased. Bore less when had and john shed hope.</div>
+            <div>
+                <br>
+            </div>
+            <div>An so vulgar to on points wanted. Not rapturous resolving continued household northward gay. He it otherwise supported instantly. Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved. Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its.</div>
+        </p>
     </div>
-    <div class="formbuilder-radio-group form-group field-radio-group-1670858152886">
-        <label for="radio-group-1670858152886" class="formbuilder-radio-group-label">Question 2 ?
-            <br>
-        </label>
-        <div class="radio-group">
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858152886" access="false" id="radio-group-1670858152886-0" value="option-1" type="radio">
-                <label for="radio-group-1670858152886-0">Option 1</label>
+    <div class="formbuilder-checkbox-group form-group field-checkbox-group-1670939129893">
+        <label for="checkbox-group-1670939129893" class="formbuilder-checkbox-group-label">Checkbox Group</label>
+        <div class="checkbox-group">
+            <div class="formbuilder-checkbox">
+                <input name="checkbox-group-1670939129893[]" access="false" id="checkbox-group-1670939129893-0" value="option-1" type="checkbox" checked="checked">
+                <label for="checkbox-group-1670939129893-0">Option 1</label>
             </div>
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858152886" access="false" id="radio-group-1670858152886-1" value="option-2" type="radio">
-                <label for="radio-group-1670858152886-1">Option 2</label>
+            <div class="formbuilder-checkbox">
+                <input name="checkbox-group-1670939129893[]" access="false" id="checkbox-group-1670939129893-1" value="option-2" type="checkbox">
+                <label for="checkbox-group-1670939129893-1">Option 2</label>
             </div>
-            <div class="formbuilder-radio">
-                <input name="radio-group-1670858152886" access="false" id="radio-group-1670858152886-2" value="option-3" type="radio">
-                <label for="radio-group-1670858152886-2">Option 3</label>
+            <div class="formbuilder-checkbox">
+                <input name="checkbox-group-1670939129893[]" access="false" id="checkbox-group-1670939129893-2" value="option-3" type="checkbox">
+                <label for="checkbox-group-1670939129893-2">Option 3</label>
             </div>
         </div>
     </div>

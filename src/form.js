@@ -1,13 +1,13 @@
 import { THREE } from 'ud-viz';
 
 export class Form {
-
   constructor(view, formGraph) {
-    this.view = view
-    this.formGraph = formGraph
+    this.savedValues = {}
+    this.view = view;
+    this.formGraph = formGraph;
     this.textPanel = null;
-    this.initTextPanel()
-    this.initPreviousNextButtons()
+    this.initTextPanel();
+    this.initPreviousNextButtons();
   }
 
   fillWithHtmlFromFile(fileName, targetDiv) {
@@ -39,13 +39,16 @@ export class Form {
     previousButton.style.bottom = '0';
     previousButton.style.left = '0';
     previousButton.style.margin = '0';
-    previousButton.addEventListener('click', function () {
-      let current = this.formGraph.nodes[this.formGraph.currentIndex];
-      let previous = this.formGraph.nodes[current.previous];
-      this.fillWithHtmlFromFile(previous.path, this.textPanel);
-      this.travelToPosition(previous, this.view);
-      this.formGraph.currentIndex = current.previous;
-    }.bind(this));
+    previousButton.addEventListener(
+      'click',
+      function () {
+        let current = this.formGraph.nodes[this.formGraph.currentIndex];
+        let previous = this.formGraph.nodes[current.previous];
+        this.fillWithHtmlFromFile(previous.path, this.textPanel);
+        this.travelToPosition(previous, this.view);
+        this.formGraph.currentIndex = current.previous;
+      }.bind(this)
+    );
 
     document.body.appendChild(previousButton);
 
@@ -57,13 +60,17 @@ export class Form {
     nextButton.style.right = '0';
     nextButton.style.margin = '0';
     nextButton.style.zIndex = '9';
-    nextButton.addEventListener('click', function () {
-      let current = this.formGraph.nodes[this.formGraph.currentIndex];
-      let next = this.formGraph.nodes[current.next];
-      this.fillWithHtmlFromFile(next.path, this.textPanel);
-      this.travelToPosition(next, this.view);
-      this.formGraph.currentIndex = current.next;
-    }.bind(this));
+    nextButton.addEventListener(
+      'click',
+      function () {
+        this.saveInputValues();
+        let current = this.formGraph.nodes[this.formGraph.currentIndex];
+        let next = this.formGraph.nodes[current.next];
+        this.fillWithHtmlFromFile(next.path, this.textPanel);
+        this.travelToPosition(next, this.view);
+        this.formGraph.currentIndex = current.next;
+      }.bind(this)
+    );
 
     document.body.appendChild(nextButton);
   }
@@ -90,5 +97,29 @@ export class Form {
     } catch (error) {
       console.log('No position or rotation');
     }
+  }
+
+  saveInputValues() {
+    const formInputs = this.textPanel.querySelectorAll('input, select');
+    formInputs.forEach((input) => {
+      let value = '';
+      if (input.nodeName == 'INPUT') {
+        switch (input.type) {
+          case 'text':
+            value = input.value;
+            break;
+          default:
+            if (input.checked) {
+              value = document.querySelector(
+                'label[for=' + input.id + ']'
+              ).innerHTML;
+            }
+        }
+      }
+      if (input.nodeName == 'SELECT') {
+        value = input.options[input.selectedIndex].text;
+      }
+      console.log(value);
+    });
   }
 }
