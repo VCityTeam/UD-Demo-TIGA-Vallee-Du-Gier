@@ -149,11 +149,11 @@
   ],
   "camera": {
     "position": {
-      "range": "19000",
+      "range": "20300",
       "heading": "0",
       "tilt": "40",
       "x": "1822000",
-      "y": "5145000"
+      "y": "5143000"
     }
   },
   "cityObjects": {
