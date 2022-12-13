@@ -2,10 +2,11 @@ import { THREE } from 'ud-viz';
 
 export class Form {
   constructor(view, formGraph) {
-    this.savedValues = {}
+    this.savedValues = [];
     this.view = view;
     this.formGraph = formGraph;
     this.textPanel = null;
+    this.currentIndex = -1;
     this.initTextPanel();
     this.initPreviousNextButtons();
   }
@@ -24,7 +25,7 @@ export class Form {
     this.textPanel.style.width = '30%';
     this.textPanel.style.backgroundColor = 'white';
 
-    this.formGraph.currentIndex = this.formGraph.startIndex;
+    this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
@@ -42,11 +43,11 @@ export class Form {
     previousButton.addEventListener(
       'click',
       function () {
-        let current = this.formGraph.nodes[this.formGraph.currentIndex];
+        let current = this.formGraph.nodes[this.currentIndex];
         let previous = this.formGraph.nodes[current.previous];
         this.fillWithHtmlFromFile(previous.path, this.textPanel);
         this.travelToPosition(previous, this.view);
-        this.formGraph.currentIndex = current.previous;
+        this.currentIndex = current.previous;
       }.bind(this)
     );
 
@@ -63,12 +64,12 @@ export class Form {
     nextButton.addEventListener(
       'click',
       function () {
-        this.saveInputValues();
-        let current = this.formGraph.nodes[this.formGraph.currentIndex];
+        this.saveInputValues(this.currentIndex);
+        let current = this.formGraph.nodes[this.currentIndex];
         let next = this.formGraph.nodes[current.next];
         this.fillWithHtmlFromFile(next.path, this.textPanel);
         this.travelToPosition(next, this.view);
-        this.formGraph.currentIndex = current.next;
+        this.currentIndex = current.next;
       }.bind(this)
     );
 
@@ -99,8 +100,9 @@ export class Form {
     }
   }
 
-  saveInputValues() {
+  saveInputValues(nodeIndex) {
     const formInputs = this.textPanel.querySelectorAll('input, select');
+    let values = [];
     formInputs.forEach((input) => {
       let value = '';
       if (input.nodeName == 'INPUT') {
@@ -119,7 +121,8 @@ export class Form {
       if (input.nodeName == 'SELECT') {
         value = input.options[input.selectedIndex].text;
       }
-      console.log(value);
+      values.push(value);
     });
+    this.savedValues[nodeIndex] = values;
   }
 }
