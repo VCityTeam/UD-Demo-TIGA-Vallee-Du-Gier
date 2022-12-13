@@ -1,6 +1,6 @@
 import * as udviz from 'ud-viz';
 import { addLabelLayers } from './labelLayer';
-import { initPreviousNextButtons, initTextPanel } from './form';
+import { Form } from './form';
 
 fetch('../assets/config/formConfig.json')
   .then((response) => response.json())
@@ -38,6 +38,7 @@ fetch('../assets/config/formConfig.json')
 
 function startApp(formGraph) {
   const app = new udviz.Templates.AllWidget();
+  let form = null;
 
   app.start('../assets/config/config.json').then((config) => {
     if (formGraph) {
@@ -45,8 +46,7 @@ function startApp(formGraph) {
       allWidgetDiv.style.width = '70%';
       allWidgetDiv.style.float = 'right';
 
-      initTextPanel(formGraph);
-      initPreviousNextButtons(formGraph);
+      form = new Form(app.view3D.getItownsView(), formGraph)
     }
 
     ////// CITY OBJECTS MODULE
