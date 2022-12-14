@@ -33,47 +33,69 @@ export class Form {
   }
 
   initPreviousNextButtons() {
-    let previousButton = document.createElement('button');
-    previousButton.id = 'previous_button';
-    previousButton.innerHTML = 'Previous';
-    previousButton.style.position = 'absolute';
-    previousButton.style.bottom = '0';
-    previousButton.style.left = '0';
-    previousButton.style.margin = '0';
-    previousButton.addEventListener(
+    this.previousButton = document.createElement('button');
+    this.previousButton.id = 'previous_button';
+    this.previousButton.innerHTML = 'Previous';
+    this.previousButton.style.position = 'absolute';
+    this.previousButton.style.bottom = '0';
+    this.previousButton.style.left = '0';
+    this.previousButton.style.margin = '0';
+    this.previousButton.style.visibility = 'hidden';
+    this.previousButton.addEventListener(
       'click',
       function () {
-        let current = this.formGraph.nodes[this.currentIndex];
-        let previous = this.formGraph.nodes[current.previous];
-        this.fillWithHtmlFromFile(previous.path, this.textPanel);
-        this.travelToPosition(previous, this.view);
-        this.currentIndex = current.previous;
+        this.goToPreviousNode();
       }.bind(this)
     );
 
-    document.body.appendChild(previousButton);
+    document.body.appendChild(this.previousButton);
 
-    let nextButton = document.createElement('button');
-    nextButton.id = 'Next_button';
-    nextButton.innerHTML = 'Next';
-    nextButton.style.position = 'absolute';
-    nextButton.style.bottom = '0';
-    nextButton.style.right = '0';
-    nextButton.style.margin = '0';
-    nextButton.style.zIndex = '9';
-    nextButton.addEventListener(
+    this.nextButton = document.createElement('button');
+    this.nextButton.id = 'Next_button';
+    this.nextButton.innerHTML = 'Next';
+    this.nextButton.style.position = 'absolute';
+    this.nextButton.style.bottom = '0';
+    this.nextButton.style.right = '0';
+    this.nextButton.style.margin = '0';
+    this.nextButton.style.zIndex = '9';
+    this.nextButton.style.visibility = 'visible';
+    this.nextButton.addEventListener(
       'click',
       function () {
-        this.saveInputValues(this.currentIndex);
-        let current = this.formGraph.nodes[this.currentIndex];
-        let next = this.formGraph.nodes[current.next];
-        this.fillWithHtmlFromFile(next.path, this.textPanel);
-        this.travelToPosition(next, this.view);
-        this.currentIndex = current.next;
+        this.goToNextNode();
       }.bind(this)
     );
 
-    document.body.appendChild(nextButton);
+    document.body.appendChild(this.nextButton);
+  }
+
+  goToPreviousNode() {
+    let current = this.formGraph.nodes[this.currentIndex];
+    let previous = this.formGraph.nodes[current.previous];
+    this.fillWithHtmlFromFile(previous.path, this.textPanel);
+    this.travelToPosition(previous, this.view);
+    this.currentIndex = current.previous;
+    if (this.currentIndex == this.formGraph.startIndex) {
+      this.previousButton.style.visibility = 'hidden';
+    }
+    if (this.currentIndex < this.formGraph.endIndex) {
+      this.nextButton.style.visibility = 'visible';
+    }
+  }
+
+  goToNextNode() {
+    this.saveInputValues(this.currentIndex);
+    let current = this.formGraph.nodes[this.currentIndex];
+    let next = this.formGraph.nodes[current.next];
+    this.fillWithHtmlFromFile(next.path, this.textPanel);
+    this.travelToPosition(next, this.view);
+    this.currentIndex = current.next;
+    if (this.currentIndex > this.formGraph.startIndex) {
+      this.previousButton.style.visibility = 'visible';
+    }
+    if (this.currentIndex == this.formGraph.endIndex) {
+      this.nextButton.style.visibility = 'hidden';
+    }
   }
 
   travelToPosition(graphNode, view) {
