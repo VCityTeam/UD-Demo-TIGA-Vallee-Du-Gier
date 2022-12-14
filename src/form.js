@@ -8,6 +8,7 @@ export class Form {
     this.textPanel = null;
     this.currentIndex = -1;
     this.initTextPanel();
+    this.initEndButton();
     this.initPreviousNextButtons();
   }
 
@@ -30,6 +31,27 @@ export class Form {
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
     document.body.appendChild(this.textPanel);
+  }
+
+  initEndButton() {
+    this.endButton = document.createElement('button');
+    this.endButton.id = 'end_button';
+    this.endButton.innerHTML = 'End';
+    this.endButton.style.position = 'absolute';
+    this.endButton.style.bottom = '0';
+    this.endButton.style.right = '0';
+    this.endButton.style.margin = '0';
+    this.endButton.style.zIndex = '9';
+    this.endButton.style.visibility = 'hidden';
+    this.endButton.addEventListener(
+      'click',
+      function () {
+        this.saveInputValues(this.currentIndex);
+        console.log(this.savedValues);
+      }.bind(this)
+    );
+
+    document.body.appendChild(this.endButton);
   }
 
   initPreviousNextButtons() {
@@ -80,6 +102,7 @@ export class Form {
     }
     if (this.currentIndex < this.formGraph.endIndex) {
       this.nextButton.style.visibility = 'visible';
+      this.endButton.style.visibility = 'hidden';
     }
   }
 
@@ -95,6 +118,7 @@ export class Form {
     }
     if (this.currentIndex == this.formGraph.endIndex) {
       this.nextButton.style.visibility = 'hidden';
+      this.endButton.style.visibility = 'visible';
     }
   }
 
