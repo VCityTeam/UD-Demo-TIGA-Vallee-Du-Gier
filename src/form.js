@@ -42,7 +42,7 @@ export class Form {
     this.endButton.style.right = '0';
     this.endButton.style.margin = '0';
     this.endButton.style.zIndex = '9';
-    this.endButton.style.visibility = 'hidden';
+    this.endButton.style.display = 'none';
     this.endButton.addEventListener(
       'click',
       function () {
@@ -62,7 +62,7 @@ export class Form {
     this.previousButton.style.bottom = '0';
     this.previousButton.style.left = '0';
     this.previousButton.style.margin = '0';
-    this.previousButton.style.visibility = 'hidden';
+    this.previousButton.style.display = 'none';
     this.previousButton.addEventListener(
       'click',
       function () {
@@ -80,7 +80,7 @@ export class Form {
     this.nextButton.style.right = '0';
     this.nextButton.style.margin = '0';
     this.nextButton.style.zIndex = '9';
-    this.nextButton.style.visibility = 'visible';
+    this.nextButton.style.display = 'block';
     this.nextButton.addEventListener(
       'click',
       function () {
@@ -98,11 +98,11 @@ export class Form {
     this.travelToPosition(previous, this.view);
     this.currentIndex = current.previous;
     if (this.currentIndex == this.formGraph.startIndex) {
-      this.previousButton.style.visibility = 'hidden';
+      this.previousButton.style.display = 'none';
     }
     if (this.currentIndex < this.formGraph.endIndex) {
-      this.nextButton.style.visibility = 'visible';
-      this.endButton.style.visibility = 'hidden';
+      this.nextButton.style.display = 'block';
+      this.endButton.style.display = 'none';
     }
   }
 
@@ -114,11 +114,11 @@ export class Form {
     this.travelToPosition(next, this.view);
     this.currentIndex = current.next;
     if (this.currentIndex > this.formGraph.startIndex) {
-      this.previousButton.style.visibility = 'visible';
+      this.previousButton.style.display = 'block';
     }
     if (this.currentIndex == this.formGraph.endIndex) {
-      this.nextButton.style.visibility = 'hidden';
-      this.endButton.style.visibility = 'visible';
+      this.nextButton.style.display = 'none';
+      this.endButton.style.display = 'block';
     }
   }
 

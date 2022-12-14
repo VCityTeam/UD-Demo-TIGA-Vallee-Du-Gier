@@ -20,7 +20,7 @@ fetch('../assets/config/formConfig.json')
       let button = document.createElement('button');
       button.innerHTML = graph.name;
       button.addEventListener('click', function () {
-        entryPanel.style.height = '0';
+        entryPanel.style.display = 'none';
         startApp(graph);
       });
       entryPanel.appendChild(button);
@@ -29,7 +29,7 @@ fetch('../assets/config/formConfig.json')
     let openVisitButton = document.createElement('button');
     openVisitButton.innerHTML = 'Parcours libre';
     openVisitButton.addEventListener('click', function () {
-      entryPanel.style.height = '0';
+      entryPanel.style.display = 'none';
       startApp();
     });
     entryPanel.appendChild(openVisitButton);
