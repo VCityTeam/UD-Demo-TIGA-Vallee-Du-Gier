@@ -13,10 +13,17 @@ export class Form {
     this.initPreviousNextButtons();
   }
 
-  fillWithHtmlFromFile(fileName, targetDiv) {
+  fillWithHtmlFromFile(fileName, target) {
     fetch(fileName)
       .then((response) => response.text())
-      .then((text) => (targetDiv.innerHTML = text));
+      .then((text) => (target.innerHTML = text));
+  }
+
+  fillWithValues(values, target) {
+    values.forEach((array) => {
+      target.appendChild(document.createTextNode(array.join('; ')));
+      target.appendChild(document.createElement('br'));
+    });
   }
 
   initTextPanel() {
@@ -43,6 +50,10 @@ export class Form {
     this.recapPanel.style.backgroundColor = 'white';
     this.recapPanel.style.display = 'none';
 
+    const recapHeader = document.createElement('h1');
+    recapHeader.innerHTML = 'Recap';
+    this.recapPanel.appendChild(recapHeader);
+
     const recapText = document.createElement('p');
     recapText.id = 'recap_text';
     this.recapPanel.appendChild(recapText);
@@ -63,14 +74,18 @@ export class Form {
       'click',
       function () {
         this.saveInputValues(this.currentIndex);
+
         this.previousButton.style.display = 'none';
         this.nextButton.style.display = 'none';
         this.endButton.style.display = 'none';
         this.textPanel.style.display = 'none';
         document.getElementById('_all_widget').style.display = 'none';
+
         this.recapPanel.style.display = 'block';
-        document.getElementById('recap_text').innerHTML = this.savedValues;
-        console.log(this.savedValues);
+        this.fillWithValues(
+          this.savedValues,
+          document.getElementById('recap_text')
+        );
       }.bind(this)
     );
 
