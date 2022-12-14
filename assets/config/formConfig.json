@@ -1,7 +1,7 @@
 {
     "graphs": [
         {
-            "name": "default",
+            "name": "Parcours 1",
             "startIndex": 0,
             "endIndex": 2,
             "nodes": [
@@ -56,7 +56,7 @@
             ]
         },
         {
-            "name": "test",
+            "name": "Parcours 2",
             "startIndex": 0,
             "endIndex": 2,
             "nodes": [

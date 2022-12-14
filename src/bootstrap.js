@@ -27,7 +27,7 @@ fetch('../assets/config/formConfig.json')
     });
 
     let openVisitButton = document.createElement('button');
-    openVisitButton.innerHTML = 'Open Visit';
+    openVisitButton.innerHTML = 'Parcours libre';
     openVisitButton.addEventListener('click', function () {
       entryPanel.style.height = '0';
       startApp();
