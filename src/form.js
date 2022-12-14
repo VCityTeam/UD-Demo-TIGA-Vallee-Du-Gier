@@ -8,6 +8,7 @@ export class Form {
     this.textPanel = null;
     this.currentIndex = -1;
     this.initTextPanel();
+    this.initRecapPanel();
     this.initEndButton();
     this.initPreviousNextButtons();
   }
@@ -33,6 +34,21 @@ export class Form {
     document.body.appendChild(this.textPanel);
   }
 
+  initRecapPanel() {
+    this.recapPanel = document.createElement('div');
+    this.recapPanel.id = 'recap_panel';
+    this.recapPanel.style.float = 'left';
+    this.recapPanel.style.height = '100%';
+    this.recapPanel.style.width = '100%';
+    this.recapPanel.style.backgroundColor = 'white';
+    this.recapPanel.style.display = 'none';
+
+    const recapText = document.createElement('p');
+    recapText.id = 'recap_text';
+    this.recapPanel.appendChild(recapText);
+    document.body.appendChild(this.recapPanel);
+  }
+
   initEndButton() {
     this.endButton = document.createElement('button');
     this.endButton.id = 'end_button';
@@ -47,6 +63,13 @@ export class Form {
       'click',
       function () {
         this.saveInputValues(this.currentIndex);
+        this.previousButton.style.display = 'none';
+        this.nextButton.style.display = 'none';
+        this.endButton.style.display = 'none';
+        this.textPanel.style.display = 'none';
+        document.getElementById('_all_widget').style.display = 'none';
+        this.recapPanel.style.display = 'block';
+        document.getElementById('recap_text').innerHTML = this.savedValues;
         console.log(this.savedValues);
       }.bind(this)
     );
