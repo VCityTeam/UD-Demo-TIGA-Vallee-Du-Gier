@@ -29,16 +29,19 @@ export class Form {
   initTextPanel() {
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
-    this.textPanel.style.float = 'left';
-    this.textPanel.style.height = '100%';
+    this.textPanel.style.height = '75%'
     this.textPanel.style.width = '30%';
-    this.textPanel.style.backgroundColor = 'white';
+    this.textPanel.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+    this.textPanel.style.position = 'absolute';
+    this.textPanel.style.zIndex = '8';
+    this.textPanel.style.padding = '36px 1px 0 0';
+    this.textPanel.style.margin = '5%';
 
     this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
-    document.body.appendChild(this.textPanel);
+    document.getElementById('_all_widget').appendChild(this.textPanel);
   }
 
   initRecapPanel() {

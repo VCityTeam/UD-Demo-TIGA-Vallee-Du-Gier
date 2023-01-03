@@ -14,7 +14,7 @@ fetch('../assets/config/formConfig.json')
     entryPanel.style.height = '100%';
     entryPanel.style.width = '100%';
     entryPanel.style.backgroundColor = 'white';
-    entryPanel.style.display = 'grid';
+    entryPanel.style.position = 'relative';
 
     json.graphs.forEach((graph) => {
       let button = document.createElement('button');
@@ -42,9 +42,10 @@ function startApp(formGraph) {
 
   app.start('../assets/config/config.json').then((config) => {
     if (formGraph) {
-      let allWidgetDiv = document.getElementById('_all_widget');
-      allWidgetDiv.style.width = '70%';
-      allWidgetDiv.style.float = 'right';
+      let allWidgetPanel = document.getElementById('_all_widget_stuct_main_panel');
+      allWidgetPanel.style.display = 'block';
+      allWidgetPanel.querySelector('nav').style.display = 'none';
+      window.dispatchEvent(new Event('resize'));
 
       form = new Form(app.view3D.getItownsView(), formGraph)
     }
