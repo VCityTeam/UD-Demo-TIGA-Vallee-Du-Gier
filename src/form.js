@@ -16,7 +16,10 @@ export class Form {
   fillWithHtmlFromFile(fileName, target) {
     fetch(fileName)
       .then((response) => response.text())
-      .then((text) => (target.innerHTML = text));
+      .then((text) => {
+        target.innerHTML = text;
+        target.firstChild.style.margin = '0px 50px';
+      });
   }
 
   fillWithValues(values, target) {
@@ -29,13 +32,14 @@ export class Form {
   initTextPanel() {
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
-    this.textPanel.style.height = '75%'
-    this.textPanel.style.width = '30%';
+    this.textPanel.style.height = '87%';
+    this.textPanel.style.width = '35%';
     this.textPanel.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
     this.textPanel.style.position = 'absolute';
     this.textPanel.style.zIndex = '8';
     this.textPanel.style.padding = '36px 1px 0 0';
-    this.textPanel.style.margin = '5%';
+    this.textPanel.style.margin = '2%';
+    this.textPanel.style.borderRadius = '37px';
 
     this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
