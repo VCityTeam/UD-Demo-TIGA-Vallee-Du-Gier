@@ -16,11 +16,6 @@ fetch('../assets/config/formConfig.json')
 
     let entryPanel = document.createElement('div');
     entryPanel.id = 'entry_panel';
-    entryPanel.style.float = 'left';
-    entryPanel.style.height = '100%';
-    entryPanel.style.width = '100%';
-    entryPanel.style.backgroundColor = 'white';
-    entryPanel.style.position = 'relative';
 
     json.graphs.forEach((graph) => {
       let button = document.createElement('button');

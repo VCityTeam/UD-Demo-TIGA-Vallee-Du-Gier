@@ -17,7 +17,7 @@ export class Form {
     fetch(fileName)
       .then((response) => response.text())
       .then((text) => {
-        document.getElementById('form_page').innerHTML = text;
+        document.getElementById('form_container').innerHTML = text;
       });
   }
 
@@ -31,19 +31,10 @@ export class Form {
   initTextPanel() {
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
-    this.textPanel.style.height = '87%';
-    this.textPanel.style.width = '35%';
-    this.textPanel.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-    this.textPanel.style.position = 'absolute';
-    this.textPanel.style.zIndex = '8';
-    this.textPanel.style.padding = '36px 1px 0 0';
-    this.textPanel.style.margin = '2%';
-    this.textPanel.style.borderRadius = '37px';
 
-    const formPage = document.createElement('div');
-    formPage.id = 'form_page';
-    formPage.style.margin = '0px 50px';
-    this.textPanel.appendChild(formPage);
+    const formContainer = document.createElement('div');
+    formContainer.id = 'form_container';
+    this.textPanel.appendChild(formContainer);
 
     this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
@@ -55,11 +46,6 @@ export class Form {
   initRecapPanel() {
     this.recapPanel = document.createElement('div');
     this.recapPanel.id = 'recap_panel';
-    this.recapPanel.style.float = 'left';
-    this.recapPanel.style.height = '100%';
-    this.recapPanel.style.width = '100%';
-    this.recapPanel.style.backgroundColor = 'white';
-    this.recapPanel.style.display = 'none';
 
     const recapHeader = document.createElement('h1');
     recapHeader.innerHTML = 'Recap';
