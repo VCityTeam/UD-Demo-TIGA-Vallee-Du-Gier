@@ -13,12 +13,11 @@ export class Form {
     this.initPreviousNextButtons();
   }
 
-  fillWithHtmlFromFile(fileName, target) {
+  fillWithHtmlFromFile(fileName) {
     fetch(fileName)
       .then((response) => response.text())
       .then((text) => {
-        target.innerHTML = text;
-        target.firstChild.style.margin = '0px 50px';
+        document.getElementById('form_page').innerHTML = text;
       });
   }
 
@@ -40,6 +39,11 @@ export class Form {
     this.textPanel.style.padding = '36px 1px 0 0';
     this.textPanel.style.margin = '2%';
     this.textPanel.style.borderRadius = '37px';
+
+    const formPage = document.createElement('div');
+    formPage.id = 'form_page';
+    formPage.style.margin = '0px 50px';
+    this.textPanel.appendChild(formPage);
 
     this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
@@ -95,8 +99,8 @@ export class Form {
         );
       }.bind(this)
     );
-
-    document.body.appendChild(this.endButton);
+    this.textPanel.appendChild(this.endButton);
+    console.log(this.textPanel);
   }
 
   initPreviousNextButtons() {
@@ -115,7 +119,7 @@ export class Form {
       }.bind(this)
     );
 
-    document.body.appendChild(this.previousButton);
+    this.textPanel.appendChild(this.previousButton);
 
     this.nextButton = document.createElement('button');
     this.nextButton.id = 'Next_button';
@@ -133,7 +137,7 @@ export class Form {
       }.bind(this)
     );
 
-    document.body.appendChild(this.nextButton);
+    this.textPanel.appendChild(this.nextButton);
   }
 
   goToPreviousNode() {
