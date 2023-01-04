@@ -9,6 +9,7 @@
                     "path": "../assets/form/01.txt",
                     "previous": 0,
                     "next": 1,
+                    "type": "half",
                     "position": {
                         "x": 1824490.154412651,
                         "y": 5115364.911133474,
@@ -25,6 +26,7 @@
                     "path": "../assets/form/02.txt",
                     "previous": 0,
                     "next": 2,
+                    "type": "half",
                     "position": {
                         "x": 1820572.2564841579,
                         "y": 5142159.305112128,
@@ -41,6 +43,7 @@
                     "path": "../assets/form/03.txt",
                     "previous": 1,
                     "next": 3,
+                    "type": "half",
                     "position": {
                         "x": 1822810.2848260512,
                         "y": 5146615.931828531,
@@ -54,7 +57,8 @@
                     }
                 },
                 {
-                    "previous": 2
+                    "previous": 2,
+                    "type": "full"
                 }
             ]
         },
@@ -67,6 +71,7 @@
                     "path": "../assets/form/03.txt",
                     "previous": 0,
                     "next": 1,
+                    "type": "half",
                     "position": {
                         "x": 1822810.2848260512,
                         "y": 5146615.931828531,
@@ -83,6 +88,7 @@
                     "path": "../assets/form/02.txt",
                     "previous": 0,
                     "next": 2,
+                    "type": "full",
                     "position": {
                         "x": 1820572.2564841579,
                         "y": 5142159.305112128,
@@ -99,6 +105,7 @@
                     "path": "../assets/form/01.txt",
                     "previous": 1,
                     "next": 3,
+                    "type": "half",
                     "position": {
                         "x": 1824490.154412651,
                         "y": 5115364.911133474,
@@ -112,7 +119,8 @@
                     }
                 },
                 {
-                    "previous": 2
+                    "previous": 2,
+                    "type": "full"
                 }
             ]
         }

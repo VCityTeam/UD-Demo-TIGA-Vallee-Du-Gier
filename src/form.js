@@ -15,35 +15,32 @@ export class Form {
     fetch(fileName)
       .then((response) => response.text())
       .then((text) => {
-        document.getElementById('form_container').innerHTML = text;
+        this.formContainer.innerHTML = text;
       });
   }
 
   fillWithRecapValues(values) {
-    const formContainer = document.getElementById('form_container');
-    formContainer.innerHTML = '';
-
     const recapTitle = document.createElement('h1');
     recapTitle.innerHTML =
       'Félicitations, vous avez terminé le parcours ' +
       this.formGraph.name +
       ' !';
-    formContainer.appendChild(recapTitle);
+    this.formContainer.appendChild(recapTitle);
 
     values.forEach((array) => {
-      formContainer.appendChild(document.createTextNode(array.join('; ')));
-      formContainer.appendChild(document.createElement('br'));
+      this.formContainer.appendChild(document.createTextNode(array.join('; ')));
+      this.formContainer.appendChild(document.createElement('br'));
     });
 
     const restartButton = document.createElement('button');
     restartButton.classList.add('recap-button');
     restartButton.innerHTML = 'Recommencer';
-    formContainer.appendChild(restartButton);
+    this.formContainer.appendChild(restartButton);
 
     const visitButton = document.createElement('button');
     visitButton.classList.add('recap-button');
     visitButton.innerHTML = 'Visite Libre';
-    formContainer.appendChild(visitButton);
+    this.formContainer.appendChild(visitButton);
   }
 
   initTextPanel() {
@@ -53,9 +50,9 @@ export class Form {
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
 
-    const formContainer = document.createElement('div');
-    formContainer.id = 'form_container';
-    this.textPanel.appendChild(formContainer);
+    this.formContainer = document.createElement('div');
+    this.formContainer.id = 'form_container';
+    this.textPanel.appendChild(this.formContainer);
 
     this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
@@ -94,8 +91,14 @@ export class Form {
   }
 
   goToPreviousNode() {
+    this.formContainer.innerHTML = '';
     let current = this.formGraph.nodes[this.currentIndex];
     let previous = this.formGraph.nodes[current.previous];
+    if (previous.type == 'half') {
+      this.textPanel.style.width = '35%';
+    } else {
+      this.textPanel.style.width = '100%';
+    }
     if (current.previous == this.formGraph.startIndex) {
       this.previousButton.style.display = 'none';
     }
@@ -107,8 +110,14 @@ export class Form {
 
   goToNextNode() {
     this.saveInputValues(this.currentIndex);
+    this.formContainer.innerHTML = '';
     let current = this.formGraph.nodes[this.currentIndex];
     let next = this.formGraph.nodes[current.next];
+    if (next.type == 'half') {
+      this.textPanel.style.width = '35%';
+    } else {
+      this.textPanel.style.width = '100%';
+    }
     if (current.next == this.formGraph.endIndex) {
       this.nextButton.style.display = 'none';
       this.fillWithRecapValues(this.savedValues);
@@ -145,7 +154,7 @@ export class Form {
   }
 
   saveInputValues(nodeIndex) {
-    const formInputs = this.textPanel.querySelectorAll('input, select');
+    const formInputs = this.formContainer.querySelectorAll('input, select');
     let values = [];
     formInputs.forEach((input) => {
       let value = '';
