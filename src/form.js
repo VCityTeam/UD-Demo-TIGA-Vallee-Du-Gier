@@ -8,8 +8,6 @@ export class Form {
     this.textPanel = null;
     this.currentIndex = -1;
     this.initTextPanel();
-    this.initRecapPanel();
-    this.initEndButton();
     this.initPreviousNextButtons();
   }
 
@@ -21,11 +19,31 @@ export class Form {
       });
   }
 
-  fillWithValues(values, target) {
+  fillWithRecapValues(values) {
+    const formContainer = document.getElementById('form_container');
+    formContainer.innerHTML = '';
+
+    const recapTitle = document.createElement('h1');
+    recapTitle.innerHTML =
+      'Félicitations, vous avez terminé le parcours ' +
+      this.formGraph.name +
+      ' !';
+    formContainer.appendChild(recapTitle);
+
     values.forEach((array) => {
-      target.appendChild(document.createTextNode(array.join('; ')));
-      target.appendChild(document.createElement('br'));
+      formContainer.appendChild(document.createTextNode(array.join('; ')));
+      formContainer.appendChild(document.createElement('br'));
     });
+
+    const restartButton = document.createElement('button');
+    restartButton.classList.add('recap-button');
+    restartButton.innerHTML = 'Recommencer';
+    formContainer.appendChild(restartButton);
+
+    const visitButton = document.createElement('button');
+    visitButton.classList.add('recap-button');
+    visitButton.innerHTML = 'Visite Libre';
+    formContainer.appendChild(visitButton);
   }
 
   initTextPanel() {
@@ -44,49 +62,8 @@ export class Form {
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
 
-    textDiv.appendChild(this.textPanel)
+    textDiv.appendChild(this.textPanel);
     document.body.appendChild(textDiv);
-  }
-
-  initRecapPanel() {
-    this.recapPanel = document.createElement('div');
-    this.recapPanel.id = 'recap_panel';
-
-    const recapHeader = document.createElement('h1');
-    recapHeader.innerHTML = 'Recap';
-    this.recapPanel.appendChild(recapHeader);
-
-    const recapText = document.createElement('p');
-    recapText.id = 'recap_text';
-    this.recapPanel.appendChild(recapText);
-    document.body.appendChild(this.recapPanel);
-  }
-
-  initEndButton() {
-    this.endButton = document.createElement('button');
-    this.endButton.id = 'end_button';
-    this.endButton.classList.add('arrow_button', 'button_right');
-    this.endButton.style.display = 'none';
-    this.endButton.addEventListener(
-      'click',
-      function () {
-        this.saveInputValues(this.currentIndex);
-
-        this.previousButton.style.display = 'none';
-        this.nextButton.style.display = 'none';
-        this.endButton.style.display = 'none';
-        this.textPanel.style.display = 'none';
-        document.getElementById('_all_widget').style.display = 'none';
-
-        this.recapPanel.style.display = 'block';
-        this.fillWithValues(
-          this.savedValues,
-          document.getElementById('recap_text')
-        );
-      }.bind(this)
-    );
-    this.textPanel.appendChild(this.endButton);
-    console.log(this.textPanel);
   }
 
   initPreviousNextButtons() {
@@ -119,32 +96,28 @@ export class Form {
   goToPreviousNode() {
     let current = this.formGraph.nodes[this.currentIndex];
     let previous = this.formGraph.nodes[current.previous];
+    if (current.previous == this.formGraph.startIndex) {
+      this.previousButton.style.display = 'none';
+    }
+    this.nextButton.style.display = 'block';
     this.fillWithHtmlFromFile(previous.path, this.textPanel);
     this.travelToPosition(previous, this.view);
     this.currentIndex = current.previous;
-    if (this.currentIndex == this.formGraph.startIndex) {
-      this.previousButton.style.display = 'none';
-    }
-    if (this.currentIndex < this.formGraph.endIndex) {
-      this.nextButton.style.display = 'block';
-      this.endButton.style.display = 'none';
-    }
   }
 
   goToNextNode() {
     this.saveInputValues(this.currentIndex);
     let current = this.formGraph.nodes[this.currentIndex];
     let next = this.formGraph.nodes[current.next];
-    this.fillWithHtmlFromFile(next.path, this.textPanel);
-    this.travelToPosition(next, this.view);
-    this.currentIndex = current.next;
-    if (this.currentIndex > this.formGraph.startIndex) {
-      this.previousButton.style.display = 'block';
-    }
-    if (this.currentIndex == this.formGraph.endIndex) {
+    if (current.next == this.formGraph.endIndex) {
       this.nextButton.style.display = 'none';
-      this.endButton.style.display = 'block';
+      this.fillWithRecapValues(this.savedValues);
+    } else {
+      this.previousButton.style.display = 'block';
+      this.fillWithHtmlFromFile(next.path, this.textPanel);
+      this.travelToPosition(next, this.view);
     }
+    this.currentIndex = current.next;
   }
 
   travelToPosition(graphNode, view) {

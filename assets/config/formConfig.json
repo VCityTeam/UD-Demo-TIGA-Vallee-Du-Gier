@@ -3,7 +3,7 @@
         {
             "name": "Parcours 1",
             "startIndex": 0,
-            "endIndex": 2,
+            "endIndex": 3,
             "nodes": [
                 {
                     "path": "../assets/form/01.txt",
@@ -40,7 +40,7 @@
                 {
                     "path": "../assets/form/03.txt",
                     "previous": 1,
-                    "next": 2,
+                    "next": 3,
                     "position": {
                         "x": 1822810.2848260512,
                         "y": 5146615.931828531,
@@ -52,13 +52,16 @@
                         "z": 0.06443499302976319,
                         "w": 0.8263529783343309
                     }
+                },
+                {
+                    "previous": 2
                 }
             ]
         },
         {
             "name": "Parcours 2",
             "startIndex": 0,
-            "endIndex": 2,
+            "endIndex": 3,
             "nodes": [
                 {
                     "path": "../assets/form/03.txt",
@@ -95,7 +98,7 @@
                 {
                     "path": "../assets/form/01.txt",
                     "previous": 1,
-                    "next": 2,
+                    "next": 3,
                     "position": {
                         "x": 1824490.154412651,
                         "y": 5115364.911133474,
@@ -107,6 +110,9 @@
                         "z": -0.022633650371156878,
                         "w": 0.9339705383774479
                     }
+                },
+                {
+                    "previous": 2
                 }
             ]
         }
