@@ -29,6 +29,9 @@ export class Form {
   }
 
   initTextPanel() {
+    const textDiv = document.createElement('div');
+    textDiv.id = 'text_div';
+
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
 
@@ -40,7 +43,9 @@ export class Form {
     const start = this.formGraph.nodes[this.formGraph.startIndex];
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
-    document.getElementById('_all_widget').appendChild(this.textPanel);
+
+    textDiv.appendChild(this.textPanel)
+    document.body.appendChild(textDiv);
   }
 
   initRecapPanel() {
