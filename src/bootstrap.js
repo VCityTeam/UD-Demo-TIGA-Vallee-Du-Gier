@@ -2,6 +2,12 @@ import * as udviz from 'ud-viz';
 import { addLabelLayers } from './labelLayer';
 import { Form } from './form';
 
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = 'src/css/style.css';
+document.getElementsByTagName('HEAD')[0].appendChild(link);
+
 fetch('../assets/config/formConfig.json')
   .then((response) => response.json())
   .then((json) => {

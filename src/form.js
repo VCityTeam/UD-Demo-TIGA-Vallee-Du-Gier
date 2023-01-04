@@ -74,12 +74,7 @@ export class Form {
   initEndButton() {
     this.endButton = document.createElement('button');
     this.endButton.id = 'end_button';
-    this.endButton.innerHTML = 'End';
-    this.endButton.style.position = 'absolute';
-    this.endButton.style.bottom = '0';
-    this.endButton.style.right = '0';
-    this.endButton.style.margin = '0';
-    this.endButton.style.zIndex = '9';
+    this.endButton.classList.add('arrow_button', 'button_right');
     this.endButton.style.display = 'none';
     this.endButton.addEventListener(
       'click',
@@ -106,11 +101,7 @@ export class Form {
   initPreviousNextButtons() {
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
-    this.previousButton.innerHTML = 'Previous';
-    this.previousButton.style.position = 'absolute';
-    this.previousButton.style.bottom = '0';
-    this.previousButton.style.left = '0';
-    this.previousButton.style.margin = '0';
+    this.previousButton.classList.add('arrow_button', 'button_left');
     this.previousButton.style.display = 'none';
     this.previousButton.addEventListener(
       'click',
@@ -123,13 +114,7 @@ export class Form {
 
     this.nextButton = document.createElement('button');
     this.nextButton.id = 'Next_button';
-    this.nextButton.innerHTML = 'Next';
-    this.nextButton.style.position = 'absolute';
-    this.nextButton.style.bottom = '0';
-    this.nextButton.style.right = '0';
-    this.nextButton.style.margin = '0';
-    this.nextButton.style.zIndex = '9';
-    this.nextButton.style.display = 'block';
+    this.nextButton.classList.add('arrow_button', 'button_right');
     this.nextButton.addEventListener(
       'click',
       function () {
