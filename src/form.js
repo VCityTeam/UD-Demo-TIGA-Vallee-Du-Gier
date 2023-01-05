@@ -60,6 +60,12 @@ export class Form {
           label.style.color = '#fff';
         }
       });
+      checkbox.addEventListener('mouseenter', function () {
+        label.style.filter = 'brightness(85%)';
+      });
+      checkbox.addEventListener('mouseleave', function () {
+        label.style.filter = 'brightness(100%)';
+      });
     });
 
     const radios = this.formContainer.querySelectorAll('input[type="radio"]');
@@ -83,6 +89,12 @@ export class Form {
           }
         }.bind(this)
       );
+      radio.addEventListener('mouseenter', function () {
+        label.style.filter = 'brightness(85%)';
+      });
+      radio.addEventListener('mouseleave', function () {
+        label.style.filter = 'brightness(100%)';
+      });
     });
   }
 
