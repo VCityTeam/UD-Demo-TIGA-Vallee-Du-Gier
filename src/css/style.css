@@ -129,3 +129,13 @@ h1 {
   border-radius: 12px;
   background-color: #a5a5a5;
 }
+
+.formbuilder-checkbox-group,
+.formbuilder-text-label,
+.formbuilder-select-label,
+.formbuilder-radio-group-label {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+}
