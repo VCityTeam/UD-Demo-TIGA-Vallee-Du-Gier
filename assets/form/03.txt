@@ -24,7 +24,7 @@
         <label for="checkbox-group-1670939129893" class="formbuilder-checkbox-group-label">Checkbox Group</label>
         <div class="checkbox-group">
             <div class="formbuilder-checkbox">
-                <input name="checkbox-group-1670939129893[]" access="false" id="checkbox-group-1670939129893-0" value="option-1" type="checkbox" checked="checked">
+                <input name="checkbox-group-1670939129893[]" access="false" id="checkbox-group-1670939129893-0" value="option-1" type="checkbox">
                 <label for="checkbox-group-1670939129893-0">Option 1</label>
             </div>
             <div class="formbuilder-checkbox">

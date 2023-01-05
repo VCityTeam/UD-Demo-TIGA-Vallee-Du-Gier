@@ -16,6 +16,7 @@ export class Form {
       .then((response) => response.text())
       .then((text) => {
         this.formContainer.innerHTML = text;
+        this.addStyleEvents();
       });
   }
 
@@ -41,6 +42,23 @@ export class Form {
     visitButton.classList.add('recap-button');
     visitButton.innerHTML = 'Visite Libre';
     this.formContainer.appendChild(visitButton);
+  }
+
+  addStyleEvents() {
+    const checkboxes = this.formContainer.querySelectorAll('input[type="checkbox"]');
+
+    [].forEach.call(checkboxes, checkbox => {
+      const label = document.querySelector(`[for="${checkbox.id}"]`);
+      checkbox.addEventListener('input', function () {
+      if (checkbox.checked) {
+          label.style.backgroundColor= '#ffffff';
+          label.style.color = '#a5a5a5';
+        } else {
+          label.style.backgroundColor= '#a5a5a5';
+          label.style.color = '#fff';
+        }
+      });
+    });
   }
 
   initTextPanel() {
