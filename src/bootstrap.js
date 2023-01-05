@@ -39,16 +39,17 @@ fetch('../assets/config/formConfig.json')
 
 function startApp(formGraph) {
   const app = new udviz.Templates.AllWidget();
-  let form = null;
 
   app.start('../assets/config/config.json').then((config) => {
     if (formGraph) {
-      let allWidgetPanel = document.getElementById('_all_widget_stuct_main_panel');
+      let allWidgetPanel = document.getElementById(
+        '_all_widget_stuct_main_panel'
+      );
       allWidgetPanel.style.display = 'block';
       allWidgetPanel.querySelector('nav').style.display = 'none';
       window.dispatchEvent(new Event('resize'));
 
-      form = new Form(app.view3D.getItownsView(), formGraph)
+      const form = new Form(app.view3D.getItownsView(), formGraph);
     }
 
     ////// CITY OBJECTS MODULE
