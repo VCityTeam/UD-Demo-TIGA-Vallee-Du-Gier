@@ -45,19 +45,44 @@ export class Form {
   }
 
   addStyleEvents() {
-    const checkboxes = this.formContainer.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = this.formContainer.querySelectorAll(
+      'input[type="checkbox"]'
+    );
 
-    [].forEach.call(checkboxes, checkbox => {
+    [].forEach.call(checkboxes, (checkbox) => {
       const label = document.querySelector(`[for="${checkbox.id}"]`);
-      checkbox.addEventListener('input', function () {
-      if (checkbox.checked) {
-          label.style.backgroundColor= '#ffffff';
+      checkbox.addEventListener('click', function () {
+        if (checkbox.checked) {
+          label.style.backgroundColor = '#ffffff';
           label.style.color = '#a5a5a5';
         } else {
-          label.style.backgroundColor= '#a5a5a5';
+          label.style.backgroundColor = '#a5a5a5';
           label.style.color = '#fff';
         }
       });
+    });
+
+    const radios = this.formContainer.querySelectorAll('input[type="radio"]');
+
+    [].forEach.call(radios, (radio) => {
+      const label = document.querySelector(`[for="${radio.id}"]`);
+      radio.addEventListener(
+        'click',
+        function () {
+          if (radio.checked) {
+            label.style.backgroundColor = '#ffffff';
+            label.style.color = '#a5a5a5';
+            const others = this.formContainer.querySelectorAll(
+              'input:not(#' + radio.id + ')[type="radio"]'
+            );
+            [].forEach.call(others, (other) => {
+              const otherLabel = document.querySelector(`[for="${other.id}"]`);
+              otherLabel.style.backgroundColor = '#a5a5a5';
+              otherLabel.style.color = '#fff';
+            });
+          }
+        }.bind(this)
+      );
     });
   }
 

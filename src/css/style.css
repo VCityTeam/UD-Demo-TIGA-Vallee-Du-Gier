@@ -61,7 +61,8 @@
   margin: 0 0 0 10px;
 }
 
-.formbuilder-checkbox {
+.formbuilder-checkbox,
+.formbuilder-radio {
   position: relative;
   width: 91px;
   height: 48px;
@@ -69,7 +70,8 @@
   float: left;
 }
 
-.formbuilder-checkbox input {
+.formbuilder-checkbox input,
+.formbuilder-radio input {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,7 +81,8 @@
   cursor: pointer;
 }
 
-.formbuilder-checkbox label {
+.formbuilder-checkbox label,
+.formbuilder-radio label {
   width: 100%;
   height: 100%;
   display: flex;
