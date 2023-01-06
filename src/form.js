@@ -111,8 +111,12 @@ export class Form {
     this.formContainer.id = 'form_container';
     this.textPanel.appendChild(this.formContainer);
 
-    this.currentIndex = this.formGraph.startIndex;
     const start = this.formGraph.nodes[this.formGraph.startIndex];
+    if (start.type == 'half') {
+      this.textPanel.style.width = '35%';
+    } else {
+      this.textPanel.style.width = '100%';
+    }
     this.fillWithHtmlFromFile(start.path, this.textPanel);
     this.travelToPosition(start, this.view);
 
