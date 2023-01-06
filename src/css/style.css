@@ -28,8 +28,9 @@ h1 {
   position: relative;
   z-index: 8;
   padding: 36px 0 10px 0;
-  margin: 2%;
+  margin: 3%;
   border-radius: 37px;
+  border: solid 1px #707070;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-stretch: normal;
   font-style: normal;
@@ -39,7 +40,6 @@ h1 {
   font-weight: normal;
   text-align: left;
   color: #707070;
-  overflow: auto;
   display: flex;
   flex-direction: column;
 }
@@ -92,6 +92,40 @@ h1 {
   -webkit-transform: rotate(135deg);
   left: 0;
   margin: 0 0 0 10px;
+}
+
+#close_button {
+  height: 72px;
+  width: 40px;
+  border: solid 1px #707070;
+  border-radius: 10px;
+  background-color: #fff;
+  display: inline-block;
+  top: 5%;
+  right: -40px;
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#close_arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  background-color: transparent;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  left: 14px;
+}
+
+#close_arrow:hover {
+  border: solid #a5a5a5;
+  border-width: 0 3px 3px 0;
+  padding: 9px;
 }
 
 .formbuilder-checkbox,

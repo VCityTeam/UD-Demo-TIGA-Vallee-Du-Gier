@@ -6,9 +6,11 @@ export class Form {
     this.view = view;
     this.formGraph = formGraph;
     this.textPanel = null;
-    this.currentIndex = -1;
+    this.currentIndex = this.formGraph.startIndex;
+    this.isClosed = false;
     this.initTextPanel();
     this.initPreviousNextButtons();
+    this.initCloseButton();
   }
 
   fillWithHtmlFromFile(fileName) {
@@ -145,6 +147,27 @@ export class Form {
     this.textPanel.appendChild(this.nextButton);
   }
 
+  initCloseButton() {
+    this.closeButton = document.createElement('button');
+    this.closeButton.id = 'close_button';
+    this.closeButton.addEventListener(
+      'click',
+      function () {
+        if (this.isClosed) {
+          this.openTextPanel();
+        } else {
+          this.closeTextPanel();
+        }
+      }.bind(this)
+    );
+
+    const arrow = document.createElement('div');
+    arrow.id = 'close_arrow';
+    this.closeButton.appendChild(arrow);
+
+    this.textPanel.appendChild(this.closeButton);
+  }
+
   goToPreviousNode() {
     this.formContainer.innerHTML = '';
     let current = this.formGraph.nodes[this.currentIndex];
@@ -182,6 +205,29 @@ export class Form {
       this.travelToPosition(next, this.view);
     }
     this.currentIndex = current.next;
+  }
+
+  closeTextPanel() {
+    this.textPanel.style.width = '1%';
+    this.nextButton.style.display = 'none';
+    this.previousButton.style.display = 'none';
+    this.closeButton.firstChild.style.transform = 'rotate(-45deg)';
+    this.closeButton.firstChild.style.webkitTransform = 'rotate(-45deg)';
+    this.closeButton.firstChild.style.left = '7px';
+    this.isClosed = true;
+  }
+
+  openTextPanel() {
+    const currentNode = this.formGraph.nodes[this.currentIndex];
+    this.textPanel.style.width = currentNode.type == 'half' ? '35%' : '100%';
+    if (this.currentIndex != this.formGraph.startIndex)
+      this.previousButton.style.display = 'block';
+    if (this.currentIndex != this.formGraph.endIndex)
+      this.nextButton.style.display = 'block';
+    this.closeButton.firstChild.style.transform = 'rotate(135deg)';
+    this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
+    this.closeButton.firstChild.style.left = '14px';
+    this.isClosed = false;
   }
 
   travelToPosition(graphNode, view) {
