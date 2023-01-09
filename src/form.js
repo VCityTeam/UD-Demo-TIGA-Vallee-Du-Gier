@@ -65,10 +65,13 @@ export class Form {
         }
       });
       checkbox.addEventListener('mouseenter', function () {
-        label.style.filter = 'brightness(85%)';
+        if (checkbox.checked)
+          label.style.backgroundColor = 'rgb(235, 234, 234)';
+        else label.style.backgroundColor = '#929292';
       });
       checkbox.addEventListener('mouseleave', function () {
-        label.style.filter = 'brightness(100%)';
+        if (checkbox.checked) label.style.backgroundColor = '#ffffff';
+        else label.style.backgroundColor = '#a5a5a5';
       });
     });
 
@@ -94,10 +97,10 @@ export class Form {
         }.bind(this)
       );
       radio.addEventListener('mouseenter', function () {
-        label.style.filter = 'brightness(85%)';
+        if (!radio.checked) label.style.backgroundColor = '#929292';
       });
       radio.addEventListener('mouseleave', function () {
-        label.style.filter = 'brightness(100%)';
+        if (!radio.checked) label.style.backgroundColor = '#a5a5a5';
       });
     });
   }

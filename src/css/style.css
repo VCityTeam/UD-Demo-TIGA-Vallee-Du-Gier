@@ -192,6 +192,7 @@ h1 {
   color: #fff;
   border-radius: 12px;
   background-color: #a5a5a5;
+  border: solid 1px #bfbfbf;
 }
 
 .formbuilder-checkbox-group,
