@@ -63,6 +63,36 @@ h1 {
   display: none;
 }
 
+.recap-button {
+ position: absolute;
+ display: inline-block;
+ left:50%;
+ margin: 0;
+ width: 190px;
+ height: 50px;
+ line-height: 25px;
+ font-size: 20px;
+ font-weight: bold;
+ text-align: center;
+ color: #a5a5a5;
+ border-radius: 12px;
+ background-color: #fff;
+ border: solid 1px #bfbfbf;
+ cursor: pointer;
+}
+
+#restart_button {
+  transform: translateX(-120%);
+}
+
+#visit_button {
+  transform: translateX(20%);
+}
+
+.recap-button:hover {
+  background-color: rgb(235, 234, 234);
+}
+
 .arrow_button {
   border: solid black;
   border-width: 0 6px 6px 0;

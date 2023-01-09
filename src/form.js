@@ -36,11 +36,13 @@ export class Form {
     });
 
     const restartButton = document.createElement('button');
+    restartButton.id = 'restart_button';
     restartButton.classList.add('recap-button');
     restartButton.innerHTML = 'Recommencer';
     this.formContainer.appendChild(restartButton);
 
     const visitButton = document.createElement('button');
+    visitButton.id = 'visit_button';
     visitButton.classList.add('recap-button');
     visitButton.innerHTML = 'Visite Libre';
     this.formContainer.appendChild(visitButton);
