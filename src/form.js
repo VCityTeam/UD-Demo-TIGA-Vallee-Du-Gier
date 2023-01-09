@@ -1,16 +1,28 @@
 import { THREE } from 'ud-viz';
 
 export class Form {
-  constructor(view, formGraph) {
+  constructor(view) {
     this.savedValues = [];
     this.view = view;
-    this.formGraph = formGraph;
     this.textPanel = null;
-    this.currentIndex = this.formGraph.startIndex;
+    this.currentIndex = -1;
     this.isClosed = false;
     this.initTextPanel();
     this.initPreviousNextButtons();
     this.initCloseButton();
+  }
+
+  resetForm() {
+    this.savedValues = [];
+    this.currentIndex = -1;
+  }
+
+  displayForm() {
+    document.getElementById('text_div').style.display = 'flex';
+  }
+
+  hideForm() {
+    document.getElementById('text_div').style.display = 'none';
   }
 
   fillWithHtmlFromFile(fileName) {
@@ -25,9 +37,7 @@ export class Form {
   fillWithRecapValues(values) {
     const recapTitle = document.createElement('h1');
     recapTitle.innerHTML =
-      'Félicitations, vous avez terminé le parcours ' +
-      this.formGraph.name +
-      ' !';
+      'Félicitations, vous avez terminé le parcours ' + this.graph.name + ' !';
     this.formContainer.appendChild(recapTitle);
 
     values.forEach((array) => {
@@ -39,12 +49,31 @@ export class Form {
     restartButton.id = 'restart_button';
     restartButton.classList.add('recap-button');
     restartButton.innerHTML = 'Recommencer';
+    restartButton.addEventListener(
+      'click',
+      function () {
+        this.resetForm();
+        document.getElementById('entry_panel').style.display = 'block';
+      }.bind(this)
+    );
     this.formContainer.appendChild(restartButton);
 
     const visitButton = document.createElement('button');
     visitButton.id = 'visit_button';
     visitButton.classList.add('recap-button');
     visitButton.innerHTML = 'Visite Libre';
+    visitButton.addEventListener(
+      'click',
+      function () {
+        this.hideForm();
+        let allWidgetPanel = document.getElementById(
+          '_all_widget_stuct_main_panel'
+        );
+        allWidgetPanel.style.display = 'grid';
+        allWidgetPanel.querySelector('nav').style.display = 'inline-block';
+        window.dispatchEvent(new Event('resize'));
+      }.bind(this)
+    );
     this.formContainer.appendChild(visitButton);
   }
 
@@ -116,15 +145,6 @@ export class Form {
     this.formContainer.id = 'form_container';
     this.textPanel.appendChild(this.formContainer);
 
-    const start = this.formGraph.nodes[this.formGraph.startIndex];
-    if (start.type == 'half') {
-      this.textPanel.style.width = '35%';
-    } else {
-      this.textPanel.style.width = '100%';
-    }
-    this.fillWithHtmlFromFile(start.path, this.textPanel);
-    this.travelToPosition(start, this.view);
-
     textDiv.appendChild(this.textPanel);
     document.body.appendChild(textDiv);
   }
@@ -133,7 +153,6 @@ export class Form {
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
     this.previousButton.classList.add('arrow_button', 'button_left');
-    this.previousButton.style.display = 'none';
     this.previousButton.addEventListener(
       'click',
       function () {
@@ -177,16 +196,31 @@ export class Form {
     this.textPanel.appendChild(this.closeButton);
   }
 
+  startForm(graph) {
+    this.graph = graph;
+    this.currentIndex = this.graph.startIndex;
+    const start = this.graph.nodes[this.currentIndex];
+    if (start.type == 'half') {
+      this.textPanel.style.width = '35%';
+    } else {
+      this.textPanel.style.width = '100%';
+    }
+    this.previousButton.style.display = 'none';
+    this.nextButton.style.display = 'block';
+    this.fillWithHtmlFromFile(start.path, this.textPanel);
+    this.travelToPosition(start, this.view);
+  }
+
   goToPreviousNode() {
     this.formContainer.innerHTML = '';
-    let current = this.formGraph.nodes[this.currentIndex];
-    let previous = this.formGraph.nodes[current.previous];
+    let current = this.graph.nodes[this.currentIndex];
+    let previous = this.graph.nodes[current.previous];
     if (previous.type == 'half') {
       this.textPanel.style.width = '35%';
     } else {
       this.textPanel.style.width = '100%';
     }
-    if (current.previous == this.formGraph.startIndex) {
+    if (current.previous == this.graph.startIndex) {
       this.previousButton.style.display = 'none';
     }
     this.nextButton.style.display = 'block';
@@ -198,14 +232,14 @@ export class Form {
   goToNextNode() {
     this.saveInputValues(this.currentIndex);
     this.formContainer.innerHTML = '';
-    let current = this.formGraph.nodes[this.currentIndex];
-    let next = this.formGraph.nodes[current.next];
+    let current = this.graph.nodes[this.currentIndex];
+    let next = this.graph.nodes[current.next];
     if (next.type == 'half') {
       this.textPanel.style.width = '35%';
     } else {
       this.textPanel.style.width = '100%';
     }
-    if (current.next == this.formGraph.endIndex) {
+    if (current.next == this.graph.endIndex) {
       this.nextButton.style.display = 'none';
       this.fillWithRecapValues(this.savedValues);
     } else {
@@ -227,11 +261,11 @@ export class Form {
   }
 
   openTextPanel() {
-    const currentNode = this.formGraph.nodes[this.currentIndex];
+    const currentNode = this.graph.nodes[this.currentIndex];
     this.textPanel.style.width = currentNode.type == 'half' ? '35%' : '100%';
-    if (this.currentIndex != this.formGraph.startIndex)
+    if (this.currentIndex != this.graph.startIndex)
       this.previousButton.style.display = 'block';
-    if (this.currentIndex != this.formGraph.endIndex)
+    if (this.currentIndex != this.graph.endIndex)
       this.nextButton.style.display = 'block';
     this.closeButton.firstChild.style.transform = 'rotate(135deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
