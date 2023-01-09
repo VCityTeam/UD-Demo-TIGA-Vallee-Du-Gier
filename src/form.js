@@ -251,6 +251,7 @@ export class Form {
   }
 
   closeTextPanel() {
+    this.formContainer.style.display = 'none';
     this.textPanel.style.width = '1%';
     this.nextButton.style.display = 'none';
     this.previousButton.style.display = 'none';
@@ -263,6 +264,7 @@ export class Form {
   openTextPanel() {
     const currentNode = this.graph.nodes[this.currentIndex];
     this.textPanel.style.width = currentNode.type == 'half' ? '35%' : '100%';
+    this.formContainer.style.display = 'block';
     if (this.currentIndex != this.graph.startIndex)
       this.previousButton.style.display = 'block';
     if (this.currentIndex != this.graph.endIndex)

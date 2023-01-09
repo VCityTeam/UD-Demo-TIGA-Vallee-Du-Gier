@@ -53,6 +53,7 @@ h1 {
 }
 
 #form_container {
+  display: block;
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
