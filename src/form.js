@@ -31,6 +31,8 @@ export class Form {
       .then((text) => {
         this.formContainer.innerHTML = text;
         this.addStyleEvents();
+        if (this.savedValues && this.savedValues[this.currentIndex])
+          this.loadSavedValues(this.currentIndex);
       });
   }
 
@@ -41,7 +43,9 @@ export class Form {
     this.formContainer.appendChild(recapTitle);
 
     values.forEach((array) => {
-      this.formContainer.appendChild(document.createTextNode(array.join('; ')));
+      this.formContainer.appendChild(
+        document.createTextNode(array.map((v) => v.text).join('; '))
+      );
       this.formContainer.appendChild(document.createElement('br'));
     });
 
@@ -303,25 +307,48 @@ export class Form {
     const formInputs = this.formContainer.querySelectorAll('input, select');
     let values = [];
     formInputs.forEach((input) => {
-      let value = '';
+      let value = { option: '', text: '' };
       if (input.nodeName == 'INPUT') {
         switch (input.type) {
           case 'text':
-            value = input.value;
+            value.text = input.value;
             break;
           default:
+            value.option = input.checked;
             if (input.checked) {
-              value = document.querySelector(
+              value.text = document.querySelector(
                 'label[for=' + input.id + ']'
               ).innerHTML;
             }
         }
       }
       if (input.nodeName == 'SELECT') {
-        value = input.options[input.selectedIndex].text;
+        value.text = input.options[input.selectedIndex].text;
+        value.option = input.options[input.selectedIndex].value;
       }
       values.push(value);
     });
     this.savedValues[nodeIndex] = values;
+  }
+
+  loadSavedValues(nodeIndex) {
+    const formInputs = this.formContainer.querySelectorAll('input, select');
+    let i = 0;
+    formInputs.forEach((input) => {
+      const value = this.savedValues[nodeIndex][i];
+      if (input.nodeName == 'INPUT') {
+        switch (input.type) {
+          case 'text':
+            input.value = value.text;
+            break;
+          default:
+            if (value.option) input.click();
+        }
+      }
+      if (input.nodeName == 'SELECT') {
+        input.value = value.option;
+      }
+      i++;
+    });
   }
 }
