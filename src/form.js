@@ -23,6 +23,11 @@ export class Form {
 
   hideForm() {
     document.getElementById('text_div').style.display = 'none';
+    let allWidgetPanel = document.getElementById(
+      '_all_widget_stuct_main_panel'
+    );
+    allWidgetPanel.style.display = 'grid';
+    allWidgetPanel.querySelector('nav').style.display = 'inline-block';
   }
 
   fillWithHtmlFromFile(fileName) {
@@ -70,11 +75,6 @@ export class Form {
       'click',
       function () {
         this.hideForm();
-        let allWidgetPanel = document.getElementById(
-          '_all_widget_stuct_main_panel'
-        );
-        allWidgetPanel.style.display = 'grid';
-        allWidgetPanel.querySelector('nav').style.display = 'inline-block';
         window.dispatchEvent(new Event('resize'));
       }.bind(this)
     );
