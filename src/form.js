@@ -281,7 +281,7 @@ export class Form {
   }
 
   travelToPosition(graphNode, view) {
-    try {
+    if (graphNode.position && graphNode.rotation) {
       const newCameraCoordinates = new THREE.Vector3(
         graphNode.position.x,
         graphNode.position.y,
@@ -299,8 +299,6 @@ export class Form {
         newCameraQuaternion,
         true
       );
-    } catch (error) {
-      console.log('No position or rotation');
     }
   }
 
