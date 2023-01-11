@@ -87,7 +87,16 @@ fetch('../assets/config/formConfig.json')
       entryPanel.appendChild(openVisitButton);
       document.body.appendChild(entryPanel);
 
+      const viewerDiv = document.getElementById('viewerDiv');
       const mediaPanel = new MediaPanel();
-      mediaPanel.setContent({ path: '../assets/form/01.txt' });
+
+      viewerDiv.addEventListener('mousedown', function (e) {
+        if (form.isClosed) {
+          const cityObject = app.view3D.layerManager.pickCityObject(e);
+          if (cityObject) {
+            mediaPanel.setContent({ path: '../assets/form/01.txt' });
+          }
+        }
+      });
     });
   });

@@ -5,6 +5,8 @@ export class MediaPanel {
     this.isDragged = false;
     this.initMainPanel();
     this.setDraggable();
+    this.mainPanel.style.display = 'none';
+    this.isClosed = true;
   }
 
   initMainPanel() {
@@ -20,9 +22,7 @@ export class MediaPanel {
     this.closeButton.addEventListener(
       'click',
       function () {
-        this.content = null;
-        this.contentPanel.innerHTML = '';
-        this.mainPanel.style.display = 'none';
+        this.closePanel();
       }.bind(this)
     );
 
@@ -38,7 +38,15 @@ export class MediaPanel {
       .then((text) => {
         this.contentPanel.innerHTML = text;
         this.mainPanel.style.display = 'flex';
+        this.isClosed = false;
       });
+  }
+
+  closePanel() {
+    this.content = null;
+    this.contentPanel.innerHTML = '';
+    this.mainPanel.style.display = 'none';
+    this.isClosed = true;
   }
 
   setDraggable() {
