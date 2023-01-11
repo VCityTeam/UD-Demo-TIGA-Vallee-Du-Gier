@@ -144,6 +144,7 @@ export class Form {
 
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
+    this.textPanel.classList.add('panel');
 
     this.formContainer = document.createElement('div');
     this.formContainer.id = 'form_container';

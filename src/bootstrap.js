@@ -1,6 +1,7 @@
 import * as udviz from 'ud-viz';
 import { addLabelLayers } from './labelLayer';
 import { Form } from './form';
+import { MediaPanel } from './mediaPanel';
 
 var link = document.createElement('link');
 link.rel = 'stylesheet';
@@ -85,5 +86,8 @@ fetch('../assets/config/formConfig.json')
       });
       entryPanel.appendChild(openVisitButton);
       document.body.appendChild(entryPanel);
+
+      const mediaPanel = new MediaPanel();
+      mediaPanel.setContent({ path: '../assets/form/01.txt' });
     });
   });

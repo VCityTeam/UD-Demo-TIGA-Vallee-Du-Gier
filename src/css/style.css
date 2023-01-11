@@ -26,13 +26,9 @@ h1 {
   position: absolute;
 }
 
-#text_panel {
-  width: 35%;
+.panel {
   background-color: rgba(255, 255, 255, 0.9);
-  position: relative;
-  z-index: 8;
   padding: 36px 0 10px 0;
-  margin: 3%;
   border-radius: 37px;
   border: solid 1px #707070;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,6 +42,53 @@ h1 {
   color: #707070;
   display: flex;
   flex-direction: column;
+  padding: 36px 0 10px 0;
+}
+
+#text_panel {
+  position: relative;
+  width: 35%;
+  z-index: 8;
+  margin: 3%;
+}
+
+#media_panel {
+  position: absolute;
+  width: 25%;
+  height: 70%;
+  z-index: 8;
+  left: 50%;
+  top: 10%;
+}
+
+#media_content_panel {
+  display: block;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0px 30px;
+}
+
+#media_panel_close {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-size: 35px;
+  line-height: 12px;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 1px black;
+  padding: 0;
+  cursor: pointer;
+}
+
+#media_panel_close:after {
+  content: "\00d7";
 }
 
 #form_container::-webkit-scrollbar {
