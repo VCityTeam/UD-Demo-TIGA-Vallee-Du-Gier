@@ -216,6 +216,7 @@ export class Form {
   }
 
   goToPreviousNode() {
+    this.saveInputValues(this.currentIndex);
     this.formContainer.innerHTML = '';
     let current = this.graph.nodes[this.currentIndex];
     let previous = this.graph.nodes[current.previous];
