@@ -1,7 +1,6 @@
 import * as udviz from 'ud-viz';
 import { addLabelLayers } from './labelLayer';
-import { Form } from './form';
-import { MediaPanel } from './mediaPanel';
+import { Visit } from './visit';
 
 var link = document.createElement('link');
 link.rel = 'stylesheet';
@@ -54,17 +53,15 @@ fetch('../assets/config/formConfig.json')
 
       addLabelLayers(config, app.view3D.getItownsView());
 
-      document.body.style.width = '100%';
-      document.body.style.display = 'block';
-
       let entryPanel = document.createElement('div');
       entryPanel.id = 'entry_panel';
+      document.body.appendChild(entryPanel);
 
-      const form = new Form(app.view3D.getItownsView());
+      const visit = new Visit(app.view3D);
 
-      json.graphs.forEach((graph) => {
+      json.visits.forEach((visitConfig) => {
         let button = document.createElement('button');
-        button.innerHTML = graph.name;
+        button.innerHTML = visitConfig.name;
         button.addEventListener('click', function () {
           entryPanel.style.display = 'none';
           let allWidgetPanel = document.getElementById(
@@ -73,7 +70,7 @@ fetch('../assets/config/formConfig.json')
           allWidgetPanel.style.display = 'block';
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
-          form.startForm(graph);
+          visit.start(visitConfig);
         });
         entryPanel.appendChild(button);
       });
@@ -82,21 +79,8 @@ fetch('../assets/config/formConfig.json')
       openVisitButton.innerHTML = 'Parcours libre';
       openVisitButton.addEventListener('click', function () {
         entryPanel.style.display = 'none';
-        form.hideForm();
+        visit.startOpenVisit();
       });
       entryPanel.appendChild(openVisitButton);
-      document.body.appendChild(entryPanel);
-
-      const viewerDiv = document.getElementById('viewerDiv');
-      const mediaPanel = new MediaPanel();
-
-      viewerDiv.addEventListener('mousedown', function (e) {
-        if (form.isClosed) {
-          const cityObject = app.view3D.layerManager.pickCityObject(e);
-          if (cityObject) {
-            mediaPanel.setContent({ path: '../assets/form/01.txt' });
-          }
-        }
-      });
     });
   });

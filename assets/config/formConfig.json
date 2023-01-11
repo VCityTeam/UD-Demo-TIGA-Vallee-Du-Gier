@@ -1,6 +1,7 @@
 {
-    "graphs": [
+    "visits": [
         {
+            "id": "P1",
             "name": "Parcours 1",
             "startIndex": 0,
             "endIndex": 3,
@@ -52,6 +53,7 @@
             ]
         },
         {
+            "id": "P2",
             "name": "Parcours 2",
             "startIndex": 0,
             "endIndex": 3,

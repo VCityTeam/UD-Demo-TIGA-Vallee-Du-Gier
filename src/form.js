@@ -1,84 +1,65 @@
-import { THREE } from 'ud-viz';
-
 export class Form {
-  constructor(view) {
+  constructor() {
     this.savedValues = [];
-    this.view = view;
     this.textPanel = null;
-    this.currentIndex = -1;
     this.isClosed = false;
     this.initTextPanel();
     this.initPreviousNextButtons();
     this.initCloseButton();
   }
 
-  resetForm() {
+  reset() {
     this.savedValues = [];
-    this.currentIndex = -1;
   }
 
-  displayForm() {
-    document.getElementById('text_div').style.display = 'flex';
-  }
-
-  hideForm() {
+  hide() {
     document.getElementById('text_div').style.display = 'none';
     let allWidgetPanel = document.getElementById(
       '_all_widget_stuct_main_panel'
     );
     allWidgetPanel.style.display = 'grid';
     allWidgetPanel.querySelector('nav').style.display = 'inline-block';
+    window.dispatchEvent(new Event('resize'));
   }
 
-  fillWithHtmlFromFile(fileName) {
+  start(nodeType, nodePath, nodeIndex) {
+    this.setButtonsStyle(true, false);
+    this.setWidth(nodeType);
+    this.fillWithHtmlFromFile(nodePath, nodeIndex);
+  }
+
+  setWidth(nodeType) {
+    this.textPanel.style.width = nodeType == 'half' ? '35%' : '100%';
+  }
+
+  setButtonsStyle(isStart, isEnd) {
+    this.previousButton.style.display = isStart ? 'none' : 'block';
+    this.nextButton.style.display = isEnd ? 'none' : 'block';
+  }
+
+  fillWithHtmlFromFile(fileName, nodeIndex) {
     fetch(fileName)
       .then((response) => response.text())
       .then((text) => {
         this.formContainer.innerHTML = text;
         this.addStyleEvents();
-        if (this.savedValues && this.savedValues[this.currentIndex])
-          this.loadSavedValues(this.currentIndex);
+        if (this.savedValues && this.savedValues[nodeIndex])
+          this.loadSavedValues(nodeIndex);
       });
   }
 
-  fillWithRecapValues(values) {
+  fillWithRecapValues(visitName) {
     const recapTitle = document.createElement('h1');
     recapTitle.innerHTML =
-      'Félicitations, vous avez terminé le parcours ' + this.graph.name + ' !';
+      'Félicitations, vous avez terminé le parcours ' + visitName + ' !';
     this.formContainer.appendChild(recapTitle);
 
-    values.forEach((array) => {
+    this.savedValues.forEach((array) => {
       this.formContainer.appendChild(
         document.createTextNode(array.map((v) => v.text).join('; '))
       );
       this.formContainer.appendChild(document.createElement('br'));
     });
-
-    const restartButton = document.createElement('button');
-    restartButton.id = 'restart_button';
-    restartButton.classList.add('recap-button');
-    restartButton.innerHTML = 'Recommencer';
-    restartButton.addEventListener(
-      'click',
-      function () {
-        this.resetForm();
-        document.getElementById('entry_panel').style.display = 'block';
-      }.bind(this)
-    );
-    this.formContainer.appendChild(restartButton);
-
-    const visitButton = document.createElement('button');
-    visitButton.id = 'visit_button';
-    visitButton.classList.add('recap-button');
-    visitButton.innerHTML = 'Visite Libre';
-    visitButton.addEventListener(
-      'click',
-      function () {
-        this.hideForm();
-        window.dispatchEvent(new Event('resize'));
-      }.bind(this)
-    );
-    this.formContainer.appendChild(visitButton);
   }
 
   addStyleEvents() {
@@ -158,41 +139,17 @@ export class Form {
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
     this.previousButton.classList.add('arrow_button', 'button_left');
-    this.previousButton.addEventListener(
-      'click',
-      function () {
-        this.goToPreviousNode();
-      }.bind(this)
-    );
-
     this.textPanel.appendChild(this.previousButton);
 
     this.nextButton = document.createElement('button');
     this.nextButton.id = 'Next_button';
     this.nextButton.classList.add('arrow_button', 'button_right');
-    this.nextButton.addEventListener(
-      'click',
-      function () {
-        this.goToNextNode();
-      }.bind(this)
-    );
-
     this.textPanel.appendChild(this.nextButton);
   }
 
   initCloseButton() {
     this.closeButton = document.createElement('button');
     this.closeButton.id = 'close_button';
-    this.closeButton.addEventListener(
-      'click',
-      function () {
-        if (this.isClosed) {
-          this.openTextPanel();
-        } else {
-          this.closeTextPanel();
-        }
-      }.bind(this)
-    );
 
     const arrow = document.createElement('div');
     arrow.id = 'close_arrow';
@@ -201,59 +158,18 @@ export class Form {
     this.textPanel.appendChild(this.closeButton);
   }
 
-  startForm(graph) {
-    this.graph = graph;
-    this.currentIndex = this.graph.startIndex;
-    const start = this.graph.nodes[this.currentIndex];
-    if (start.type == 'half') {
-      this.textPanel.style.width = '35%';
-    } else {
-      this.textPanel.style.width = '100%';
-    }
-    this.previousButton.style.display = 'none';
-    this.nextButton.style.display = 'block';
-    this.fillWithHtmlFromFile(start.path, this.textPanel);
-    this.travelToPosition(start, this.view);
-  }
+  initRecapButtons() {
+    this.restartButton = document.createElement('button');
+    this.restartButton.id = 'restart_button';
+    this.restartButton.classList.add('recap-button');
+    this.restartButton.innerHTML = 'Recommencer';
+    this.formContainer.appendChild(this.restartButton);
 
-  goToPreviousNode() {
-    this.saveInputValues(this.currentIndex);
-    this.formContainer.innerHTML = '';
-    let current = this.graph.nodes[this.currentIndex];
-    let previous = this.graph.nodes[current.previous];
-    if (previous.type == 'half') {
-      this.textPanel.style.width = '35%';
-    } else {
-      this.textPanel.style.width = '100%';
-    }
-    if (current.previous == this.graph.startIndex) {
-      this.previousButton.style.display = 'none';
-    }
-    this.nextButton.style.display = 'block';
-    this.fillWithHtmlFromFile(previous.path, this.textPanel);
-    this.travelToPosition(previous, this.view);
-    this.currentIndex = current.previous;
-  }
-
-  goToNextNode() {
-    this.saveInputValues(this.currentIndex);
-    this.formContainer.innerHTML = '';
-    let current = this.graph.nodes[this.currentIndex];
-    let next = this.graph.nodes[current.next];
-    if (next.type == 'half') {
-      this.textPanel.style.width = '35%';
-    } else {
-      this.textPanel.style.width = '100%';
-    }
-    if (current.next == this.graph.endIndex) {
-      this.nextButton.style.display = 'none';
-      this.fillWithRecapValues(this.savedValues);
-    } else {
-      this.previousButton.style.display = 'block';
-      this.fillWithHtmlFromFile(next.path, this.textPanel);
-      this.travelToPosition(next, this.view);
-    }
-    this.currentIndex = current.next;
+    this.visitButton = document.createElement('button');
+    this.visitButton.id = 'visit_button';
+    this.visitButton.classList.add('recap-button');
+    this.visitButton.innerHTML = 'Visite Libre';
+    this.formContainer.appendChild(this.visitButton);
   }
 
   closeTextPanel() {
@@ -267,40 +183,14 @@ export class Form {
     this.isClosed = true;
   }
 
-  openTextPanel() {
-    const currentNode = this.graph.nodes[this.currentIndex];
-    this.textPanel.style.width = currentNode.type == 'half' ? '35%' : '100%';
+  openTextPanel(nodeType, isStart, isEnd) {
+    this.setWidth(nodeType);
     this.formContainer.style.display = 'block';
-    if (this.currentIndex != this.graph.startIndex)
-      this.previousButton.style.display = 'block';
-    if (this.currentIndex != this.graph.endIndex)
-      this.nextButton.style.display = 'block';
+    this.setButtonsStyle(isStart, isEnd);
     this.closeButton.firstChild.style.transform = 'rotate(135deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
     this.closeButton.firstChild.style.left = '14px';
     this.isClosed = false;
-  }
-
-  travelToPosition(graphNode, view) {
-    if (graphNode.position && graphNode.rotation) {
-      const newCameraCoordinates = new THREE.Vector3(
-        graphNode.position.x,
-        graphNode.position.y,
-        graphNode.position.z
-      );
-      const newCameraQuaternion = new THREE.Quaternion(
-        graphNode.rotation.x,
-        graphNode.rotation.y,
-        graphNode.rotation.z,
-        graphNode.rotation.w
-      );
-      view.controls.initiateTravel(
-        newCameraCoordinates,
-        'auto',
-        newCameraQuaternion,
-        true
-      );
-    }
   }
 
   saveInputValues(nodeIndex) {
