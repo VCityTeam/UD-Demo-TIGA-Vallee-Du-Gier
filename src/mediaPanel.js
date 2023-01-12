@@ -31,15 +31,36 @@ export class MediaPanel {
     document.body.appendChild(this.mainPanel);
   }
 
-  setContent(mediaContent) {
-    this.content = mediaContent;
-    fetch(this.content.path)
-      .then((response) => response.text())
-      .then((text) => {
-        this.contentPanel.innerHTML = text;
-        this.mainPanel.style.display = 'flex';
-        this.isClosed = false;
-      });
+  setContent(media) {
+    this.contentPanel.innerHTML = '';
+    if (media.name) {
+      const mediaTitle = document.createElement('h1');
+      mediaTitle.innerHTML = media.name;
+      this.contentPanel.appendChild(mediaTitle);
+    }
+    media.contents.forEach((content) => {
+      switch (content.type) {
+        case 'text':
+          this.contentPanel.appendChild(document.createTextNode(content.value));
+          break;
+        case 'video':
+          const video = document.createElement('video');
+          video.src = content.value;
+          video.controls = true;
+          video.muted = false;
+          this.contentPanel.appendChild(video);
+          break;
+        case 'image':
+          const img = document.createElement('img');
+          img.src = content.value;
+          this.contentPanel.appendChild(img);
+          break;
+        default:
+          console.log('Unkown media type');
+      }
+    });
+    this.mainPanel.style.display = 'flex';
+    this.isClosed = false;
   }
 
   closePanel() {

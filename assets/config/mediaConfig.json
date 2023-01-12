@@ -6,12 +6,16 @@
             "name": "Nom du media",
             "contents": [
                 {
-                    "type": "raw_text",
-                    "value": "Description du media"
+                    "type": "text",
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate."
                 },
                 {
                     "type": "image",
                     "value": "../assets/media/images/LABEX_IMU-COUL-PNG.png"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
                 }
             ]
         },
@@ -22,11 +26,26 @@
             "contents": [
                 {
                     "type": "text",
-                    "value": "Description du media"
+                    "value": "Aliquam ultrices sagittis orci a scelerisque purus. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Laoreet id donec ultrices tincidunt arcu non sodales neque. Nibh cras pulvinar mattis nunc. Id volutpat lacus laoreet non curabitur gravida. Mollis aliquam ut porttitor leo a."
                 },
                 {
                     "type": "video",
                     "value": "../assets/media/videos/demo_colors.mp4"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/bug_select.gif"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
                 }
             ]
         }

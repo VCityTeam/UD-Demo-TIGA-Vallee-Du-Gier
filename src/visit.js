@@ -69,7 +69,7 @@ export class Visit {
             (m) => m.parent_id == cityObject.props.id
           );
           if (media) {
-            this.mediaPanel.setContent({ path: '../assets/form/01.txt' });
+            this.mediaPanel.setContent(media);
           }
         }
       }.bind(this)
@@ -90,6 +90,7 @@ export class Visit {
 
   startOpenVisit() {
     this.id = 'OPEN';
+    this.currentIndex = 0;
     this.form.hide();
     this.allowedMedias = this.medias;
   }
