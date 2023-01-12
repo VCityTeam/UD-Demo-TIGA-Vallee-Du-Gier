@@ -19,10 +19,10 @@
     }
   ],
   "extents": {
-    "min_x": "1806000",
-    "max_x": "1839000",
-    "min_y": "5119000",
-    "max_y": "5166000"
+    "min_x": "1750000",
+    "max_x": "1895000",
+    "min_y": "5089000",
+    "max_y": "5216000"
   },
   "projection": "EPSG:3946",
   "maxSubdivisionLevel": 15,
