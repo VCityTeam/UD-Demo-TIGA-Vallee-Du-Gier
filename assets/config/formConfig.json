@@ -5,6 +5,10 @@
             "name": "Parcours 1",
             "startIndex": 0,
             "endIndex": 3,
+            "medias": [
+                "0",
+                "1"
+            ],
             "nodes": [
                 {
                     "path": "../assets/form/01.txt",
@@ -57,6 +61,9 @@
             "name": "Parcours 2",
             "startIndex": 0,
             "endIndex": 3,
+            "medias": [
+                "0"
+            ],
             "nodes": [
                 {
                     "path": "../assets/form/03.txt",

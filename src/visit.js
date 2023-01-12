@@ -3,9 +3,11 @@ import { MediaPanel } from './mediaPanel';
 import { THREE } from 'ud-viz';
 
 export class Visit {
-  constructor(view) {
+  constructor(view, medias) {
     this.id = 'NONE';
     this.config = null;
+    this.medias = medias;
+    this.allowedMedias = null;
     this.currentIndex = 0;
     this.view = view;
 
@@ -63,7 +65,12 @@ export class Visit {
       function (e) {
         const cityObject = this.view.layerManager.pickCityObject(e);
         if (cityObject) {
-          this.mediaPanel.setContent({ path: '../assets/form/01.txt' });
+          const media = this.allowedMedias.find(
+            (m) => m.parent_id == cityObject.props.id
+          );
+          if (media) {
+            this.mediaPanel.setContent({ path: '../assets/form/01.txt' });
+          }
         }
       }.bind(this)
     );
@@ -73,6 +80,9 @@ export class Visit {
     this.config = visitConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
+    this.allowedMedias = this.medias.filter((media) =>
+      this.config.medias.includes(media.id)
+    );
     const startNode = this.config.nodes[this.currentIndex];
     this.form.start(startNode.type, startNode.path, this.currentIndex);
     this.travelToPosition(startNode, this.view);
@@ -81,6 +91,7 @@ export class Visit {
   startOpenVisit() {
     this.id = 'OPEN';
     this.form.hide();
+    this.allowedMedias = this.medias;
   }
 
   reset() {
@@ -91,6 +102,7 @@ export class Visit {
   }
 
   goToPreviousNode() {
+    this.mediaPanel.closePanel();
     this.form.saveInputValues(this.currentIndex);
     this.form.formContainer.innerHTML = '';
     let current = this.getNode();
@@ -103,6 +115,7 @@ export class Visit {
   }
 
   goToNextNode() {
+    this.mediaPanel.closePanel();
     this.form.saveInputValues(this.currentIndex);
     this.form.formContainer.innerHTML = '';
     let current = this.getNode();

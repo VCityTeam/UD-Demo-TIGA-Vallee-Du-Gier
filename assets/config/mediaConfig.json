@@ -1,0 +1,34 @@
+{
+    "medias": [
+        {
+            "id": "0",
+            "parent_id": "BATIMENT0000000317424578",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "raw_text",
+                    "value": "Description du media"
+                },
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/LABEX_IMU-COUL-PNG.png"
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "parent_id": "BATIMENT0000000317420383",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "text",
+                    "value": "Description du media"
+                },
+                {
+                    "type": "video",
+                    "value": "../assets/media/videos/demo_colors.mp4"
+                }
+            ]
+        }
+    ]
+}
