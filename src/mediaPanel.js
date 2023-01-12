@@ -75,7 +75,6 @@ export class MediaPanel {
     this.mainPanel.addEventListener(
       'mousedown',
       function (e) {
-        e = e || window.event;
         e.preventDefault();
         this.pos.x = e.clientX;
         this.pos.y = e.clientY;
@@ -110,6 +109,7 @@ export class MediaPanel {
       function () {
         this.mainPanel.style.top = '10%';
         this.mainPanel.style.right = '0%';
+        this.mainPanel.style.removeProperty('left');
       }.bind(this)
     );
   }
