@@ -39,25 +39,25 @@ export class MediaPanel {
       this.contentPanel.appendChild(mediaTitle);
     }
     media.contents.forEach((content) => {
+      let child = null;
       switch (content.type) {
         case 'text':
-          this.contentPanel.appendChild(document.createTextNode(content.value));
+          child = document.createTextNode(content.value);
           break;
         case 'video':
-          const video = document.createElement('video');
-          video.src = content.value;
-          video.controls = true;
-          video.muted = false;
-          this.contentPanel.appendChild(video);
+          child = document.createElement('video');
+          child.src = content.value;
+          child.controls = true;
+          child.muted = false;
           break;
         case 'image':
-          const img = document.createElement('img');
-          img.src = content.value;
-          this.contentPanel.appendChild(img);
+          child = document.createElement('img');
+          child.src = content.value;
           break;
         default:
           console.log('Unkown media type');
       }
+      this.contentPanel.appendChild(child);
     });
     this.mainPanel.style.display = 'flex';
     this.isClosed = false;
@@ -100,7 +100,7 @@ export class MediaPanel {
 
     this.mainPanel.addEventListener(
       'mouseup',
-      function (e) {
+      function () {
         this.isDragged = false;
       }.bind(this)
     );
