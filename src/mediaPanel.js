@@ -109,7 +109,7 @@ export class MediaPanel {
       'resize',
       function () {
         this.mainPanel.style.top = '10%';
-        this.mainPanel.style.left = '50%';
+        this.mainPanel.style.right = '0%';
       }.bind(this)
     );
   }

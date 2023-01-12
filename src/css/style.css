@@ -68,7 +68,7 @@ video {
   width: 25%;
   height: 70%;
   z-index: 7;
-  left: 50%;
+  right: 0%;
   top: 10%;
 }
 
