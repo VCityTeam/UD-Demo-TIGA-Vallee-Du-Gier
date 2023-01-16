@@ -81,6 +81,10 @@ video {
   margin: 0px 30px;
 }
 
+#media_content_panel::-webkit-scrollbar {
+  display: none;
+}
+
 #media_panel_close {
   display: flex;
   justify-content: center;
