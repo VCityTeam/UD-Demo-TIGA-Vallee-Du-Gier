@@ -83,6 +83,7 @@ export class Visit {
     this.allowedMedias = this.medias.filter((media) =>
       this.config.medias.includes(media.id)
     );
+    this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
     const startNode = this.config.nodes[this.currentIndex];
     this.form.start(startNode.type, startNode.path, this.currentIndex);
     this.travelToPosition(startNode, this.view);
@@ -93,6 +94,7 @@ export class Visit {
     this.currentIndex = 0;
     this.form.hide();
     this.allowedMedias = this.medias;
+    this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
   }
 
   reset() {
@@ -168,5 +170,30 @@ export class Visit {
           true
         );
     }
+  }
+
+  applyStyleToParents(parentIds) {
+    this.view.layerManager.tilesManagers.forEach((tilesManager) => {
+      tilesManager.tiles.forEach((tile) => {
+        if (tile.cityObjects != null) {
+          tile.cityObjects.forEach((cityObject) => {
+            if (parentIds.includes(cityObject.props.id)) {
+              tilesManager.setStyle(cityObject.cityObjectId, {
+                materialProps: {
+                  color: 0xff0000,
+                  emissive: 0x00ff00,
+                  emissiveIntensity: 0.1,
+                },
+              });
+              tilesManager.applyStyles({
+                updateFunction: tilesManager.view.notifyChange.bind(
+                  tilesManager.view
+                ),
+              });
+            }
+          });
+        }
+      });
+    });
   }
 }
