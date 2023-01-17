@@ -92,7 +92,7 @@ Promise.all(list).then(function () {
       });
       let description = document.createElement('p');
       description.classList.add('visit_desc');
-      description.innerHTML = 'Description';
+      description.innerHTML = visitConfig.description;
       visitDiv.appendChild(button);
       visitDiv.appendChild(description);
       entryPanel.appendChild(visitDiv);
@@ -109,7 +109,7 @@ Promise.all(list).then(function () {
     });
     let openVisitDescription = document.createElement('p');
     openVisitDescription.classList.add('visit_desc');
-    openVisitDescription.innerHTML = 'Description';
+    openVisitDescription.innerHTML = 'Visite libre de la Vallée du Gier <br> Accès à tous les médias';
     openVisitDiv.appendChild(openVisitButton);
     openVisitDiv.appendChild(openVisitDescription);
     entryPanel.appendChild(openVisitDiv);
