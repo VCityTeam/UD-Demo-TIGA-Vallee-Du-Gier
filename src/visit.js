@@ -182,7 +182,7 @@ export class Visit {
                 materialProps: {
                   color: 0xff0000,
                   emissive: 0x00ff00,
-                  emissiveIntensity: 0.1,
+                  emissiveIntensity: 0.2,
                 },
               });
               tilesManager.applyStyles({
