@@ -75,7 +75,10 @@ Promise.all(list).then(function () {
     const visit = new Visit(app.view3D, mediaConfig.medias);
 
     formConfig.visits.forEach((visitConfig) => {
+      let visitDiv = document.createElement('div');
+      visitDiv.classList.add('visit_div');
       let button = document.createElement('button');
+      button.classList.add('visit_button');
       button.innerHTML = visitConfig.name;
       button.addEventListener('click', function () {
         entryPanel.style.display = 'none';
@@ -87,15 +90,28 @@ Promise.all(list).then(function () {
         window.dispatchEvent(new Event('resize'));
         visit.start(visitConfig);
       });
-      entryPanel.appendChild(button);
+      let description = document.createElement('p');
+      description.classList.add('visit_desc');
+      description.innerHTML = 'Description';
+      visitDiv.appendChild(button);
+      visitDiv.appendChild(description);
+      entryPanel.appendChild(visitDiv);
     });
 
+    let openVisitDiv = document.createElement('div');
+    openVisitDiv.classList.add('visit_div');
     let openVisitButton = document.createElement('button');
+    openVisitButton.classList.add('visit_button');
     openVisitButton.innerHTML = 'Parcours libre';
     openVisitButton.addEventListener('click', function () {
       entryPanel.style.display = 'none';
       visit.startOpenVisit();
     });
-    entryPanel.appendChild(openVisitButton);
+    let openVisitDescription = document.createElement('p');
+    openVisitDescription.classList.add('visit_desc');
+    openVisitDescription.innerHTML = 'Description';
+    openVisitDiv.appendChild(openVisitButton);
+    openVisitDiv.appendChild(openVisitDescription);
+    entryPanel.appendChild(openVisitDiv);
   });
 });

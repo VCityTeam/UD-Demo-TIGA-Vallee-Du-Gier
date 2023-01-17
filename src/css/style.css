@@ -18,8 +18,9 @@ video {
 }
 
 #entry_panel {
-  float: left;
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -27,6 +28,47 @@ video {
   top: 0;
   left: 0;
   z-index: 50002; /* Because z-index = 50001 is the widgets nav */
+}
+
+.visit_div {
+  display: grid;
+  padding: 10px;
+  position: relative;
+  height: 100%;
+  grid-template-rows: 2fr 1fr;
+  border: solid 1px #bfbfbf;
+}
+
+.visit_button {
+  height: 100px;
+  width: 60%;
+  place-self: center;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  background-color: #a5a5a5;
+  border: solid 1px #bfbfbf;
+  cursor: pointer;
+}
+
+.visit_button:hover {
+  background-color: #929292;
+}
+
+.visit_desc {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+  color: #707070;
+  align-self: start;
 }
 
 #text_div {
