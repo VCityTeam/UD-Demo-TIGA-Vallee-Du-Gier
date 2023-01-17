@@ -39,11 +39,11 @@ video {
 }
 
 .visit_button {
-  height: 100px;
+  height: 40%;
   width: 60%;
   place-self: center;
   margin: 0;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: #fff;
