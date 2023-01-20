@@ -22,7 +22,6 @@ jobs:
         - npm install && npm run travis
     - stage: "Markdown link checks"
       language: node_js
-      node_js: 12
       script:
         - npm install --global remark-cli remark-validate-links
         - remark -u validate-links .
