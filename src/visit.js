@@ -133,7 +133,7 @@ export class Visit {
         'click',
         function () {
           this.reset();
-          document.getElementById('entry_panel').style.display = 'block';
+          document.getElementById('entry_panel').style.display = 'grid';
         }.bind(this)
       );
       this.form.visitButton.addEventListener(
