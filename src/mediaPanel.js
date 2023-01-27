@@ -54,6 +54,12 @@ export class MediaPanel {
           child = document.createElement('img');
           child.src = content.value;
           break;
+        case 'audio':
+          child = document.createElement('audio');
+          child.src = content.value;
+          child.controls = true;
+          child.muted = false;
+          break;
         default:
           console.log('Unkown media type');
       }
