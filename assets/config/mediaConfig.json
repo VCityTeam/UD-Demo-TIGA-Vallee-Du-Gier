@@ -56,7 +56,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE1_AcieriesMarine.jpg"
+                    "value": "../assets/media/images/IMAGE2_AcieriesMarine.jpg"
                 },
                 {
                     "type": "text",
@@ -95,9 +95,8 @@
             ]
         },
         {
-            "id": "IMAGE3",
+            "id": "IMAGE5",
             "parent_id": "BATIMENT0000000317419788",
-            "name": "Nom du media",
             "contents": [
                 {
                     "type": "image",
@@ -105,22 +104,25 @@
                 },
                 {
                     "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                    "value": "La démolition des bâtiments de l'ancienne verrerie a débuté en 2021. Saint-Etienne Métropole y porte un projet de nouveau quartier récréatif et économique, valorisant le Gier.<br><a href'https://patrimoine.auvergnerhonealpes.fr/dossier/verrerie-de-rive-de-gier-actuellement-verrerie-duralex/8deec39f-cfe0-4710-be4b-d02e3e7489b7'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>"
                 }
             ]
         },
         {
-            "id": "IMAGE4",
+            "id": "IMAGE6",
             "parent_id": "BATIMENT0000000317419788",
-            "name": "Nom du media",
             "contents": [
                 {
                     "type": "image",
                     "value": "../assets/media/images/IMAGE4_Duralex.jpg"
                 },
                 {
+                    "type": "image",
+                    "value": "../assets/media/images/Gier.jpg"
+                },
+                {
                     "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                    "value": "Photographies des auteurs, septembre 2022"
                 }
             ]
         }

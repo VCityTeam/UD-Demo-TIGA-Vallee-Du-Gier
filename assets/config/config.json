@@ -15,7 +15,7 @@
     {
       "id": "BATI-INDUS",
       "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Demo/UD-Demo-TIGA-Vallee-Du-Gier/Vallee_Du_Gier_BAT_INDUS_2022/tileset.json",
-      "color": "0xFF0000"
+      "color": "0x010101"
     }
   ],
   "extents": {

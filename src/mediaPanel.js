@@ -42,7 +42,8 @@ export class MediaPanel {
       let child = null;
       switch (content.type) {
         case 'text':
-          child = document.createTextNode(content.value);
+          child = document.createElement('p');
+          child.innerHTML = content.value;
           break;
         case 'video':
           child = document.createElement('video');

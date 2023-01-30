@@ -112,10 +112,10 @@ video {
 #media_panel {
   position: absolute;
   width: 25%;
-  height: 70%;
+  height: auto;
   z-index: 7;
   right: 0%;
-  top: 10%;
+  top: 5%;
 }
 
 #media_content_panel {

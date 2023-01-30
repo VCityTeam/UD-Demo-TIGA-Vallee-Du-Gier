@@ -115,6 +115,7 @@ export class Visit {
     this.form.setWidth(previous.type);
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
     this.form.fillWithHtmlFromFile(previous.path, this.currentIndex);
+    this.setMedia(previous);
     this.filterLayers(previous.layers);
     this.travelToPosition(previous, this.view);
   }
@@ -128,6 +129,7 @@ export class Visit {
     this.currentIndex = current.next;
     this.form.setWidth(next.type);
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
+    this.filterLayers(next.layers);
     if (this.isEnd()) {
       this.form.fillWithRecapValues(this.config.name);
       this.form.initRecapButtons();
@@ -145,8 +147,8 @@ export class Visit {
         }.bind(this)
       );
     } else {
+      this.setMedia(next);
       this.form.fillWithHtmlFromFile(next.path, this.currentIndex);
-      this.filterLayers(next.layers);
       this.travelToPosition(next, this.view);
     }
   }
@@ -204,5 +206,14 @@ export class Visit {
     this.view.layerManager.getLayers().forEach((layer) => {
       layer.visible = layerIds.includes(layer.id) || layer.id == 'planar';
     });
+  }
+
+  setMedia(node) {
+    if (node.media) {
+      const media = this.medias.find((m) => m.id == node.media);
+      if (media) {
+        this.mediaPanel.setContent(media);
+      }
+    }
   }
 }
