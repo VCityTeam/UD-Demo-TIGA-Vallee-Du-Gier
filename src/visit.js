@@ -86,6 +86,7 @@ export class Visit {
     this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
     const startNode = this.config.nodes[this.currentIndex];
     this.form.start(startNode.type, startNode.path, this.currentIndex);
+    this.filterLayers(startNode.layers);
     this.travelToPosition(startNode, this.view);
   }
 
@@ -114,6 +115,7 @@ export class Visit {
     this.form.setWidth(previous.type);
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
     this.form.fillWithHtmlFromFile(previous.path, this.currentIndex);
+    this.filterLayers(previous.layers);
     this.travelToPosition(previous, this.view);
   }
 
@@ -144,6 +146,7 @@ export class Visit {
       );
     } else {
       this.form.fillWithHtmlFromFile(next.path, this.currentIndex);
+      this.filterLayers(next.layers);
       this.travelToPosition(next, this.view);
     }
   }
@@ -194,6 +197,12 @@ export class Visit {
           });
         }
       });
+    });
+  }
+
+  filterLayers(layerIds) {
+    this.view.layerManager.getLayers().forEach((layer) => {
+      layer.visible = layerIds.includes(layer.id) || layer.id == 'planar';
     });
   }
 }

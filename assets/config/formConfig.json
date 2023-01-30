@@ -138,6 +138,7 @@
                     "previous": 0,
                     "next": 1,
                     "type": "half",
+                    "layers": ["baseMapLayer_0", "communes", "noms_communes", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1815137.4389101316,
                         "y": 5120561.345129335,
@@ -155,6 +156,7 @@
                     "previous": 0,
                     "next": 2,
                     "type": "half",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1822544.8781920606,
                         "y": 5146771.966404134,
@@ -172,6 +174,7 @@
                     "previous": 1,
                     "next": 3,
                     "type": "half",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1826994.082722922,
                         "y": 5148316.617360813,
@@ -189,6 +192,7 @@
                     "previous": 2,
                     "next": 4,
                     "type": "half",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1826349.3333048907,
                         "y": 5148918.221996138,
@@ -206,6 +210,7 @@
                     "previous": 3,
                     "next": 5,
                     "type": "half",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1826349.3333048907,
                         "y": 5148918.221996138,
@@ -223,6 +228,7 @@
                     "previous": 4,
                     "next": 6,
                     "type": "half",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
                     "position": {
                         "x": 1820451.0500528857,
                         "y": 5139918.123418849,
@@ -234,6 +240,11 @@
                         "z": 0.0387968639385165,
                         "w": 0.9790546158678398
                     }
+                },
+                {
+                    "previous": 5,
+                    "type": "full",
+                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"]
                 }
             ]
         }

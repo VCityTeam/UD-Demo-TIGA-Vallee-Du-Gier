@@ -42,6 +42,15 @@ Promise.all(list).then(function () {
     const layerChoice = new udviz.Widgets.LayerChoice(app.view3D.layerManager);
     app.addModuleView('layerChoice', layerChoice);
 
+    ////// BaseMap Widget
+    const baseMap = new udviz.Widgets.BaseMap(
+      app.view3D.getItownsView(),
+      config['baseMapLayers'],
+      app.extent,
+      app.config['projection']
+    );
+    app.addModuleView('baseMap', baseMap);
+
     addLabelLayers(config, app.view3D.getItownsView());
 
     let entryPanel = document.createElement('div');
