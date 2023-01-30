@@ -48,6 +48,81 @@
                     "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
                 }
             ]
+        },
+        {
+            "id": "IMAGE1",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/IMAGE1_AcieriesMarine.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                }
+            ]
+        },
+        {
+            "id": "IMAGE2",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                }
+            ]
+        },
+        {
+            "id": "IMAGE2_5",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                }
+            ]
+        },
+        {
+            "id": "IMAGE3",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/IMAGE3_Duralex.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                }
+            ]
+        },
+        {
+            "id": "IMAGE4",
+            "parent_id": "BATIMENT0000000317419788",
+            "name": "Nom du media",
+            "contents": [
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/IMAGE4_Duralex.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
+                }
+            ]
         }
     ]
 }

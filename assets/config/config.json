@@ -96,7 +96,6 @@
         "text": {
           "field": "{RaisonSoci}",
           "color": "rgb(255,150,150)",
-          "transform": "uppercase",
           "size": 15,
           "haloColor": "rgba(20,20,20, 0.8)",
           "haloWidth": 3

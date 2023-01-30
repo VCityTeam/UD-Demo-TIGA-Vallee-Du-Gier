@@ -1,0 +1,7 @@
+<div class="rendered-form">
+    <p>
+    Les laminoirs du Couzon à Rive de Gier, entre friche patrimoniale à valoriser et maintien discret d'une exploitation industriel.
+<br><br>
+    Cliquez sur chacune des photographies pour découvrir les éléments patrimoniaux des laminoirs (son portail, ses halles, ses rails).
+    </p>
+</div>

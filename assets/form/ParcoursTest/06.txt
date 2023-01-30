@@ -1,0 +1,7 @@
+<div class="rendered-form">
+    <p>
+    Ce territoire de forte tradition industrielle n’en reste pas moins encore productif et innovant, notamment en raison de l’implantation d’un tissu dense de petites entreprises métallurgiques, mécanique et textiles.
+    <br>Les activités productives se donnent à voir dans le paysage par une succession de zones d’activités économiques héritées et plus récentes en fond de vallée. <br><br>
+    Cliquez pour découvrir les 20 premiers établissements de la vallée (en effectif).
+    </p>
+</div>
