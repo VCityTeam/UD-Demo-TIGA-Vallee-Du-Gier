@@ -137,6 +137,7 @@
                 {
                     "type": "pin",
                     "value": "./assets/media/images/IMAGE1_HallesCouzon.jpg",
+                    "caption": "Portail des laminoirs, actuelle entrée de l'entreprise de métallurgie-mécanique Valmont.<br>Photographie des auteurs, septembre 2022",
                     "position": {
                         "x": 1826924.6322969063,
                         "y": 5148677.232349239,
@@ -146,6 +147,7 @@
                 {
                     "type": "pin",
                     "value": "./assets/media/images/IMAGE2_HallesCouzon.jpg",
+                    "caption": "Grande Halle à la charpente en bois construite dans l'entre-deux-guerres, en attente de réaffectation.<br><a href='https://patrimoine.auvergnerhonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
                     "position": {
                         "x": 1826915.8258778045,
                         "y": 5148571.276805021,
@@ -155,6 +157,7 @@
                 {
                     "type": "pin",
                     "value": "./assets/media/images/IMAGE3_HallesCouzon.jpg",
+                    "caption": "Extérieur de la grande halle des laminoirs du Couzon.<br><a href='https://patrimoine.auvergnerhonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
                     "position": {
                         "x": 1826959.549938517,
                         "y": 5148570.043722836,
@@ -164,6 +167,7 @@
                 {
                     "type": "pin",
                     "value": "./assets/media/images/IMAGE4_HallesCouzon.jpg",
+                    "caption": "L'entreprise Valmont spécialisée dans la production de mats d'éclairage en acier (occupe une vaste partie du site).<br>Photographie des auteurs, septembre 2022",
                     "position": {
                         "x": 1826890.4822390038,
                         "y": 5148805.353186624,

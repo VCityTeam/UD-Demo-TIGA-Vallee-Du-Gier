@@ -11,6 +11,16 @@ export class MediaPanel {
     this.mainPanel.style.display = 'none';
     this.pins = [];
     this.isClosed = true;
+    this.fsImageDisplayed = false;
+    document.body.addEventListener('click', (event) => {
+      if (!this.fsImageDisplayed && this.pins.length > 0) {
+        this.clickOnPin(event);
+        this.fsImageDisplayed = true;
+      } else if (this.fsImageDisplayed) {
+        document.getElementById('fs_image_background').remove();
+        this.fsImageDisplayed = false;
+      }
+    });
   }
 
   initMainPanel() {
@@ -144,6 +154,7 @@ export class MediaPanel {
         sizeAttenuation: true,
       });
       const sprite = new THREE.Sprite(pictureMaterial);
+      sprite.userData = { image: content.value, caption: content.caption };
 
       sprite.position.set(
         content.position.x,
@@ -160,5 +171,33 @@ export class MediaPanel {
       this.view.getScene().add(sprite);
       this.pins.push(sprite);
     });
+  }
+
+  clickOnPin(event) {
+    let raycaster = new THREE.Raycaster();
+    let mouse3D = new THREE.Vector3(
+      (event.clientX / window.innerWidth) * 2 - 1,
+      -(event.clientY / window.innerHeight) * 2 + 1,
+      0.5
+    );
+    raycaster.setFromCamera(mouse3D, this.view.getCamera());
+    let intersects = raycaster.intersectObjects(this.pins);
+    if (intersects.length > 0) {
+      const sprite = intersects[0].object;
+      const background = document.createElement('div');
+      background.id = 'fs_image_background';
+
+      const image = document.createElement('img');
+      image.classList.add('fs_image');
+      image.src = sprite.userData.image;
+      background.appendChild(image);
+
+      const caption = document.createElement('p');
+      caption.classList.add('fs_image_caption', 'panel');
+      caption.innerHTML = sprite.userData.caption;
+      background.appendChild(caption);
+
+      document.body.appendChild(background);
+    }
   }
 }
