@@ -335,6 +335,9 @@ video {
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 9;
+  display: flex;
+  height: -webkit-fill-available;
+  height: -moz-available; /* TO FIX */
 }
 
 .fs_image_caption {
