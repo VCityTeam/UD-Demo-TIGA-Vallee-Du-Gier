@@ -1,131 +1,6 @@
 {
     "visits": [
         {
-            "id": "P1",
-            "name": "Parcours 1",
-            "description": "Description du Parcours 1",
-            "startIndex": 0,
-            "endIndex": 3,
-            "medias": [
-                "0",
-                "1",
-                "2"
-            ],
-            "nodes": [
-                {
-                    "path": "./assets/form/01.txt",
-                    "previous": 0,
-                    "next": 1,
-                    "type": "full"
-                },
-                {
-                    "path": "./assets/form/02.txt",
-                    "previous": 0,
-                    "next": 2,
-                    "type": "half",
-                    "position": {
-                        "x": 1819972.2564841579,
-                        "y": 5142359.305112128,
-                        "z": 1551.8208461951795
-                    },
-                    "rotation": {
-                        "x": 0.48809164844536335,
-                        "y": -0.07255865325134192,
-                        "z": -0.12789286028412,
-                        "w": 0.8603169188412988
-                    }
-                },
-                {
-                    "path": "./assets/form/03.txt",
-                    "previous": 1,
-                    "next": 3,
-                    "type": "half",
-                    "position": {
-                        "x": 1822710.2848260512,
-                        "y": 5146615.931828531,
-                        "z": 395.7348090155624
-                    },
-                    "rotation": {
-                        "x": 0.557761038886221,
-                        "y": 0.04349149769551212,
-                        "z": 0.06443499302976319,
-                        "w": 0.8263529783343309
-                    }
-                },
-                {
-                    "previous": 2,
-                    "type": "full"
-                }
-            ]
-        },
-        {
-            "id": "P2",
-            "name": "Parcours 2",
-            "description": "Description du Parcours 2",
-            "startIndex": 0,
-            "endIndex": 3,
-            "medias": [
-                "0"
-            ],
-            "nodes": [
-                {
-                    "path": "./assets/form/03.txt",
-                    "previous": 0,
-                    "next": 1,
-                    "type": "half",
-                    "position": {
-                        "x": 1822710.2848260512,
-                        "y": 5146615.931828531,
-                        "z": 395.7348090155624
-                    },
-                    "rotation": {
-                        "x": 0.557761038886221,
-                        "y": 0.04349149769551212,
-                        "z": 0.06443499302976319,
-                        "w": 0.8263529783343309
-                    }
-                },
-                {
-                    "path": "./assets/form/02.txt",
-                    "previous": 0,
-                    "next": 2,
-                    "type": "full",
-                    "position": {
-                        "x": 1819972.2564841579,
-                        "y": 5142359.305112128,
-                        "z": 1551.8208461951795
-                    },
-                    "rotation": {
-                        "x": 0.48809164844536335,
-                        "y": -0.07255865325134192,
-                        "z": -0.12789286028412,
-                        "w": 0.8603169188412988
-                    }
-                },
-                {
-                    "path": "./assets/form/01.txt",
-                    "previous": 1,
-                    "next": 3,
-                    "type": "half",
-                    "position": {
-                        "x": 1814490.154412651,
-                        "y": 5115364.911133474,
-                        "z": 28519.466336798643
-                    },
-                    "rotation": {
-                        "x": 0.35652784088261585,
-                        "y": -0.008640022534478941,
-                        "z": -0.022633650371156878,
-                        "w": 0.9339705383774479
-                    }
-                },
-                {
-                    "previous": 2,
-                    "type": "full"
-                }
-            ]
-        },
-        {
             "id": "PTEST",
             "name": "Parcours Test",
             "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
@@ -377,6 +252,64 @@
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ]
+                }
+            ]
+        },
+        {
+            "id": "P1",
+            "name": "Parcours Debug",
+            "description": "Description du parcours",
+            "startIndex": 0,
+            "endIndex": 3,
+            "medias": [
+                "0",
+                "1",
+                "2"
+            ],
+            "nodes": [
+                {
+                    "path": "./assets/form/01.txt",
+                    "previous": 0,
+                    "next": 1,
+                    "type": "full"
+                },
+                {
+                    "path": "./assets/form/02.txt",
+                    "previous": 0,
+                    "next": 2,
+                    "type": "half",
+                    "position": {
+                        "x": 1819972.2564841579,
+                        "y": 5142359.305112128,
+                        "z": 1551.8208461951795
+                    },
+                    "rotation": {
+                        "x": 0.48809164844536335,
+                        "y": -0.07255865325134192,
+                        "z": -0.12789286028412,
+                        "w": 0.8603169188412988
+                    }
+                },
+                {
+                    "path": "./assets/form/03.txt",
+                    "previous": 1,
+                    "next": 3,
+                    "type": "half",
+                    "position": {
+                        "x": 1822710.2848260512,
+                        "y": 5146615.931828531,
+                        "z": 395.7348090155624
+                    },
+                    "rotation": {
+                        "x": 0.557761038886221,
+                        "y": 0.04349149769551212,
+                        "z": 0.06443499302976319,
+                        "w": 0.8263529783343309
+                    }
+                },
+                {
+                    "previous": 2,
+                    "type": "full"
                 }
             ]
         }
