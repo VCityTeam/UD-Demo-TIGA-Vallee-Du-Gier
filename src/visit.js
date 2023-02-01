@@ -205,6 +205,9 @@ export class Visit {
   filterLayers(layerIds, filter) {
     this.view.layerManager.getLayers().forEach((layer) => {
       layer.visible = layerIds.includes(layer.id) || layer.id == 'planar';
+      if (filter) {
+        layer.filter = filter; // Not working
+      }
     });
   }
 
