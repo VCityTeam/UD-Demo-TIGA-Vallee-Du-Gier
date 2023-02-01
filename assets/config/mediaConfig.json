@@ -11,7 +11,7 @@
                 },
                 {
                     "type": "image",
-                    "value": "../assets/media/images/LABEX_IMU-COUL-PNG.png"
+                    "value": "./assets/media/images/LABEX_IMU-COUL-PNG.png"
                 },
                 {
                     "type": "text",
@@ -30,7 +30,7 @@
                 },
                 {
                     "type": "video",
-                    "value": "../assets/media/videos/demo_colors.mp4"
+                    "value": "./assets/media/videos/demo_colors.mp4"
                 }
             ]
         },
@@ -41,7 +41,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/bug_select.gif"
+                    "value": "./assets/media/images/bug_select.gif"
                 },
                 {
                     "type": "text",
@@ -56,7 +56,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE2_AcieriesMarine.jpg"
+                    "value": "./assets/media/images/IMAGE2_AcieriesMarine.jpg"
                 },
                 {
                     "type": "text",
@@ -71,7 +71,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg"
+                    "value": "./assets/media/images/IMAGE2_HallesCouzon.jpg"
                 },
                 {
                     "type": "text",
@@ -86,7 +86,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg"
+                    "value": "./assets/media/images/IMAGE3_HallesCouzon.jpg"
                 },
                 {
                     "type": "text",
@@ -100,7 +100,7 @@
             "contents": [
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE3_Duralex.jpg"
+                    "value": "./assets/media/images/IMAGE3_Duralex.jpg"
                 },
                 {
                     "type": "text",
@@ -114,15 +114,15 @@
             "contents": [
                 {
                     "type": "audio",
-                    "value": "../assets/media/audios/2-GERALD-GAUDIN_20221012_LesbordsduGier.mp3"
+                    "value": "./assets/media/audios/2-GERALD-GAUDIN_20221012_LesbordsduGier.mp3"
                 },
                 {
                     "type": "image",
-                    "value": "../assets/media/images/IMAGE4_Duralex.jpg"
+                    "value": "./assets/media/images/IMAGE4_Duralex.jpg"
                 },
                 {
                     "type": "image",
-                    "value": "../assets/media/images/Gier.jpg"
+                    "value": "./assets/media/images/Gier.jpg"
                 },
                 {
                     "type": "text",
@@ -136,7 +136,7 @@
             "contents": [
                 {
                     "type": "pin",
-                    "value": "../assets/media/images/IMAGE1_HallesCouzon.jpg",
+                    "value": "./assets/media/images/IMAGE1_HallesCouzon.jpg",
                     "position": {
                         "x": 1826924.6322969063,
                         "y": 5148677.232349239,
@@ -145,7 +145,7 @@
                 },
                 {
                     "type": "pin",
-                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg",
+                    "value": "./assets/media/images/IMAGE2_HallesCouzon.jpg",
                     "position": {
                         "x": 1826915.8258778045,
                         "y": 5148571.276805021,
@@ -154,7 +154,7 @@
                 },
                 {
                     "type": "pin",
-                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg",
+                    "value": "./assets/media/images/IMAGE3_HallesCouzon.jpg",
                     "position": {
                         "x": 1826959.549938517,
                         "y": 5148570.043722836,
@@ -163,7 +163,7 @@
                 },
                 {
                     "type": "pin",
-                    "value": "../assets/media/images/IMAGE4_HallesCouzon.jpg",
+                    "value": "./assets/media/images/IMAGE4_HallesCouzon.jpg",
                     "position": {
                         "x": 1826890.4822390038,
                         "y": 5148805.353186624,
@@ -182,11 +182,11 @@
                 },
                 {
                     "type": "image",
-                    "value": "../assets/media/images/chaudronnier.jpeg"
+                    "value": "./assets/media/images/chaudronnier.jpeg"
                 },
                 {
                     "type": "audio",
-                    "value": "../assets/media/audios/TRAINA-FRERES-20221020_CHAUDRONNIER.mp3"
+                    "value": "./assets/media/audios/TRAINA-FRERES-20221020_CHAUDRONNIER.mp3"
                 }
             ]
         }

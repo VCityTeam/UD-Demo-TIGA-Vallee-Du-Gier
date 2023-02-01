@@ -10,8 +10,8 @@ document.getElementsByTagName('HEAD')[0].appendChild(link);
 
 const list = [];
 const urls = [
-  '../assets/config/formConfig.json',
-  '../assets/config/mediaConfig.json',
+  './assets/config/formConfig.json',
+  './assets/config/mediaConfig.json',
 ];
 const configs = [];
 
@@ -30,7 +30,7 @@ Promise.all(list).then(function () {
   const mediaConfig = configs[1];
   const app = new udviz.Templates.AllWidget();
 
-  app.start('../assets/config/config.json').then((config) => {
+  app.start('./assets/config/config.json').then((config) => {
     ////// CITY OBJECTS MODULE
     let cityObjectModule = new udviz.Widgets.CityObjectModule(
       app.view3D.layerManager,
