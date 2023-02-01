@@ -1,0 +1,5 @@
+<div class="rendered-form">
+    <p>
+    La métallurgie-mécanique est de loin le premier secteur industriel de la vallée et rassemble plus de la moitié des établissements comme des effectifs.
+    </p>
+</div>

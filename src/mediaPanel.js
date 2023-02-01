@@ -1,3 +1,5 @@
+import { THREE } from 'ud-viz';
+
 export class MediaPanel {
   constructor() {
     this.content = null;
@@ -31,7 +33,7 @@ export class MediaPanel {
     document.body.appendChild(this.mainPanel);
   }
 
-  setContent(media) {
+  setContent(media, view3D) {
     this.contentPanel.innerHTML = '';
     if (media.name) {
       const mediaTitle = document.createElement('h1');
@@ -60,14 +62,20 @@ export class MediaPanel {
           child.src = content.value;
           child.controls = true;
           child.muted = false;
+          child.play();
+          break;
+        case 'pin':
+          this.createPin(content, view3D);
           break;
         default:
           console.log('Unkown media type');
       }
-      this.contentPanel.appendChild(child);
+      if (child != null) {
+        this.contentPanel.appendChild(child);
+        this.mainPanel.style.display = 'flex';
+        this.isClosed = false;
+      }
     });
-    this.mainPanel.style.display = 'flex';
-    this.isClosed = false;
   }
 
   closePanel() {
@@ -119,5 +127,30 @@ export class MediaPanel {
         this.mainPanel.style.removeProperty('left');
       }.bind(this)
     );
+  }
+
+  createPin(content, view3D) {
+    const loader = new THREE.TextureLoader();
+    loader.load(content.value, (texture) => {
+      const pictureMaterial = new THREE.SpriteMaterial({
+        map: texture,
+        sizeAttenuation: true,
+      });
+      const pictureSprite = new THREE.Sprite(pictureMaterial);
+
+      pictureSprite.position.set(
+        content.position.x,
+        content.position.y,
+        content.position.z
+      );
+
+      const width = texture.image.naturalWidth;
+      const height = texture.image.naturalHeight;
+      if (width > height) pictureSprite.scale.set(15 * (width / height), 15, 1);
+      else pictureSprite.scale.set(15, 15 * (height / width), 1);
+      pictureSprite.updateMatrixWorld();
+
+      view3D.getScene().add(pictureSprite);
+    });
   }
 }

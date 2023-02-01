@@ -130,7 +130,7 @@
             "name": "Parcours Test",
             "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
             "startIndex": 0,
-            "endIndex": 6,
+            "endIndex": 10,
             "medias": [],
             "nodes": [
                 {
@@ -138,7 +138,13 @@
                     "previous": 0,
                     "next": 1,
                     "type": "half",
-                    "layers": ["baseMapLayer_0", "communes", "zae", "BATI-INDUS", "BATI-AUTRE"],
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
                     "position": {
                         "x": 1815137.4389101316,
                         "y": 5120561.345129335,
@@ -156,7 +162,11 @@
                     "previous": 0,
                     "next": 2,
                     "type": "half",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
                     "position": {
                         "x": 1822544.8781920606,
                         "y": 5146771.966404134,
@@ -174,7 +184,12 @@
                     "previous": 1,
                     "next": 3,
                     "type": "half",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
+                    "media": "PINS",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
                     "position": {
                         "x": 1826994.082722922,
                         "y": 5148316.617360813,
@@ -193,7 +208,11 @@
                     "next": 4,
                     "type": "half",
                     "media": "IMAGE5",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
                     "position": {
                         "x": 1826349.3333048907,
                         "y": 5148918.221996138,
@@ -212,7 +231,11 @@
                     "next": 5,
                     "type": "half",
                     "media": "IMAGE6",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
                     "position": {
                         "x": 1826349.3333048907,
                         "y": 5148918.221996138,
@@ -230,7 +253,13 @@
                     "previous": 4,
                     "next": 6,
                     "type": "half",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"],
+                    "layers": [
+                        "baseMapLayer_0",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "noms_communes"
+                    ],
                     "position": {
                         "x": 1820451.0500528857,
                         "y": 5139918.123418849,
@@ -244,9 +273,110 @@
                     }
                 },
                 {
+                    "path": "../assets/form/ParcoursTest/07.txt",
                     "previous": 5,
+                    "next": 7,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "noms_communes"
+                    ],
+                    "position": {
+                        "x": 1820451.0500528857,
+                        "y": 5139918.123418849,
+                        "z": 12151.976236768156
+                    },
+                    "rotation": {
+                        "x": 0.19971037216658302,
+                        "y": 0.007913895721935208,
+                        "z": 0.0387968639385165,
+                        "w": 0.9790546158678398
+                    }
+                },
+                {
+                    "path": "../assets/form/ParcoursTest/07.txt",
+                    "previous": 6,
+                    "next": 8,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "noms_communes"
+                    ],
+                    "position": {
+                        "x": 1820451.0500528857,
+                        "y": 5139918.123418849,
+                        "z": 12151.976236768156
+                    },
+                    "rotation": {
+                        "x": 0.19971037216658302,
+                        "y": 0.007913895721935208,
+                        "z": 0.0387968639385165,
+                        "w": 0.9790546158678398
+                    }
+                },
+                {
+                    "path": "../assets/form/ParcoursTest/07.txt",
+                    "previous": 7,
+                    "next": 9,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "noms_communes"
+                    ],
+                    "position": {
+                        "x": 1820451.0500528857,
+                        "y": 5139918.123418849,
+                        "z": 12151.976236768156
+                    },
+                    "rotation": {
+                        "x": 0.19971037216658302,
+                        "y": 0.007913895721935208,
+                        "z": 0.0387968639385165,
+                        "w": 0.9790546158678398
+                    }
+                },
+                {
+                    "path": "../assets/form/ParcoursTest/08.txt",
+                    "previous": 8,
+                    "next": 10,
+                    "type": "half",
+                    "media": "CHAUDRONNERIE",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "zae",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "noms_communes"
+                    ],
+                    "position": {
+                        "x": 1820451.0500528857,
+                        "y": 5139918.123418849,
+                        "z": 12151.976236768156
+                    },
+                    "rotation": {
+                        "x": 0.19971037216658302,
+                        "y": 0.007913895721935208,
+                        "z": 0.0387968639385165,
+                        "w": 0.9790546158678398
+                    }
+                },
+                {
+                    "previous": 9,
                     "type": "full",
-                    "layers": ["baseMapLayer_1", "BATI-INDUS", "BATI-AUTRE"]
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ]
                 }
             ]
         }

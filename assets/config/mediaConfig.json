@@ -113,6 +113,10 @@
             "parent_id": "BATIMENT0000000317419788",
             "contents": [
                 {
+                    "type": "audio",
+                    "value": "../assets/media/audios/2-GERALD-GAUDIN_20221012_LesbordsduGier.mp3"
+                },
+                {
                     "type": "image",
                     "value": "../assets/media/images/IMAGE4_Duralex.jpg"
                 },
@@ -123,6 +127,66 @@
                 {
                     "type": "text",
                     "value": "Photographies des auteurs, septembre 2022"
+                }
+            ]
+        },
+        {
+            "id": "PINS",
+            "parent_id": "NULL",
+            "contents": [
+                {
+                    "type": "pin",
+                    "value": "../assets/media/images/IMAGE1_HallesCouzon.jpg",
+                    "position": {
+                        "x": 1826924.6322969063,
+                        "y": 5148677.232349239,
+                        "z": 266.6366424560547
+                    }
+                },
+                {
+                    "type": "pin",
+                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg",
+                    "position": {
+                        "x": 1826915.8258778045,
+                        "y": 5148571.276805021,
+                        "z": 269.35496520996094
+                    }
+                },
+                {
+                    "type": "pin",
+                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg",
+                    "position": {
+                        "x": 1826959.549938517,
+                        "y": 5148570.043722836,
+                        "z": 271.8705291748047
+                    }
+                },
+                {
+                    "type": "pin",
+                    "value": "../assets/media/images/IMAGE4_HallesCouzon.jpg",
+                    "position": {
+                        "x": 1826890.4822390038,
+                        "y": 5148805.353186624,
+                        "z": 266.4672546386719
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CHAUDRONNERIE",
+            "parent_id": "NULL",
+            "contents": [
+                {
+                    "type": "text",
+                    "value": "Les métiers de la forge, de la chaudronnerie et de la soudure sont très représentés."
+                },
+                {
+                    "type": "image",
+                    "value": "../assets/media/images/chaudronnier.jpeg"
+                },
+                {
+                    "type": "audio",
+                    "value": "../assets/media/audios/TRAINA-FRERES-20221020_CHAUDRONNIER.mp3"
                 }
             ]
         }

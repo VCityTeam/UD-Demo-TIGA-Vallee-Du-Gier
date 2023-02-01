@@ -86,7 +86,7 @@ export class Visit {
     this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
     const startNode = this.config.nodes[this.currentIndex];
     this.form.start(startNode.type, startNode.path, this.currentIndex);
-    this.filterLayers(startNode.layers);
+    this.filterLayers(startNode.layers, startNode.filter);
     this.travelToPosition(startNode, this.view);
   }
 
@@ -116,7 +116,7 @@ export class Visit {
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
     this.form.fillWithHtmlFromFile(previous.path, this.currentIndex);
     this.setMedia(previous);
-    this.filterLayers(previous.layers);
+    this.filterLayers(previous.layers, previous.filter);
     this.travelToPosition(previous, this.view);
   }
 
@@ -129,7 +129,7 @@ export class Visit {
     this.currentIndex = current.next;
     this.form.setWidth(next.type);
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
-    this.filterLayers(next.layers);
+    this.filterLayers(next.layers, next.filter);
     if (this.isEnd()) {
       this.form.fillWithRecapValues(this.config.name);
       this.form.initRecapButtons();
@@ -202,7 +202,7 @@ export class Visit {
     });
   }
 
-  filterLayers(layerIds) {
+  filterLayers(layerIds, filter) {
     this.view.layerManager.getLayers().forEach((layer) => {
       layer.visible = layerIds.includes(layer.id) || layer.id == 'planar';
     });
@@ -212,7 +212,7 @@ export class Visit {
     if (node.media) {
       const media = this.medias.find((m) => m.id == node.media);
       if (media) {
-        this.mediaPanel.setContent(media);
+        this.mediaPanel.setContent(media, this.view);
       }
     }
   }
