@@ -1,13 +1,15 @@
 import { THREE } from 'ud-viz';
 
 export class MediaPanel {
-  constructor() {
+  constructor(view) {
     this.content = null;
     this.mainPanel = null;
     this.isDragged = false;
+    this.view = view;
     this.initMainPanel();
     this.setDraggable();
     this.mainPanel.style.display = 'none';
+    this.pins = [];
     this.isClosed = true;
   }
 
@@ -33,7 +35,7 @@ export class MediaPanel {
     document.body.appendChild(this.mainPanel);
   }
 
-  setContent(media, view3D) {
+  setContent(media) {
     this.contentPanel.innerHTML = '';
     if (media.name) {
       const mediaTitle = document.createElement('h1');
@@ -65,7 +67,7 @@ export class MediaPanel {
           child.play();
           break;
         case 'pin':
-          this.createPin(content, view3D);
+          this.createPin(content);
           break;
         default:
           console.log('Unkown media type');
@@ -82,6 +84,11 @@ export class MediaPanel {
     this.content = null;
     this.contentPanel.innerHTML = '';
     this.mainPanel.style.display = 'none';
+    this.pins.forEach((pin) => {
+      this.view.getScene().remove(pin);
+      pin.material.dispose();
+    });
+    this.pins = [];
     this.isClosed = true;
   }
 
@@ -122,23 +129,23 @@ export class MediaPanel {
     window.addEventListener(
       'resize',
       function () {
-        this.mainPanel.style.top = '10%';
+        this.mainPanel.style.top = '1%';
         this.mainPanel.style.right = '0%';
         this.mainPanel.style.removeProperty('left');
       }.bind(this)
     );
   }
 
-  createPin(content, view3D) {
+  createPin(content) {
     const loader = new THREE.TextureLoader();
     loader.load(content.value, (texture) => {
       const pictureMaterial = new THREE.SpriteMaterial({
         map: texture,
         sizeAttenuation: true,
       });
-      const pictureSprite = new THREE.Sprite(pictureMaterial);
+      const sprite = new THREE.Sprite(pictureMaterial);
 
-      pictureSprite.position.set(
+      sprite.position.set(
         content.position.x,
         content.position.y,
         content.position.z
@@ -146,11 +153,12 @@ export class MediaPanel {
 
       const width = texture.image.naturalWidth;
       const height = texture.image.naturalHeight;
-      if (width > height) pictureSprite.scale.set(15 * (width / height), 15, 1);
-      else pictureSprite.scale.set(15, 15 * (height / width), 1);
-      pictureSprite.updateMatrixWorld();
+      if (width > height) sprite.scale.set(18 * (width / height), 18, 1);
+      else sprite.scale.set(18, 18 * (height / width), 1);
+      sprite.updateMatrixWorld();
 
-      view3D.getScene().add(pictureSprite);
+      this.view.getScene().add(sprite);
+      this.pins.push(sprite);
     });
   }
 }

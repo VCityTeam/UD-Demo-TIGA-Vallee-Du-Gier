@@ -14,7 +14,7 @@ export class Visit {
     this.form = new Form();
     this.addFormEvents();
 
-    this.mediaPanel = new MediaPanel();
+    this.mediaPanel = new MediaPanel(view);
     this.addMediaPanelEvents();
   }
 
@@ -212,7 +212,7 @@ export class Visit {
     if (node.media) {
       const media = this.medias.find((m) => m.id == node.media);
       if (media) {
-        this.mediaPanel.setContent(media, this.view);
+        this.mediaPanel.setContent(media);
       }
     }
   }
