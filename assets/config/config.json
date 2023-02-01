@@ -4,7 +4,8 @@
     "imageFolder": "./assets/img",
     "logos": [
       "logo-liris.png",
-      "LABEX_IMU-COUL-PNG.png"
+      "LABEX_IMU-COUL-PNG.png",
+      "tiga.png"
     ]
   },
   "3DTilesLayers": [
