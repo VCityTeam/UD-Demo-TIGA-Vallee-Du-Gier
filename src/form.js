@@ -179,7 +179,7 @@ export class Form {
     this.previousButton.style.display = 'none';
     this.closeButton.firstChild.style.transform = 'rotate(-45deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(-45deg)';
-    this.closeButton.firstChild.style.left = '7px';
+    this.closeButton.firstChild.style.left = '5px';
     this.isClosed = true;
   }
 
@@ -189,7 +189,7 @@ export class Form {
     this.setButtonsStyle(isStart, isEnd);
     this.closeButton.firstChild.style.transform = 'rotate(135deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
-    this.closeButton.firstChild.style.left = '14px';
+    this.closeButton.firstChild.style.left = '9px';
     this.isClosed = false;
   }
 

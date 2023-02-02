@@ -205,9 +205,9 @@ video {
 
 .arrow_button {
   border: solid black;
-  border-width: 0 6px 6px 0;
+  border-width: 0 5px 5px 0;
   display: inline-block;
-  padding: 10px;
+  padding: 7px;
   background-color: transparent;
   top: 50%;
   position: absolute;
@@ -217,7 +217,7 @@ video {
 .arrow_button:hover {
   border: solid #a5a5a5;
   border-width: 0 6px 6px 0;
-  padding: 13px;
+  padding: 10px;
 }
 
 .button_right {
@@ -265,7 +265,7 @@ video {
 #close_arrow:hover {
   border: solid #a5a5a5;
   border-width: 0 3px 3px 0;
-  padding: 9px;
+  padding: 7px;
 }
 
 .formbuilder-checkbox,
