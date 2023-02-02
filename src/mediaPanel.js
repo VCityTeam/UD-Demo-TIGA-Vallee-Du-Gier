@@ -74,7 +74,6 @@ export class MediaPanel {
           child.src = content.value;
           child.controls = true;
           child.muted = false;
-          child.play();
           break;
         case 'pin':
           this.createPin(content);

@@ -2,7 +2,7 @@
     "visits": [
         {
             "id": "PTEST",
-            "name": "Parcours Test",
+            "name": "Parcours Demo",
             "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
             "startIndex": 0,
             "endIndex": 10,
@@ -126,7 +126,7 @@
                 {
                     "path": "./assets/form/ParcoursTest/06.txt",
                     "previous": 4,
-                    "next": 6,
+                    "next": 9,
                     "type": "half",
                     "layers": [
                         "baseMapLayer_0",
@@ -221,7 +221,7 @@
                 },
                 {
                     "path": "./assets/form/ParcoursTest/08.txt",
-                    "previous": 8,
+                    "previous": 5,
                     "next": 10,
                     "type": "half",
                     "media": "CHAUDRONNERIE",
@@ -257,8 +257,8 @@
         },
         {
             "id": "P1",
-            "name": "Parcours Debug",
-            "description": "Description du parcours",
+            "name": "Parcours Question",
+            "description": "Parcours avec questions",
             "startIndex": 0,
             "endIndex": 3,
             "medias": [
