@@ -10,6 +10,7 @@ export class Visit {
     this.allowedMedias = null;
     this.currentIndex = 0;
     this.view = view;
+    this.modifiedCityObjects = [];
 
     this.form = new Form();
     this.addFormEvents();
@@ -102,6 +103,7 @@ export class Visit {
     this.id = 'NONE';
     this.config = null;
     this.currentIndex = 0;
+    this.resetStyle();
     this.form.reset();
   }
 
@@ -178,6 +180,7 @@ export class Visit {
   }
 
   applyStyleToParents(parentIds) {
+    this.modifiedCityObjects = [];
     this.view.layerManager.tilesManagers.forEach((tilesManager) => {
       tilesManager.tiles.forEach((tile) => {
         if (tile.cityObjects != null) {
@@ -190,16 +193,33 @@ export class Visit {
                   emissiveIntensity: 0.2,
                 },
               });
-              tilesManager.applyStyles({
-                updateFunction: tilesManager.view.notifyChange.bind(
-                  tilesManager.view
-                ),
-              });
+              this.modifiedCityObjects.push({object: cityObject, manager: tilesManager, color: 0x202020});
             }
+          });
+          tilesManager.applyStyles({
+            updateFunction: tilesManager.view.notifyChange.bind(
+              tilesManager.view
+            ),
           });
         }
       });
     });
+  }
+
+  resetStyle() {
+    this.modifiedCityObjects.forEach((co)=> {
+      co.manager.setStyle(co.object.cityObjectId, {
+        materialProps: {
+          color: co.color
+        }
+      });
+      co.manager.applyStyles({
+        updateFunction: co.manager.view.notifyChange.bind(
+          co.manager.view
+        ),
+      });
+    });
+    this.modifiedCityObjects = [];
   }
 
   filterLayers(layerIds, filter) {
