@@ -1,6 +1,7 @@
 import { Form } from './form';
 import { MediaPanel } from './mediaPanel';
 import { THREE } from 'ud-viz';
+import { createTemporaryLayer } from './layerUtils';
 
 export class Visit {
   constructor(view, medias) {
@@ -11,6 +12,7 @@ export class Visit {
     this.currentIndex = 0;
     this.view = view;
     this.modifiedCityObjects = [];
+    this.temporaryLayers = [];
 
     this.form = new Form();
     this.addFormEvents();
@@ -224,17 +226,35 @@ export class Visit {
     this.modifiedCityObjects = [];
   }
 
-  filterLayers(layerIds, filter) {
+  filterLayers(layerIds, filters) {
+    this.temporaryLayers.forEach((layer) => {
+      this.view.getItownsView().removeLayer(layer.id, true);
+    });
+    this.temporaryLayers = [];
+
     this.view.layerManager.getLayers().forEach((layer) => {
-      layer.visible =
-        layerIds == undefined ||
-        layerIds.includes(layer.id) ||
-        layer.id == 'planar';
-      if (filter) {
-        layer.filter = undefined;
+      let isFiltered = false;
+      if (filters && filters.length > 0) {
+        filters.forEach((filter) => {
+          if (filter.layer == layer.id) {
+            isFiltered = true;
+            const temporaryLayer = createTemporaryLayer(
+              layer,
+              filter,
+              'temporary_' + this.temporaryLayers.length
+            );
+            this.view.getItownsView().addLayer(temporaryLayer);
+            this.temporaryLayers.push(temporaryLayer);
+          }
+        });
+        if (!isFiltered) layer.filter = undefined;
       } else {
         layer.filter = undefined;
       }
+      layer.visible =
+        layerIds == undefined ||
+        (layerIds.includes(layer.id) && !isFiltered) ||
+        layer.id == 'planar';
     });
   }
 

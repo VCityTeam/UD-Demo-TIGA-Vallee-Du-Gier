@@ -1,5 +1,5 @@
 import * as udviz from 'ud-viz';
-import { addLabelLayers } from './labelLayer';
+import { addLabelLayers } from './layerUtils';
 import { Visit } from './visit';
 
 var link = document.createElement('link');
