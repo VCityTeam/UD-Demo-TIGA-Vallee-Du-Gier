@@ -135,6 +135,20 @@
                         "BATI-AUTRE",
                         "noms_communes"
                     ],
+                    "filters": [
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Rive-de-Gier",
+                                        "Saint-Chamond"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
                     "position": {
                         "x": 1820451.0500528857,
                         "y": 5139918.123418849,

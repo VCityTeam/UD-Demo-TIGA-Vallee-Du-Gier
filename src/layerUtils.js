@@ -1,5 +1,6 @@
 /** @format */
 
+import * as Ajv from 'ajv';
 import * as udviz from 'ud-viz';
 
 export function addLabelLayers(config, itownsView) {
@@ -19,7 +20,6 @@ export function addLabelLayers(config, itownsView) {
       zoom: layer.zoom,
     });
 
-    console.log(labelLayer);
     itownsView.addLayer(labelLayer);
   }
 }
@@ -41,7 +41,16 @@ export function createTemporaryLayer(layer, filter, id) {
       source: source,
       style: layer.style,
       zoom: layer.zoom,
-      filter: (properties) => {return properties.id > 0;}
+      filter: (properties) => {
+        const ajv = new Ajv();
+        const schema = {
+          type: 'object',
+          properties: filter.properties,
+          required: Object.keys(filter.properties),
+        };
+        const validate = ajv.compile(schema);
+        return validate(properties);
+      },
     });
   }
 
