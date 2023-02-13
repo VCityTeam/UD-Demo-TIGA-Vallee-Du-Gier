@@ -87,7 +87,7 @@ export class Visit {
     this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
     const startNode = this.config.nodes[this.currentIndex];
     this.form.start(startNode.type, startNode.path, this.currentIndex);
-    this.filterLayers(startNode.layers, startNode.filter);
+    this.filterLayers(startNode.layers, startNode.filters);
     this.travelToPosition(startNode, this.view);
   }
 
@@ -118,7 +118,7 @@ export class Visit {
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
     this.form.fillWithHtmlFromFile(previous.path, this.currentIndex);
     this.setMedia(previous);
-    this.filterLayers(previous.layers, previous.filter);
+    this.filterLayers(previous.layers, previous.filters);
     this.travelToPosition(previous, this.view);
   }
 
@@ -131,7 +131,7 @@ export class Visit {
     this.currentIndex = current.next;
     this.form.setWidth(next.type);
     this.form.setButtonsStyle(this.isStart(), this.isEnd());
-    this.filterLayers(next.layers, next.filter);
+    this.filterLayers(next.layers, next.filters);
     if (this.isEnd()) {
       this.form.fillWithRecapValues(this.config.name);
       this.form.initRecapButtons();
@@ -193,7 +193,11 @@ export class Visit {
                   emissiveIntensity: 0.2,
                 },
               });
-              this.modifiedCityObjects.push({object: cityObject, manager: tilesManager, color: 0x202020});
+              this.modifiedCityObjects.push({
+                object: cityObject,
+                manager: tilesManager,
+                color: 0x202020,
+              });
             }
           });
           tilesManager.applyStyles({
@@ -207,16 +211,14 @@ export class Visit {
   }
 
   resetStyle() {
-    this.modifiedCityObjects.forEach((co)=> {
+    this.modifiedCityObjects.forEach((co) => {
       co.manager.setStyle(co.object.cityObjectId, {
         materialProps: {
-          color: co.color
-        }
+          color: co.color,
+        },
       });
       co.manager.applyStyles({
-        updateFunction: co.manager.view.notifyChange.bind(
-          co.manager.view
-        ),
+        updateFunction: co.manager.view.notifyChange.bind(co.manager.view),
       });
     });
     this.modifiedCityObjects = [];
@@ -229,7 +231,9 @@ export class Visit {
         layerIds.includes(layer.id) ||
         layer.id == 'planar';
       if (filter) {
-        layer.filter = filter; // Not working
+        layer.filter = undefined;
+      } else {
+        layer.filter = undefined;
       }
     });
   }
