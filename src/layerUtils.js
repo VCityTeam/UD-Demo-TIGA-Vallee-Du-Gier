@@ -1,7 +1,7 @@
 /** @format */
 
-import * as Ajv from 'ajv';
 import * as udviz from 'ud-viz';
+import { FilterValidator } from './filterValidator';
 
 export function addLabelLayers(config, itownsView) {
   for (const layer of config['LabelLayers']) {
@@ -51,15 +51,9 @@ export function createTemporaryLayer(layer, filter, id) {
     });
   }
 
+  const validator = new FilterValidator(filter.properties);
   temporaryLayer.filter = (properties) => {
-    const ajv = new Ajv();
-    const schema = {
-      type: 'object',
-      properties: filter.properties,
-      required: Object.keys(filter.properties),
-    };
-    const validate = ajv.compile(schema);
-    return validate(properties);
+    return validator.validate(properties);
   };
   return temporaryLayer;
 }
