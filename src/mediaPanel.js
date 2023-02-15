@@ -17,7 +17,11 @@ export class MediaPanel {
         this.clickOnPin(event);
         this.fsImageDisplayed = true;
       } else if (this.fsImageDisplayed) {
-        document.getElementById('fs_image_background').remove();
+        try {
+          document.getElementById('fs_image_background').remove();}
+        catch {
+          this.deletePins();
+        }
         this.fsImageDisplayed = false;
       }
     });
@@ -93,10 +97,7 @@ export class MediaPanel {
     this.content = null;
     this.contentPanel.innerHTML = '';
     this.mainPanel.style.display = 'none';
-    this.pins.forEach((pin) => {
-      this.view.getScene().remove(pin);
-      pin.material.dispose();
-    });
+    this.deletePins();
     this.pins = [];
     this.isClosed = true;
   }
@@ -169,6 +170,13 @@ export class MediaPanel {
 
       this.view.getScene().add(sprite);
       this.pins.push(sprite);
+    });
+  }
+
+  deletePins() {
+    this.pins.forEach((pin) => {
+      this.view.getScene().remove(pin);
+      pin.material.dispose();
     });
   }
 
