@@ -41,18 +41,25 @@ export function createTemporaryLayer(layer, filter, id) {
       source: source,
       style: layer.style,
       zoom: layer.zoom,
-      filter: (properties) => {
-        const ajv = new Ajv();
-        const schema = {
-          type: 'object',
-          properties: filter.properties,
-          required: Object.keys(filter.properties),
-        };
-        const validate = ajv.compile(schema);
-        return validate(properties);
-      },
+    });
+  } else if (layer.isColorLayer) {
+    temporaryLayer = new udviz.itowns.ColorLayer(id, {
+      name: id,
+      transparent: true,
+      source: source,
+      style: layer.style,
     });
   }
 
+  temporaryLayer.filter = (properties) => {
+    const ajv = new Ajv();
+    const schema = {
+      type: 'object',
+      properties: filter.properties,
+      required: Object.keys(filter.properties),
+    };
+    const validate = ajv.compile(schema);
+    return validate(properties);
+  };
   return temporaryLayer;
 }
