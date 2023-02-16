@@ -1,11 +1,281 @@
-<!-- @format -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  </head>
-  <body>
-    <script src="./dist/release/app_name.js"></script>
-  </body>
+<html lang="en">
+    <head>
+        <title>Vallée du Gier</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS Ekko -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+         <!-- Le CSS de Boostrap -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Police Font-->
+        <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
+        <!-- Font Aswome -->
+        <script src="https://kit.fontawesome.com/f4e581b399.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <!-- CDN Splitting-->
+        <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+        <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+        <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+       
+        <!-- Custom Css-->
+        <link href="./src/css/home_page.css" rel="stylesheet">
+    </head>
+    <body>
+<!-- Menu  -->
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <!-- <li class="nav-item"> -->
+          <li class="nav-item ">
+            <a class="btn btn-light " type="button" href="#" role="tab">Accueil</a>
+          </li>
+          <a class="btn btn-light mybtn" type="button" href="#visite" >Visite guidée</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-light" type="button" href="./html/open_visit.html">Carte intéractive</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-light" type="button" href="#contact">Contact</a>
+          </li>
+        <li class="nav-item disabled">
+        <button class="btn btn-light disabled" type="button" aria-disabled="true">Profil</button>
+        </li>
+      </ul>
+    </nav>
+
+
+
+<!-- Caroussel et texte  -->
+<section id="carouselText">
+  <div class="container">
+    <div class="row">
+            <!-- Carousssel -->
+            <div class="col-md-6">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-130" img src="./assets/img/Capture.PNG"  alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-130" img src="./assets/img/Capture.PNG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-130" img src="./assets/img/Capture.PNG" alt="Third slide">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>   
+            </div>
+          
+<!-- texte présentation -->
+            <div class="col-md-6" id="textPres">
+                <div class="card-body">
+                  <h2>À propos</h2>
+                  <p align="justify">Ce projet s'inscrit dans le cadre de l'action 14 (Think and do Tank) du projet TIGA piloté par la Métropole de Lyon. 
+                    Il vise à mettre en place un travail partenarial entre deux laboratoires de recherche parties prenantes du Think and do Tank : 
+                    le laboratoire d'Informatique en Image et Systèmes d'Information (LIRIS) 
+                      <!-- <br id="contact"> -->
+                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+          <!-- Bannière -->
+
+    <section id="ban1" class="py-2">
+    </section>
+
+
+
+ <!-- Section Galerie-->
+
+ <section id="visite">
+    <div class="container">
+        <h2 class="text-center">Les visites disponibles</h2>
+        <br>
+        <br>
+        <br>
+       
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row mb-3">
+                    <!-- Les images prennent 4 colonnes en format petits-->
+
+                    <!-- Demo VDG-->
+                    <a type="button"class="col-sm-4"data-target="#vdgModal">
+                    <img src="./assets/img/Capture.PNG" class="img-fluid" alt="portofolio image">
+                    <p type="button" class="btn btn-light" class="col-sm-4" data-toggle="modal" data-target="#vdgModal">
+                      Parcours démo
+                    </p>
+                    </a>
+                    <!-- Button trigger modal -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="vdgModal" tabindex="-1" role="dialog" aria-labelledby="vdgModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="vdgModalLabel">Parcours démo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="./assets/img/Capture.PNG" class="img-fluid" alt="portofolio image">
+                            <p>La Vallée du Gier, un territoire de tradition industrielle en transformation</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Fermer</button>
+                            <a type="button" class="btn btn-secondary" href="./html/demo_vdg.html">Visite guidée</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Demo Questions-->
+                    <a type="button"class="col-sm-4"data-target="#questionsModal">
+                      <img src="./assets/img/Capture.PNG" class="img-fluid" alt="portofolio image">
+                      <p type="button" class="btn btn-light" class="col-sm-4" data-toggle="modal" data-target="#questionsModal">
+                        Parcours questions
+                      </p>
+                      </a>
+                      <!-- Button trigger modal -->
+  
+                      <!-- Modal -->
+                      <div class="modal fade" id="questionsModal" tabindex="-1" role="dialog" aria-labelledby="questionsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="questionsModalLabel">Parcours questions</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <img src="./assets/img/Capture.PNG" class="img-fluid" alt="portofolio image">
+                              <p>Parcours avec questions</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" data-dismiss="modal">Fermer</button>
+                              <a type="button" class="btn btn-secondary" href="./html/demo_questions.html">Visite guidée</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <a class="col-sm-4">
+                      <img src="./assets/img/coming-soon.png" class="img-fluid" alt="portofolio image"><p class="text-center">Bientôt disponible</p>
+                    </a>
+                </div>
+                <!--2eme colonne d'images-->
+                <div class="row">
+                  <a class="col-sm-4">
+                    <img src="./assets/img/coming-soon.png" class="img-fluid" alt="portofolio image"><p class="text-center">Bientôt disponible</p>
+                  </a>
+                  <a class="col-sm-4">
+                    <img src="./assets/img/coming-soon.png" class="img-fluid" alt="portofolio image"><p class="text-center">Bientôt disponible</p>
+                  </a>
+                  <a class="col-sm-4">
+                    <img src="./assets/img/coming-soon.png" class="img-fluid" alt="portofolio image"><p class="text-center">Bientôt disponible</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Bannière -->
+    <section id="ban1" class="py-2" >
+    </section>
+    <!-- Contacts -->
+        <section  >
+            <div class="container" id="contact">
+              <h2>Contacts</h2>
+              <br>
+              <br>
+                <div class="row">
+
+
+                    <div class="icone col-md-3" id="contact-1">
+                      <img src="./assets/img/contact.png" class="img-contact">
+                      <h4><br>Nom prénom</h4>
+                        <h0>Poste <br> nom.prenom@universite-lyon.fr</h0>
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/contact.png" class="img-contact">
+                      <h4><br>Nom prénom</h4>
+                        <h0>Poste <br> nom.prenom@universite-lyon.fr</h0>
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/contact.png" class="img-contact">
+                      <h4><br>Nom prénom</h4>
+                        <h0>Poste <br> nom.prenom@universite-lyon.fr</h0>
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/contact.png" class="img-contact">
+                      <h4><br>Nom prénom</h4>
+                        <h0>Poste <br> nom.prenom@universite-lyon.fr</h0>
+                    </div>
+                </div>
+            </div>
+        </section>
+<hr>
+    <!-- Les partenaires -->
+        <section  >
+            <div class="container">
+              <br>
+              <br>
+              <h2>Les partenaires</h2>
+              <br>
+              <br>
+                <div class="row">
+                    <div class="icone col-md-3" >
+                      <img src="./assets/img/coming-soon.png"class="img-partenaire">
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/coming-soon.png"class="img-partenaire">
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/coming-soon.png"class="img-partenaire">
+                    </div>
+                    <div class="icone col-md-3">
+                      <img src="./assets/img/coming-soon.png"class="img-partenaire">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+        </section>
+
+
+
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- JS Boostrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <!--JS Ekko-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
+
+</body>
 </html>

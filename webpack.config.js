@@ -38,18 +38,18 @@ module.exports = (env) => {
   if (debugBuild)
     plugins.push(
       new HtmlWebpackPlugin({
-        title: 'Demo debug',
+        title: 'Vallée du Gier',
         filename: 'index.html',
       })
     );
 
   const config = {
     mode,
-    entry: [path.resolve(__dirname, './src/bootstrap.js')],
+    entry: [path.resolve(__dirname, './src/index.js')],
     output: {
       path: outputPath,
-      filename: 'app_name.js',
-      library: 'app_name',
+      filename: 'vdg_app.js',
+      library: 'vdg_app',
       libraryTarget: 'umd',
       umdNamedDefine: true,
     },

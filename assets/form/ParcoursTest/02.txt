@@ -2,6 +2,6 @@
     <p>
     L’œil du visiteur s’arrête d’abord sur les grandes halles industrielles, parfois en friche, qui marquent le paysage et témoignent de la déprise économique.
     </p>
-    <img src='./assets/media/images/IMAGE2_AcieriesMarine.jpg'>
+    <img src='../assets/media/images/IMAGE2_AcieriesMarine.jpg'>
     <a href='https://numelyo.bm-lyon.fr/f_eserv/BML:BML_01ICO00101B01CP42420_000003/Source0.jpg'>Les anciennes Acieries de la Marine à Lorette, l’un des sites du patrimoine industriel de la vallée du Gier </a>
 </div>

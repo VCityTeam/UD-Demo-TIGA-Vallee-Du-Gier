@@ -1,7 +1,7 @@
 {
   "assets": {
-    "iconFolder": "./assets/icons",
-    "imageFolder": "./assets/img",
+    "iconFolder": "../assets/icons",
+    "imageFolder": "../assets/img",
     "logos": [
       "logo-liris.png",
       "LABEX_IMU-COUL-PNG.png",
@@ -38,7 +38,7 @@
     "version": "1.3.0",
     "format": "image/jpeg",
     "layer_name": "Carte_IGN_1",
-    "image": "./assets/img/ign_ortho.png",
+    "image": "../assets/img/ign_ortho.png",
     "maxSubdivisionLevel": 15
   },
   "baseMapLayers": [
@@ -48,7 +48,7 @@
       "version": "1.3.0",
       "format": "image/jpeg",
       "layer_name": "Carte_IGN_1",
-      "image": "./assets/img/ign_ortho.png"
+      "image": "../assets/img/ign_ortho.png"
     },
     {
       "url": "https://wxs.ign.fr/ortho/geoportail/r/wms",
@@ -64,7 +64,7 @@
       "version": "1.3.0",
       "format": "image/jpeg",
       "layer_name": "Carte_IGN_2",
-      "image": "./assets/img/ign_ortho.png"
+      "image": "../assets/img/ign_ortho.png"
     },
     {
       "url": "https://wxs.ign.fr/parcellaire/geoportail/r/wms",
@@ -72,13 +72,13 @@
       "version": "1.3.0",
       "format": "image/jpeg",
       "layer_name": "Parcelle_IGN",
-      "image": "./assets/img/ign_ortho.png"
+      "image": "../assets/img/ign_ortho.png"
     }
   ],
   "GeoJSONLayers": [
     {
       "id": "communes",
-      "url": "./assets/geojson/COMMUNES_GIER_3946.geojson",
+      "url": "../assets/geojson/COMMUNES_GIER_3946.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
@@ -93,7 +93,7 @@
     },
     {
       "id": "zae",
-      "url": "./assets/geojson/3-sem_deef_zae_gier_3946.geojson",
+      "url": "../assets/geojson/3-sem_deef_zae_gier_3946.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
@@ -107,7 +107,7 @@
     },
     {
       "id": "multi_emprises",
-      "url": "./assets/geojson/4-EtablissementsIndusBatMultiplesEmprisesFoncieres_3946.geojson",
+      "url": "../assets/geojson/4-EtablissementsIndusBatMultiplesEmprisesFoncieres_3946.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
@@ -123,7 +123,7 @@
   "LabelLayers": [
     {
       "id": "noms_entreprises",
-      "url": "./assets/geojson/1_Gier_centroides_bati_indus_3946.geojson",
+      "url": "../assets/geojson/1_Gier_centroides_bati_indus_3946.geojson",
       "zoom": {
         "min": 6
       },
@@ -139,7 +139,7 @@
     },
     {
       "id": "noms_communes",
-      "url": "./assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
+      "url": "../assets/geojson/COMMUNES_GIER_Centroids_3946.geojson",
       "zoom": {
         "min": 1
       },

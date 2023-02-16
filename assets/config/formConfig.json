@@ -1,7 +1,7 @@
 {
     "visits": [
         {
-            "id": "PTEST",
+            "id": "P_DEMO_VDG",
             "name": "Parcours Demo",
             "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
             "startIndex": 0,
@@ -9,7 +9,7 @@
             "medias": [],
             "nodes": [
                 {
-                    "path": "./assets/form/ParcoursTest/01.txt",
+                    "path": "../assets/form/ParcoursTest/01.txt",
                     "previous": 0,
                     "next": 1,
                     "type": "half",
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/02.txt",
+                    "path": "../assets/form/ParcoursTest/02.txt",
                     "previous": 0,
                     "next": 2,
                     "type": "half",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/03.txt",
+                    "path": "../assets/form/ParcoursTest/03.txt",
                     "previous": 1,
                     "next": 3,
                     "type": "half",
@@ -78,7 +78,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/04.txt",
+                    "path": "../assets/form/ParcoursTest/04.txt",
                     "previous": 2,
                     "next": 4,
                     "type": "half",
@@ -101,7 +101,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/04.txt",
+                    "path": "../assets/form/ParcoursTest/04.txt",
                     "previous": 3,
                     "next": 5,
                     "type": "half",
@@ -124,7 +124,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/06.txt",
+                    "path": "../assets/form/ParcoursTest/06.txt",
                     "previous": 4,
                     "next": 9,
                     "type": "half",
@@ -162,7 +162,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/07.txt",
+                    "path": "../assets/form/ParcoursTest/07.txt",
                     "previous": 5,
                     "next": 7,
                     "type": "half",
@@ -186,7 +186,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/07.txt",
+                    "path": "../assets/form/ParcoursTest/07.txt",
                     "previous": 6,
                     "next": 8,
                     "type": "half",
@@ -210,7 +210,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/07.txt",
+                    "path": "../assets/form/ParcoursTest/07.txt",
                     "previous": 7,
                     "next": 9,
                     "type": "half",
@@ -234,7 +234,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/ParcoursTest/08.txt",
+                    "path": "../assets/form/ParcoursTest/08.txt",
                     "previous": 5,
                     "next": 10,
                     "type": "half",
@@ -270,7 +270,7 @@
             ]
         },
         {
-            "id": "P1",
+            "id": "P_QUESTIONS",
             "name": "Parcours Question",
             "description": "Parcours avec questions",
             "startIndex": 0,
@@ -282,13 +282,13 @@
             ],
             "nodes": [
                 {
-                    "path": "./assets/form/01.txt",
+                    "path": "../assets/form/01.txt",
                     "previous": 0,
                     "next": 1,
                     "type": "full"
                 },
                 {
-                    "path": "./assets/form/02.txt",
+                    "path": "../assets/form/02.txt",
                     "previous": 0,
                     "next": 2,
                     "type": "half",
@@ -305,7 +305,7 @@
                     }
                 },
                 {
-                    "path": "./assets/form/03.txt",
+                    "path": "../assets/form/03.txt",
                     "previous": 1,
                     "next": 3,
                     "type": "half",

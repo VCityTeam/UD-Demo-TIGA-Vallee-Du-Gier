@@ -1,0 +1,72 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visite guidée</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script src="../dist/release/vdg_app.js"></script>
+    <!-- <script src="../dist/debug/vdg_app.js"></script> -->
+    <script type="text/javascript">
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '../src/css/style.css';
+      document.getElementsByTagName('HEAD')[0].appendChild(link);
+
+      const list = [];
+      const urls = [
+        '../assets/config/formConfig.json',
+        '../assets/config/mediaConfig.json',
+      ];
+      const configs = [];
+
+      urls.forEach(function (url, i) {
+        list.push(
+          fetch(url)
+            .then((response) => response.json())
+            .then((json) => {
+              configs[i] = json;
+            })
+        );
+      });
+
+      Promise.all(list).then(function () {
+        const formConfig = configs[0];
+        const mediaConfig = configs[1];
+        const app = new vdg_app.Templates.AllWidget();
+
+        app.start('../assets/config/config.json').then((config) => {
+          ////// BaseMap Widget
+          const baseMap = new vdg_app.Widgets.BaseMap(
+            app.view3D.getItownsView(),
+            config['baseMapLayers'],
+            app.extent,
+            app.config['projection']
+          );
+          app.addModuleView('baseMap', baseMap);
+
+          vdg_app.addLabelLayers(config, app.view3D.getItownsView());
+
+          const visit = new vdg_app.Visit(app.view3D, mediaConfig.medias);
+
+          let allWidgetPanel = document.getElementById(
+            '_all_widget_stuct_main_panel'
+          );
+          allWidgetPanel.style.display = 'block';
+          allWidgetPanel.querySelector('nav').style.display = 'none';
+          window.dispatchEvent(new Event('resize'));
+
+          const visitConfig = formConfig.visits.find(
+            (v) => v.id == 'P_QUESTIONS'
+          );
+          visit.start(visitConfig);
+        });
+      });
+    </script>
+  </body>
+</html>

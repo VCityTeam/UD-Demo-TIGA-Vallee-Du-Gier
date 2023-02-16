@@ -1,0 +1,125 @@
+
+
+.btn{
+    margin: 5px;
+}
+
+.bg-light{
+    background-color: rgb(255, 255, 255)!important;
+    border-bottom: solid 0.8px rgb(199, 197, 197);
+}
+
+.btn:hover{
+    background-color: rgb(220, 221, 221);
+}
+
+
+
+#pills-tab{
+    padding: 10px 10px 10px 770px ;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0px 0px 50px 10px;
+}
+
+/* sous menu catégories */
+
+#navCategories{
+    padding: 0px 0px 15px 200px;
+    display: flex;
+    -ms-flex-align: center;
+    /* background-color: brown; */
+}
+
+.list-group-item{
+    margin: 10px;
+}
+
+.categorie1{
+    color: chocolate;
+    border-radius: 30px;
+}
+
+.categorie2{
+    color: rgb(30, 159, 210);
+    border-radius: 30px;
+}
+
+.categorie3{
+    color: rgb(210, 198, 30);
+    border-radius: 30px;
+}
+
+.categorie4{
+    color: rgb(30, 36, 210);
+    border-radius: 30px;
+}
+
+.categorie5{
+    color: rgb(30, 210, 75);
+    border-radius: 30px;
+}
+
+.categorie6{
+    color: rgb(210, 30, 30);
+    border-radius: 30px 30px 30px 30px;
+}
+
+
+/* Générale*/
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+#carouselText{
+    /* padding-top: 80px; */
+    /* margin-top: 50px; */
+    padding: 150px 10px 50px 10px;
+    /* background-color: black; */
+}
+
+
+
+/* .row{
+    background-color: rgb(73, 73, 73);
+} */
+
+ /**Banniere */
+
+ #ban1{
+    height: 7rem;
+    position: relative;
+    background: url('https://www.patrimoine-lyon.org/uploads/images/icones/gravure-3d_1680.jpg');
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.img-contact{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+.img-partenaire{
+    border-radius: 10%;
+    height: 150px;
+    width: 250px;
+}
+
+#contact{
+    padding: 100px 0 100px 0;
+}
+
+#visite{
+    padding: 100px 0 100px 0;
+}
+.img-fluid{
+    border-radius: 10%;
+}
+
