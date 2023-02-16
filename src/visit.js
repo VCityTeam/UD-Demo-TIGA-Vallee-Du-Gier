@@ -140,14 +140,13 @@ export class Visit {
       this.form.restartButton.addEventListener(
         'click',
         function () {
-          this.reset();
-          document.getElementById('entry_panel').style.display = 'grid';
+          location.href = '../index.html';
         }.bind(this)
       );
       this.form.visitButton.addEventListener(
         'click',
         function () {
-          this.startOpenVisit();
+          location.href = './open_visit.html';
         }.bind(this)
       );
     } else {
