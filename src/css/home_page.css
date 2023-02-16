@@ -13,7 +13,9 @@
     background-color: rgb(220, 221, 221);
 }
 
-
+.d-block{
+    width: 100%;
+}
 
 #pills-tab{
     padding: 10px 10px 10px 770px ;
