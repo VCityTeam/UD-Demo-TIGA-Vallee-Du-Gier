@@ -95,7 +95,7 @@ body{
  #ban1{
     height: 7rem;
     position: relative;
-    background: url('https://www.patrimoine-lyon.org/uploads/images/icones/gravure-3d_1680.jpg');
+    /* background: url('https://www.patrimoine-lyon.org/uploads/images/icones/gravure-3d_1680.jpg'); */
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
