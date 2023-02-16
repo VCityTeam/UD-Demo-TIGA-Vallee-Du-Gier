@@ -17,11 +17,8 @@ export class MediaPanel {
         this.clickOnPin(event);
         this.fsImageDisplayed = true;
       } else if (this.fsImageDisplayed) {
-        try {
-          document.getElementById('fs_image_background').remove();}
-        catch {
-          this.deletePins();
-        }
+        const fs_bg = document.getElementById('fs_image_background');
+        if (fs_bg) fs_bg.remove();
         this.fsImageDisplayed = false;
       }
     });
