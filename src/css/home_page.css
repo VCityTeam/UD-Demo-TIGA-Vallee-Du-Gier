@@ -1,127 +1,93 @@
-
-
-.btn{
-    margin: 5px;
+.btn {
+  margin: 5px;
 }
 
-.bg-light{
-    background-color: rgb(255, 255, 255)!important;
-    border-bottom: solid 0.8px rgb(199, 197, 197);
+.bg-light {
+  background-color: rgb(255, 255, 255) !important;
+  border-bottom: solid 0.8px rgb(199, 197, 197);
 }
 
-.btn:hover{
-    background-color: rgb(220, 221, 221);
+.btn:hover {
+  background-color: rgb(220, 221, 221);
 }
 
-.d-block{
+
+#pills-tab {
+  padding: 10px 10px 10px 770px;
+}
+
+body {
+  font-family: 'Inter';
+  font-style: normal;
+  color: #000000;
+}
+
+p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#titles {
+  padding: 270px 0px 100px 0px;
+}
+
+#main-title {
+  padding: 0px 0px 27px 0px;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+}
+
+#second-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+#img-bg {
     width: 100%;
 }
 
-#pills-tab{
-    padding: 10px 10px 10px 770px ;
+#intro {
+  background-color: #686868;
 }
 
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 0px 0px 50px 10px;
+#intro-container {
+  padding: 176px 50px 70px 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-/* sous menu catégories */
-
-#navCategories{
-    padding: 0px 0px 15px 200px;
-    display: flex;
-    -ms-flex-align: center;
-    /* background-color: brown; */
+#intro-img {
+  width: 100%;
+  padding: 20px;
 }
 
-.list-group-item{
-    margin: 10px;
+#intro-text-div {
+  color: white;
+  padding: 20px;
 }
 
-.categorie1{
-    color: chocolate;
-    border-radius: 30px;
+#visit {
+  padding: 60px 70px 300px 70px;
 }
 
-.categorie2{
-    color: rgb(30, 159, 210);
-    border-radius: 30px;
+#visits-grid {
+    padding: 0px 50px 0px 50x;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.categorie3{
-    color: rgb(210, 198, 30);
-    border-radius: 30px;
+.visit-button {
+ width: 100%;
+ padding: 20px;
 }
 
-.categorie4{
-    color: rgb(30, 36, 210);
-    border-radius: 30px;
+.img-fluid {
+  border-radius: 10%;
 }
-
-.categorie5{
-    color: rgb(30, 210, 75);
-    border-radius: 30px;
-}
-
-.categorie6{
-    color: rgb(210, 30, 30);
-    border-radius: 30px 30px 30px 30px;
-}
-
-
-/* Générale*/
-
-body{
-    font-family: 'Lato', sans-serif;
-}
-
-#carouselText{
-    /* padding-top: 80px; */
-    /* margin-top: 50px; */
-    padding: 150px 10px 50px 10px;
-    /* background-color: black; */
-}
-
-
-
-/* .row{
-    background-color: rgb(73, 73, 73);
-} */
-
- /**Banniere */
-
- #ban1{
-    height: 7rem;
-    position: relative;
-    /* background: url('https://www.patrimoine-lyon.org/uploads/images/icones/gravure-3d_1680.jpg'); */
-    background-size: cover;
-    background-position: right;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-.img-contact{
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-}
-.img-partenaire{
-    border-radius: 10%;
-    height: 150px;
-    width: 250px;
-}
-
-#contact{
-    padding: 100px 0 100px 0;
-}
-
-#visite{
-    padding: 100px 0 100px 0;
-}
-.img-fluid{
-    border-radius: 10%;
-}
-
