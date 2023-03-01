@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Inter font -->
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
     <!-- Le CSS de Boostrap -->
     <link
@@ -21,43 +21,45 @@
   </head>
   <body>
     <!-- Menu  -->
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <ul class="nav nav-pills" id="pills-tab" role="tablist">
-        <li class="nav-item">
-          <a class="btn btn-light mybtn" type="button" href="#visit"
-            >Visite guidée</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-light" type="button" href="./html/open_visit.html"
-            >Carte intéractive</a
-          >
-        </li>
-        <li class="nav-item disabled">
-          <button
-            class="btn btn-light disabled"
-            type="button"
-            aria-disabled="true"
-          >
-            À propos
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <section id="menu">
+      <nav id="menu-nav" class="navbar navbar-light">
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="btn btn-light mybtn" type="button" href="#visit"
+              >Visite guidée</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-light" type="button" href="./html/open_visit.html"
+              >Carte intéractive</a
+            >
+          </li>
+          <li class="nav-item disabled">
+            <button
+              class="btn btn-light disabled"
+              type="button"
+              aria-disabled="true"
+            >
+              À propos
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
 
     <!-- Section Titres -->
     <section id="titles">
       <h1 id="main-title" class="text-center">Visite en Vallée du Gier</h1>
       <h2 id="second-title" class="text-center">Découvrir le territoire</h2>
     </section>
-    
+
     <!-- Section Image -->
     <section id="image">
       <div id="image-container">
-        <img id="img-bg" src="./assets/img/fond_fumee.png">
+        <img id="img-bg" src="./assets/img/fond_fumee.png" />
       </div>
     </section>
-  
+
     <!-- Section Intro -->
     <section id="intro">
       <div id="intro-container">
@@ -66,8 +68,18 @@
           src="./assets/media/images/IMAGE2_AcieriesMarine.jpg"
         />
         <div id="intro-text-div">
-          <h3>Comprendre le territoire industriel</h2>
-          <p><br><br>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+          <h3>Comprendre le territoire industriel</h3>
+          <p>
+            <br /><br />Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Etiam eu turpis molestie, dictum est a, mattis tellus. Sed
+            dignissim, metus nec fringilla accumsan, risus sem sollicitudin
+            lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum
+            velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos. Praesent
+            auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
+            Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna.
+            Curabitur vel bibendum lorem. Morbi convallis convallis diam sit
+            amet lacinia. Aliquam in elementum tellus.
           </p>
         </div>
       </div>
@@ -77,7 +89,14 @@
     <section id="visit">
       <div id="visit-container">
         <h3 class="text-center">Découvrez les visites 3D</h3>
-        <p class="text-center"><br><br>Gorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per<br><br></p>
+        <p class="text-center">
+          <br /><br />Gorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+          metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+          interdum tellus elit sed risus. Maecenas eget condimentum velit, sit
+          amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent
+          per<br /><br />
+        </p>
         <div id="visits-grid">
           <!-- Demo VDG-->
           <a class="visit-button" type="button" data-target="#vdgModal">
@@ -110,9 +129,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="vdgModalLabel">
-                    Parcours démo
-                  </h5>
+                  <h5 class="modal-title" id="vdgModalLabel">Parcours démo</h5>
                   <button
                     type="button"
                     class="close"
@@ -129,8 +146,8 @@
                     alt="portofolio image"
                   />
                   <p>
-                    La Vallée du Gier, un territoire de tradition
-                    industrielle en transformation
+                    La Vallée du Gier, un territoire de tradition industrielle
+                    en transformation
                   </p>
                 </div>
                 <div class="modal-footer">
