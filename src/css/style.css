@@ -74,19 +74,18 @@ video {
   align-self: start;
 }
 
-#text_div {
+#main_div {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   position: absolute;
 }
 
-.panel {
+#main_panel {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 36px 0 10px 0;
-  border-radius: 37px;
+  border-radius: 0px 10px 10px 0px;
   border: solid 1px #707070;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-stretch: normal;
@@ -98,79 +97,21 @@ video {
   text-align: left;
   color: #707070;
   display: flex;
-  flex-direction: column;
-  padding: 36px 0 10px 0;
-}
-
-#text_panel {
   position: relative;
-  width: 35%;
+  width: 30%;
+  height: 100%;
   z-index: 8;
-  margin: 3%;
+  flex-direction: column;
 }
 
-#media_panel {
-  position: absolute;
-  width: 35%;
-  max-height: 90%;
-  z-index: 7;
-  right: 0%;
-  top: 1%;
-  text-align: center;
-}
-
-#media_content_panel {
-  display: block;
+#content_panel {
+  padding: 10px 40px 10px 40px;
   overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  margin: 0px 30px;
-}
-
-#media_content_panel::-webkit-scrollbar {
-  display: none;
-}
-
-#media_panel_close {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  font-size: 36px;
-  line-height: 11px;
-  top: 10px;
-  right: 10px;
-  margin: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: solid 1px black;
-  padding: 0;
-  cursor: pointer;
-}
-
-#media_panel_close:after {
-  content: '\00d7';
-}
-
-#form_container::-webkit-scrollbar {
-  display: none;
+  display: block;
 }
 
 #form_container {
   display: block;
-  overflow: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  margin: 0px 50px;
-}
-
-#recap_panel {
-  float: left;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: none;
 }
 
 .recap-button {
@@ -209,7 +150,6 @@ video {
   display: inline-block;
   padding: 7px;
   background-color: transparent;
-  top: 50%;
   position: absolute;
   cursor: pointer;
 }
@@ -238,7 +178,7 @@ video {
   height: 50px;
   width: 28px;
   border: solid 1px #707070;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   background-color: #fff;
   display: inline-block;
   top: 10%;

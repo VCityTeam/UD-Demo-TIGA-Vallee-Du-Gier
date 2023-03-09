@@ -1,5 +1,5 @@
-import { Form } from './form';
-import { MediaPanel } from './mediaPanel';
+import { Panel } from './panel';
+import { MediaManager } from './mediaManager';
 import { THREE } from 'ud-viz';
 import { createTemporaryLayer } from './layerUtils';
 
@@ -14,11 +14,8 @@ export class Visit {
     this.modifiedCityObjects = [];
     this.temporaryLayers = [];
 
-    this.form = new Form();
-    this.addFormEvents();
-
-    this.mediaPanel = new MediaPanel(view);
-    this.addMediaPanelEvents();
+    this.panel = new Panel();
+    this.mediaManager = new MediaManager(view);
   }
 
   isStart() {
@@ -33,35 +30,22 @@ export class Visit {
     return this.config.nodes[this.currentIndex];
   }
 
-  addFormEvents() {
-    this.form.previousButton.addEventListener(
+  addVisitPanelEvents() {
+    this.panel.previousButton.addEventListener(
       'click',
       function () {
         this.goToPreviousNode();
       }.bind(this)
     );
-    this.form.nextButton.addEventListener(
+    this.panel.nextButton.addEventListener(
       'click',
       function () {
         this.goToNextNode();
       }.bind(this)
     );
-    this.form.closeButton.addEventListener(
-      'click',
-      function () {
-        if (this.form.isClosed) {
-          this.form.openTextPanel(
-            this.getNode().type,
-            this.isStart(),
-            this.isEnd()
-          );
-        } else {
-          this.form.closeTextPanel();
-        }
-      }.bind(this)
-    );
   }
 
+  // TODO: adapt this method to display info in open visit
   addMediaPanelEvents() {
     document.getElementById('viewerDiv').addEventListener(
       'mousedown',
@@ -72,7 +56,7 @@ export class Visit {
             (m) => m.parent_id == cityObject.props.id
           );
           if (media) {
-            this.mediaPanel.setContent(media);
+            this.mediaManager.setContent(media);
           }
         }
       }.bind(this)
@@ -83,12 +67,10 @@ export class Visit {
     this.config = visitConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
-    this.allowedMedias = this.medias.filter((media) =>
-      this.config.medias.includes(media.id)
-    );
-    this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
+    this.panel.initPreviousNextButtons();
+    this.addVisitPanelEvents();
     const startNode = this.config.nodes[this.currentIndex];
-    this.form.start(startNode.type, startNode.path, this.currentIndex);
+    this.panel.start(startNode.path, this.currentIndex);
     this.filterLayers(startNode.layers, startNode.filters);
     this.travelToPosition(startNode, this.view);
   }
@@ -96,8 +78,8 @@ export class Visit {
   startOpenVisit() {
     this.id = 'OPEN';
     this.currentIndex = 0;
-    this.form.hide();
     this.allowedMedias = this.medias;
+    // this.addMediaPanelEvents();
     this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
   }
 
@@ -106,52 +88,49 @@ export class Visit {
     this.config = null;
     this.currentIndex = 0;
     this.resetStyle();
-    this.form.reset();
+    this.panel.reset();
   }
 
   goToPreviousNode() {
-    this.mediaPanel.closePanel();
-    this.form.saveInputValues(this.currentIndex);
-    this.form.formContainer.innerHTML = '';
+    this.panel.saveInputValues(this.currentIndex);
+    this.panel.formContainer.innerHTML = '';
     let current = this.getNode();
     let previous = this.config.nodes[current.previous];
     this.currentIndex = current.previous;
-    this.form.setWidth(previous.type);
-    this.form.setButtonsStyle(this.isStart(), this.isEnd());
-    this.form.fillWithHtmlFromFile(previous.path, this.currentIndex);
+    this.panel.setButtonsStyle(this.isStart(), this.isEnd());
+    this.panel.fillWithHtmlFromFile(previous.path, this.currentIndex);
     this.setMedia(previous);
     this.filterLayers(previous.layers, previous.filters);
     this.travelToPosition(previous, this.view);
   }
 
   goToNextNode() {
-    this.mediaPanel.closePanel();
-    this.form.saveInputValues(this.currentIndex);
-    this.form.formContainer.innerHTML = '';
+    this.panel.saveInputValues(this.currentIndex);
+    this.panel.formContainer.innerHTML = '';
     let current = this.getNode();
     let next = this.config.nodes[current.next];
     this.currentIndex = current.next;
-    this.form.setWidth(next.type);
-    this.form.setButtonsStyle(this.isStart(), this.isEnd());
+    this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.filterLayers(next.layers, next.filters);
     if (this.isEnd()) {
-      this.form.fillWithRecapValues(this.config.name);
-      this.form.initRecapButtons();
-      this.form.restartButton.addEventListener(
+      this.panel.fillWithRecapValues(this.config.name);
+      this.panel.cleanMediaContainer();
+      this.panel.initRecapButtons();
+      this.panel.restartButton.addEventListener(
         'click',
         function () {
           location.href = '../index.html';
         }.bind(this)
       );
-      this.form.visitButton.addEventListener(
+      this.panel.visitButton.addEventListener(
         'click',
         function () {
           location.href = './open_visit.html';
         }.bind(this)
       );
     } else {
+      this.panel.fillWithHtmlFromFile(next.path, this.currentIndex);
       this.setMedia(next);
-      this.form.fillWithHtmlFromFile(next.path, this.currentIndex);
       this.travelToPosition(next, this.view);
     }
   }
@@ -261,8 +240,11 @@ export class Visit {
     if (node.media) {
       const media = this.medias.find((m) => m.id == node.media);
       if (media) {
-        this.mediaPanel.setContent(media);
+        this.panel.mediaContainer.style.display = 'block';
+        this.mediaManager.setContent(media, this.panel.mediaContainer);
       }
+    } else {
+      this.panel.cleanMediaContainer();
     }
   }
 }

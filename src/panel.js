@@ -1,10 +1,13 @@
-export class Form {
+export class Panel {
   constructor() {
     this.savedValues = [];
+    this.mainPanel = null;
+    this.contentPanel = null;
+    this.headerPanel = null;
     this.textPanel = null;
+    this.footerPanel = null;
     this.isClosed = false;
-    this.initTextPanel();
-    this.initPreviousNextButtons();
+    this.initPanel();
     this.initCloseButton();
   }
 
@@ -12,24 +15,9 @@ export class Form {
     this.savedValues = [];
   }
 
-  hide() {
-    document.getElementById('text_div').style.display = 'none';
-    let allWidgetPanel = document.getElementById(
-      '_all_widget_stuct_main_panel'
-    );
-    allWidgetPanel.style.display = 'grid';
-    allWidgetPanel.querySelector('nav').style.display = 'inline-block';
-    window.dispatchEvent(new Event('resize'));
-  }
-
-  start(nodeType, nodePath, nodeIndex) {
+  start(nodePath, nodeIndex) {
     this.setButtonsStyle(true, false);
-    this.setWidth(nodeType);
     this.fillWithHtmlFromFile(nodePath, nodeIndex);
-  }
-
-  setWidth(nodeType) {
-    this.textPanel.style.width = nodeType == 'half' ? '35%' : '100%';
   }
 
   setButtonsStyle(isStart, isEnd) {
@@ -119,43 +107,71 @@ export class Form {
     });
   }
 
-  initTextPanel() {
-    const textDiv = document.createElement('div');
-    textDiv.id = 'text_div';
+  initPanel() {
+    this.mainPanel = document.createElement('div');
+    this.mainPanel.id = 'main_panel';
+
+    this.contentPanel = document.createElement('div');
+    this.contentPanel.id = 'content_panel';
+    this.mainPanel.appendChild(this.contentPanel);
+
+    this.headerPanel = document.createElement('div');
+    this.headerPanel.id = 'header_panel';
+    this.contentPanel.appendChild(this.headerPanel);
 
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
-    this.textPanel.classList.add('panel');
+    this.contentPanel.appendChild(this.textPanel);
 
     this.formContainer = document.createElement('div');
     this.formContainer.id = 'form_container';
     this.textPanel.appendChild(this.formContainer);
 
-    textDiv.appendChild(this.textPanel);
-    document.body.appendChild(textDiv);
+    this.mediaContainer = document.createElement('div');
+    this.mediaContainer.id = 'media_container';
+    this.textPanel.appendChild(this.mediaContainer);
+
+    this.footerPanel = document.createElement('div');
+    this.footerPanel.id = 'footer_panel';
+    this.contentPanel.appendChild(this.footerPanel);
+
+    const mainDiv = document.createElement('div');
+    mainDiv.id = 'main_div';
+    mainDiv.appendChild(this.mainPanel);
+    document.body.appendChild(mainDiv);
   }
 
   initPreviousNextButtons() {
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
     this.previousButton.classList.add('arrow_button', 'button_left');
-    this.textPanel.appendChild(this.previousButton);
+    this.headerPanel.appendChild(this.previousButton);
 
     this.nextButton = document.createElement('button');
     this.nextButton.id = 'Next_button';
     this.nextButton.classList.add('arrow_button', 'button_right');
-    this.textPanel.appendChild(this.nextButton);
+    this.headerPanel.appendChild(this.nextButton);
   }
 
   initCloseButton() {
     this.closeButton = document.createElement('button');
     this.closeButton.id = 'close_button';
+    this.closeButton.addEventListener(
+      'click',
+      function () {
+        if (this.isClosed) {
+          this.openPanel();
+        } else {
+          this.closePanel();
+        }
+      }.bind(this)
+    );
 
     const arrow = document.createElement('div');
     arrow.id = 'close_arrow';
     this.closeButton.appendChild(arrow);
 
-    this.textPanel.appendChild(this.closeButton);
+    this.mainPanel.appendChild(this.closeButton);
   }
 
   initRecapButtons() {
@@ -172,21 +188,18 @@ export class Form {
     this.formContainer.appendChild(this.visitButton);
   }
 
-  closeTextPanel() {
-    this.formContainer.style.display = 'none';
-    this.textPanel.style.width = '1%';
-    this.nextButton.style.display = 'none';
-    this.previousButton.style.display = 'none';
+  closePanel() {
+    this.contentPanel.style.display = 'none';
+    this.mainPanel.style.width = '0%';
     this.closeButton.firstChild.style.transform = 'rotate(-45deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(-45deg)';
     this.closeButton.firstChild.style.left = '5px';
     this.isClosed = true;
   }
 
-  openTextPanel(nodeType, isStart, isEnd) {
-    this.setWidth(nodeType);
-    this.formContainer.style.display = 'block';
-    this.setButtonsStyle(isStart, isEnd);
+  openPanel() {
+    this.contentPanel.style.display = 'block';
+    this.mainPanel.style.width = '30%';
     this.closeButton.firstChild.style.transform = 'rotate(135deg)';
     this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
     this.closeButton.firstChild.style.left = '9px';
@@ -241,4 +254,10 @@ export class Form {
       i++;
     });
   }
+
+  cleanMediaContainer() {
+    this.mediaContainer.style.display = 'none';
+    this.mediaContainer.innerHTML = '';
+  }
 }
+
