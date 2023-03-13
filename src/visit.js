@@ -44,7 +44,7 @@ export class Visit {
       }.bind(this)
     );
   }
-  
+
   setVisit() {
     this.panel.initHeader();
     this.addVisitPanelEvents();
@@ -68,6 +68,7 @@ export class Visit {
     this.currentIndex = 0;
     this.allowedMedias = this.medias;
     this.setOpenVisit();
+    this.filterLayers(this.config.layers);
   }
 
   setOpenVisit() {
@@ -77,6 +78,7 @@ export class Visit {
     const subTitle = document.createElement('h2');
     subTitle.innerHTML = this.config.description;
     this.panel.headerPanel.appendChild(subTitle);
+    this.fillOpenVisitContent(this.config.categories);
   }
 
   reset() {
@@ -156,7 +158,7 @@ export class Visit {
     }
   }
 
-  filterLayers(layerIds, filters) {
+  filterLayers(layerIds, filters = undefined) {
     this.temporaryLayers.forEach((layer) => {
       this.view.getItownsView().removeLayer(layer.id, true);
     });
@@ -198,5 +200,43 @@ export class Visit {
     } else {
       this.panel.cleanMediaContainer();
     }
+  }
+
+  fillOpenVisitContent(categoriesConfig) {
+    categoriesConfig.forEach((category) => {
+      const categoryDiv = document.createElement('div');
+      categoryDiv.classList.add('ov_category');
+      this.panel.textPanel.appendChild(categoryDiv);
+
+      const categoryName = document.createElement('h3');
+      categoryName.innerHTML = category.name;
+      categoryDiv.appendChild(categoryName);
+
+      if (category.contents) {
+        category.contents.forEach((content) => {
+          const contentButton = document.createElement('button');
+          contentButton.classList.add('ov_content');
+          categoryDiv.appendChild(contentButton);
+
+          if (content.style) {
+            switch (content.style.type) {
+              case 'border':
+                contentButton.style.border = '5px solid ' + content.style.color;
+                break;
+              case 'plain':
+                contentButton.style.background = content.style.color;
+                break;
+              default:
+                contentButton.style.background = 'white';
+            }
+          }
+
+          const buttonText = document.createElement('p');
+          buttonText.classList.add('ov_text');
+          buttonText.innerHTML = content.description;
+          contentButton.appendChild(buttonText);
+        });
+      }
+    });
   }
 }

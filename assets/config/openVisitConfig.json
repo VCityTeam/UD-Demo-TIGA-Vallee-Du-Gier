@@ -1,4 +1,47 @@
 {
     "name": "Visite virtuelle d'une vallée industrielle",
-    "description": "<br>Parcourez librement le territoire de la Vallée du Gier"
+    "description": "<br>Parcourez librement le territoire de la Vallée du Gier",
+    "layers": [
+        "baseMapLayer_0",
+        "communes",
+        "BATI-INDUS",
+        "BATI-AUTRE"
+    ],
+    "categories": [
+        {
+            "name": "Couches de données",
+            "contents": [
+                {
+                    "type": "layer",
+                    "description": "Bâtiments industriels",
+                    "layerID": "BATI-INDUS",
+                    "style": {
+                        "color": "#202020",
+                        "type": "plain"
+                    }
+                },
+                {
+                    "type": "layer",
+                    "description": "Zones d'activités économiques",
+                    "layerID": "zae",
+                    "style": {
+                        "color": "green",
+                        "type": "plain"
+                    }
+                },
+                {
+                    "type": "layer",
+                    "description": "Délimitations des communes",
+                    "layerID": "communes",
+                    "style": {
+                        "color": "blue",
+                        "type": "border"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Exemples de filtres"
+        }
+    ]
 }
