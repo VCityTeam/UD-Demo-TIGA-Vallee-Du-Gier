@@ -16,6 +16,7 @@ export class Panel {
   }
 
   start(nodePath, nodeIndex) {
+    this.initPreviousNextButtons();
     this.setButtonsStyle(true, false);
     this.fillWithHtmlFromFile(nodePath, nodeIndex);
   }

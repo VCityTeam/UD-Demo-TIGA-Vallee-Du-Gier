@@ -45,32 +45,13 @@ export class Visit {
     );
   }
 
-  // TODO: adapt this method to display info in open visit
-  addMediaPanelEvents() {
-    document.getElementById('viewerDiv').addEventListener(
-      'mousedown',
-      function (e) {
-        const cityObject = this.view.layerManager.pickCityObject(e);
-        if (cityObject) {
-          const media = this.allowedMedias.find(
-            (m) => m.parent_id == cityObject.props.id
-          );
-          if (media) {
-            this.mediaManager.setContent(media);
-          }
-        }
-      }.bind(this)
-    );
-  }
-
   start(visitConfig) {
     this.config = visitConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
-    this.panel.initPreviousNextButtons();
-    this.addVisitPanelEvents();
     const startNode = this.config.nodes[this.currentIndex];
     this.panel.start(startNode.path, this.currentIndex);
+    this.addVisitPanelEvents();
     this.filterLayers(startNode.layers, startNode.filters);
     this.travelToPosition(startNode, this.view);
   }
@@ -79,15 +60,12 @@ export class Visit {
     this.id = 'OPEN';
     this.currentIndex = 0;
     this.allowedMedias = this.medias;
-    // this.addMediaPanelEvents();
-    this.applyStyleToParents(this.allowedMedias.map((m) => m.parent_id));
   }
 
   reset() {
     this.id = 'NONE';
     this.config = null;
     this.currentIndex = 0;
-    this.resetStyle();
     this.panel.reset();
   }
 
@@ -157,51 +135,6 @@ export class Visit {
           true
         );
     }
-  }
-
-  applyStyleToParents(parentIds) {
-    this.modifiedCityObjects = [];
-    this.view.layerManager.tilesManagers.forEach((tilesManager) => {
-      tilesManager.tiles.forEach((tile) => {
-        if (tile.cityObjects != null) {
-          tile.cityObjects.forEach((cityObject) => {
-            if (parentIds.includes(cityObject.props.id)) {
-              tilesManager.setStyle(cityObject.cityObjectId, {
-                materialProps: {
-                  color: 0xff0000,
-                  emissive: 0x00ff00,
-                  emissiveIntensity: 0.2,
-                },
-              });
-              this.modifiedCityObjects.push({
-                object: cityObject,
-                manager: tilesManager,
-                color: 0x202020,
-              });
-            }
-          });
-          tilesManager.applyStyles({
-            updateFunction: tilesManager.view.notifyChange.bind(
-              tilesManager.view
-            ),
-          });
-        }
-      });
-    });
-  }
-
-  resetStyle() {
-    this.modifiedCityObjects.forEach((co) => {
-      co.manager.setStyle(co.object.cityObjectId, {
-        materialProps: {
-          color: co.color,
-        },
-      });
-      co.manager.applyStyles({
-        updateFunction: co.manager.view.notifyChange.bind(co.manager.view),
-      });
-    });
-    this.modifiedCityObjects = [];
   }
 
   filterLayers(layerIds, filters) {
