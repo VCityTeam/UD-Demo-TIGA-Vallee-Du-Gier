@@ -1,17 +1,29 @@
-a {
-  color: black;
-}
-
 body {
   width: 100%;
   display: block;
+  font-family: 'Inter';
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  font-weight: normal;
 }
 
 h1 {
   font-size: 27px;
   font-weight: bold;
   text-align: center;
-  color: #000;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+a {
+  color: #000000 !important;
 }
 
 img,
@@ -19,59 +31,6 @@ video {
   max-width: 100%;
   max-height: 700px;
   margin: 0px auto;
-}
-
-#entry_panel {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-auto-rows: minmax(200px, 50%);
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50002; /* Because z-index = 50001 is the widgets nav */
-}
-
-.visit_div {
-  display: grid;
-  padding: 10px;
-  position: relative;
-  grid-template-rows: 66% 33%;
-  border: solid 1px #bfbfbf;
-}
-
-.visit_button {
-  height: 50%;
-  width: 60%;
-  place-self: center;
-  margin: 0;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  border-radius: 12px;
-  background-color: #a5a5a5;
-  border: solid 1px #bfbfbf;
-  cursor: pointer;
-}
-
-.visit_button:hover {
-  background-color: #929292;
-}
-
-.visit_desc {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  font-size: 25px;
-  font-weight: normal;
-  text-align: center;
-  color: #707070;
-  align-self: start;
 }
 
 #main_div {
@@ -84,30 +43,26 @@ video {
 }
 
 #main_panel {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(217, 217, 217, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 10px 10px 0px;
-  border: solid 1px #707070;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   font-size: 17px;
-  font-weight: normal;
-  text-align: left;
-  color: #707070;
   display: flex;
   position: relative;
-  width: 30%;
+  width: 25%;
   height: 100%;
   z-index: 8;
   flex-direction: column;
 }
 
 #content_panel {
-  padding: 10px 40px 10px 40px;
+  padding: 0px 40px 0px 40px;
   overflow: auto;
   display: block;
+}
+
+.panel {
+  padding: 20px 0px 20px 0px;
 }
 
 #form_container {
@@ -144,6 +99,14 @@ video {
   background-color: rgb(235, 234, 234);
 }
 
+#progress_count {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .arrow_button {
   border: solid black;
   border-width: 0 5px 5px 0;
@@ -177,9 +140,9 @@ video {
 #close_button {
   height: 50px;
   width: 28px;
-  border: solid 1px #707070;
-  border-radius: 0px 10px 10px 0px;
-  background-color: #fff;
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 5px 5px 0px;
   display: inline-block;
   top: 10%;
   right: -28px;
@@ -251,8 +214,6 @@ video {
 .formbuilder-radio-group-label {
   font-size: 22px;
   font-weight: bold;
-  text-align: left;
-  color: #000;
 }
 
 #fs_image_background {

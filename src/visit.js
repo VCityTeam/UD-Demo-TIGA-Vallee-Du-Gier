@@ -44,22 +44,39 @@ export class Visit {
       }.bind(this)
     );
   }
+  
+  setVisit() {
+    this.panel.initHeader();
+    this.addVisitPanelEvents();
+  }
 
   start(visitConfig) {
     this.config = visitConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
+    this.setVisit();
+    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     const startNode = this.config.nodes[this.currentIndex];
     this.panel.start(startNode.path, this.currentIndex);
-    this.addVisitPanelEvents();
     this.filterLayers(startNode.layers, startNode.filters);
     this.travelToPosition(startNode, this.view);
   }
 
-  startOpenVisit() {
+  startOpenVisit(openVisitConfig) {
+    this.config = openVisitConfig;
     this.id = 'OPEN';
     this.currentIndex = 0;
     this.allowedMedias = this.medias;
+    this.setOpenVisit();
+  }
+
+  setOpenVisit() {
+    const title = document.createElement('h1');
+    title.innerHTML = this.config.name;
+    this.panel.headerPanel.appendChild(title);
+    const subTitle = document.createElement('h2');
+    subTitle.innerHTML = this.config.description;
+    this.panel.headerPanel.appendChild(subTitle);
   }
 
   reset() {
@@ -75,6 +92,7 @@ export class Visit {
     let current = this.getNode();
     let previous = this.config.nodes[current.previous];
     this.currentIndex = current.previous;
+    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.panel.fillWithHtmlFromFile(previous.path, this.currentIndex);
     this.setMedia(previous);
@@ -88,6 +106,7 @@ export class Visit {
     let current = this.getNode();
     let next = this.config.nodes[current.next];
     this.currentIndex = current.next;
+    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.filterLayers(next.layers, next.filters);
     if (this.isEnd()) {

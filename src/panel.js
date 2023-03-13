@@ -16,7 +16,6 @@ export class Panel {
   }
 
   start(nodePath, nodeIndex) {
-    this.initPreviousNextButtons();
     this.setButtonsStyle(true, false);
     this.fillWithHtmlFromFile(nodePath, nodeIndex);
   }
@@ -24,6 +23,10 @@ export class Panel {
   setButtonsStyle(isStart, isEnd) {
     this.previousButton.style.display = isStart ? 'none' : 'block';
     this.nextButton.style.display = isEnd ? 'none' : 'block';
+  }
+
+  setProgressCount(currentIndex, endIndex) {
+    this.progressCount.innerHTML = (currentIndex + 1) + ' / ' + (endIndex + 1);
   }
 
   fillWithHtmlFromFile(fileName, nodeIndex) {
@@ -118,10 +121,12 @@ export class Panel {
 
     this.headerPanel = document.createElement('div');
     this.headerPanel.id = 'header_panel';
+    this.headerPanel.classList.add('panel');
     this.contentPanel.appendChild(this.headerPanel);
 
     this.textPanel = document.createElement('div');
     this.textPanel.id = 'text_panel';
+    this.textPanel.classList.add('panel');
     this.contentPanel.appendChild(this.textPanel);
 
     this.formContainer = document.createElement('div');
@@ -134,6 +139,7 @@ export class Panel {
 
     this.footerPanel = document.createElement('div');
     this.footerPanel.id = 'footer_panel';
+    this.footerPanel.classList.add('panel');
     this.contentPanel.appendChild(this.footerPanel);
 
     const mainDiv = document.createElement('div');
@@ -142,7 +148,11 @@ export class Panel {
     document.body.appendChild(mainDiv);
   }
 
-  initPreviousNextButtons() {
+  initHeader() {
+    this.progressCount = document.createElement('h3');
+    this.progressCount.id = 'progress_count';
+    this.headerPanel.appendChild(this.progressCount);
+
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
     this.previousButton.classList.add('arrow_button', 'button_left');

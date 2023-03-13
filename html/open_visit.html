@@ -8,6 +8,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/css/style.css" rel="stylesheet" />
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
     <script src="../dist/release/vdg_app.js"></script>
@@ -15,7 +18,7 @@
     <script type="text/javascript">
       const list = [];
       const urls = [
-        '../assets/config/formConfig.json',
+        '../assets/config/openVisitConfig.json',
         '../assets/config/mediaConfig.json',
       ];
       const configs = [];
@@ -31,7 +34,7 @@
       });
 
       Promise.all(list).then(function () {
-        const formConfig = configs[0];
+        const openVisitConfig = configs[0];
         const mediaConfig = configs[1];
         const app = new vdg_app.Templates.AllWidget();
 
@@ -60,9 +63,16 @@
 
           vdg_app.addLabelLayers(config, app.view3D.getItownsView());
 
+          let allWidgetPanel = document.getElementById(
+            '_all_widget_stuct_main_panel'
+          );
+          allWidgetPanel.style.display = 'block';
+          allWidgetPanel.querySelector('nav').style.display = 'none';
+          window.dispatchEvent(new Event('resize'));
+
           const visit = new vdg_app.Visit(app.view3D, mediaConfig.medias);
 
-          visit.startOpenVisit();
+          visit.startOpenVisit(openVisitConfig);
         });
       });
     </script>
