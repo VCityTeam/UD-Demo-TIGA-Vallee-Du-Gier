@@ -23,6 +23,48 @@
                 "color": "blue",
                 "type": "border"
             }
+        },
+        {
+            "description": "Noms des communes",
+            "id": "noms_communes",
+            "style": {
+                "color": "white",
+                "type": "text"
+            }
+        },
+        {
+            "description": "Noms des entreprises",
+            "id": "noms_entreprises",
+            "style": {
+                "color": "rgb(255,150,150)",
+                "type": "text"
+            }
+        }
+    ],
+    "filters": [
+        {
+            "description": "Bâtiments industriels de plus de 20 mètres",
+            "id": "BATI_INDUS_HAUTEUR",
+            "style": {
+                "color": "#202020",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Filtre noms communes",
+            "id": "NOMS_COM",
+            "style": {
+                "color": "green",
+                "type": "text"
+            }
+        },
+        {
+            "description": "Filtre communes",
+            "id": "COMS",
+            "style": {
+                "color": "blue",
+                "type": "border"
+            }
         }
     ]
 }

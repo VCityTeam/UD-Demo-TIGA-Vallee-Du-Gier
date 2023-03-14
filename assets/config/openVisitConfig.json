@@ -26,7 +26,24 @@
             ]
         },
         {
-            "name": "Exemples de filtres"
+            "name": "Exemples de filtres",
+            "contents": [
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "BATI_INDUS_HAUTEUR"
+                },
+                {
+                    "type": "filter",
+                    "layer": "noms_communes",
+                    "id": "NOMS_COM"
+                },
+                {
+                    "type": "filter",
+                    "layer": "communes",
+                    "id": "COMS"
+                }
+            ]
         }
     ]
 }

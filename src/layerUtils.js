@@ -24,6 +24,23 @@ export function addLabelLayers(config, itownsView) {
   }
 }
 
+export function addFilterOnLayer(view, layer, filter, id) {
+  if (layer.isC3DTilesLayer) {
+    return filterCityObjectsByAttribute(view, layer, filter);
+  } else {
+    return createTemporaryLayer(layer, filter, id);
+  }
+}
+
+export function removeFilterOnLayer(view, filter, setVisible=false) {
+  if (filter.targetLayer.isC3DTilesLayer) {
+    // TODO
+  } else {
+    view.getItownsView().removeLayer(filter.targetLayer.id, true);
+    filter.sourceLayer.visible = setVisible;
+  }
+}
+
 export function createTemporaryLayer(layer, filter, id) {
   let source = null;
   let temporaryLayer = null;
@@ -56,4 +73,29 @@ export function createTemporaryLayer(layer, filter, id) {
     return validator.validate(properties);
   };
   return temporaryLayer;
+}
+
+export function filterCityObjectsByAttribute(view, layer, filter) {
+  for (const tilesManager of view.layerManager.tilesManagers) {
+    if (tilesManager.layer.id == layer.id) {
+      tilesManager.tiles.forEach((tile) => {
+        if (tile.cityObjects != null) {
+          tile.cityObjects.forEach((cityObject) => {
+            if (filter.attributeValues.includes(cityObject.props[filter.attributeName])) {
+              tilesManager.setStyle(cityObject.cityObjectId, filter.styleAccepted);
+            } else {
+              tilesManager.setStyle(cityObject.cityObjectId, filter.styleRejected);
+            }
+          });
+          tilesManager.applyStyles({
+            updateFunction: tilesManager.view.notifyChange.bind(
+              tilesManager.view
+            ),
+          });
+        }
+      });
+      break;
+    }
+  }
+  return layer;
 }

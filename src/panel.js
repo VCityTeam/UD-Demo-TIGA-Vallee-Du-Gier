@@ -280,6 +280,10 @@ export class Panel {
         case 'plain':
           captionSquare.style.background = style.color;
           break;
+        case 'text':
+          captionSquare.innerHTML = 'Abc';
+          captionSquare.style.color = style.color;
+          break;
         default:
           captionSquare.style.background = 'white';
       }
