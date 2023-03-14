@@ -43,10 +43,10 @@
     ],
     "filters": [
         {
-            "description": "Bâtiments industriels de plus de 20 mètres",
+            "description": "Bâtiments industriels usage commercial",
             "id": "BATI_INDUS_HAUTEUR",
             "style": {
-                "color": "#202020",
+                "color": "#ff0000",
                 "type": "plain"
             }
         },

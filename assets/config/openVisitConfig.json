@@ -5,7 +5,8 @@
         "baseMapLayer_0",
         "communes",
         "BATI-INDUS",
-        "BATI-AUTRE"
+        "BATI-AUTRE",
+        "noms_communes"
     ],
     "categories": [
         {
@@ -22,6 +23,10 @@
                 {
                     "type": "layer",
                     "id": "communes"
+                },
+                {
+                    "type": "layer",
+                    "id": "noms_communes"
                 }
             ]
         },
@@ -31,17 +36,51 @@
                 {
                     "type": "filter",
                     "layer": "BATI-INDUS",
-                    "id": "BATI_INDUS_HAUTEUR"
+                    "id": "BATI_INDUS_HAUTEUR",
+                    "properties": {
+                        "attribute": "USAGE2",
+                        "attribute_values": [
+                            "Commercial et services"
+                        ],
+                        "style_accepted": {
+                            "materialProps": {
+                                "color": "0x600000"
+                            }
+                        },
+                        "style_rejected": {
+                            "materialProps": {
+                                "color": "0x000000"
+                            }
+                        }
+                    }
                 },
                 {
                     "type": "filter",
                     "layer": "noms_communes",
-                    "id": "NOMS_COM"
+                    "id": "NOMS_COM",
+                    "properties": {
+                        "COMMUNE": {
+                            "type": "string",
+                            "enum": [
+                                "Rive-de-Gier",
+                                "Saint-Chamond"
+                            ]
+                        }
+                    }
                 },
                 {
                     "type": "filter",
                     "layer": "communes",
-                    "id": "COMS"
+                    "id": "COMS",
+                    "properties": {
+                        "COMMUNE": {
+                            "type": "string",
+                            "enum": [
+                                "Rive-de-Gier",
+                                "Saint-Chamond"
+                            ]
+                        }
+                    }
                 }
             ]
         }

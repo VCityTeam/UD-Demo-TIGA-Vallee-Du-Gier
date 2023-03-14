@@ -1,7 +1,7 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { THREE } from 'ud-viz';
-import { addFilterOnLayer, removeFilterOnLayer } from './layerUtils';
+import { addFilterOnLayer, getLayerById, removeFilterOnLayer } from './layerUtils';
 
 export class Visit {
   constructor(view, medias) {
@@ -164,23 +164,23 @@ export class Visit {
     }
   }
 
-  layerHasFilter(layer) {
+  layerHasFilter(layerId) {
     for (const filter of this.layerFilters) {
-      if (filter.sourceLayer.id == layer.id) return true;
+      if (filter.sourceLayer.id == layerId) return true;
     }
     return false;
   }
 
-  layerIsFilter(layer) {
+  layerIsFilter(layerId) {
     for (const filter of this.layerFilters) {
-      if (filter.targetLayer.id == layer.id) return true;
+      if (filter.targetLayer.id == layerId) return true;
     }
     return false;
   }
 
-  getSourceForFilteredLayer(layer) {
+  getSourceForFilteredLayer(layerId) {
     for (const filter of this.layerFilters) {
-      if (filter.targetLayer.id == layer.id) return filter.sourceLayer;
+      if (filter.targetLayer.id == layerId) return filter.sourceLayer;
     }
     return undefined;
   }
@@ -205,13 +205,12 @@ export class Visit {
               sourceLayer: layer,
               targetLayer: temporaryLayer,
             });
-            this.view.getItownsView().addLayer(temporaryLayer);
           }
         });
       }
       layer.visible =
         layerIds == undefined ||
-        (layerIds.includes(layer.id) && !this.layerHasFilter(layer)) ||
+        (layerIds.includes(layer.id) && !this.layerHasFilter(layer.id)) ||
         layer.id == 'planar';
     });
   }
@@ -268,6 +267,28 @@ export class Visit {
                 break;
               }
             }
+            contentButton.addEventListener(
+              'click',
+              function () {
+                if (this.layerHasFilter(content.layer)) {
+                  let i = 0;
+                  let filter = null;
+                  for (const f of this.layerFilters) {
+                    if (f.sourceLayer.id == content.layer) filter = f;
+                    i++; 
+                  }
+                  removeFilterOnLayer(this.view, filter, true);
+                  this.layerFilters.splice(i, 1);
+                }
+                const layer = getLayerById(this.view, content.layer);
+                const temporaryLayer = addFilterOnLayer(this.view, layer, content, 'temporary_' + this.layerFilters.length);
+                this.layerFilters.push({
+                  sourceLayer: layer,
+                  targetLayer: temporaryLayer,
+                });
+                layer.visible = false;
+              }.bind(this)
+            );
           }
         });
       }
@@ -278,8 +299,8 @@ export class Visit {
     this.panel.footerPanel.innerHTML = '';
     this.view.layerManager.getLayers().forEach((layer) => {
       if (layer.visible) {
-        const id = this.layerIsFilter(layer)
-          ? this.getSourceForFilteredLayer(layer).id
+        const id = this.layerIsFilter(layer.id)
+          ? this.getSourceForFilteredLayer(layer.id).id
           : layer.id;
         for (const layerCaption of this.captionConfig.layers) {
           if (id == layerCaption.id) {
