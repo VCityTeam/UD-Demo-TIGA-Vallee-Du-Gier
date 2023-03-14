@@ -50,8 +50,9 @@ export class Visit {
     this.addVisitPanelEvents();
   }
 
-  start(visitConfig) {
+  start(visitConfig, captionConfig) {
     this.config = visitConfig;
+    this.captionConfig = captionConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
     this.setVisit();
@@ -59,11 +60,13 @@ export class Visit {
     const startNode = this.config.nodes[this.currentIndex];
     this.panel.start(startNode.path, this.currentIndex);
     this.filterLayers(startNode.layers, startNode.filters);
+    this.createLayersCaption();
     this.travelToPosition(startNode, this.view);
   }
 
-  startOpenVisit(openVisitConfig) {
+  startOpenVisit(openVisitConfig, captionConfig) {
     this.config = openVisitConfig;
+    this.captionConfig = captionConfig;
     this.id = 'OPEN';
     this.currentIndex = 0;
     this.allowedMedias = this.medias;
@@ -99,6 +102,7 @@ export class Visit {
     this.panel.fillWithHtmlFromFile(previous.path, this.currentIndex);
     this.setMedia(previous);
     this.filterLayers(previous.layers, previous.filters);
+    this.createLayersCaption();
     this.travelToPosition(previous, this.view);
   }
 
@@ -111,22 +115,24 @@ export class Visit {
     this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.filterLayers(next.layers, next.filters);
+    this.createLayersCaption();
     if (this.isEnd()) {
-      this.panel.fillWithRecapValues(this.config.name);
-      this.panel.cleanMediaContainer();
-      this.panel.initRecapButtons();
-      this.panel.restartButton.addEventListener(
-        'click',
-        function () {
-          location.href = '../index.html';
-        }.bind(this)
-      );
-      this.panel.visitButton.addEventListener(
-        'click',
-        function () {
-          location.href = './open_visit.html';
-        }.bind(this)
-      );
+      this.panel.fillWithHtmlFromFile(next.path, this.currentIndex).then(() => {
+        this.panel.cleanMediaContainer();
+        this.panel.initRecapButtons();
+        this.panel.restartButton.addEventListener(
+          'click',
+          function () {
+            location.href = '../index.html';
+          }.bind(this)
+        );
+        this.panel.visitButton.addEventListener(
+          'click',
+          function () {
+            location.href = './open_visit.html';
+          }.bind(this)
+        );
+      });
     } else {
       this.panel.fillWithHtmlFromFile(next.path, this.currentIndex);
       this.setMedia(next);
@@ -179,9 +185,6 @@ export class Visit {
             this.temporaryLayers.push(temporaryLayer);
           }
         });
-        if (!isFiltered) layer.filter = undefined;
-      } else {
-        layer.filter = undefined;
       }
       layer.visible =
         layerIds == undefined ||
@@ -218,24 +221,39 @@ export class Visit {
           contentButton.classList.add('ov_content');
           categoryDiv.appendChild(contentButton);
 
-          if (content.style) {
-            switch (content.style.type) {
-              case 'border':
-                contentButton.style.border = '5px solid ' + content.style.color;
+          if (content.type == 'layer') {
+            for (const layerCaption of this.captionConfig.layers) {
+              if (content.id == layerCaption.id) {
+                contentButton.appendChild(
+                  this.panel.createCaption(
+                    layerCaption.style,
+                    layerCaption.description
+                  )
+                );
                 break;
-              case 'plain':
-                contentButton.style.background = content.style.color;
-                break;
-              default:
-                contentButton.style.background = 'white';
+              }
             }
           }
-
-          const buttonText = document.createElement('p');
-          buttonText.classList.add('ov_text');
-          buttonText.innerHTML = content.description;
-          contentButton.appendChild(buttonText);
         });
+      }
+    });
+  }
+
+  createLayersCaption() {
+    this.panel.footerPanel.innerHTML = '';
+    this.view.layerManager.getLayers().forEach((layer) => {
+      if (layer.visible) {
+        for (const layerCaption of this.captionConfig.layers) {
+          if (layer.id == layerCaption.id) {
+            this.panel.footerPanel.appendChild(
+              this.panel.createCaption(
+                layerCaption.style,
+                layerCaption.description
+              )
+            );
+            break;
+          }
+        }
       }
     });
   }

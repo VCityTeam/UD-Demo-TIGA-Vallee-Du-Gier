@@ -20,6 +20,7 @@
       const urls = [
         '../assets/config/openVisitConfig.json',
         '../assets/config/mediaConfig.json',
+        '../assets/config/captionConfig.json',
       ];
       const configs = [];
 
@@ -36,6 +37,7 @@
       Promise.all(list).then(function () {
         const openVisitConfig = configs[0];
         const mediaConfig = configs[1];
+        const captionConfig = configs[2];
         const app = new vdg_app.Templates.AllWidget();
 
         app.start('../assets/config/config.json').then((config) => {
@@ -72,7 +74,7 @@
 
           const visit = new vdg_app.Visit(app.view3D, mediaConfig.medias);
 
-          visit.startOpenVisit(openVisitConfig);
+          visit.startOpenVisit(openVisitConfig, captionConfig);
         });
       });
     </script>

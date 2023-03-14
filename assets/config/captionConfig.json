@@ -1,0 +1,28 @@
+{
+    "layers": [
+        {
+            "description": "Bâtiments industriels",
+            "id": "BATI-INDUS",
+            "style": {
+                "color": "#202020",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Zones d'activités économiques",
+            "id": "zae",
+            "style": {
+                "color": "green",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Délimitations des communes",
+            "id": "communes",
+            "style": {
+                "color": "blue",
+                "type": "border"
+            }
+        }
+    ]
+}

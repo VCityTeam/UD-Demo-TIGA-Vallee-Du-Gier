@@ -187,6 +187,7 @@
                     }
                 },
                 {
+                    "path": "../assets/form/ParcoursTest/09.txt",
                     "previous": 6,
                     "type": "full",
                     "layers": [
@@ -250,6 +251,7 @@
                     }
                 },
                 {
+                    "path": "../assets/form/04.txt",
                     "previous": 2,
                     "type": "full"
                 }

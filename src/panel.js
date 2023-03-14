@@ -26,31 +26,20 @@ export class Panel {
   }
 
   setProgressCount(currentIndex, endIndex) {
-    this.progressCount.innerHTML = (currentIndex + 1) + ' / ' + (endIndex + 1);
+    this.progressCount.innerHTML = currentIndex + 1 + ' / ' + (endIndex + 1);
   }
 
   fillWithHtmlFromFile(fileName, nodeIndex) {
-    fetch(fileName)
-      .then((response) => response.text())
-      .then((text) => {
-        this.formContainer.innerHTML = text;
-        this.addStyleEvents();
-        if (this.savedValues && this.savedValues[nodeIndex])
-          this.loadSavedValues(nodeIndex);
-      });
-  }
-
-  fillWithRecapValues(visitName) {
-    const recapTitle = document.createElement('h1');
-    recapTitle.innerHTML =
-      'Félicitations, vous avez terminé le parcours ' + visitName + ' !';
-    this.formContainer.appendChild(recapTitle);
-
-    this.savedValues.forEach((array) => {
-      this.formContainer.appendChild(
-        document.createTextNode(array.map((v) => v.text).join('; '))
-      );
-      this.formContainer.appendChild(document.createElement('br'));
+    return new Promise((resolve) => {
+      fetch(fileName)
+        .then((response) => response.text())
+        .then((text) => {
+          this.formContainer.innerHTML = text;
+          this.addStyleEvents();
+          if (this.savedValues && this.savedValues[nodeIndex])
+            this.loadSavedValues(nodeIndex);
+          resolve();
+        });
     });
   }
 
@@ -192,6 +181,8 @@ export class Panel {
     this.restartButton.innerHTML = 'Recommencer';
     this.formContainer.appendChild(this.restartButton);
 
+    this.formContainer.appendChild(document.createElement('br'));
+
     this.visitButton = document.createElement('button');
     this.visitButton.id = 'visit_button';
     this.visitButton.classList.add('recap-button');
@@ -270,5 +261,35 @@ export class Panel {
     this.mediaContainer.style.display = 'none';
     this.mediaContainer.innerHTML = '';
   }
-}
 
+  createCaption(style, text) {
+    const captionDiv = document.createElement('div');
+    captionDiv.classList.add('caption_div');
+
+    const captionSquare = document.createElement('div');
+    captionSquare.classList.add('caption_square');
+    captionDiv.appendChild(captionSquare);
+
+    if (style) {
+      switch (style.type) {
+        case 'border':
+          captionSquare.style.border = '7px solid ' + style.color;
+          captionSquare.style.width = '16px';
+          captionSquare.style.height = '16px';
+          break;
+        case 'plain':
+          captionSquare.style.background = style.color;
+          break;
+        default:
+          captionSquare.style.background = 'white';
+      }
+    }
+
+    const captionText = document.createElement('p');
+    captionText.classList.add('caption_text');
+    captionText.innerHTML = text;
+    captionDiv.appendChild(captionText);
+
+    return captionDiv;
+  }
+}
