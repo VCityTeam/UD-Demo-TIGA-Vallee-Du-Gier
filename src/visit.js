@@ -1,7 +1,11 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { THREE } from 'ud-viz';
-import { addFilterOnLayer, getLayerById, removeFilterOnLayer } from './layerUtils';
+import {
+  addFilterOnLayer,
+  getLayerById,
+  removeFilterOnLayer,
+} from './layerUtils';
 
 export class Visit {
   constructor(view, medias) {
@@ -208,10 +212,12 @@ export class Visit {
           }
         });
       }
-      layer.visible =
-        layerIds == undefined ||
-        (layerIds.includes(layer.id) && !this.layerHasFilter(layer.id)) ||
-        layer.id == 'planar';
+      if (!this.layerHasFilter(layer.id)) {
+        layer.visible =
+          layerIds == undefined ||
+          layerIds.includes(layer.id) ||
+          layer.id == 'planar';
+      }
     });
   }
 
@@ -255,6 +261,14 @@ export class Visit {
                 break;
               }
             }
+            contentButton.addEventListener(
+              'click',
+              function () {
+                const layer = getLayerById(this.view, content.id);
+                layer.visible = !layer.visible;
+                this.view.layerManager.notifyChange();
+              }.bind(this)
+            );
           } else if (content.type == 'filter') {
             for (const filterCaption of this.captionConfig.filters) {
               if (content.id == filterCaption.id) {
@@ -275,18 +289,22 @@ export class Visit {
                   let filter = null;
                   for (const f of this.layerFilters) {
                     if (f.sourceLayer.id == content.layer) filter = f;
-                    i++; 
+                    i++;
                   }
                   removeFilterOnLayer(this.view, filter, true);
                   this.layerFilters.splice(i, 1);
                 }
                 const layer = getLayerById(this.view, content.layer);
-                const temporaryLayer = addFilterOnLayer(this.view, layer, content, 'temporary_' + this.layerFilters.length);
+                const temporaryLayer = addFilterOnLayer(
+                  this.view,
+                  layer,
+                  content,
+                  'temporary_' + this.layerFilters.length
+                );
                 this.layerFilters.push({
                   sourceLayer: layer,
                   targetLayer: temporaryLayer,
                 });
-                layer.visible = false;
               }.bind(this)
             );
           }

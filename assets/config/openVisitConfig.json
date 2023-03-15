@@ -44,12 +44,12 @@
                         ],
                         "style_accepted": {
                             "materialProps": {
-                                "color": "0x600000"
+                                "color": "#FF0000"
                             }
                         },
                         "style_rejected": {
                             "materialProps": {
-                                "color": "0x000000"
+                                "color": "#ffffff"
                             }
                         }
                     }

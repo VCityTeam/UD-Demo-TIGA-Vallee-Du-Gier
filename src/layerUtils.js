@@ -32,10 +32,13 @@ export function getLayerById(view, layerId) {
 
 export function addFilterOnLayer(view, layer, filter, id) {
   if (layer.isC3DTilesLayer) {
+    layer.visible = true;
     return filterCityObjectsByAttribute(view, layer, filter);
   } else {
     const tempLayer = createTemporaryLayer(layer, filter, id);
+    layer.visible = false;
     view.getItownsView().addLayer(tempLayer);
+    view.layerManager.notifyChange();
     return tempLayer;
   }
 }
@@ -94,7 +97,6 @@ export function filterCityObjectsByAttribute(view, layer, filter) {
                 cityObject.props[filter.properties['attribute']]
               )
             ) {
-              console.log(cityObject.cityObjectId, cityObject.props);
               tilesManager.setStyle(
                 cityObject.cityObjectId,
                 filter.properties['style_accepted']
