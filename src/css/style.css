@@ -264,6 +264,10 @@ audio {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.caption_div {
+  height: 100%;
+}
+
 .caption_square {
   position: relative;
   top: 0px;
@@ -278,11 +282,12 @@ audio {
 
 .caption_text {
   margin: 0px;
-  width: 85%;
   position: relative;
-  top: -25px;
+  top: -50%;
   left: 40px;
   text-align: left;
   width: fit-content;
   font-size: 15px;
+  line-height: 15px;
+  transform: translateY(-50%);
 }
