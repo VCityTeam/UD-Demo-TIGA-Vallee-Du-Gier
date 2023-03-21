@@ -284,6 +284,9 @@ export class Panel {
           captionSquare.innerHTML = 'Abc';
           captionSquare.style.color = style.color;
           break;
+        case 'image':
+          captionSquare.style.backgroundImage = 'url(' + style.path + ')';
+          break;
         default:
           captionSquare.style.background = 'white';
       }
