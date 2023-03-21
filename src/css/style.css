@@ -300,6 +300,9 @@ audio {
 
 .caption_div {
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
 }
 
 .caption_square {
@@ -317,11 +320,10 @@ audio {
 .caption_text {
   margin: 0px;
   position: relative;
-  top: -50%;
-  left: 40px;
-  text-align: left;
+  left: 20px;
   width: fit-content;
   font-size: 15px;
   line-height: 15px;
-  transform: translateY(-50%);
+  margin-top: auto;
+  margin-bottom: auto;
 }

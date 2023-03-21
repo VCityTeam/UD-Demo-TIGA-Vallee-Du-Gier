@@ -133,7 +133,8 @@ export class Visit {
             this.panel.footerPanel.appendChild(
               this.panel.createCaption(
                 layerCaption.style,
-                layerCaption.description
+                layerCaption.description,
+                10
               )
             );
             break;

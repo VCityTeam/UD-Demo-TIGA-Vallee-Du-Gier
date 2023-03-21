@@ -262,9 +262,10 @@ export class Panel {
     this.mediaContainer.innerHTML = '';
   }
 
-  createCaption(style, text) {
+  createCaption(style, text, margin = 0) {
     const captionDiv = document.createElement('div');
     captionDiv.classList.add('caption_div');
+    if (margin != 0) captionDiv.style.margin = margin + 'px 0px';
 
     const captionSquare = document.createElement('div');
     captionSquare.classList.add('caption_square');
