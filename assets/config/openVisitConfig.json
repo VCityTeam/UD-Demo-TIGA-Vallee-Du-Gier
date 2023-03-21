@@ -28,6 +28,21 @@
                     "type": "layer",
                     "id": "noms_communes"
                 }
+            ],
+            "categories": [
+                {
+                    "name": "Fonds de carte",
+                    "contents": [
+                        {
+                            "type": "layer",
+                            "id": "baseMapLayer_0"
+                        },
+                        {
+                            "type": "layer",
+                            "id": "baseMapLayer_1"
+                        }
+                    ]
+                }
             ]
         },
         {

@@ -71,6 +71,12 @@ export class OpenVisit extends Visit {
         this.addContent(content, categoryContent);
       });
     }
+
+    if (category.categories) {
+      category.categories.forEach((category) => {
+        this.addCategory(category, categoryContent);
+      });
+    }
   }
 
   addContent(content, parentDiv) {
