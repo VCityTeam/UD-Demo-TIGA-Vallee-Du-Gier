@@ -1,3 +1,4 @@
 export { Templates, Widgets, THREE } from 'ud-viz';
 export { addLabelLayers } from './layerUtils';
-export { Visit } from './visit';
+export { OpenVisit } from './openVisit';
+export { GuidedVisit } from './guidedVisit';

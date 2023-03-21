@@ -72,9 +72,9 @@
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
 
-          const visit = new vdg_app.Visit(app.view3D, mediaConfig.medias);
+          const visit = new vdg_app.OpenVisit(app.view3D, mediaConfig.medias);
 
-          visit.startOpenVisit(openVisitConfig, captionConfig);
+          visit.start(openVisitConfig, captionConfig);
         });
       });
     </script>
