@@ -250,6 +250,40 @@ audio {
   height: fit-content;
 }
 
+.ov_category_button {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.ov_category_name {
+  padding: 0px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.ov_category_square {
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.square_right {
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #585858;
+}
+
+.square_down {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #585858;
+}
+
 .ov_content {
   display: block;
   margin: 10px 0px;

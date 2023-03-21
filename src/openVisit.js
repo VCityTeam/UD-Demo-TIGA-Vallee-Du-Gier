@@ -31,15 +31,41 @@ export class OpenVisit extends Visit {
       categoryDiv.classList.add('ov_category');
       this.panel.textPanel.appendChild(categoryDiv);
 
+      const categoryButton = document.createElement('button');
+      categoryButton.classList.add('ov_category_button');
       const categoryName = document.createElement('h3');
       categoryName.innerHTML = category.name;
-      categoryDiv.appendChild(categoryName);
+      categoryName.classList.add('ov_category_name');
+      categoryButton.appendChild(categoryName);
+      const categorySquare = document.createElement('div');
+      categorySquare.classList.add('ov_category_square', 'square_right');
+      categoryButton.appendChild(categorySquare);
+      categoryDiv.appendChild(categoryButton);
+
+      const categoryContent = document.createElement('div');
+      categoryContent.classList.add('ov_category_content');
+      categoryContent.style.display = 'none';
+      categoryButton.addEventListener(
+        'click',
+        function () {
+          if (categoryContent.style.display == 'none') {
+            categoryContent.style.display = 'block';
+            categorySquare.classList.remove('square_right');
+            categorySquare.classList.add('square_down');
+          } else {
+            categoryContent.style.display = 'none';
+            categorySquare.classList.remove('square_down');
+            categorySquare.classList.add('square_right');
+          }
+        }.bind(this)
+      );
+      categoryDiv.appendChild(categoryContent);
 
       if (category.contents) {
         category.contents.forEach((content) => {
           const contentButton = document.createElement('button');
           contentButton.classList.add('ov_content');
-          categoryDiv.appendChild(contentButton);
+          categoryContent.appendChild(contentButton);
 
           if (content.type == 'layer') {
             for (const layerCaption of this.captionConfig.layers) {
