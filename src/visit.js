@@ -1,6 +1,6 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
-import { THREE } from 'ud-viz';
+import { THREE } from '@ud-viz/browser';
 import {
   addFilterOnLayer,
   removeFilterOnLayer,

@@ -16,56 +16,48 @@
     <script src="../dist/release/vdg_app.js"></script>
     <!-- <script src="../dist/debug/vdg_app.js"></script> -->
     <script type="text/javascript">
-      const list = [];
-      const urls = [
+      vdg_app.FileUtil.loadMultipleJSON([
         '../assets/config/formConfig.json',
         '../assets/config/mediaConfig.json',
         '../assets/config/captionConfig.json',
-      ];
-      const configs = [];
-
-      urls.forEach(function (url, i) {
-        list.push(
-          fetch(url)
-            .then((response) => response.json())
-            .then((json) => {
-              configs[i] = json;
-            })
+        '../assets/config/config.json',
+      ]).then((configs) => {
+        vdg_app.proj4.default.defs(
+          configs['config'].projection,
+          '+proj=lcc +lat_1=45.25 +lat_2=46.75' +
+            ' +lat_0=46 +lon_0=3 +x_0=1700000 +y_0=5200000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs'
         );
-      });
 
-      Promise.all(list).then(function () {
-        const formConfig = configs[0];
-        const mediaConfig = configs[1];
-        const captionConfig = configs[2];
-        const app = new vdg_app.Templates.AllWidget();
+        const extent = new vdg_app.itowns.Extent(
+          configs['config'].projection,
+          parseInt(configs['config']['extents'].min_x),
+          parseInt(configs['config']['extents'].max_x),
+          parseInt(configs['config']['extents'].min_y),
+          parseInt(configs['config']['extents'].max_y)
+        );
 
-        app.start('../assets/config/config.json').then((config) => {
-          ////// BaseMap Widget
-          const baseMap = new vdg_app.Widgets.BaseMap(
-            app.view3D.getItownsView(),
-            config['baseMapLayers'],
-            app.extent,
-            app.config['projection']
-          );
-          app.addModuleView('baseMap', baseMap);
+        const frame3DPlanar = new vdg_app.Frame3DPlanar(
+          extent,
+          configs['config'].planar
+        );
 
-          vdg_app.addLabelLayers(config, app.view3D.getItownsView());
+        const baseMap = new vdg_app.Widget.BaseMap(
+          frame3DPlanar.getItownsView(),
+          configs['config']['baseMapLayers'],
+          extent
+        );
 
-          const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
+        vdg_app.addLabelLayers(configs['config'], frame3DPlanar.getItownsView());
 
-          let allWidgetPanel = document.getElementById(
-            '_all_widget_stuct_main_panel'
-          );
-          allWidgetPanel.style.display = 'block';
-          allWidgetPanel.querySelector('nav').style.display = 'none';
-          window.dispatchEvent(new Event('resize'));
+        const visit = new vdg_app.GuidedVisit(
+          frame3DPlanar,
+          configs['mediaConfig'].medias
+        );
 
-          const visitConfig = formConfig.visits.find(
-            (v) => v.id == 'P_QUESTIONS'
-          );
-          visit.start(visitConfig, captionConfig);
-        });
+        const visitConfig = configs['formConfig'].visits.find(
+          (v) => v.id == 'P_QUESTIONS'
+        );
+        visit.start(visitConfig, configs['captionConfig']);
       });
     </script>
   </body>

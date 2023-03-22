@@ -1,4 +1,4 @@
-import { THREE } from 'ud-viz';
+import { THREE } from '@ud-viz/browser';
 
 export class MediaManager {
   constructor(view) {

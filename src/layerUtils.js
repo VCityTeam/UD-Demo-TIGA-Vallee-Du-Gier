@@ -1,6 +1,6 @@
 /** @format */
 
-import * as udviz from 'ud-viz';
+import * as udviz from '@ud-viz/browser';
 import { FilterValidator } from './filterValidator';
 
 export function addLabelLayers(config, itownsView) {
