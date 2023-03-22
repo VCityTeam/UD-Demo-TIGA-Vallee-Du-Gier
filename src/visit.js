@@ -134,7 +134,7 @@ export class Visit {
               this.panel.createCaption(
                 layerCaption.style,
                 layerCaption.description,
-                10
+                15
               )
             );
             break;

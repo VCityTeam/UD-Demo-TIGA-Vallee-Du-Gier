@@ -284,6 +284,10 @@ audio {
   border-top: 12px solid #585858;
 }
 
+.ov_category_content {
+  margin: 0px 0px 0px 10px;
+}
+
 .ov_content {
   display: block;
   margin: 10px 0px;
@@ -306,9 +310,7 @@ audio {
 }
 
 .caption_square {
-  position: relative;
-  top: 0px;
-  width: 30px;
+  flex: 0 0 30px;
   height: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -318,12 +320,8 @@ audio {
 }
 
 .caption_text {
-  margin: 0px;
-  position: relative;
-  left: 20px;
-  width: fit-content;
+  margin: auto 0px auto 20px;
   font-size: 15px;
   line-height: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
+  text-align: left;
 }

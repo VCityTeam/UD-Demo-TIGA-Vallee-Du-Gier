@@ -275,7 +275,7 @@ export class Panel {
       switch (style.type) {
         case 'border':
           captionSquare.style.border = '7px solid ' + style.color;
-          captionSquare.style.width = '16px';
+          captionSquare.style.flex = '0 0 16px';
           captionSquare.style.height = '16px';
           break;
         case 'plain':
