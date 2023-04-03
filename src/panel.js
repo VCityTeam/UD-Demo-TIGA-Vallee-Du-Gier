@@ -15,9 +15,8 @@ export class Panel {
     this.savedValues = [];
   }
 
-  start(nodePath, nodeIndex) {
+  start() {
     this.setButtonsStyle(true, false);
-    this.fillWithHtmlFromFile(nodePath, nodeIndex);
   }
 
   setButtonsStyle(isStart, isEnd) {
@@ -29,22 +28,14 @@ export class Panel {
     this.progressCount.innerHTML = currentIndex + 1 + ' / ' + (endIndex + 1);
   }
 
-  fillWithHtmlFromFile(fileName, nodeIndex) {
-    return new Promise((resolve) => {
-      fetch(fileName)
-        .then((response) => response.text())
-        .then((text) => {
-          this.formContainer.innerHTML = text;
-          this.addStyleEvents();
-          if (this.savedValues && this.savedValues[nodeIndex])
-            this.loadSavedValues(nodeIndex);
-          resolve();
-        });
-    });
+  setForm(nodeIndex) {
+    this.addStyleEvents();
+    if (this.savedValues && this.savedValues[nodeIndex])
+      this.loadSavedValues(nodeIndex);
   }
 
   addStyleEvents() {
-    const checkboxes = this.formContainer.querySelectorAll(
+    const checkboxes = this.mediaContainer.querySelectorAll(
       'input[type="checkbox"]'
     );
 
@@ -70,7 +61,7 @@ export class Panel {
       });
     });
 
-    const radios = this.formContainer.querySelectorAll('input[type="radio"]');
+    const radios = this.mediaContainer.querySelectorAll('input[type="radio"]');
 
     [].forEach.call(radios, (radio) => {
       const label = document.querySelector(`[for="${radio.id}"]`);
@@ -80,7 +71,7 @@ export class Panel {
           if (radio.checked) {
             label.style.backgroundColor = '#ffffff';
             label.style.color = '#a5a5a5';
-            const others = this.formContainer.querySelectorAll(
+            const others = this.mediaContainer.querySelectorAll(
               'input:not(#' + radio.id + ')[type="radio"]'
             );
             [].forEach.call(others, (other) => {
@@ -117,10 +108,6 @@ export class Panel {
     this.textPanel.id = 'text_panel';
     this.textPanel.classList.add('panel');
     this.contentPanel.appendChild(this.textPanel);
-
-    this.formContainer = document.createElement('div');
-    this.formContainer.id = 'form_container';
-    this.textPanel.appendChild(this.formContainer);
 
     this.mediaContainer = document.createElement('div');
     this.mediaContainer.id = 'media_container';
@@ -187,15 +174,15 @@ export class Panel {
     this.restartButton.id = 'restart_button';
     this.restartButton.classList.add('recap-button');
     this.restartButton.innerHTML = 'Recommencer';
-    this.formContainer.appendChild(this.restartButton);
+    this.mediaContainer.appendChild(this.restartButton);
 
-    this.formContainer.appendChild(document.createElement('br'));
+    this.mediaContainer.appendChild(document.createElement('br'));
 
     this.visitButton = document.createElement('button');
     this.visitButton.id = 'visit_button';
     this.visitButton.classList.add('recap-button');
     this.visitButton.innerHTML = 'Visite Libre';
-    this.formContainer.appendChild(this.visitButton);
+    this.mediaContainer.appendChild(this.visitButton);
   }
 
   closePanel() {
@@ -217,7 +204,7 @@ export class Panel {
   }
 
   saveInputValues(nodeIndex) {
-    const formInputs = this.formContainer.querySelectorAll('input, select');
+    const formInputs = this.mediaContainer.querySelectorAll('input, select');
     let values = [];
     formInputs.forEach((input) => {
       let value = { option: '', text: '' };
@@ -245,7 +232,7 @@ export class Panel {
   }
 
   loadSavedValues(nodeIndex) {
-    const formInputs = this.formContainer.querySelectorAll('input, select');
+    const formInputs = this.mediaContainer.querySelectorAll('input, select');
     let i = 0;
     formInputs.forEach((input) => {
       const value = this.savedValues[nodeIndex][i];
@@ -266,7 +253,6 @@ export class Panel {
   }
 
   cleanMediaContainer() {
-    this.mediaContainer.style.display = 'none';
     this.mediaContainer.innerHTML = '';
   }
 

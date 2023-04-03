@@ -35,7 +35,6 @@
             ],
             "nodes": [
                 {
-                    "path": "../assets/form/ParcoursTest/01.txt",
                     "previous": 0,
                     "next": 1,
                     "type": "half",
@@ -45,6 +44,9 @@
                         "zae",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "D_01"
                     ],
                     "position": {
                         "x": 1815137.4389101316,
@@ -59,7 +61,6 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/02.txt",
                     "previous": 0,
                     "next": 2,
                     "type": "half",
@@ -67,6 +68,9 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "D_02"
                     ],
                     "position": {
                         "x": 1822544.8781920606,
@@ -81,11 +85,13 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/03.txt",
                     "previous": 1,
                     "next": 3,
                     "type": "half",
-                    "media": "PINS",
+                    "medias": [
+                        "D_03",
+                        "PINS"
+                    ],
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -104,11 +110,13 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/04.txt",
                     "previous": 2,
                     "next": 4,
                     "type": "half",
-                    "media": "IMAGE5",
+                    "medias": [
+                        "D_04",
+                        "IMAGE5"
+                    ],
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -127,11 +135,13 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/04.txt",
                     "previous": 3,
                     "next": 5,
                     "type": "half",
-                    "media": "IMAGE6",
+                    "medias": [
+                        "D_04",
+                        "IMAGE6"
+                    ],
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -154,6 +164,9 @@
                     "previous": 4,
                     "next": 6,
                     "type": "half",
+                    "medias": [
+                        "D_06"
+                    ],
                     "layers": [
                         "baseMapLayer_0",
                         "zae",
@@ -192,7 +205,10 @@
                     "previous": 5,
                     "next": 7,
                     "type": "half",
-                    "media": "CHAUDRONNERIE",
+                    "medias": [
+                        "D_08",
+                        "CHAUDRONNERIE"
+                    ],
                     "layers": [
                         "baseMapLayer_0",
                         "zae",
@@ -216,6 +232,9 @@
                     "path": "../assets/form/ParcoursTest/09.txt",
                     "previous": 6,
                     "type": "full",
+                    "medias": [
+                        "D_09"
+                    ],
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -233,16 +252,20 @@
             "categories": [],
             "nodes": [
                 {
-                    "path": "../assets/form/01.txt",
                     "previous": 0,
                     "next": 1,
-                    "type": "full"
+                    "type": "full",
+                    "medias": [
+                        "Q_01"
+                    ]
                 },
                 {
-                    "path": "../assets/form/02.txt",
                     "previous": 0,
                     "next": 2,
                     "type": "half",
+                    "medias": [
+                        "Q_02"
+                    ],
                     "position": {
                         "x": 1819972.2564841579,
                         "y": 5142359.305112128,
@@ -256,10 +279,12 @@
                     }
                 },
                 {
-                    "path": "../assets/form/03.txt",
                     "previous": 1,
                     "next": 3,
                     "type": "half",
+                    "medias": [
+                        "Q_03"
+                    ],
                     "position": {
                         "x": 1822710.2848260512,
                         "y": 5146615.931828531,
@@ -273,9 +298,11 @@
                     }
                 },
                 {
-                    "path": "../assets/form/04.txt",
                     "previous": 2,
-                    "type": "full"
+                    "type": "full",
+                    "medias": [
+                        "Q_04"
+                    ]
                 }
             ]
         }

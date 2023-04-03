@@ -17,14 +17,15 @@ export class MediaManager {
     });
   }
 
-  setContent(media, contentDiv) {
-    contentDiv.innerHTML = '';
+  async addContent(media, contentDiv) {
+    const mediaDiv = document.createElement('div');
+    contentDiv.appendChild(mediaDiv);
     if (media.name) {
       const mediaTitle = document.createElement('h1');
       mediaTitle.innerHTML = media.name;
-      contentDiv.appendChild(mediaTitle);
+      mediaDiv.appendChild(mediaTitle);
     }
-    media.contents.forEach((content) => {
+    for (const content of media.contents) {
       let child = null;
       switch (content.type) {
         case 'text':
@@ -50,13 +51,16 @@ export class MediaManager {
         case 'pin':
           this.createPin(content);
           break;
+        case 'file':
+          child = await this.fetchFile(content.value);
+          break;
         default:
           console.log('Unkown media type');
       }
       if (child != null) {
-        contentDiv.appendChild(child);
+        mediaDiv.appendChild(child);
       }
-    });
+    }
   }
 
   createPin(content) {
@@ -119,5 +123,17 @@ export class MediaManager {
 
       document.body.appendChild(background);
     }
+  }
+
+  fetchFile(fileName) {
+    return new Promise((resolve) => {
+      fetch(fileName)
+        .then((response) => response.text())
+        .then((text) => {
+          const formDiv = document.createElement('div');
+          formDiv.innerHTML = text;
+          resolve(formDiv);
+        });
+    });
   }
 }

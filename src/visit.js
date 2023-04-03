@@ -1,10 +1,7 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { THREE } from 'ud-viz';
-import {
-  addFilterOnLayer,
-  removeFilterOnLayer,
-} from './layerUtils';
+import { addFilterOnLayer, removeFilterOnLayer } from './layerUtils';
 
 export class Visit {
   constructor(view, medias) {
@@ -110,14 +107,15 @@ export class Visit {
   }
 
   setMedia(node) {
-    if (node.media) {
-      const media = this.medias.find((m) => m.id == node.media);
-      if (media) {
-        this.panel.mediaContainer.style.display = 'block';
-        this.mediaManager.setContent(media, this.panel.mediaContainer);
-      }
-    } else {
-      this.panel.cleanMediaContainer();
+    this.panel.cleanMediaContainer();
+    if (node.medias && node.medias.length > 0) {
+      node.medias.forEach((nodeMedia) => {
+        const media = this.medias.find((m) => m.id == nodeMedia);
+        if (media) {
+          this.mediaManager.addContent(media, this.panel.mediaContainer);
+          this.panel.setForm(this.currentIndex);
+        }
+      });
     }
   }
 

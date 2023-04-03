@@ -51,41 +51,31 @@ export class GuidedVisit extends Visit {
       );
     });
     this.addVisitPanelEvents();
-    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
-    const startNode = this.config.nodes[this.currentIndex];
-    this.panel.start(startNode.path, this.currentIndex);
-    this.filterLayers(startNode.layers, startNode.filters);
-    this.createLayersCaption();
-    this.travelToPosition(startNode, this.view);
+    this.panel.start();
+    this.goToNode(this.currentIndex);
   }
 
   goToNode(nodeIndex) {
     this.panel.saveInputValues(this.currentIndex);
-    this.panel.formContainer.innerHTML = '';
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
     this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
+    this.setMedia(currentNode);
     if (this.isEnd()) {
-      this.panel.fillWithHtmlFromFile(currentNode.path, this.currentIndex).then(() => {
-        this.panel.cleanMediaContainer();
-        this.panel.initRecapButtons();
-        this.panel.restartButton.addEventListener(
-          'click',
-          function () {
-            location.href = '../index.html';
-          }.bind(this)
-        );
-        this.panel.visitButton.addEventListener(
-          'click',
-          function () {
-            location.href = './open_visit.html';
-          }.bind(this)
-        );
-      });
-    } else {
-      this.panel.fillWithHtmlFromFile(currentNode.path, this.currentIndex);
-      this.setMedia(currentNode);
+      this.panel.initRecapButtons();
+      this.panel.restartButton.addEventListener(
+        'click',
+        function () {
+          location.href = '../index.html';
+        }.bind(this)
+      );
+      this.panel.visitButton.addEventListener(
+        'click',
+        function () {
+          location.href = './open_visit.html';
+        }.bind(this)
+      );
     }
     this.filterLayers(currentNode.layers, currentNode.filters);
     this.createLayersCaption();

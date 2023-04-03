@@ -1,57 +1,7 @@
 {
     "medias": [
         {
-            "id": "0",
-            "parent_id": "BATIMENT0000000317424578",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "text",
-                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque id nibh tortor id aliquet lectus. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate."
-                },
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/LABEX_IMU-COUL-PNG.png"
-                },
-                {
-                    "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
-                }
-            ]
-        },
-        {
-            "id": "1",
-            "parent_id": "BATIMENT0000000317420383",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "text",
-                    "value": "Aliquam ultrices sagittis orci a scelerisque purus. Elit ut aliquam purus sit amet luctus venenatis lectus magna. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Laoreet id donec ultrices tincidunt arcu non sodales neque. Nibh cras pulvinar mattis nunc. Id volutpat lacus laoreet non curabitur gravida. Mollis aliquam ut porttitor leo a."
-                },
-                {
-                    "type": "video",
-                    "value": "../assets/media/videos/demo_colors.mp4"
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "parent_id": "BATIMENT0000000317419788",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/bug_select.gif"
-                },
-                {
-                    "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
-                }
-            ]
-        },
-        {
             "id": "IMAGE1",
-            "parent_id": "BATIMENT0000000317419788",
             "name": "Nom du media",
             "contents": [
                 {
@@ -66,7 +16,6 @@
         },
         {
             "id": "IMAGE2",
-            "parent_id": "BATIMENT0000000317419788",
             "name": "Nom du media",
             "contents": [
                 {
@@ -81,7 +30,6 @@
         },
         {
             "id": "IMAGE2_5",
-            "parent_id": "BATIMENT0000000317419788",
             "name": "Nom du media",
             "contents": [
                 {
@@ -96,7 +44,6 @@
         },
         {
             "id": "IMAGE5",
-            "parent_id": "BATIMENT0000000317419788",
             "contents": [
                 {
                     "type": "image",
@@ -110,7 +57,6 @@
         },
         {
             "id": "IMAGE6",
-            "parent_id": "BATIMENT0000000317419788",
             "contents": [
                 {
                     "type": "audio",
@@ -132,7 +78,6 @@
         },
         {
             "id": "PINS",
-            "parent_id": "NULL",
             "contents": [
                 {
                     "type": "pin",
@@ -157,7 +102,7 @@
                 {
                     "type": "pin",
                     "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg",
-                    "caption": "Extérieur de la grande halle des laminoirs du Couzon.<br><a href='https://patrimoine.auvergnerhonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
+                    "caption": "Extérieur de la grande halle des laminoirs du Couzon.<br><a href='https://patrimoine.auvergnerhpreviousonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
                     "position": {
                         "x": 1826959.549938517,
                         "y": 5148570.043722836,
@@ -178,7 +123,6 @@
         },
         {
             "id": "CHAUDRONNERIE",
-            "parent_id": "NULL",
             "contents": [
                 {
                     "type": "text",
@@ -191,6 +135,114 @@
                 {
                     "type": "audio",
                     "value": "../assets/media/audios/TRAINA-FRERES-20221020_CHAUDRONNIER.mp3"
+                }
+            ]
+        },
+        {
+            "id": "Q_01",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursQuestion/01.txt"
+                }
+            ]
+        },
+        {
+            "id": "Q_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursQuestion/02.txt"
+                }
+            ]
+        },
+        {
+            "id": "Q_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursQuestion/03.txt"
+                }
+            ]
+        },
+        {
+            "id": "Q_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursQuestion/04.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_01",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/01.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/02.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/03.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/04.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_06",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/06.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_07",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/07.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_08",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/08.txt"
+                }
+            ]
+        },
+        {
+            "id": "D_09",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/ParcoursTest/09.txt"
                 }
             ]
         }
