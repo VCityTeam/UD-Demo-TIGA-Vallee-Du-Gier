@@ -99,42 +99,47 @@ audio {
   background-color: rgb(235, 234, 234);
 }
 
+#progress_div {
+  display: flex;
+  flex-direction: row;
+}
+
 #progress_count {
-  position: absolute;
   padding: 0px;
-  margin: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
 }
 
 .arrow_button {
   border: solid black;
   border-width: 0 5px 5px 0;
   display: inline-block;
-  padding: 7px;
   background-color: transparent;
-  position: absolute;
   cursor: pointer;
+  flex: 0 0 20px;
+  height: 20px;
 }
 
 .arrow_button:hover {
   border: solid #a5a5a5;
-  border-width: 0 6px 6px 0;
-  padding: 10px;
+  border-width: 0 5px 5px 0;
+}
+
+.arrow_button:disabled {
+  border: solid #a5a5a5;
+  border-width: 0 5px 5px 0;
+  cursor: default;
 }
 
 .button_right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  right: 30%;
-  margin: 0 10px 0 0;
+  margin: auto;
 }
 
 .button_left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-  left: 30%;
-  margin: 0 0 0 10px;
+  margin: auto;
 }
 
 #close_button {

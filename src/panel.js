@@ -21,8 +21,8 @@ export class Panel {
   }
 
   setButtonsStyle(isStart, isEnd) {
-    this.previousButton.style.display = isStart ? 'none' : 'block';
-    this.nextButton.style.display = isEnd ? 'none' : 'block';
+    this.previousButton.disabled = isStart;
+    this.nextButton.disabled = isEnd;
   }
 
   setProgressCount(currentIndex, endIndex) {
@@ -138,19 +138,23 @@ export class Panel {
   }
 
   initHeader() {
-    this.progressCount = document.createElement('h3');
-    this.progressCount.id = 'progress_count';
-    this.headerPanel.appendChild(this.progressCount);
+    const progressDiv = document.createElement('div');
+    progressDiv.id = 'progress_div';
+    this.headerPanel.appendChild(progressDiv);
 
     this.previousButton = document.createElement('button');
     this.previousButton.id = 'previous_button';
     this.previousButton.classList.add('arrow_button', 'button_left');
-    this.headerPanel.appendChild(this.previousButton);
+    progressDiv.appendChild(this.previousButton);
+
+    this.progressCount = document.createElement('h3');
+    this.progressCount.id = 'progress_count';
+    progressDiv.appendChild(this.progressCount);
 
     this.nextButton = document.createElement('button');
-    this.nextButton.id = 'Next_button';
+    this.nextButton.id = 'next_button';
     this.nextButton.classList.add('arrow_button', 'button_right');
-    this.headerPanel.appendChild(this.nextButton);
+    progressDiv.appendChild(this.nextButton);
   }
 
   initCloseButton() {
