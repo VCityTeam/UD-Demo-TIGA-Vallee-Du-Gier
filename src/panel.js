@@ -138,6 +138,10 @@ export class Panel {
   }
 
   initHeader() {
+    this.categoriesDiv = document.createElement('div');
+    this.categoriesDiv.id = 'categories_div';
+    this.headerPanel.appendChild(this.categoriesDiv);
+
     const progressDiv = document.createElement('div');
     progressDiv.id = 'progress_div';
     this.headerPanel.appendChild(progressDiv);

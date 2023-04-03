@@ -99,6 +99,19 @@ audio {
   background-color: rgb(235, 234, 234);
 }
 
+#categories_div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.category_button {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  margin: auto;
+  padding: 0px;
+}
+
 #progress_div {
   display: flex;
   flex-direction: row;

@@ -38,6 +38,18 @@ export class GuidedVisit extends Visit {
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
     this.panel.initHeader();
+    this.config.categories.forEach((category) => {
+      const category_button = document.createElement('button');
+      category_button.classList.add('category_button');
+      category_button.innerText = category.name;
+      this.panel.categoriesDiv.appendChild(category_button);
+      category_button.addEventListener(
+        'click',
+        function () {
+          this.goToNode(category.nodeIndex);
+        }.bind(this)
+      );
+    });
     this.addVisitPanelEvents();
     this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     const startNode = this.config.nodes[this.currentIndex];
@@ -47,33 +59,15 @@ export class GuidedVisit extends Visit {
     this.travelToPosition(startNode, this.view);
   }
 
-  goToPreviousNode() {
+  goToNode(nodeIndex) {
     this.panel.saveInputValues(this.currentIndex);
     this.panel.formContainer.innerHTML = '';
-    let current = this.getNode();
-    let previous = this.config.nodes[current.previous];
-    this.currentIndex = current.previous;
+    this.currentIndex = nodeIndex;
+    const currentNode = this.getNode();
     this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
-    this.panel.fillWithHtmlFromFile(previous.path, this.currentIndex);
-    this.setMedia(previous);
-    this.filterLayers(previous.layers, previous.filters);
-    this.createLayersCaption();
-    this.travelToPosition(previous, this.view);
-  }
-
-  goToNextNode() {
-    this.panel.saveInputValues(this.currentIndex);
-    this.panel.formContainer.innerHTML = '';
-    let current = this.getNode();
-    let next = this.config.nodes[current.next];
-    this.currentIndex = current.next;
-    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
-    this.panel.setButtonsStyle(this.isStart(), this.isEnd());
-    this.filterLayers(next.layers, next.filters);
-    this.createLayersCaption();
     if (this.isEnd()) {
-      this.panel.fillWithHtmlFromFile(next.path, this.currentIndex).then(() => {
+      this.panel.fillWithHtmlFromFile(currentNode.path, this.currentIndex).then(() => {
         this.panel.cleanMediaContainer();
         this.panel.initRecapButtons();
         this.panel.restartButton.addEventListener(
@@ -90,9 +84,21 @@ export class GuidedVisit extends Visit {
         );
       });
     } else {
-      this.panel.fillWithHtmlFromFile(next.path, this.currentIndex);
-      this.setMedia(next);
-      this.travelToPosition(next, this.view);
+      this.panel.fillWithHtmlFromFile(currentNode.path, this.currentIndex);
+      this.setMedia(currentNode);
     }
+    this.filterLayers(currentNode.layers, currentNode.filters);
+    this.createLayersCaption();
+    this.travelToPosition(currentNode, this.view);
+  }
+
+  goToPreviousNode() {
+    const previousIndex = this.getNode().previous;
+    this.goToNode(previousIndex);
+  }
+
+  goToNextNode() {
+    const nextIndex = this.getNode().next;
+    this.goToNode(nextIndex);
   }
 }

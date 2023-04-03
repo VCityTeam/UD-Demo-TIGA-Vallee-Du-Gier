@@ -6,7 +6,33 @@
             "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
             "startIndex": 0,
             "endIndex": 7,
-            "medias": [],
+            "categories": [
+                {
+                    "id": "INTRO",
+                    "name": "Introduction",
+                    "nodeIndex": 0
+                },
+                {
+                    "id": "FRICHE",
+                    "name": "Friches",
+                    "nodeIndex": 1
+                },
+                {
+                    "id": "PATRIMOINE",
+                    "name": "Patrimoine",
+                    "nodeIndex": 2
+                },
+                {
+                    "id": "DURALEX",
+                    "name": "Duralex",
+                    "nodeIndex": 3
+                },
+                {
+                    "id": "ACTIVITE",
+                    "name": "Activités",
+                    "nodeIndex": 5
+                }
+            ],
             "nodes": [
                 {
                     "path": "../assets/form/ParcoursTest/01.txt",
@@ -204,11 +230,7 @@
             "description": "Parcours avec questions",
             "startIndex": 0,
             "endIndex": 3,
-            "medias": [
-                "0",
-                "1",
-                "2"
-            ],
+            "categories": [],
             "nodes": [
                 {
                     "path": "../assets/form/01.txt",
