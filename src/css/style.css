@@ -54,7 +54,7 @@ audio {
   font-size: 17px;
   display: flex;
   position: relative;
-  width: 25%;
+  width: 30%;
   height: 100%;
   z-index: 8;
   flex-direction: column;
@@ -101,7 +101,7 @@ audio {
 
 #categories_div {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
@@ -109,7 +109,7 @@ audio {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   margin: auto;
-  padding: 0px;
+  padding: 0px 10px;
 }
 
 #progress_div {
