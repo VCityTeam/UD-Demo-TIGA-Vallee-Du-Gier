@@ -58,14 +58,9 @@
                         "attribute_values": [
                             "Commercial et services"
                         ],
-                        "style_accepted": {
+                        "style": {
                             "materialProps": {
                                 "color": "#FF0000"
-                            }
-                        },
-                        "style_rejected": {
-                            "materialProps": {
-                                "color": "#ffffff"
                             }
                         }
                     }

@@ -30,7 +30,12 @@ export class FilterManager {
   addFilter(layer, filter) {
     let filterLayer = null;
     if (layer.isC3DTilesLayer) {
-      filterLayer = this.filterCityObjectsByAttribute(layer, filter);
+      filterLayer = this.filterCityObjectsByAttribute(
+        layer,
+        filter.properties.attribute,
+        filter.properties.attribute_values,
+        filter.properties.style
+      );
     } else {
       filterLayer = this.createTemporaryLayer(layer, filter);
       this.view.getItownsView().addLayer(filterLayer);
@@ -48,7 +53,16 @@ export class FilterManager {
   removeFilter(filterId) {
     const filter = this.filters[filterId];
     if (filter.layer.isC3DTilesLayer) {
-      // TODO
+      this.filterCityObjectsByAttribute(
+        filter.layer,
+        filter.properties.attribute,
+        filter.properties.attribute_values,
+        {
+          materialProps: {
+            color: '#FFFFFF',
+          },
+        }
+      );
     } else {
       this.view.getItownsView().removeLayer(filter.layer.id, true);
       this.view.layerManager.notifyChange();
@@ -98,26 +112,14 @@ export class FilterManager {
     return temporaryLayer;
   }
 
-  filterCityObjectsByAttribute(layer, filter) {
+  filterCityObjectsByAttribute(layer, attributeName, attributeValues, style) {
     for (const tilesManager of this.view.layerManager.tilesManagers) {
       if (tilesManager.layer.id == layer.id) {
         tilesManager.tiles.forEach((tile) => {
           if (tile.cityObjects != null) {
             tile.cityObjects.forEach((cityObject) => {
-              if (
-                filter.properties['attribute_values'].includes(
-                  cityObject.props[filter.properties['attribute']]
-                )
-              ) {
-                tilesManager.setStyle(
-                  cityObject.cityObjectId,
-                  filter.properties['style_accepted']
-                );
-              } else {
-                tilesManager.setStyle(
-                  cityObject.cityObjectId,
-                  filter.properties['style_rejected']
-                );
+              if (attributeValues.includes(cityObject.props[attributeName])) {
+                tilesManager.setStyle(cityObject.cityObjectId, style);
               }
             });
             tilesManager.applyStyles({
