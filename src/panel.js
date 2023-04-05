@@ -8,7 +8,6 @@ export class Panel {
     this.footerPanel = null;
     this.isClosed = false;
     this.initPanel();
-    this.initCloseButton();
   }
 
   reset() {
@@ -92,65 +91,13 @@ export class Panel {
   }
 
   initPanel() {
-    this.mainPanel = document.createElement('div');
-    this.mainPanel.id = 'main_panel';
-
-    this.contentPanel = document.createElement('div');
-    this.contentPanel.id = 'content_panel';
-    this.mainPanel.appendChild(this.contentPanel);
-
-    this.headerPanel = document.createElement('div');
-    this.headerPanel.id = 'header_panel';
-    this.headerPanel.classList.add('panel');
-    this.contentPanel.appendChild(this.headerPanel);
-
-    this.textPanel = document.createElement('div');
-    this.textPanel.id = 'text_panel';
-    this.textPanel.classList.add('panel');
-    this.contentPanel.appendChild(this.textPanel);
-
-    this.mediaContainer = document.createElement('div');
-    this.mediaContainer.id = 'media_container';
-    this.textPanel.appendChild(this.mediaContainer);
-
-    this.footerPanel = document.createElement('div');
-    this.footerPanel.id = 'footer_panel';
-    this.footerPanel.classList.add('panel');
-    this.contentPanel.appendChild(this.footerPanel);
-
-    const mainDiv = document.createElement('div');
-    mainDiv.id = 'main_div';
-    mainDiv.appendChild(this.mainPanel);
-    document.body.appendChild(mainDiv);
-  }
-
-  initHeader() {
-    this.categoriesDiv = document.createElement('div');
-    this.categoriesDiv.id = 'categories_div';
-    this.headerPanel.appendChild(this.categoriesDiv);
-
-    const progressDiv = document.createElement('div');
-    progressDiv.id = 'progress_div';
-    this.headerPanel.appendChild(progressDiv);
-
-    this.previousButton = document.createElement('button');
-    this.previousButton.id = 'previous_button';
-    this.previousButton.classList.add('arrow_button', 'button_left');
-    progressDiv.appendChild(this.previousButton);
-
-    this.progressCount = document.createElement('h3');
-    this.progressCount.id = 'progress_count';
-    progressDiv.appendChild(this.progressCount);
-
-    this.nextButton = document.createElement('button');
-    this.nextButton.id = 'next_button';
-    this.nextButton.classList.add('arrow_button', 'button_right');
-    progressDiv.appendChild(this.nextButton);
-  }
-
-  initCloseButton() {
-    this.closeButton = document.createElement('button');
-    this.closeButton.id = 'close_button';
+    this.mainPanel = document.getElementById('main_panel');
+    this.contentPanel = document.getElementById('content_panel');
+    this.headerPanel = document.getElementById('header_panel');
+    this.textPanel = document.getElementById('text_panel');
+    this.mediaContainer = document.getElementById('media_container');
+    this.footerPanel = document.getElementById('footer_panel');
+    this.closeButton = document.getElementById('close_button');
     this.closeButton.addEventListener(
       'click',
       function () {
@@ -161,12 +108,14 @@ export class Panel {
         }
       }.bind(this)
     );
+    this.closeArrow = document.getElementById('close_arrow');
+  }
 
-    const arrow = document.createElement('div');
-    arrow.id = 'close_arrow';
-    this.closeButton.appendChild(arrow);
-
-    this.mainPanel.appendChild(this.closeButton);
+  initHeader() {
+    this.categoriesDiv = document.getElementById('categories_div');
+    this.previousButton = document.getElementById('previous_button');
+    this.progressCount = document.getElementById('progress_count');
+    this.nextButton = document.getElementById('next_button');
   }
 
   initRecapButtons() {
@@ -188,18 +137,18 @@ export class Panel {
   closePanel() {
     this.contentPanel.style.display = 'none';
     this.mainPanel.style.width = '0%';
-    this.closeButton.firstChild.style.transform = 'rotate(-45deg)';
-    this.closeButton.firstChild.style.webkitTransform = 'rotate(-45deg)';
-    this.closeButton.firstChild.style.left = '5px';
+    this.closeArrow.style.transform = 'rotate(-45deg)';
+    this.closeArrow.style.webkitTransform = 'rotate(-45deg)';
+    this.closeArrow.style.left = '5px';
     this.isClosed = true;
   }
 
   openPanel() {
     this.contentPanel.style.display = 'block';
     this.mainPanel.style.width = '30%';
-    this.closeButton.firstChild.style.transform = 'rotate(135deg)';
-    this.closeButton.firstChild.style.webkitTransform = 'rotate(135deg)';
-    this.closeButton.firstChild.style.left = '9px';
+    this.closeArrow.style.transform = 'rotate(135deg)';
+    this.closeArrow.style.webkitTransform = 'rotate(135deg)';
+    this.closeArrow.style.left = '9px';
     this.isClosed = false;
   }
 
