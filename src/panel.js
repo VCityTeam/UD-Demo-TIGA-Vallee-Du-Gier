@@ -23,8 +23,12 @@ export class Panel {
     this.nextButton.disabled = isEnd;
   }
 
-  setProgressCount(currentIndex, endIndex) {
+  updateHeader(currentIndex, endIndex, currentCategory) {
     this.progressCount.innerHTML = currentIndex + 1 + ' / ' + (endIndex + 1);
+    this.categoryButtons.forEach((button) => {
+      if (button.id == currentCategory) button.style.fontWeight = 'bold';
+      else button.style.fontWeight = 'normal';
+    });
   }
 
   setForm(nodeIndex) {
@@ -116,6 +120,7 @@ export class Panel {
     this.previousButton = document.getElementById('previous_button');
     this.progressCount = document.getElementById('progress_count');
     this.nextButton = document.getElementById('next_button');
+    this.categoryButtons = [];
   }
 
   initRecapButtons() {
@@ -242,5 +247,15 @@ export class Panel {
     captionDiv.appendChild(captionText);
 
     return captionDiv;
+  }
+
+  createCategoryButton(category) {
+    const category_button = document.createElement('button');
+    category_button.id = category.id;
+    category_button.classList.add('category_button');
+    category_button.innerText = category.name;
+    this.categoriesDiv.appendChild(category_button);
+    this.categoryButtons.push(category_button);
+    return category_button;
   }
 }

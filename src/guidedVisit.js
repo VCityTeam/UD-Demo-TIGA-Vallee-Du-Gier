@@ -17,6 +17,15 @@ export class GuidedVisit extends Visit {
     return this.config.nodes[this.currentIndex];
   }
 
+  getCurrentCategory() {
+    if (this.config.categories && this.config.categories.length > 0) {
+      for (const category of [...this.config.categories].reverse()) {
+        if (this.currentIndex >= category.nodeIndex) return category.id;
+      }
+    }
+    return null;
+  }
+
   addVisitPanelEvents() {
     this.panel.previousButton.addEventListener(
       'click',
@@ -39,10 +48,7 @@ export class GuidedVisit extends Visit {
     this.currentIndex = this.config.startIndex;
     this.panel.initHeader();
     this.config.categories.forEach((category) => {
-      const category_button = document.createElement('button');
-      category_button.classList.add('category_button');
-      category_button.innerText = category.name;
-      this.panel.categoriesDiv.appendChild(category_button);
+      const category_button = this.panel.createCategoryButton(category);
       category_button.addEventListener(
         'click',
         function () {
@@ -59,7 +65,11 @@ export class GuidedVisit extends Visit {
     this.panel.saveInputValues(this.currentIndex);
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
-    this.panel.setProgressCount(this.currentIndex, this.config.endIndex);
+    this.panel.updateHeader(
+      this.currentIndex,
+      this.config.endIndex,
+      this.getCurrentCategory()
+    );
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.setMedia(currentNode);
     if (this.isEnd()) {
