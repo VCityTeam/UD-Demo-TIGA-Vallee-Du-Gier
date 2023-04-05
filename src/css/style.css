@@ -107,9 +107,15 @@ audio {
 
 .category_button {
   background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-weight: normal;
   cursor: pointer;
   margin: auto;
   padding: 0px 10px;
+}
+
+.category_button:hover {
+  color: #a5a5a5;
 }
 
 #progress_div {
