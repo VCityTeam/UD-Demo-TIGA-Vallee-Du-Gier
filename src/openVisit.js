@@ -7,6 +7,8 @@ export class OpenVisit extends Visit {
     this.id = 'OPEN';
     this.currentIndex = 0;
     this.categories = [];
+    this.filters = {};
+    this.contentNumber = 0;
   }
 
   start(config, captionConfig) {
@@ -89,8 +91,10 @@ export class OpenVisit extends Visit {
 
   addContent(content, parentDiv) {
     const contentButton = document.createElement('button');
+    contentButton.id = 'content_' + this.contentNumber;
     contentButton.classList.add('ov_content');
     parentDiv.appendChild(contentButton);
+    this.contentNumber++;
 
     if (content.type == 'layer') {
       for (const layerCaption of this.captionConfig.layers) {
@@ -127,9 +131,11 @@ export class OpenVisit extends Visit {
       contentButton.addEventListener(
         'click',
         function () {
-          const layer = getLayerById(this.view, content.layer);
-          this.filterManager.addFilter(layer, content);
-          if (!layer.isC3DTilesLayer) layer.visible = false;
+          if (contentButton.id in this.filters) {
+            this.removeFilter(contentButton, content);
+          } else {
+            this.addFilter(contentButton, content);
+          }
         }.bind(this)
       );
     }
@@ -145,5 +151,23 @@ export class OpenVisit extends Visit {
     categoryContent.style.display = 'none';
     categorySquare.classList.remove('square_down');
     categorySquare.classList.add('square_right');
+  }
+
+  addFilter(contentButton, content) {
+    const layer = getLayerById(this.view, content.layer);
+    const filterId = this.filterManager.addFilter(layer, content);
+    this.filters[contentButton.id] = filterId;
+    if (!layer.isC3DTilesLayer) layer.visible = false;
+    contentButton.classList.add('ov_content_displayed');
+  }
+
+  removeFilter(contentButton, content) {
+    const filterId = this.filters[contentButton.id];
+    this.filterManager.removeFilter(filterId);
+    const layer = getLayerById(this.view, content.layer);
+    if (!layer.isC3DTilesLayer)
+      layer.visible = !this.filterManager.layerHasFilter(layer.id);
+    delete this.filters[contentButton.id];
+    contentButton.classList.remove('ov_content_displayed');
   }
 }

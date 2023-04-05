@@ -51,6 +51,7 @@ export class FilterManager {
       // TODO
     } else {
       this.view.getItownsView().removeLayer(filter.layer.id, true);
+      this.view.layerManager.notifyChange();
     }
     delete this.filters[filterId];
   }
