@@ -1,9 +1,5 @@
 import { Visit } from './visit';
-import {
-  addFilterOnLayer,
-  getLayerById,
-  removeFilterOnLayer,
-} from './layerUtils';
+import { getLayerById } from './layerUtils';
 
 export class OpenVisit extends Visit {
   constructor(view, medias) {
@@ -55,10 +51,6 @@ export class OpenVisit extends Visit {
     categoryButton.addEventListener(
       'click',
       function () {
-        this.layerFilters.forEach((filter) => {
-          removeFilterOnLayer(this.view, filter, true);
-        });
-        this.layerFilters = [];
         if (categoryContent.style.display == 'none') {
           categoryContent.style.display = 'block';
           categorySquare.classList.remove('square_right');
@@ -121,27 +113,9 @@ export class OpenVisit extends Visit {
       contentButton.addEventListener(
         'click',
         function () {
-          if (this.layerHasFilter(content.layer)) {
-            let i = 0;
-            let filter = null;
-            for (const f of this.layerFilters) {
-              if (f.sourceLayer.id == content.layer) filter = f;
-              i++;
-            }
-            removeFilterOnLayer(this.view, filter, true);
-            this.layerFilters.splice(i, 1);
-          }
           const layer = getLayerById(this.view, content.layer);
-          const temporaryLayer = addFilterOnLayer(
-            this.view,
-            layer,
-            content,
-            'temporary_' + this.layerFilters.length
-          );
-          this.layerFilters.push({
-            sourceLayer: layer,
-            targetLayer: temporaryLayer,
-          });
+          this.filterManager.addFilter(layer, content);
+          if (!layer.isC3DTilesLayer) layer.visible = false;
         }.bind(this)
       );
     }

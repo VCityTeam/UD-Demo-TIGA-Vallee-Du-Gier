@@ -1,7 +1,7 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
+import { FilterManager } from './filterManager';
 import { THREE } from 'ud-viz';
-import { addFilterOnLayer, removeFilterOnLayer } from './layerUtils';
 
 export class Visit {
   constructor(view, medias) {
@@ -10,11 +10,10 @@ export class Visit {
     this.medias = medias;
     this.currentIndex = 0;
     this.view = view;
-    this.modifiedCityObjects = [];
-    this.layerFilters = [];
 
     this.panel = new Panel();
     this.mediaManager = new MediaManager(view);
+    this.filterManager = new FilterManager(view);
   }
 
   start(config, captionConfig) {
@@ -53,51 +52,21 @@ export class Visit {
     }
   }
 
-  layerHasFilter(layerId) {
-    for (const filter of this.layerFilters) {
-      if (filter.sourceLayer.id == layerId) return true;
-    }
-    return false;
-  }
-
-  layerIsFilter(layerId) {
-    for (const filter of this.layerFilters) {
-      if (filter.targetLayer.id == layerId) return true;
-    }
-    return false;
-  }
-
-  getSourceForFilteredLayer(layerId) {
-    for (const filter of this.layerFilters) {
-      if (filter.targetLayer.id == layerId) return filter.sourceLayer;
-    }
-    return undefined;
-  }
-
   filterLayers(layerIds, filters = undefined) {
-    this.layerFilters.forEach((filter) => {
-      removeFilterOnLayer(this.view, filter);
-    });
-    this.layerFilters = [];
+    this.filterManager.removeAllFilters();
 
     this.view.layerManager.getLayers().forEach((layer) => {
       if (filters && filters.length > 0) {
         filters.forEach((filter) => {
           if (filter.layer == layer.id) {
-            const temporaryLayer = addFilterOnLayer(
-              this.view,
-              layer,
-              filter,
-              'temporary_' + this.layerFilters.length
-            );
-            this.layerFilters.push({
-              sourceLayer: layer,
-              targetLayer: temporaryLayer,
-            });
+            this.filterManager.addFilter(layer, filter);
           }
         });
       }
-      if (!this.layerHasFilter(layer.id)) {
+      if (this.filterManager.layerHasFilter(layer.id)) {
+        if (layer.isC3DTilesLayer) layer.visible = true;
+        else layer.visible = false;
+      } else {
         layer.visible =
           layerIds == undefined ||
           layerIds.includes(layer.id) ||
@@ -123,8 +92,8 @@ export class Visit {
     this.panel.footerPanel.innerHTML = '';
     this.view.layerManager.getLayers().forEach((layer) => {
       if (layer.visible) {
-        const id = this.layerIsFilter(layer.id)
-          ? this.getSourceForFilteredLayer(layer.id).id
+        const id = this.filterManager.layerIsFilter(layer.id)
+          ? this.filterManager.getSourceForFilteredLayer(layer.id).id
           : layer.id;
         for (const layerCaption of this.captionConfig.layers) {
           if (id == layerCaption.id) {
