@@ -1,0 +1,135 @@
+body {
+  width: 100%;
+  display: block;
+  font-family: 'Inter';
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 10px 0px;
+}
+
+a {
+  color: #000000 !important;
+}
+
+img,
+video,
+audio {
+  max-width: 100%;
+  max-height: 700px;
+  margin: 0px auto;
+}
+
+#main_div {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+
+#main_panel {
+  background: rgba(217, 217, 217, 0.9);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 10px 10px 0px;
+  font-size: 17px;
+  display: flex;
+  position: relative;
+  width: 30%;
+  height: 100%;
+  z-index: 8;
+  flex-direction: column;
+}
+
+#content_panel {
+  padding: 0px 30px 0px 30px;
+  overflow: auto;
+  display: block;
+}
+
+.panel {
+  padding: 20px 0px 20px 0px;
+  position: relative;
+}
+
+#media_container {
+  display: flex;
+  flex-direction: column;
+}
+
+#close_button {
+  height: 50px;
+  width: 28px;
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 5px 5px 0px;
+  display: inline-block;
+  top: 10%;
+  right: -28px;
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#close_arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  background-color: transparent;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: absolute;
+  left: 9px;
+}
+
+#close_arrow:hover {
+  border: solid #a5a5a5;
+  border-width: 0 3px 3px 0;
+  padding: 7px;
+}
+
+.caption_div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+.caption_square {
+  flex: 0 0 30px;
+  height: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background: #d9d9d9;
+  text-align: center;
+  line-height: 30px;
+}
+
+.caption_text {
+  margin: auto 0px auto 20px;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: left;
+}
