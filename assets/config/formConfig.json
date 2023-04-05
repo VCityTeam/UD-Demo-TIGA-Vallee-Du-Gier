@@ -41,9 +41,7 @@
                     "layers": [
                         "baseMapLayer_0",
                         "communes",
-                        "zae",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "zae"
                     ],
                     "medias": [
                         "D_01"
@@ -68,6 +66,22 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "D_02"
@@ -97,6 +111,22 @@
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     "position": {
                         "x": 1826994.082722922,
                         "y": 5148316.617360813,
@@ -122,6 +152,22 @@
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     "position": {
                         "x": 1826349.3333048907,
                         "y": 5148918.221996138,
@@ -146,6 +192,22 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
                     ],
                     "position": {
                         "x": 1826349.3333048907,
@@ -186,6 +248,20 @@
                                     ]
                                 }
                             }
+                        },
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "position": {
@@ -216,6 +292,22 @@
                         "BATI-AUTRE",
                         "noms_communes"
                     ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     "position": {
                         "x": 1820451.0500528857,
                         "y": 5139918.123418849,
@@ -239,6 +331,22 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "USAGE1",
+                                "attribute_values": [
+                                    "Industriel"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
                     ]
                 }
             ]
