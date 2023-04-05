@@ -6,6 +6,7 @@ export class OpenVisit extends Visit {
     super(view, medias);
     this.id = 'OPEN';
     this.currentIndex = 0;
+    this.categories = [];
   }
 
   start(config, captionConfig) {
@@ -21,6 +22,12 @@ export class OpenVisit extends Visit {
     this.filterLayers(this.config.layers);
   }
 
+  getCategory(categoryId) {
+    for (const category of this.categories)
+      if (category.id == categoryId) return category;
+    return null;
+  }
+
   fillContent(contentsConfig) {
     contentsConfig.forEach((content) => {
       if (content.type == 'category')
@@ -31,38 +38,45 @@ export class OpenVisit extends Visit {
 
   addCategory(category, parentDiv) {
     const categoryDiv = document.createElement('div');
+    categoryDiv.id = 'ov_category_ ' + this.categories.length;
+    this.categories.push({
+      id: categoryDiv.id,
+      displayed: false,
+    });
     categoryDiv.classList.add('ov_category');
     parentDiv.appendChild(categoryDiv);
 
     const categoryButton = document.createElement('button');
     categoryButton.classList.add('ov_category_button');
+    categoryDiv.appendChild(categoryButton);
+
     const categoryName = document.createElement('h3');
     categoryName.innerHTML = category.name;
     categoryName.classList.add('ov_category_name');
     categoryButton.appendChild(categoryName);
+
     const categorySquare = document.createElement('div');
     categorySquare.classList.add('ov_category_square', 'square_right');
     categoryButton.appendChild(categorySquare);
-    categoryDiv.appendChild(categoryButton);
 
     const categoryContent = document.createElement('div');
     categoryContent.classList.add('ov_category_content');
     categoryContent.style.display = 'none';
+    categoryDiv.appendChild(categoryContent);
+
     categoryButton.addEventListener(
       'click',
       function () {
-        if (categoryContent.style.display == 'none') {
-          categoryContent.style.display = 'block';
-          categorySquare.classList.remove('square_right');
-          categorySquare.classList.add('square_down');
+        const cat = this.getCategory(categoryDiv.id);
+        if (cat.displayed) {
+          this.closeCategory(categoryDiv, categoryContent, categorySquare);
+          cat.displayed = false;
         } else {
-          categoryContent.style.display = 'none';
-          categorySquare.classList.remove('square_down');
-          categorySquare.classList.add('square_right');
+          this.openCategory(categoryDiv, categoryContent, categorySquare);
+          cat.displayed = true;
         }
       }.bind(this)
     );
-    categoryDiv.appendChild(categoryContent);
 
     if (category.contents) {
       category.contents.forEach((content) => {
@@ -119,5 +133,17 @@ export class OpenVisit extends Visit {
         }.bind(this)
       );
     }
+  }
+
+  openCategory(categoryDiv, categoryContent, categorySquare) {
+    categoryContent.style.display = 'block';
+    categorySquare.classList.remove('square_right');
+    categorySquare.classList.add('square_down');
+  }
+
+  closeCategory(categoryDiv, categoryContent, categorySquare) {
+    categoryContent.style.display = 'none';
+    categorySquare.classList.remove('square_down');
+    categorySquare.classList.add('square_right');
   }
 }
