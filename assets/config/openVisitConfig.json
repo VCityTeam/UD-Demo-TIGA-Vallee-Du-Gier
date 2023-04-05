@@ -8,9 +8,10 @@
         "BATI-AUTRE",
         "noms_communes"
     ],
-    "categories": [
+    "contents": [
         {
             "name": "Couches de données",
+            "type": "category",
             "contents": [
                 {
                     "type": "layer",
@@ -27,11 +28,10 @@
                 {
                     "type": "layer",
                     "id": "noms_communes"
-                }
-            ],
-            "categories": [
+                },
                 {
                     "name": "Fonds de carte",
+                    "type": "category",
                     "contents": [
                         {
                             "type": "layer",
@@ -47,6 +47,7 @@
         },
         {
             "name": "Exemples de filtres",
+            "type": "category",
             "contents": [
                 {
                     "type": "filter",

@@ -21,13 +21,15 @@ export class OpenVisit extends Visit {
     const subTitle = document.createElement('h2');
     subTitle.innerHTML = this.config.description;
     this.panel.headerPanel.appendChild(subTitle);
-    this.fillContent(this.config.categories);
+    this.fillContent(this.config.contents);
     this.filterLayers(this.config.layers);
   }
 
-  fillContent(categoriesConfig) {
-    categoriesConfig.forEach((category) => {
-      this.addCategory(category, this.panel.textPanel);
+  fillContent(contentsConfig) {
+    contentsConfig.forEach((content) => {
+      if (content.type == 'category')
+        this.addCategory(content, this.panel.textPanel);
+      else this.addContent(content, this.panel.textPanel);
     });
   }
 
@@ -53,6 +55,10 @@ export class OpenVisit extends Visit {
     categoryButton.addEventListener(
       'click',
       function () {
+        this.layerFilters.forEach((filter) => {
+          removeFilterOnLayer(this.view, filter, true);
+        });
+        this.layerFilters = [];
         if (categoryContent.style.display == 'none') {
           categoryContent.style.display = 'block';
           categorySquare.classList.remove('square_right');
@@ -68,13 +74,9 @@ export class OpenVisit extends Visit {
 
     if (category.contents) {
       category.contents.forEach((content) => {
-        this.addContent(content, categoryContent);
-      });
-    }
-
-    if (category.categories) {
-      category.categories.forEach((category) => {
-        this.addCategory(category, categoryContent);
+        if (content.type == 'category')
+          this.addCategory(content, categoryContent);
+        else this.addContent(content, categoryContent);
       });
     }
   }
