@@ -69,13 +69,10 @@ export class OpenVisit extends Visit {
     categoryButton.addEventListener(
       'click',
       function () {
-        const cat = this.getCategory(categoryDiv.id);
-        if (cat.displayed) {
-          this.closeCategory(categoryDiv, categoryContent, categorySquare);
-          cat.displayed = false;
+        if (this.getCategory(categoryDiv.id).displayed) {
+          this.closeCategory(categoryDiv);
         } else {
-          this.openCategory(categoryDiv, categoryContent, categorySquare);
-          cat.displayed = true;
+          this.openCategory(categoryDiv);
         }
       }.bind(this)
     );
@@ -141,16 +138,24 @@ export class OpenVisit extends Visit {
     }
   }
 
-  openCategory(categoryDiv, categoryContent, categorySquare) {
-    categoryContent.style.display = 'block';
+  openCategory(categoryDiv) {
+    categoryDiv.querySelector('.ov_category_content').style.display = 'block';
+    const categorySquare = categoryDiv.querySelector('.ov_category_square');
     categorySquare.classList.remove('square_right');
     categorySquare.classList.add('square_down');
+    this.getCategory(categoryDiv.id).displayed = true;
   }
 
-  closeCategory(categoryDiv, categoryContent, categorySquare) {
-    categoryContent.style.display = 'none';
+  closeCategory(categoryDiv) {
+    const childCategories = categoryDiv.querySelectorAll('.ov_category');
+    for (const childCategory of childCategories) {
+      this.closeCategory(childCategory);
+    }
+    categoryDiv.querySelector('.ov_category_content').style.display = 'none';
+    const categorySquare = categoryDiv.querySelector('.ov_category_square');
     categorySquare.classList.remove('square_down');
     categorySquare.classList.add('square_right');
+    this.getCategory(categoryDiv.id).displayed = false;
   }
 
   addFilter(contentButton, content) {
