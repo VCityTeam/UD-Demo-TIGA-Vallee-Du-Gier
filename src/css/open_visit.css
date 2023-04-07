@@ -51,3 +51,8 @@
 .ov_content:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+.ov_content_displayed {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
