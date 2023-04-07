@@ -8,6 +8,7 @@ export class OpenVisit extends Visit {
     this.currentIndex = 0;
     this.categories = [];
     this.filters = {};
+    this.contentConfigs = {};
     this.contentNumber = 0;
   }
 
@@ -125,13 +126,14 @@ export class OpenVisit extends Visit {
           break;
         }
       }
+      this.contentConfigs[contentButton.id] = content;
       contentButton.addEventListener(
         'click',
         function () {
           if (contentButton.id in this.filters) {
-            this.removeFilter(contentButton, content);
+            this.removeFilter(contentButton);
           } else {
-            this.addFilter(contentButton, content);
+            this.addFilter(contentButton);
           }
         }.bind(this)
       );
@@ -158,25 +160,35 @@ export class OpenVisit extends Visit {
     for (const childCategory of childCategories) {
       this.closeCategory(childCategory);
     }
-    categoryDiv.querySelector('.ov_category_content').style.display = 'none';
+    const categoryContent = categoryDiv.querySelector('.ov_category_content');
+    const contents = categoryContent.querySelectorAll('.ov_content_displayed');
+    for (const content of contents) {
+      if (content.id in this.filters) {
+        this.removeFilter(content);
+      }
+    }
+    categoryContent.style.display = 'none';
     const categorySquare = categoryDiv.querySelector('.ov_category_square');
     categorySquare.classList.remove('square_down');
     categorySquare.classList.add('square_right');
     this.getCategory(categoryDiv.id).displayed = false;
   }
 
-  addFilter(contentButton, content) {
-    const layer = getLayerById(this.view, content.layer);
-    const filterId = this.filterManager.addFilter(layer, content);
+  addFilter(contentButton) {
+    const layer = getLayerById(this.view, this.contentConfigs[contentButton.id].layer);
+    const filterId = this.filterManager.addFilter(
+      layer,
+      this.contentConfigs[contentButton.id]
+    );
     this.filters[contentButton.id] = filterId;
     if (!layer.isC3DTilesLayer) layer.visible = false;
     contentButton.classList.add('ov_content_displayed');
   }
 
-  removeFilter(contentButton, content) {
+  removeFilter(contentButton) {
     const filterId = this.filters[contentButton.id];
     this.filterManager.removeFilter(filterId);
-    const layer = getLayerById(this.view, content.layer);
+    const layer = getLayerById(this.view, this.contentConfigs[contentButton.id].layer);
     if (!layer.isC3DTilesLayer)
       layer.visible = !this.filterManager.layerHasFilter(layer.id);
     delete this.filters[contentButton.id];
