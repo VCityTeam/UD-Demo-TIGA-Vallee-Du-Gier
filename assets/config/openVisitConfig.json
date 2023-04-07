@@ -15,19 +15,23 @@
             "contents": [
                 {
                     "type": "layer",
-                    "id": "BATI-INDUS"
+                    "id": "BATI-INDUS",
+                    "default": "show"
                 },
                 {
                     "type": "layer",
-                    "id": "zae"
+                    "id": "zae",
+                    "default": "show"
                 },
                 {
                     "type": "layer",
-                    "id": "communes"
+                    "id": "communes",
+                    "default": "show"
                 },
                 {
                     "type": "layer",
-                    "id": "noms_communes"
+                    "id": "noms_communes",
+                    "default": "show"
                 },
                 {
                     "name": "Fonds de carte",
@@ -53,6 +57,7 @@
                     "type": "filter",
                     "layer": "BATI-INDUS",
                     "id": "BATI_INDUS_HAUTEUR",
+                    "default": "show",
                     "properties": {
                         "attribute": "USAGE2",
                         "attribute_values": [
@@ -69,6 +74,7 @@
                     "type": "filter",
                     "layer": "noms_communes",
                     "id": "NOMS_COM",
+                    "default": "hide",
                     "properties": {
                         "COMMUNE": {
                             "type": "string",
@@ -83,6 +89,7 @@
                     "type": "filter",
                     "layer": "communes",
                     "id": "COMS",
+                    "default": "show",
                     "properties": {
                         "COMMUNE": {
                             "type": "string",

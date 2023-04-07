@@ -148,7 +148,14 @@ export class OpenVisit extends Visit {
         this.closeCategory(category);
       }
     }
-    categoryDiv.querySelector('.ov_category_content').style.display = 'block';
+    const categoryContent = categoryDiv.querySelector('.ov_category_content');
+    const contents = categoryContent.querySelectorAll('.ov_content');
+    for (const content of contents) {
+      if (this.contentConfigs[content.id].default == 'show') {
+        this.addFilter(content);
+      }
+    }
+    categoryContent.style.display = 'block';
     const categorySquare = categoryDiv.querySelector('.ov_category_square');
     categorySquare.classList.remove('square_right');
     categorySquare.classList.add('square_down');
@@ -175,7 +182,10 @@ export class OpenVisit extends Visit {
   }
 
   addFilter(contentButton) {
-    const layer = getLayerById(this.view, this.contentConfigs[contentButton.id].layer);
+    const layer = getLayerById(
+      this.view,
+      this.contentConfigs[contentButton.id].layer
+    );
     const filterId = this.filterManager.addFilter(
       layer,
       this.contentConfigs[contentButton.id]
@@ -188,7 +198,10 @@ export class OpenVisit extends Visit {
   removeFilter(contentButton) {
     const filterId = this.filters[contentButton.id];
     this.filterManager.removeFilter(filterId);
-    const layer = getLayerById(this.view, this.contentConfigs[contentButton.id].layer);
+    const layer = getLayerById(
+      this.view,
+      this.contentConfigs[contentButton.id].layer
+    );
     if (!layer.isC3DTilesLayer)
       layer.visible = !this.filterManager.layerHasFilter(layer.id);
     delete this.filters[contentButton.id];
