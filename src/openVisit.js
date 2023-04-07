@@ -139,6 +139,13 @@ export class OpenVisit extends Visit {
   }
 
   openCategory(categoryDiv) {
+    const categories =
+      categoryDiv.parentNode.getElementsByClassName('ov_category');
+    for (const category of categories) {
+      if (category.id != categoryDiv.id) {
+        this.closeCategory(category);
+      }
+    }
     categoryDiv.querySelector('.ov_category_content').style.display = 'block';
     const categorySquare = categoryDiv.querySelector('.ov_category_square');
     categorySquare.classList.remove('square_right');
