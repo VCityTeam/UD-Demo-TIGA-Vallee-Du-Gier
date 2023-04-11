@@ -25,17 +25,20 @@ export class OpenVisit extends Visit {
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
     const layerButton = document.getElementById('layer_button');
-    layerButton.addEventListener('click', function () {
-      const layerPanel = document.getElementById('layer_panel');
-      if (this.layerPanelOpen) {
-        layerPanel.style.display = 'none';
-        layerButton.style.backgroundColor = '#d9d9d9';
-      } else {
-        layerPanel.style.display = 'flex';
-        layerButton.style.backgroundColor = '#c8c8c8';
-      }
-      this.layerPanelOpen = !this.layerPanelOpen;
-    }.bind(this));
+    layerButton.addEventListener(
+      'click',
+      function () {
+        const layerPanel = document.getElementById('layer_panel');
+        if (this.layerPanelOpen) {
+          layerPanel.style.display = 'none';
+          layerButton.style.backgroundColor = '#d9d9d9';
+        } else {
+          layerPanel.style.display = 'flex';
+          layerButton.style.backgroundColor = '#c8c8c8';
+        }
+        this.layerPanelOpen = !this.layerPanelOpen;
+      }.bind(this)
+    );
   }
 
   getCategory(categoryId) {
@@ -202,30 +205,38 @@ export class OpenVisit extends Visit {
 
   addLayers(layers) {
     const layerPanel = document.getElementById('layer_panel');
-    for (const layerConfig of layers) {
-      const layerButton = document.createElement('button');
-      layerButton.id = layerConfig.id;
-      layerButton.classList.add('ov_content');
-      for (const layerCaption of this.captionConfig.layers) {
-        if (layerConfig.id == layerCaption.id) {
-          layerButton.appendChild(
-            this.panel.createCaption(
-              layerCaption.style,
-              layerCaption.description
-            )
+    this.view.layerManager.getLayers().forEach((layer) => {
+      let layerInVisit = false;
+      for (const layerConfig of layers) {
+        if (layer.id == layerConfig.id) {
+          const layerButton = document.createElement('button');
+          layerButton.id = layerConfig.id;
+          layerButton.classList.add('ov_content');
+          for (const layerCaption of this.captionConfig.layers) {
+            if (layerConfig.id == layerCaption.id) {
+              layerButton.appendChild(
+                this.panel.createCaption(
+                  layerCaption.style,
+                  layerCaption.description
+                )
+              );
+              break;
+            }
+          }
+          layerButton.addEventListener(
+            'click',
+            function () {
+              layer.visible = !layer.visible;
+              this.view.layerManager.notifyChange();
+            }.bind(this)
           );
+          layerPanel.appendChild(layerButton);
+          layerInVisit = true;
           break;
         }
       }
-      layerButton.addEventListener(
-        'click',
-        function () {
-          const layer = getLayerById(this.view, layerConfig.id);
-          layer.visible = !layer.visible;
-          this.view.layerManager.notifyChange();
-        }.bind(this)
-      );
-      layerPanel.appendChild(layerButton);
-    }
+      layer.visible = layerInVisit || layer.id == 'planar';
+    });
+    this.view.layerManager.notifyChange();
   }
 }
