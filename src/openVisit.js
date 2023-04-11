@@ -10,6 +10,7 @@ export class OpenVisit extends Visit {
     this.filters = {};
     this.contentConfigs = {};
     this.contentNumber = 0;
+    this.layerPanelOpen = false;
   }
 
   start(config, captionConfig) {
@@ -23,6 +24,18 @@ export class OpenVisit extends Visit {
     this.panel.headerPanel.appendChild(subTitle);
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
+    const layerButton = document.getElementById('layer_button');
+    layerButton.addEventListener('click', function () {
+      const layerPanel = document.getElementById('layer_panel');
+      if (this.layerPanelOpen) {
+        layerPanel.style.display = 'none';
+        layerButton.style.backgroundColor = '#d9d9d9';
+      } else {
+        layerPanel.style.display = 'flex';
+        layerButton.style.backgroundColor = '#c8c8c8';
+      }
+      this.layerPanelOpen = !this.layerPanelOpen;
+    }.bind(this));
   }
 
   getCategory(categoryId) {
