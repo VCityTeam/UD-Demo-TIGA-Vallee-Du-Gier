@@ -22,7 +22,7 @@ export class OpenVisit extends Visit {
     subTitle.innerHTML = this.config.description;
     this.panel.headerPanel.appendChild(subTitle);
     this.fillContent(this.config.contents);
-    this.filterLayers(this.config.layers);
+    this.addLayers(this.config.layers);
   }
 
   getCategory(categoryId) {
@@ -187,27 +187,32 @@ export class OpenVisit extends Visit {
     contentButton.classList.remove('ov_content_displayed');
   }
 
-  // addLayer() {
-  //   if (content.type == 'layer') {
-  //     for (const layerCaption of this.captionConfig.layers) {
-  //       if (content.id == layerCaption.id) {
-  //         contentButton.appendChild(
-  //           this.panel.createCaption(
-  //             layerCaption.style,
-  //             layerCaption.description
-  //           )
-  //         );
-  //         break;
-  //       }
-  //     }
-  //     contentButton.addEventListener(
-  //       'click',
-  //       function () {
-  //         const layer = getLayerById(this.view, content.id);
-  //         layer.visible = !layer.visible;
-  //         this.view.layerManager.notifyChange();
-  //       }.bind(this)
-  //     );
-  //   }
-  // }
+  addLayers(layers) {
+    const layerPanel = document.getElementById('layer_panel');
+    for (const layerConfig of layers) {
+      const layerButton = document.createElement('button');
+      layerButton.id = layerConfig.id;
+      layerButton.classList.add('ov_content');
+      for (const layerCaption of this.captionConfig.layers) {
+        if (layerConfig.id == layerCaption.id) {
+          layerButton.appendChild(
+            this.panel.createCaption(
+              layerCaption.style,
+              layerCaption.description
+            )
+          );
+          break;
+        }
+      }
+      layerButton.addEventListener(
+        'click',
+        function () {
+          const layer = getLayerById(this.view, layerConfig.id);
+          layer.visible = !layer.visible;
+          this.view.layerManager.notifyChange();
+        }.bind(this)
+      );
+      layerPanel.appendChild(layerButton);
+    }
+  }
 }

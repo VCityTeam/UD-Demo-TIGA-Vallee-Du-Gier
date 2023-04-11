@@ -2,11 +2,34 @@
     "name": "Visite virtuelle d'une vallée industrielle",
     "description": "<br>Parcourez librement le territoire de la Vallée du Gier",
     "layers": [
-        "baseMapLayer_0",
-        "communes",
-        "BATI-INDUS",
-        "BATI-AUTRE",
-        "noms_communes"
+        {
+            "id": "BATI-INDUS",
+            "default": "show"
+        },
+        {
+            "id": "BATI-AUTRE",
+            "default": "show"
+        },
+        {
+            "id": "zae",
+            "default": "show"
+        },
+        {
+            "id": "communes",
+            "default": "show"
+        },
+        {
+            "id": "noms_communes",
+            "default": "show"
+        },
+        {
+            "id": "baseMapLayer_0",
+            "default": "show"
+        },
+        {
+            "id": "baseMapLayer_1",
+            "default": "hide"
+        }
     ],
     "contents": [
         {
