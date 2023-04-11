@@ -44,7 +44,7 @@
             "description": "Fond cartographique IGN",
             "id": "baseMapLayer_0",
             "style": {
-                "path": "../assets/img/fond_carto.png",
+                "path": "../assets/logos/fond_carto.png",
                 "type": "image"
             }
         },
@@ -52,7 +52,7 @@
             "description": "Fond orthophoto IGN",
             "id": "baseMapLayer_1",
             "style": {
-                "path": "../assets/img/fond_ortho.png",
+                "path": "../assets/logos/fond_ortho.png",
                 "type": "image"
             }
         }

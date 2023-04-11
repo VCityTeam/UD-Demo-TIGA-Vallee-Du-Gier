@@ -46,7 +46,7 @@
     <script type="text/javascript">
       const list = [];
       const urls = [
-        '../assets/config/formConfig.json',
+        '../assets/config/visitConfig.json',
         '../assets/config/mediaConfig.json',
         '../assets/config/captionConfig.json',
       ];
@@ -63,12 +63,12 @@
       });
 
       Promise.all(list).then(function () {
-        const formConfig = configs[0];
+        const visitConfig = configs[0];
         const mediaConfig = configs[1];
         const captionConfig = configs[2];
         const app = new vdg_app.Templates.AllWidget();
 
-        app.start('../assets/config/config.json').then((config) => {
+        app.start('../assets/config/layerConfig.json').then((config) => {
           ////// BaseMap Widget
           const baseMap = new vdg_app.Widgets.BaseMap(
             app.view3D.getItownsView(),
@@ -89,10 +89,10 @@
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
 
-          const visitConfig = formConfig.visits.find(
+          const conf = visitConfig.visits.find(
             (v) => v.id == 'P_QUESTIONS'
           );
-          visit.start(visitConfig, captionConfig);
+          visit.start(conf, captionConfig);
         });
       });
     </script>

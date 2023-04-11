@@ -56,20 +56,7 @@
         const captionConfig = configs[2];
         const app = new vdg_app.Templates.AllWidget();
 
-        app.start('../assets/config/config.json').then((config) => {
-          ////// CITY OBJECTS MODULE
-          let cityObjectModule = new vdg_app.Widgets.CityObjectModule(
-            app.view3D.layerManager,
-            app.config
-          );
-          app.addModuleView('cityObjects', cityObjectModule.view);
-
-          ////// LAYER CHOICE MODULE
-          const layerChoice = new vdg_app.Widgets.LayerChoice(
-            app.view3D.layerManager
-          );
-          app.addModuleView('layerChoice', layerChoice);
-
+        app.start('../assets/config/layerConfig.json').then((config) => {
           ////// BaseMap Widget
           const baseMap = new vdg_app.Widgets.BaseMap(
             app.view3D.getItownsView(),
