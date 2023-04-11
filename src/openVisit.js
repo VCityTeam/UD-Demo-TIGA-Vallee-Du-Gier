@@ -206,7 +206,7 @@ export class OpenVisit extends Visit {
   addLayers(layers) {
     const layerPanel = document.getElementById('layer_panel');
     this.view.layerManager.getLayers().forEach((layer) => {
-      let layerInVisit = false;
+      let layerDisplayed = false;
       for (const layerConfig of layers) {
         if (layer.id == layerConfig.id) {
           const layerButton = document.createElement('button');
@@ -226,17 +226,37 @@ export class OpenVisit extends Visit {
           layerButton.addEventListener(
             'click',
             function () {
-              layer.visible = !layer.visible;
-              this.view.layerManager.notifyChange();
+              if (layer.visible) {
+                this.hideLayer(layer);
+              } else {
+                this.showLayer(layer);
+              }
             }.bind(this)
           );
           layerPanel.appendChild(layerButton);
-          layerInVisit = true;
+          if (layerConfig.default == 'show') {
+            layerDisplayed = true;
+            layerButton.classList.add('ov_content_displayed');
+          }
           break;
         }
       }
-      layer.visible = layerInVisit || layer.id == 'planar';
+      layer.visible = layerDisplayed || layer.id == 'planar';
     });
+    this.view.layerManager.notifyChange();
+  }
+
+  showLayer(layer) {
+    const layerButton = document.getElementById(layer.id);
+    layerButton.classList.add('ov_content_displayed');
+    layer.visible = true;
+    this.view.layerManager.notifyChange();
+  }
+
+  hideLayer(layer) {
+    const layerButton = document.getElementById(layer.id);
+    layerButton.classList.remove('ov_content_displayed');
+    layer.visible = false;
     this.view.layerManager.notifyChange();
   }
 }

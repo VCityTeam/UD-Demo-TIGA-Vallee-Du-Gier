@@ -12,7 +12,7 @@
         },
         {
             "id": "zae",
-            "default": "show"
+            "default": "hide"
         },
         {
             "id": "communes",
