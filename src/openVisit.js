@@ -93,28 +93,7 @@ export class OpenVisit extends Visit {
     contentButton.classList.add('ov_content');
     parentDiv.appendChild(contentButton);
     this.contentNumber++;
-
-    if (content.type == 'layer') {
-      for (const layerCaption of this.captionConfig.layers) {
-        if (content.id == layerCaption.id) {
-          contentButton.appendChild(
-            this.panel.createCaption(
-              layerCaption.style,
-              layerCaption.description
-            )
-          );
-          break;
-        }
-      }
-      contentButton.addEventListener(
-        'click',
-        function () {
-          const layer = getLayerById(this.view, content.id);
-          layer.visible = !layer.visible;
-          this.view.layerManager.notifyChange();
-        }.bind(this)
-      );
-    } else if (content.type == 'filter') {
+    if (content.type == 'filter') {
       for (const filterCaption of this.captionConfig.filters) {
         if (content.id == filterCaption.id) {
           contentButton.appendChild(
@@ -207,4 +186,28 @@ export class OpenVisit extends Visit {
     delete this.filters[contentButton.id];
     contentButton.classList.remove('ov_content_displayed');
   }
+
+  // addLayer() {
+  //   if (content.type == 'layer') {
+  //     for (const layerCaption of this.captionConfig.layers) {
+  //       if (content.id == layerCaption.id) {
+  //         contentButton.appendChild(
+  //           this.panel.createCaption(
+  //             layerCaption.style,
+  //             layerCaption.description
+  //           )
+  //         );
+  //         break;
+  //       }
+  //     }
+  //     contentButton.addEventListener(
+  //       'click',
+  //       function () {
+  //         const layer = getLayerById(this.view, content.id);
+  //         layer.visible = !layer.visible;
+  //         this.view.layerManager.notifyChange();
+  //       }.bind(this)
+  //     );
+  //   }
+  // }
 }

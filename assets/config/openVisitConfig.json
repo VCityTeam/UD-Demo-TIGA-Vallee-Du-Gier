@@ -10,46 +10,6 @@
     ],
     "contents": [
         {
-            "name": "Couches de données",
-            "type": "category",
-            "contents": [
-                {
-                    "type": "layer",
-                    "id": "BATI-INDUS",
-                    "default": "show"
-                },
-                {
-                    "type": "layer",
-                    "id": "zae",
-                    "default": "show"
-                },
-                {
-                    "type": "layer",
-                    "id": "communes",
-                    "default": "show"
-                },
-                {
-                    "type": "layer",
-                    "id": "noms_communes",
-                    "default": "show"
-                },
-                {
-                    "name": "Fonds de carte",
-                    "type": "category",
-                    "contents": [
-                        {
-                            "type": "layer",
-                            "id": "baseMapLayer_0"
-                        },
-                        {
-                            "type": "layer",
-                            "id": "baseMapLayer_1"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Exemples de filtres",
             "type": "category",
             "contents": [
