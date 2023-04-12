@@ -89,6 +89,46 @@
                 "color": "blue",
                 "type": "border"
             }
+        },
+        {
+            "description": "1 à 9 salariés",
+            "id": "TypeEffect_1",
+            "style": {
+                "color": "red",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "10 à 49 salariés",
+            "id": "TypeEffect_2",
+            "style": {
+                "color": "green",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "50 à 199 salariés",
+            "id": "TypeEffect_3",
+            "style": {
+                "color": "blue",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "200 à 300 salariés",
+            "id": "TypeEffect_4",
+            "style": {
+                "color": "yellow",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Artisans autoentrepreneur",
+            "id": "TypeEffect_5",
+            "style": {
+                "color": "purple",
+                "type": "plain"
+            }
         }
     ]
 }

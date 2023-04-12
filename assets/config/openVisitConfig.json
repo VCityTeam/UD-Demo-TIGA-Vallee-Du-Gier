@@ -84,6 +84,103 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "L'industrie dans la vallée",
+            "type": "category",
+            "contents": [
+                {
+                    "name": "Par effectif salariés",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "BATI-INDUS",
+                            "id": "TypeEffect_1",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "TypeEffect",
+                                "attribute_values": [
+                                    "1 a 2 salaries", "3 a 5 salaries", "6 a 9 salaries"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ff0000"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "BATI-INDUS",
+                            "id": "TypeEffect_2",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "TypeEffect",
+                                "attribute_values": [
+                                    "10 a 19 salaries", "20 a 49 salaries", "20 a 49 salarie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#00ff00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "BATI-INDUS",
+                            "id": "TypeEffect_3",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "TypeEffect",
+                                "attribute_values": [
+                                    "50 a 99 salaries", "100 a 199 salaries"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#0000ff"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "BATI-INDUS",
+                            "id": "TypeEffect_4",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "TypeEffect",
+                                "attribute_values": [
+                                    "200 a 300 salaries"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ffff00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "BATI-INDUS",
+                            "id": "TypeEffect_5",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "TypeEffect",
+                                "attribute_values": [
+                                    "Artisan autoentrepreneur", "Artisans autoentrepreneur"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ff00ff"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
