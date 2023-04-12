@@ -27,6 +27,14 @@ export class FilterManager {
     return undefined;
   }
 
+  getFiltersForLayer(layerId) {
+    let filters = [];
+    for (const id in this.filters) {
+      if (this.filters[id].source.id == layerId) filters.push(this.filters[id]);
+    }
+    return filters;
+  }
+
   addFilter(layer, filter) {
     let filterLayer = null;
     if (layer.isC3DTilesLayer) {

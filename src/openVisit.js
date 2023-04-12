@@ -226,7 +226,7 @@ export class OpenVisit extends Visit {
           layerButton.addEventListener(
             'click',
             function () {
-              if (layer.visible) {
+              if (layerButton.classList.contains('ov_content_displayed')) {
                 this.hideLayer(layer);
               } else {
                 this.showLayer(layer);
@@ -249,14 +249,24 @@ export class OpenVisit extends Visit {
   showLayer(layer) {
     const layerButton = document.getElementById(layer.id);
     layerButton.classList.add('ov_content_displayed');
-    layer.visible = true;
+    if (this.filterManager.layerHasFilter(layer.id)) {
+      const filters = this.filterManager.getFiltersForLayer(layer.id);
+      for (const filter of filters) filter.layer.visible = true;
+    } else {
+      layer.visible = true;
+    }
     this.view.layerManager.notifyChange();
   }
 
   hideLayer(layer) {
     const layerButton = document.getElementById(layer.id);
     layerButton.classList.remove('ov_content_displayed');
-    layer.visible = false;
+    if (this.filterManager.layerHasFilter(layer.id)) {
+      const filters = this.filterManager.getFiltersForLayer(layer.id);
+      for (const filter of filters) filter.layer.visible = false;
+    } else {
+      layer.visible = false;
+    }
     this.view.layerManager.notifyChange();
   }
 }
