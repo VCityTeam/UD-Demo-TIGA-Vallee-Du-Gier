@@ -136,15 +136,16 @@ export class OpenVisit extends Visit {
   }
 
   openCategory(categoryDiv) {
-    const categories =
-      categoryDiv.parentNode.getElementsByClassName('ov_category');
+    const categories = categoryDiv.parentNode.querySelectorAll(
+      ':scope > .ov_category, :scope > .ov_category_content > .ov_category'
+    );
     for (const category of categories) {
       if (category.id != categoryDiv.id) {
         this.closeCategory(category);
       }
     }
     const categoryContent = categoryDiv.querySelector('.ov_category_content');
-    const contents = categoryContent.querySelectorAll('.ov_content');
+    const contents = categoryContent.querySelectorAll(':scope > .ov_content');
     for (const content of contents) {
       if (this.contentConfigs[content.id].default == 'show') {
         this.addFilter(content);
@@ -158,12 +159,16 @@ export class OpenVisit extends Visit {
   }
 
   closeCategory(categoryDiv) {
-    const childCategories = categoryDiv.querySelectorAll('.ov_category');
+    const childCategories = categoryDiv.querySelectorAll(
+      ':scope > .ov_category, :scope > .ov_category_content > .ov_category'
+    );
     for (const childCategory of childCategories) {
       this.closeCategory(childCategory);
     }
     const categoryContent = categoryDiv.querySelector('.ov_category_content');
-    const contents = categoryContent.querySelectorAll('.ov_content_displayed');
+    const contents = categoryContent.querySelectorAll(
+      ':scope > .ov_content_displayed'
+    );
     for (const content of contents) {
       if (content.id in this.filters) {
         this.removeFilter(content);
