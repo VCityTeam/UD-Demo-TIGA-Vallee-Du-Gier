@@ -60,22 +60,24 @@ export class FilterManager {
 
   removeFilter(filterId) {
     const filter = this.filters[filterId];
-    if (filter.layer.isC3DTilesLayer) {
-      this.filterCityObjectsByAttribute(
-        filter.layer,
-        filter.properties.attribute,
-        filter.properties.attribute_values,
-        {
-          materialProps: {
-            color: '#FFFFFF',
-          },
-        }
-      );
-    } else {
-      this.view.getItownsView().removeLayer(filter.layer.id, true);
-      this.view.layerManager.notifyChange();
+    if (filter) {
+      if (filter.layer.isC3DTilesLayer) {
+        this.filterCityObjectsByAttribute(
+          filter.layer,
+          filter.properties.attribute,
+          filter.properties.attribute_values,
+          {
+            materialProps: {
+              color: '#FFFFFF',
+            },
+          }
+        );
+      } else {
+        this.view.getItownsView().removeLayer(filter.layer.id, true);
+        this.view.layerManager.notifyChange();
+      }
+      delete this.filters[filterId];
     }
-    delete this.filters[filterId];
   }
 
   removeAllFilters() {
