@@ -54,10 +54,17 @@ audio {
   font-size: 17px;
   display: flex;
   position: relative;
-  width: 30%;
   height: 100%;
   z-index: 8;
   flex-direction: column;
+}
+
+.full_width {
+  width: 90%;
+}
+
+.half_width {
+  width: 30%;
 }
 
 #content_panel {

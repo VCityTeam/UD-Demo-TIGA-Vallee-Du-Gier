@@ -23,6 +23,22 @@ export class Panel {
     this.nextButton.disabled = isEnd;
   }
 
+  setWidth(type) {
+    switch (type) {
+      case 'half':
+        this.mainPanel.classList.add('half_width');
+        this.mainPanel.classList.remove('full_width');
+        break;
+      case 'full':
+        this.mainPanel.classList.remove('half_width');
+        this.mainPanel.classList.add('full_width');
+        break;
+      default:
+        this.mainPanel.classList.remove('half_width');
+        this.mainPanel.classList.remove('full_width');
+    }
+  }
+
   updateHeader(currentIndex, endIndex, currentCategory) {
     this.progressCount.innerHTML = currentIndex + 1 + ' / ' + (endIndex + 1);
     this.categoryButtons.forEach((button) => {

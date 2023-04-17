@@ -70,6 +70,7 @@ export class GuidedVisit extends Visit {
       this.config.endIndex,
       this.getCurrentCategory()
     );
+    this.panel.setWidth(currentNode.type);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.setMedia(currentNode);
     if (this.isEnd()) {
