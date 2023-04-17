@@ -48,66 +48,8 @@ export class Panel {
   }
 
   setForm(nodeIndex) {
-    this.addStyleEvents();
     if (this.savedValues && this.savedValues[nodeIndex])
       this.loadSavedValues(nodeIndex);
-  }
-
-  addStyleEvents() {
-    const checkboxes = this.mediaContainer.querySelectorAll(
-      'input[type="checkbox"]'
-    );
-
-    [].forEach.call(checkboxes, (checkbox) => {
-      const label = document.querySelector(`[for="${checkbox.id}"]`);
-      checkbox.addEventListener('click', function () {
-        if (checkbox.checked) {
-          label.style.backgroundColor = '#ffffff';
-          label.style.color = '#a5a5a5';
-        } else {
-          label.style.backgroundColor = '#a5a5a5';
-          label.style.color = '#fff';
-        }
-      });
-      checkbox.addEventListener('mouseenter', function () {
-        if (checkbox.checked)
-          label.style.backgroundColor = 'rgb(235, 234, 234)';
-        else label.style.backgroundColor = '#929292';
-      });
-      checkbox.addEventListener('mouseleave', function () {
-        if (checkbox.checked) label.style.backgroundColor = '#ffffff';
-        else label.style.backgroundColor = '#a5a5a5';
-      });
-    });
-
-    const radios = this.mediaContainer.querySelectorAll('input[type="radio"]');
-
-    [].forEach.call(radios, (radio) => {
-      const label = document.querySelector(`[for="${radio.id}"]`);
-      radio.addEventListener(
-        'click',
-        function () {
-          if (radio.checked) {
-            label.style.backgroundColor = '#ffffff';
-            label.style.color = '#a5a5a5';
-            const others = this.mediaContainer.querySelectorAll(
-              'input:not(#' + radio.id + ')[type="radio"]'
-            );
-            [].forEach.call(others, (other) => {
-              const otherLabel = document.querySelector(`[for="${other.id}"]`);
-              otherLabel.style.backgroundColor = '#a5a5a5';
-              otherLabel.style.color = '#fff';
-            });
-          }
-        }.bind(this)
-      );
-      radio.addEventListener('mouseenter', function () {
-        if (!radio.checked) label.style.backgroundColor = '#929292';
-      });
-      radio.addEventListener('mouseleave', function () {
-        if (!radio.checked) label.style.backgroundColor = '#a5a5a5';
-      });
-    });
   }
 
   initPanel() {
