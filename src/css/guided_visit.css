@@ -84,12 +84,19 @@
 }
 
 .formbuilder-checkbox,
-.formbuilder-radio {
+.formbuilder-radio,
+.radio,
+.checkbox {
   position: relative;
   width: 91px;
   height: 48px;
   margin: 5px;
   float: left;
+}
+
+label {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 input[type='radio'],
@@ -133,14 +140,6 @@ input[type='checkbox']:hover + label {
 
 input[type='checkbox']:checked:hover + label {
   background-color: rgb(235, 234, 234);
-}
-
-.formbuilder-checkbox-group,
-.formbuilder-text-label,
-.formbuilder-select-label,
-.formbuilder-radio-group-label {
-  font-size: 22px;
-  font-weight: bold;
 }
 
 #fs_image_background {

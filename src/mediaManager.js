@@ -130,9 +130,10 @@ export class MediaManager {
       fetch(fileName)
         .then((response) => response.text())
         .then((text) => {
-          const formDiv = document.createElement('div');
-          formDiv.innerHTML = text;
-          resolve(formDiv);
+          const fileDiv = document.createElement('div');
+          fileDiv.classList.add('file_div');
+          fileDiv.innerHTML = text;
+          resolve(fileDiv);
         });
     });
   }
