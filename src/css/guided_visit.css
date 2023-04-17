@@ -83,15 +83,19 @@
   margin: auto;
 }
 
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .formbuilder-checkbox,
 .formbuilder-radio,
 .radio,
 .checkbox {
-  position: relative;
-  width: 91px;
-  height: 48px;
-  margin: 5px;
-  float: left;
+  margin: 10px auto 10px auto;
+  height: 60px;
+  width: 130px;
 }
 
 label {
@@ -101,13 +105,7 @@ label {
 
 input[type='radio'],
 input[type='checkbox'] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
+  display: none;
 }
 
 input[type='radio'] + label,
@@ -125,6 +123,7 @@ input[type='checkbox'] + label {
   border-radius: 12px;
   background-color: #a5a5a5;
   border: solid 1px #bfbfbf;
+  cursor: pointer;
 }
 
 input[type='radio']:checked + label,
