@@ -222,7 +222,6 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/06.txt",
                     "previous": 4,
                     "next": 6,
                     "type": "half",
@@ -277,7 +276,6 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/08.txt",
                     "previous": 5,
                     "next": 7,
                     "type": "half",
@@ -321,7 +319,6 @@
                     }
                 },
                 {
-                    "path": "../assets/form/ParcoursTest/09.txt",
                     "previous": 6,
                     "type": "full",
                     "medias": [
