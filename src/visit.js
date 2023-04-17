@@ -81,8 +81,11 @@ export class Visit {
       node.medias.forEach((nodeMedia) => {
         const media = this.medias.find((m) => m.id == nodeMedia);
         if (media) {
-          this.mediaManager.addContent(media, this.panel.mediaContainer);
-          this.panel.setForm(this.currentIndex);
+          this.mediaManager
+            .addContent(media, this.panel.mediaContainer)
+            .then(() => {
+              this.panel.setForm(this.currentIndex);
+            });
         }
       });
     }

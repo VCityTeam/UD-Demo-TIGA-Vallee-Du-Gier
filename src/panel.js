@@ -48,7 +48,11 @@ export class Panel {
   }
 
   setForm(nodeIndex) {
-    if (this.savedValues && this.savedValues[nodeIndex])
+    if (
+      this.savedValues &&
+      this.savedValues[nodeIndex] &&
+      this.savedValues[nodeIndex].length > 0
+    )
       this.loadSavedValues(nodeIndex);
   }
 
@@ -154,7 +158,7 @@ export class Panel {
             input.value = value.text;
             break;
           default:
-            if (value.option) input.click();
+            input.checked = value.option;
         }
       }
       if (input.nodeName == 'SELECT') {
