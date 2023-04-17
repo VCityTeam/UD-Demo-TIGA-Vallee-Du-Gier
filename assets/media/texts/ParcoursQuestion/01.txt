@@ -12,11 +12,14 @@
             <div class="formbuilder-radio">
                 <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
                 <label for="radio-group-1670843415313-0">Yes</label>
+                <output for="radio-group-1670843415313-0">Orci nulla pellentesque dignissim enim sit. Arcu risus quis varius quam. Ipsum faucibus vitae aliquet nec ullamcorper. Integer vitae justo eget magna fermentum iaculis eu. Neque ornare aenean euismod elementum nisi. Vestibulum morbi blandit cursus risus at ultrices. Turpis in eu mi bibendum neque egestas congue. Sit amet mauris commodo quis imperdiet massa tincidunt. Feugiat in ante metus dictum. Donec ac odio tempor orci dapibus ultrices in. Elit scelerisque mauris pellentesque pulvinar pellentesque.</output>
             </div>
             <div class="formbuilder-radio">
                 <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
                 <label for="radio-group-1670843415313-1">No</label>
+                <output for="radio-group-1670843415313-1">Integer vitae justo eget magna fermentum iaculis eu. Neque ornare aenean euismod elementum nisi. Vestibulum morbi blandit cursus risus at ultrices.</output>
             </div>
         </div>
+        <p id="output_div"></p>
     </div>
 </div>

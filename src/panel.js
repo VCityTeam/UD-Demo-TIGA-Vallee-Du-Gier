@@ -54,6 +54,25 @@ export class Panel {
       this.savedValues[nodeIndex].length > 0
     )
       this.loadSavedValues(nodeIndex);
+    const radioInputs = document.querySelectorAll('input[type="radio"]');
+    for (const input of radioInputs) {
+      input.addEventListener(
+        'click',
+        function () {
+          if (input.checked) {
+            let outputDiv = document.getElementById('output_div');
+            if (outputDiv == undefined) {
+              outputDiv = document.createElement('p');
+              outputDiv.id = 'output_div';
+              this.mediaContainer.appendChild(outputDiv);
+            }
+            outputDiv.innerText = document.querySelector(
+              `output[for="${input.id}"]`
+            ).innerText;
+          }
+        }.bind(this)
+      );
+    }
   }
 
   initPanel() {

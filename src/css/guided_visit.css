@@ -141,6 +141,10 @@ input[type='checkbox']:checked:hover + label {
   background-color: rgb(235, 234, 234);
 }
 
+output {
+  display: none;
+}
+
 #fs_image_background {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
