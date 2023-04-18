@@ -7,6 +7,7 @@ export class Panel {
     this.textPanel = null;
     this.footerPanel = null;
     this.isClosed = false;
+    this.width = 'half';
     this.initPanel();
   }
 
@@ -24,6 +25,7 @@ export class Panel {
   }
 
   setWidth(type) {
+    this.width = type;
     switch (type) {
       case 'half':
         this.mainPanel.classList.add('half_width');
@@ -122,18 +124,17 @@ export class Panel {
 
   closePanel() {
     this.contentPanel.style.display = 'none';
-    this.mainPanel.style.width = '0%';
+    this.previousWidth = this.width;
+    this.setWidth();
     this.closeArrow.style.transform = 'rotate(-45deg)';
-    this.closeArrow.style.webkitTransform = 'rotate(-45deg)';
     this.closeArrow.style.left = '5px';
     this.isClosed = true;
   }
 
   openPanel() {
     this.contentPanel.style.display = 'block';
-    this.mainPanel.style.width = '30%';
+    this.setWidth(this.previousWidth);
     this.closeArrow.style.transform = 'rotate(135deg)';
-    this.closeArrow.style.webkitTransform = 'rotate(135deg)';
     this.closeArrow.style.left = '9px';
     this.isClosed = false;
   }

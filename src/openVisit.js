@@ -16,6 +16,7 @@ export class OpenVisit extends Visit {
   start(config, captionConfig) {
     this.config = config;
     this.captionConfig = captionConfig;
+    this.panel.setWidth('half');
     const title = document.createElement('h1');
     title.innerHTML = this.config.name;
     this.panel.headerPanel.appendChild(title);
