@@ -33,152 +33,537 @@
     ],
     "contents": [
         {
-            "name": "Exemples de filtres",
+            "name": "Par effectif salariés",
             "type": "category",
             "contents": [
                 {
                     "type": "filter",
                     "layer": "BATI-INDUS",
-                    "id": "BATI_INDUS_HAUTEUR",
+                    "id": "TypeEffect_1",
                     "default": "show",
                     "properties": {
-                        "attribute": "USAGE2",
+                        "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "Commercial et services"
+                            "01-02",
+                            "3-5",
+                            "6-9"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#FF0000"
+                                "color": "#ff0000"
                             }
                         }
                     }
                 },
                 {
                     "type": "filter",
-                    "layer": "noms_communes",
-                    "id": "NOMS_COM",
-                    "default": "hide",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_2",
+                    "default": "show",
                     "properties": {
-                        "COMMUNE": {
-                            "type": "string",
-                            "enum": [
-                                "Rive-de-Gier",
-                                "Saint-Chamond"
-                            ]
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "10-19",
+                            "20-49"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#00ff00"
+                            }
                         }
                     }
                 },
                 {
                     "type": "filter",
-                    "layer": "communes",
-                    "id": "COMS",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_3",
                     "default": "show",
                     "properties": {
-                        "COMMUNE": {
-                            "type": "string",
-                            "enum": [
-                                "Rive-de-Gier",
-                                "Saint-Chamond"
-                            ]
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "50-99",
+                            "100-199"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0000ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_4",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "200-249",
+                            "250-499",
+                            "500-999",
+                            "1000-1999"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ffff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_5",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "Entreprise individuelle"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff00ff"
+                            }
                         }
                     }
                 }
             ]
         },
         {
-            "name": "L'industrie dans la vallée",
+            "name": "Par chiffre d'affaire",
             "type": "category",
             "contents": [
                 {
-                    "name": "Par effectif salariés",
-                    "type": "category",
-                    "contents": [
-                        {
-                            "type": "filter",
-                            "layer": "BATI-INDUS",
-                            "id": "TypeEffect_1",
-                            "default": "show",
-                            "properties": {
-                                "attribute": "LIB_EFF",
-                                "attribute_values": [
-                                    "01-02", "3-5", "6-9"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#ff0000"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "type": "filter",
-                            "layer": "BATI-INDUS",
-                            "id": "TypeEffect_2",
-                            "default": "show",
-                            "properties": {
-                                "attribute": "LIB_EFF",
-                                "attribute_values": [
-                                    "10-19", "20-49"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#00ff00"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "type": "filter",
-                            "layer": "BATI-INDUS",
-                            "id": "TypeEffect_3",
-                            "default": "show",
-                            "properties": {
-                                "attribute": "LIB_EFF",
-                                "attribute_values": [
-                                    "50-99", "100-199"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#0000ff"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "type": "filter",
-                            "layer": "BATI-INDUS",
-                            "id": "TypeEffect_4",
-                            "default": "show",
-                            "properties": {
-                                "attribute": "LIB_EFF",
-                                "attribute_values": [
-                                    "200-249", "250-499", "500-999", "1000-1999"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#ffff00"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "type": "filter",
-                            "layer": "BATI-INDUS",
-                            "id": "TypeEffect_5",
-                            "default": "show",
-                            "properties": {
-                                "attribute": "LIB_EFF",
-                                "attribute_values": [
-                                    "Entreprise individuelle"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#ff00ff"
-                                    }
-                                }
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_1",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "5000-10 000 ", "10 000-50 000 ", "50-100 000 "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff0000"
                             }
                         }
-                    ]
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_2",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "100 000-500 000 ", "100-500 000 ", "0,5-1 million"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#00ff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_3",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "1-2 millions ", "1-5 millions ", "2-5 millions", "2-5 millions ", "5-10 millions", "5-10 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0000ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_4",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "10-50 millions", "10-50 millions ", "20-50 millions ", "50-100 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ffff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_5",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "100-200 millions ", "100-500 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff00ff"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Par filière",
+            "type": "category",
+            "contents": [
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_1",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "08"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff0000"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_2",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "10"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#00ff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_3",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "13"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0000ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_4",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "14"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ffff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_5",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "15"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff00ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_6",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "16"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#00ffff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_7",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "17"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#880000"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_8",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "18"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#008800"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_9",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "20"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#000088"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_10",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "22"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#888800"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_11",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "23"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#880088"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_12",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "24"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#008888"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_13",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "25"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff8800"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_14",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "26"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff0088"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_15",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "27"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#88ff00"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_16",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "28"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#00ff88"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_17",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "29"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0088ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_18",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "31"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#8800ff"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_19",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "32"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#ff8888"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "NAF_20",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CODE_NAF",
+                        "attribute_values": [
+                            "33"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#88ff88"
+                            }
+                        }
+                    }
                 }
             ]
         }
