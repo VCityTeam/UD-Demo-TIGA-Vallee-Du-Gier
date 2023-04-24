@@ -1,3 +1,7 @@
+#footer_panel {
+  border-top: 1px solid #585858;
+}
+
 .recap-button {
   position: relative;
   display: inline-block;
@@ -48,26 +52,27 @@
 #progress_count {
   padding: 0px;
   margin: auto;
+  font-size: 15px;
 }
 
 .arrow_button {
   border: solid black;
-  border-width: 0 5px 5px 0;
+  border-width: 0 4px 4px 0;
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
-  flex: 0 0 20px;
-  height: 20px;
+  flex: 0 0 16px;
+  height: 16px;
 }
 
 .arrow_button:hover {
   border: solid #a5a5a5;
-  border-width: 0 5px 5px 0;
+  border-width: 0 4px 4px 0;
 }
 
 .arrow_button:disabled {
   border: solid #a5a5a5;
-  border-width: 0 5px 5px 0;
+  border-width: 0 4px 4px 0;
   cursor: default;
 }
 
