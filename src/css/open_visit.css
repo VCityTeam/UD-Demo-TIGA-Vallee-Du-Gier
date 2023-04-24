@@ -93,3 +93,7 @@
   flex-wrap: wrap;
   border-radius: 4px;
 }
+
+.building_info_field {
+  margin: 0px;
+}

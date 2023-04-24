@@ -40,6 +40,7 @@ export class OpenVisit extends Visit {
         this.layerPanelOpen = !this.layerPanelOpen;
       }.bind(this)
     );
+    this.addClickOnBuildingEvent();
   }
 
   getCategory(categoryId) {
@@ -274,5 +275,44 @@ export class OpenVisit extends Visit {
       layer.visible = false;
     }
     this.view.layerManager.notifyChange();
+  }
+
+  addClickOnBuildingEvent() {
+    document.getElementById('viewerDiv').addEventListener(
+      'mousedown',
+      function (e) {
+        const cityObject = this.view.layerManager.pickCityObject(e);
+        if (
+          cityObject &&
+          cityObject.tile.layer.id == this.config.building_info.layer
+        ) {
+          this.panel.mediaContainer.innerHTML = '';
+          this.panel.mediaContainer.appendChild(
+            this.getBuildingInfo(cityObject)
+          );
+        }
+      }.bind(this)
+    );
+  }
+
+  getBuildingInfo(cityObject) {
+    const buildingInfoDiv = document.createElement('div');
+    buildingInfoDiv.id = 'building_info_div';
+
+    const buildingName = document.createElement('h2');
+    buildingName.innerText = cityObject.props[this.config.building_info.name];
+    buildingInfoDiv.appendChild(buildingName);
+
+    const buildingInfo = document.createElement('div');
+    buildingInfo.id = 'building_info';
+    for (const field of this.config.building_info.fields) {
+      const buildingInfoField = document.createElement('p');
+      buildingInfoField.classList.add('building_info_field');
+      buildingInfoField.innerText = field.name + ' : ' + cityObject.props[field.attribute];
+      buildingInfo.appendChild(buildingInfoField);
+    }
+    buildingInfoDiv.appendChild(buildingInfo);
+
+    return buildingInfoDiv;
   }
 }
