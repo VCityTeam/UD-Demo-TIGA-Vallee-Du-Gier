@@ -37,7 +37,6 @@
     "version": "1.3.0",
     "format": "image/jpeg",
     "layer_name": "Carte_IGN_1",
-    "image": "../assets/img/ign_ortho.png",
     "maxSubdivisionLevel": 15
   },
   "baseMapLayers": [
@@ -56,22 +55,6 @@
       "format": "image/jpeg",
       "layer_name": "Ortho_IGN",
       "image": "https://download.data.grandlyon.com/catalogue/srv/fre//resources.get?uuid=7e0bab06-ff3b-453e-9b72-e16b8f08d926&fname=ortho2018_s.png"
-    },
-    {
-      "url": "https://wxs.ign.fr/cartes/geoportail/r/wms",
-      "name": "GEOGRAPHICALGRIDSYSTEMS.MAPS.BDUNI.J1",
-      "version": "1.3.0",
-      "format": "image/jpeg",
-      "layer_name": "Carte_IGN_2",
-      "image": "../assets/img/ign_ortho.png"
-    },
-    {
-      "url": "https://wxs.ign.fr/parcellaire/geoportail/r/wms",
-      "name": "CADASTRALPARCELS.PARCELS",
-      "version": "1.3.0",
-      "format": "image/jpeg",
-      "layer_name": "Parcelle_IGN",
-      "image": "../assets/img/ign_ortho.png"
     }
   ],
   "GeoJSONLayers": [
@@ -101,20 +84,6 @@
         },
         "stroke": {
           "color": "green"
-        }
-      }
-    },
-    {
-      "id": "multi_emprises",
-      "url": "../assets/layers/4-EtablissementsIndusBatMultiplesEmprisesFoncieres_3946.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "purple",
-          "opacity": 0.6
-        },
-        "stroke": {
-          "color": "purple"
         }
       }
     }
@@ -161,25 +130,6 @@
       "tilt": "40",
       "x": "1822000",
       "y": "5143000"
-    }
-  },
-  "cityObjects": {
-    "styles": {
-      "layerDefault": {
-        "materialProps": {
-          "color": "#ffa14f"
-        }
-      },
-      "selection": {
-        "materialProps": {
-          "color": "#13ddef"
-        }
-      },
-      "linkedWithDisplayedDocument": {
-        "materialProps": {
-          "color": "#4c5af7"
-        }
-      }
     }
   }
 }

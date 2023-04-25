@@ -4,7 +4,7 @@
             "description": "Bâtiments industriels",
             "id": "BATI-INDUS",
             "style": {
-                "color": "#ffffff",
+                "color": "#202020",
                 "type": "plain"
             }
         },
