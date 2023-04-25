@@ -4,6 +4,8 @@ This demo offers tools to create 3D and geographic storytellings with urban data
 
 Different examples are available with the demo (see [install and run the demo](#installing-and-running-the-demo)). Those examples are about [Vallée du Gier](./assets/layers/COMMUNES_GIER_4326.geojson)'s industry.
 
+![image](https://user-images.githubusercontent.com/32875283/234228860-e7ed0424-776d-4e3a-98b8-b97926342d60.png)
+
 ## Installing and running the demo
 
 The demo application can be locally (on your desktop) started in the following way:
