@@ -1,6 +1,5 @@
 {
-    "name": "Visite virtuelle d'une vallée industrielle",
-    "description": "<br>Parcourez librement le territoire de la Vallée du Gier",
+    "name": "À LA DÉCOUVERTE<br>- DE LA VALLÉE DU GIER -",
     "building_info": {
         "name": "DENOMINATION",
         "layer": "BATI-INDUS",
@@ -64,7 +63,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff0000"
+                                "color": "#F0F9E8"
                             }
                         }
                     }
@@ -82,7 +81,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#00ff00"
+                                "color": "#BAE4BC"
                             }
                         }
                     }
@@ -100,7 +99,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#0000ff"
+                                "color": "#7BCCC4"
                             }
                         }
                     }
@@ -120,7 +119,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ffff00"
+                                "color": "#43A2CA"
                             }
                         }
                     }
@@ -137,7 +136,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff00ff"
+                                "color": "#0868AC"
                             }
                         }
                     }
@@ -162,7 +161,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff0000"
+                                "color": "#F0F9E8"
                             }
                         }
                     }
@@ -181,7 +180,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#00ff00"
+                                "color": "#BAE4BC"
                             }
                         }
                     }
@@ -203,7 +202,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#0000ff"
+                                "color": "#7BCCC4"
                             }
                         }
                     }
@@ -223,7 +222,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ffff00"
+                                "color": "#43A2CA"
                             }
                         }
                     }
@@ -241,7 +240,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff00ff"
+                                "color": "#0868AC"
                             }
                         }
                     }
@@ -264,7 +263,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "red"
+                                "color": "#CB8D23"
                             }
                         }
                     }
@@ -281,7 +280,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "orange"
+                                "color": "#868A63"
                             }
                         }
                     }
@@ -298,7 +297,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "yellow"
+                                "color": "#6D53B0"
                             }
                         }
                     }
@@ -311,12 +310,11 @@
                     "properties": {
                         "attribute": "CAT",
                         "attribute_values": [
-                            "4",
-                            "10"
+                            "4"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "lime"
+                                "color": "#ECDB00"
                             }
                         }
                     }
@@ -333,7 +331,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "green"
+                                "color": "#8D9BA1"
                             }
                         }
                     }
@@ -350,7 +348,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "cyan"
+                                "color": "#5395B0"
                             }
                         }
                     }
@@ -367,7 +365,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "blue"
+                                "color": "#B14E4E"
                             }
                         }
                     }
@@ -384,7 +382,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "purple"
+                                "color": "#8A6663"
                             }
                         }
                     }
@@ -401,7 +399,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "magenta"
+                                "color": "#B75C73"
                             }
                         }
                     }
@@ -414,11 +412,11 @@
                     "properties": {
                         "attribute": "CAT",
                         "attribute_values": [
-                            "11"
+                            "10"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "pink"
+                                "color": "#AAB835"
                             }
                         }
                     }

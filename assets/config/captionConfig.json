@@ -9,10 +9,10 @@
             }
         },
         {
-            "description": "Autres bâtiments",
+            "description": "Bâtiments non industriels",
             "id": "BATI-AUTRE",
             "style": {
-                "color": "#ffffff",
+                "color": "#F5F5F5",
                 "type": "plain"
             }
         },
@@ -28,7 +28,7 @@
             "description": "Délimitations des communes",
             "id": "communes",
             "style": {
-                "color": "blue",
+                "color": "#585858",
                 "type": "border"
             }
         },
@@ -94,7 +94,7 @@
             "description": "1 à 9 salariés",
             "id": "TypeEffect_1",
             "style": {
-                "color": "red",
+                "color": "#F0F9E8",
                 "type": "plain"
             }
         },
@@ -102,7 +102,7 @@
             "description": "10 à 49 salariés",
             "id": "TypeEffect_2",
             "style": {
-                "color": "green",
+                "color": "#BAE4BC",
                 "type": "plain"
             }
         },
@@ -110,7 +110,7 @@
             "description": "50 à 199 salariés",
             "id": "TypeEffect_3",
             "style": {
-                "color": "blue",
+                "color": "#7BCCC4",
                 "type": "plain"
             }
         },
@@ -118,7 +118,7 @@
             "description": "Plus de 200 salariés",
             "id": "TypeEffect_4",
             "style": {
-                "color": "yellow",
+                "color": "#43A2CA",
                 "type": "plain"
             }
         },
@@ -126,7 +126,7 @@
             "description": "Artisans autoentrepreneur",
             "id": "TypeEffect_5",
             "style": {
-                "color": "purple",
+                "color": "#0868AC",
                 "type": "plain"
             }
         },
@@ -134,7 +134,7 @@
             "description": "5 000 à 100 000 euros",
             "id": "CA_1",
             "style": {
-                "color": "red",
+                "color": "#F0F9E8",
                 "type": "plain"
             }
         },
@@ -142,7 +142,7 @@
             "description": "100 000 à 1 million d'euros",
             "id": "CA_2",
             "style": {
-                "color": "green",
+                "color": "#BAE4BC",
                 "type": "plain"
             }
         },
@@ -150,7 +150,7 @@
             "description": "1 à 10 millions d'euros",
             "id": "CA_3",
             "style": {
-                "color": "blue",
+                "color": "#7BCCC4",
                 "type": "plain"
             }
         },
@@ -158,7 +158,7 @@
             "description": "10 à 100 millions d'euros",
             "id": "CA_4",
             "style": {
-                "color": "yellow",
+                "color": "#43A2CA",
                 "type": "plain"
             }
         },
@@ -166,7 +166,7 @@
             "description": "Plus de 100 millions d'euros",
             "id": "CA_5",
             "style": {
-                "color": "purple",
+                "color": "#0868AC",
                 "type": "plain"
             }
         },
@@ -174,7 +174,7 @@
             "description": "Industrie extractive, eau et energie",
             "id": "NAF_1",
             "style": {
-                "color": "red",
+                "color": "#CB8D23",
                 "type": "plain"
             }
         },
@@ -182,7 +182,7 @@
             "description": "Industrie agro-alimentaire",
             "id": "NAF_2",
             "style": {
-                "color": "orange",
+                "color": "#868A63",
                 "type": "plain"
             }
         },
@@ -190,7 +190,7 @@
             "description": "Industrie textile",
             "id": "NAF_3",
             "style": {
-                "color": "yellow",
+                "color": "#6D53B0",
                 "type": "plain"
             }
         },
@@ -198,7 +198,7 @@
             "description": "Industrie du bois, papier et meubles",
             "id": "NAF_4",
             "style": {
-                "color": "lime",
+                "color": "#ECDB00",
                 "type": "plain"
             }
         },
@@ -206,7 +206,7 @@
             "description": "Industrie chimique et pharmaceutique",
             "id": "NAF_5",
             "style": {
-                "color": "green",
+                "color": "#8D9BA1",
                 "type": "plain"
             }
         },
@@ -214,7 +214,7 @@
             "description": "Industrie plastique et de produits minéraux non métalliques",
             "id": "NAF_6",
             "style": {
-                "color": "cyan",
+                "color": "#5395B0",
                 "type": "plain"
             }
         },
@@ -222,7 +222,7 @@
             "description": "Métallurgie et fabrication de produits métalliques",
             "id": "NAF_7",
             "style": {
-                "color": "blue",
+                "color": "#B14E4E",
                 "type": "plain"
             }
         },
@@ -230,7 +230,7 @@
             "description": "Fabrication de machines et équipements, électriques, électroniques, informatiques",
             "id": "NAF_8",
             "style": {
-                "color": "purple",
+                "color": "#8A6663",
                 "type": "plain"
             }
         },
@@ -238,7 +238,7 @@
             "description": "Industrie automobile et de matériels de transport",
             "id": "NAF_9",
             "style": {
-                "color": "magenta",
+                "color": "#B75C73",
                 "type": "plain"
             }
         },
@@ -246,7 +246,7 @@
             "description": "Fabrication d'autres biens et équipements divers, réparation des machines",
             "id": "NAF_10",
             "style": {
-                "color": "pink",
+                "color": "#AAB835",
                 "type": "plain"
             }
         }

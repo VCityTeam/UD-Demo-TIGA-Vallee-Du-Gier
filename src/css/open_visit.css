@@ -1,3 +1,47 @@
+#header_panel,
+#media_container {
+  padding: 0px 30px 0px 30px;
+}
+
+#ov_main_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#panel_switch {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 30px 0px 30px 0px;
+}
+
+.panel_switch_button {
+  height: 25px;
+  flex-grow: 1;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.unselected_button {
+  background: #fcf9e8;
+  color: #000000;
+  font-weight: normal;
+}
+
+.selected_button {
+  background: #e5127b;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#categories_container {
+  display: block;
+  padding: 0px 30px 0px 30px;
+}
+
 .ov_category_button {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -70,7 +114,7 @@
 }
 
 #layer_button {
-  background-color: #d9d9d9;
+  background: rgba(252, 249, 232, 0.8);
   width: 50px;
   height: 50px;
   margin: 0px;
@@ -81,14 +125,14 @@
 }
 
 #layer_button:hover {
-  background-color: #b8b8b8 !important;
+  background-color: rgba(253, 246, 205, 0.9) !important;
 }
 
 #layer_panel {
   position: absolute;
   bottom: 0%;
   padding: 0px 0px 0px 50px;
-  background-color: #d9d9d9;
+  background: rgba(252, 249, 232, 0.8);
   display: none;
   flex-wrap: wrap;
   border-radius: 4px;

@@ -18,13 +18,43 @@ export class OpenVisit extends Visit {
     this.captionConfig = captionConfig;
     this.panel.setWidth('half');
     const title = document.createElement('h1');
+    title.id = 'ov_main_title';
     title.innerHTML = this.config.name;
     this.panel.headerPanel.appendChild(title);
-    const subTitle = document.createElement('h2');
-    subTitle.innerHTML = this.config.description;
-    this.panel.headerPanel.appendChild(subTitle);
+    if (this.config.description) {
+      const subTitle = document.createElement('h2');
+      subTitle.id = 'ov_sub_title';
+      subTitle.innerHTML = this.config.description;
+      this.panel.headerPanel.appendChild(subTitle);
+    }
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
+    const mapButton = document.getElementById('map_button');
+    const infoButton = document.getElementById('info_button');
+    mapButton.addEventListener(
+      'click',
+      function () {
+        if (mapButton.classList.contains('unselected_button')) {
+          mapButton.classList.replace('unselected_button', 'selected_button');
+          infoButton.classList.replace('selected_button', 'unselected_button');
+          document.getElementById('media_container').style.display = 'none';
+          document.getElementById('categories_container').style.display =
+            'block';
+        }
+      }.bind(this)
+    );
+    infoButton.addEventListener(
+      'click',
+      function () {
+        if (infoButton.classList.contains('unselected_button')) {
+          infoButton.classList.replace('unselected_button', 'selected_button');
+          mapButton.classList.replace('selected_button', 'unselected_button');
+          document.getElementById('categories_container').style.display =
+            'none';
+          document.getElementById('media_container').style.display = 'flex';
+        }
+      }.bind(this)
+    );
     const layerButton = document.getElementById('layer_button');
     layerButton.addEventListener(
       'click',
@@ -32,10 +62,8 @@ export class OpenVisit extends Visit {
         const layerPanel = document.getElementById('layer_panel');
         if (this.layerPanelOpen) {
           layerPanel.style.display = 'none';
-          layerButton.style.backgroundColor = '#d9d9d9';
         } else {
           layerPanel.style.display = 'flex';
-          layerButton.style.backgroundColor = '#c8c8c8';
         }
         this.layerPanelOpen = !this.layerPanelOpen;
       }.bind(this)
@@ -50,10 +78,10 @@ export class OpenVisit extends Visit {
   }
 
   fillContent(contentsConfig) {
+    const catContainer = document.getElementById('categories_container');
     contentsConfig.forEach((content) => {
-      if (content.type == 'category')
-        this.addCategory(content, this.panel.textPanel);
-      else this.addContent(content, this.panel.textPanel);
+      if (content.type == 'category') this.addCategory(content, catContainer);
+      else this.addContent(content, catContainer);
     });
   }
 
@@ -308,7 +336,8 @@ export class OpenVisit extends Visit {
     for (const field of this.config.building_info.fields) {
       const buildingInfoField = document.createElement('p');
       buildingInfoField.classList.add('building_info_field');
-      buildingInfoField.innerText = field.name + ' : ' + cityObject.props[field.attribute];
+      buildingInfoField.innerText =
+        field.name + ' : ' + cityObject.props[field.attribute];
       buildingInfo.appendChild(buildingInfoField);
     }
     buildingInfoDiv.appendChild(buildingInfo);

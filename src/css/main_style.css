@@ -1,7 +1,7 @@
 body {
   width: 100%;
   display: block;
-  font-family: 'Inter';
+  font-family: 'Roboto', sans-serif;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -9,6 +9,10 @@ body {
   text-align: left;
   color: #000000;
   font-weight: normal;
+}
+
+button {
+  font-family: 'Roboto', sans-serif !important;
 }
 
 h1 {
@@ -48,7 +52,7 @@ audio {
 }
 
 #main_panel {
-  background: rgba(217, 217, 217, 0.9);
+  background: rgba(252, 249, 232, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 10px 10px 0px;
   font-size: 17px;
@@ -68,7 +72,6 @@ audio {
 }
 
 #content_panel {
-  padding: 0px 30px 0px 30px;
   overflow: auto;
   display: block;
 }
@@ -76,10 +79,6 @@ audio {
 .panel {
   padding: 20px 0px 20px 0px;
   position: relative;
-}
-
-#header_panel {
-  border-bottom: 1px solid #585858;
 }
 
 #media_container {
@@ -90,7 +89,7 @@ audio {
 #close_button {
   height: 50px;
   width: 28px;
-  background: #d9d9d9;
+  background: rgba(252, 249, 232, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 5px 5px 0px;
   display: inline-block;
