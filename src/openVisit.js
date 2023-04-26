@@ -17,16 +17,6 @@ export class OpenVisit extends Visit {
     this.config = config;
     this.captionConfig = captionConfig;
     this.panel.setWidth('half');
-    const title = document.createElement('h1');
-    title.id = 'ov_main_title';
-    title.innerHTML = this.config.name;
-    this.panel.headerPanel.appendChild(title);
-    if (this.config.description) {
-      const subTitle = document.createElement('h2');
-      subTitle.id = 'ov_sub_title';
-      subTitle.innerHTML = this.config.description;
-      this.panel.headerPanel.appendChild(subTitle);
-    }
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
     const mapButton = document.getElementById('map_button');
