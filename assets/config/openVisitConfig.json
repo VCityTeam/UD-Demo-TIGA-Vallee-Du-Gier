@@ -10,9 +10,8 @@
                 "name": "Effectif"
             },
             {
-                "attribute": "LIB_NAF",
-                "name": "Libellé NAF"
-
+                "attribute": "INT_CAT",
+                "name": "Filière"
             }
         ]
     },
@@ -259,13 +258,13 @@
                     "id": "NAF_1",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "08"
+                            "1"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff0000"
+                                "color": "red"
                             }
                         }
                     }
@@ -276,13 +275,13 @@
                     "id": "NAF_2",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "10"
+                            "2"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#00ff00"
+                                "color": "orange"
                             }
                         }
                     }
@@ -293,13 +292,13 @@
                     "id": "NAF_3",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "13"
+                            "3"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#0000ff"
+                                "color": "yellow"
                             }
                         }
                     }
@@ -310,13 +309,14 @@
                     "id": "NAF_4",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "14"
+                            "4",
+                            "10"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ffff00"
+                                "color": "lime"
                             }
                         }
                     }
@@ -327,13 +327,13 @@
                     "id": "NAF_5",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "15"
+                            "5"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#ff00ff"
+                                "color": "green"
                             }
                         }
                     }
@@ -344,13 +344,13 @@
                     "id": "NAF_6",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "16"
+                            "6"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#00ffff"
+                                "color": "cyan"
                             }
                         }
                     }
@@ -361,13 +361,13 @@
                     "id": "NAF_7",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "17"
+                            "7"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#880000"
+                                "color": "blue"
                             }
                         }
                     }
@@ -378,13 +378,13 @@
                     "id": "NAF_8",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "18"
+                            "8"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#008800"
+                                "color": "purple"
                             }
                         }
                     }
@@ -395,13 +395,13 @@
                     "id": "NAF_9",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "20"
+                            "9"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#000088"
+                                "color": "magenta"
                             }
                         }
                     }
@@ -412,183 +412,13 @@
                     "id": "NAF_10",
                     "default": "show",
                     "properties": {
-                        "attribute": "CODE_NAF",
+                        "attribute": "CAT",
                         "attribute_values": [
-                            "22"
+                            "11"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#888800"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_11",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "23"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#880088"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_12",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "24"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#008888"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_13",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "25"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#ff8800"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_14",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "26"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#ff0088"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_15",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "27"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#88ff00"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_16",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "28"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#00ff88"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_17",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "29"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#0088ff"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_18",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "31"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#8800ff"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_19",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "32"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#ff8888"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "NAF_20",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CODE_NAF",
-                        "attribute_values": [
-                            "33"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#88ff88"
+                                "color": "pink"
                             }
                         }
                     }

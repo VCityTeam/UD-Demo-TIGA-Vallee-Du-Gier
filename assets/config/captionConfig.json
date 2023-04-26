@@ -171,162 +171,82 @@
             }
         },
         {
-            "description": "Autres industries extractives",
+            "description": "Industrie extractive, eau et energie",
             "id": "NAF_1",
             "style": {
-                "color": "#ff0000",
+                "color": "red",
                 "type": "plain"
             }
         },
         {
-            "description": "Industries alimentaires",
+            "description": "Industrie agro-alimentaire",
             "id": "NAF_2",
             "style": {
-                "color": "#00ff00",
+                "color": "orange",
                 "type": "plain"
             }
         },
         {
-            "description": "Fabrication de textiles",
+            "description": "Industrie textile",
             "id": "NAF_3",
             "style": {
-                "color": "#0000ff",
+                "color": "yellow",
                 "type": "plain"
             }
         },
         {
-            "description": "Industrie de l'habillement",
+            "description": "Industrie du bois, papier et meubles",
             "id": "NAF_4",
             "style": {
-                "color": "#ffff00",
+                "color": "lime",
                 "type": "plain"
             }
         },
         {
-            "description": "Industrie du cuir et de la chaussure",
+            "description": "Industrie chimique et pharmaceutique",
             "id": "NAF_5",
             "style": {
-                "color": "#ff00ff",
+                "color": "green",
                 "type": "plain"
             }
         },
         {
-            "description": "Travail du bois et fabrication d'articles en bois et en liège",
+            "description": "Industrie plastique et de produits minéraux non métalliques",
             "id": "NAF_6",
             "style": {
-                "color": "#00ffff",
+                "color": "cyan",
                 "type": "plain"
             }
         },
         {
-            "description": "Industrie du papier et du carton",
+            "description": "Métallurgie et fabrication de produits métalliques",
             "id": "NAF_7",
             "style": {
-                "color": "#880000",
+                "color": "blue",
                 "type": "plain"
             }
         },
         {
-            "description": "Imprimerie et reproduction d'enregistrements",
+            "description": "Fabrication de machines et équipements, électriques, électroniques, informatiques",
             "id": "NAF_8",
             "style": {
-                "color": "#008800",
+                "color": "purple",
                 "type": "plain"
             }
         },
         {
-            "description": "Industrie chimique",
+            "description": "Industrie automobile et de matériels de transport",
             "id": "NAF_9",
             "style": {
-                "color": "#000088",
+                "color": "magenta",
                 "type": "plain"
             }
         },
         {
-            "description": "Fabrication de produits en caoutchouc et en plastique",
+            "description": "Fabrication d'autres biens et équipements divers, réparation des machines",
             "id": "NAF_10",
             "style": {
-                "color": "#888800",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication d'autres produits minéraux non métalliques",
-            "id": "NAF_11",
-            "style": {
-                "color": "#880088",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Métallurgie",
-            "id": "NAF_12",
-            "style": {
-                "color": "#008888",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication de produits métalliques",
-            "id": "NAF_13",
-            "style": {
-                "color": "#ff8800",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication de produits optiques, informatiques et électroniques",
-            "id": "NAF_14",
-            "style": {
-                "color": "#ff0088",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication d'équipements électriques",
-            "id": "NAF_15",
-            "style": {
-                "color": "#88ff00",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication de machines et équipements n.c.a.",
-            "id": "NAF_16",
-            "style": {
-                "color": "#00ff88",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Industrie automobile",
-            "id": "NAF_17",
-            "style": {
-                "color": "#0088ff",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Fabrication de meubles",
-            "id": "NAF_18",
-            "style": {
-                "color": "#8800ff",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Autres industries manufacturières",
-            "id": "NAF_19",
-            "style": {
-                "color": "#ff8888",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Réparation et installation de machines et d'équipements",
-            "id": "NAF_20",
-            "style": {
-                "color": "#88ff88",
+                "color": "pink",
                 "type": "plain"
             }
         }
