@@ -38,218 +38,16 @@
         },
         {
             "id": "baseMapLayer_0",
-            "default": "show"
+            "default": "hide"
         },
         {
             "id": "baseMapLayer_1",
-            "default": "hide"
+            "default": "show"
         }
     ],
     "contents": [
         {
-            "name": "Par effectif salariés",
-            "type": "category",
-            "contents": [
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "TypeEffect_1",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "LIB_EFF",
-                        "attribute_values": [
-                            "01-02",
-                            "3-5",
-                            "6-9"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#F0F9E8"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "TypeEffect_2",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "LIB_EFF",
-                        "attribute_values": [
-                            "10-19",
-                            "20-49"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#BAE4BC"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "TypeEffect_3",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "LIB_EFF",
-                        "attribute_values": [
-                            "50-99",
-                            "100-199"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#7BCCC4"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "TypeEffect_4",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "LIB_EFF",
-                        "attribute_values": [
-                            "200-249",
-                            "250-499",
-                            "500-999",
-                            "1000-1999"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#43A2CA"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "TypeEffect_5",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "LIB_EFF",
-                        "attribute_values": [
-                            "Entreprise individuelle"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#0868AC"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Par chiffre d'affaire",
-            "type": "category",
-            "contents": [
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "CA_1",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CA_TRANCHE",
-                        "attribute_values": [
-                            "5000-10 000 ",
-                            "10 000-50 000 ",
-                            "50-100 000 "
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#F0F9E8"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "CA_2",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CA_TRANCHE",
-                        "attribute_values": [
-                            "100 000-500 000 ",
-                            "100-500 000 ",
-                            "0,5-1 million"
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#BAE4BC"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "CA_3",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CA_TRANCHE",
-                        "attribute_values": [
-                            "1-2 millions ",
-                            "1-5 millions ",
-                            "2-5 millions",
-                            "2-5 millions ",
-                            "5-10 millions",
-                            "5-10 millions "
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#7BCCC4"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "CA_4",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CA_TRANCHE",
-                        "attribute_values": [
-                            "10-50 millions",
-                            "10-50 millions ",
-                            "20-50 millions ",
-                            "50-100 millions "
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#43A2CA"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "filter",
-                    "layer": "BATI-INDUS",
-                    "id": "CA_5",
-                    "default": "show",
-                    "properties": {
-                        "attribute": "CA_TRANCHE",
-                        "attribute_values": [
-                            "100-200 millions ",
-                            "100-500 millions "
-                        ],
-                        "style": {
-                            "materialProps": {
-                                "color": "#0868AC"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Par filière",
+            "name": "Les différentes catégories industrielles",
             "type": "category",
             "contents": [
                 {
@@ -418,6 +216,208 @@
                         "style": {
                             "materialProps": {
                                 "color": "#AAB835"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Classes par effectifs salariés",
+            "type": "category",
+            "contents": [
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_1",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "01-02",
+                            "3-5",
+                            "6-9"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#F0F9E8"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_2",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "10-19",
+                            "20-49"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#BAE4BC"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_3",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "50-99",
+                            "100-199"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#7BCCC4"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_4",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "200-249",
+                            "250-499",
+                            "500-999",
+                            "1000-1999"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#43A2CA"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "TypeEffect_5",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "LIB_EFF",
+                        "attribute_values": [
+                            "Entreprise individuelle"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0868AC"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Classes par chiffres d'affaire",
+            "type": "category",
+            "contents": [
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_1",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "5000-10 000 ",
+                            "10 000-50 000 ",
+                            "50-100 000 "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#F0F9E8"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_2",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "100 000-500 000 ",
+                            "100-500 000 ",
+                            "0,5-1 million"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#BAE4BC"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_3",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "1-2 millions ",
+                            "1-5 millions ",
+                            "2-5 millions",
+                            "2-5 millions ",
+                            "5-10 millions",
+                            "5-10 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#7BCCC4"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_4",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "10-50 millions",
+                            "10-50 millions ",
+                            "20-50 millions ",
+                            "50-100 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#43A2CA"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "filter",
+                    "layer": "BATI-INDUS",
+                    "id": "CA_5",
+                    "default": "show",
+                    "properties": {
+                        "attribute": "CA_TRANCHE",
+                        "attribute_values": [
+                            "100-200 millions ",
+                            "100-500 millions "
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#0868AC"
                             }
                         }
                     }
