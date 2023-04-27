@@ -234,6 +234,10 @@ export class OpenVisit extends Visit {
       let layerDisplayed = false;
       for (const layerConfig of layers) {
         if (layer.id == layerConfig.id) {
+          if (layerConfig.default == 'no_caption') {
+            layerDisplayed = true;
+            break;
+          }
           const layerButton = document.createElement('button');
           layerButton.id = layerConfig.id;
           layerButton.classList.add('ov_content');
@@ -296,6 +300,7 @@ export class OpenVisit extends Visit {
   }
 
   addClickOnBuildingEvent() {
+    this.infoPanel = document.getElementById('info');
     document.getElementById('viewerDiv').addEventListener(
       'mousedown',
       function (e) {
@@ -304,34 +309,27 @@ export class OpenVisit extends Visit {
           cityObject &&
           cityObject.tile.layer.id == this.config.building_info.layer
         ) {
-          this.panel.mediaContainer.innerHTML = '';
-          this.panel.mediaContainer.appendChild(
-            this.getBuildingInfo(cityObject)
-          );
+          this.setBuildingInfo(cityObject);
         }
       }.bind(this)
     );
   }
 
-  getBuildingInfo(cityObject) {
-    const buildingInfoDiv = document.createElement('div');
-    buildingInfoDiv.id = 'building_info_div';
-
-    const buildingName = document.createElement('h2');
-    buildingName.innerText = cityObject.props[this.config.building_info.name];
-    buildingInfoDiv.appendChild(buildingName);
-
-    const buildingInfo = document.createElement('div');
-    buildingInfo.id = 'building_info';
-    for (const field of this.config.building_info.fields) {
-      const buildingInfoField = document.createElement('p');
-      buildingInfoField.classList.add('building_info_field');
-      buildingInfoField.innerText =
-        field.name + ' : ' + cityObject.props[field.attribute];
-      buildingInfo.appendChild(buildingInfoField);
+  setBuildingInfo(cityObject) {
+    this.infoPanel.style.display = 'flex';
+    document.getElementById('info_desc').style.display = 'none';
+    const infoDivs = this.infoPanel.getElementsByClassName('info_div');
+    for (const infoDiv of infoDivs) {
+      const attributeField = infoDiv.querySelector('.attribute_field');
+      const attributeName = attributeField.id;
+      if (cityObject.props[attributeName]) {
+        const attributeValue = cityObject.props[attributeName];
+        attributeField.textContent = attributeValue;
+        for (const desc of infoDiv.querySelectorAll('.attribute_desc'))
+          attributeField.textContent += ' ' + desc.textContent;
+      } else {
+        attributeField.textContent = 'n.c.';
+      }
     }
-    buildingInfoDiv.appendChild(buildingInfo);
-
-    return buildingInfoDiv;
   }
 }

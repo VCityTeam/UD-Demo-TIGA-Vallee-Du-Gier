@@ -31,10 +31,60 @@
           </div>
           <div id="text_panel" class="panel">
             <div id="panel_switch">
-              <button id="map_button" class="panel_switch_button selected_button">Carte des industries</button>
-              <button id="info_button" class="panel_switch_button unselected_button">Fiche établissement</button>
+              <button
+                id="map_button"
+                class="panel_switch_button selected_button"
+              >
+                Carte des industries
+              </button>
+              <button
+                id="info_button"
+                class="panel_switch_button unselected_button"
+              >
+                Fiche établissement
+              </button>
             </div>
-            <div id="media_container"></div>
+            <div id="media_container">
+              <p id="info_desc">Cliquez sur un bâtiment industriel pour voir sa fiche</p>
+              <div id="info">
+                <div id="info_div_name" class="info_div">
+                  <img
+                    id="info_name"
+                    class="info_img"
+                    src="../assets/icons/Industry.svg"
+                    alt="Industry icon"
+                  />
+                  <p id="DENOMINATION" class="attribute_field"></p>
+                </div>
+                <div id="info_div_eff" class="info_div">
+                  <img
+                    id="info_eff"
+                    class="info_img"
+                    src="../assets/icons/Users_Cog.svg"
+                    alt="Employes icon"
+                  />
+                  <p id="LIB_EFF" class="attribute_field"></p><p class="attribute_desc">employés</p>
+                </div>
+                <div id="info_div_ca" class="info_div">
+                  <img
+                    id="info_ca"
+                    class="info_img"
+                    src="../assets/icons/Line_Chart.svg"
+                    alt="CA icon"
+                  />
+                  <p id="CA_TRANCHE" class="attribute_field"></p><p class="attribute_desc">euros de chiffre d'affaire</p>
+                </div>
+                <div id="info_div_site" class="info_div">
+                  <img
+                    id="info_site"
+                    class="info_img"
+                    src="../assets/icons/Globe.svg"
+                    alt="Website icon"
+                  />
+                  <p id="SITE_INTERNET" class="attribute_field"></p>
+                </div>
+              </div>
+            </div>
             <div id="categories_container"></div>
           </div>
           <div id="footer_panel" class="panel"></div>

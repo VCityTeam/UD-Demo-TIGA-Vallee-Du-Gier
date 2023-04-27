@@ -18,11 +18,11 @@
     "layers": [
         {
             "id": "BATI-INDUS",
-            "default": "show"
+            "default": "no_caption"
         },
         {
             "id": "BATI-AUTRE",
-            "default": "show"
+            "default": "no_caption"
         },
         {
             "id": "zae",
@@ -37,17 +37,13 @@
             "default": "show"
         },
         {
-            "id": "baseMapLayer_0",
-            "default": "hide"
-        },
-        {
             "id": "baseMapLayer_1",
-            "default": "show"
+            "default": "no_caption"
         }
     ],
     "contents": [
         {
-            "name": "Les différentes catégories industrielles",
+            "name": "Les différentes filières industrielles",
             "type": "category",
             "contents": [
                 {
@@ -223,7 +219,7 @@
             ]
         },
         {
-            "name": "Classes par effectifs salariés",
+            "name": "Les établissements par effectifs salariés",
             "type": "category",
             "contents": [
                 {
@@ -234,13 +230,11 @@
                     "properties": {
                         "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "01-02",
-                            "3-5",
-                            "6-9"
+                            "Entreprise individuelle"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#F0F9E8"
+                                "color": "#BAE4BC"
                             }
                         }
                     }
@@ -253,12 +247,13 @@
                     "properties": {
                         "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "10-19",
-                            "20-49"
+                            "01-02",
+                            "3-5",
+                            "6-9"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#BAE4BC"
+                                "color": "#7BCCC4"
                             }
                         }
                     }
@@ -271,12 +266,12 @@
                     "properties": {
                         "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "50-99",
-                            "100-199"
+                            "10-19",
+                            "20-49"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#7BCCC4"
+                                "color": "#43A2CA"
                             }
                         }
                     }
@@ -289,14 +284,12 @@
                     "properties": {
                         "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "200-249",
-                            "250-499",
-                            "500-999",
-                            "1000-1999"
+                            "50-99",
+                            "100-199"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#43A2CA"
+                                "color": "#0868AC"
                             }
                         }
                     }
@@ -309,11 +302,14 @@
                     "properties": {
                         "attribute": "LIB_EFF",
                         "attribute_values": [
-                            "Entreprise individuelle"
+                            "200-249",
+                            "250-499",
+                            "500-999",
+                            "1000-1999"
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#0868AC"
+                                "color": "#094B7A"
                             }
                         }
                     }
@@ -321,7 +317,7 @@
             ]
         },
         {
-            "name": "Classes par chiffres d'affaire",
+            "name": "Les établissements par chiffres d'affaire",
             "type": "category",
             "contents": [
                 {
@@ -338,7 +334,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#F0F9E8"
+                                "color": "#BAE4BC"
                             }
                         }
                     }
@@ -357,7 +353,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#BAE4BC"
+                                "color": "#7BCCC4"
                             }
                         }
                     }
@@ -379,7 +375,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#7BCCC4"
+                                "color": "#43A2CA"
                             }
                         }
                     }
@@ -399,7 +395,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#43A2CA"
+                                "color": "#0868AC"
                             }
                         }
                     }
@@ -417,7 +413,7 @@
                         ],
                         "style": {
                             "materialProps": {
-                                "color": "#0868AC"
+                                "color": "#094B7A"
                             }
                         }
                     }

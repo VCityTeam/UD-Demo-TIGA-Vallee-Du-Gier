@@ -80,11 +80,11 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "green",
+          "color": "#C0CBD3",
           "opacity": 0.6
         },
         "stroke": {
-          "color": "green"
+          "color": "#C0CBD3"
         }
       }
     }
