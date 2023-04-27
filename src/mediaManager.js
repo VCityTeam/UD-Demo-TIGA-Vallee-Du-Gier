@@ -5,6 +5,9 @@ export class MediaManager {
     this.view = view;
     this.pins = [];
     this.fsImageDisplayed = false;
+  }
+
+  addClickOnPinEvent() {
     document.body.addEventListener('click', (event) => {
       if (!this.fsImageDisplayed && this.pins.length > 0) {
         this.clickOnPin(event);
@@ -49,7 +52,10 @@ export class MediaManager {
           child.muted = false;
           break;
         case 'pin':
-          this.createPin(content);
+          this.createPin(content.value, content.position, 18, {
+            image: content.value,
+            caption: content.caption,
+          });
           break;
         case 'file':
           child = await this.fetchFile(content.value);
@@ -63,29 +69,26 @@ export class MediaManager {
     }
   }
 
-  createPin(content) {
+  createPin(path, position, scale=20, userData={}) {
     const loader = new THREE.TextureLoader();
-    loader.load(content.value, (texture) => {
+    loader.load(path, (texture) => {
       const pictureMaterial = new THREE.SpriteMaterial({
         map: texture,
         sizeAttenuation: true,
       });
       const sprite = new THREE.Sprite(pictureMaterial);
-      sprite.userData = { image: content.value, caption: content.caption };
+      sprite.userData = userData;
 
-      sprite.position.set(
-        content.position.x,
-        content.position.y,
-        content.position.z
-      );
+      sprite.position.set(position.x, position.y, position.z);
 
       const width = texture.image.naturalWidth;
       const height = texture.image.naturalHeight;
-      if (width > height) sprite.scale.set(18 * (width / height), 18, 1);
-      else sprite.scale.set(18, 18 * (height / width), 1);
+      if (width > height) sprite.scale.set(scale * (width / height), scale, 1);
+      else sprite.scale.set(scale, scale * (height / width), 1);
       sprite.updateMatrixWorld();
 
       this.view.getScene().add(sprite);
+      this.view.layerManager.notifyChange();
       this.pins.push(sprite);
     });
   }

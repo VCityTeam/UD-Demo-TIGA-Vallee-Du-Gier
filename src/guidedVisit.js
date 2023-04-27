@@ -3,6 +3,7 @@ import { Visit } from './visit';
 export class GuidedVisit extends Visit {
   constructor(view, medias) {
     super(view, medias);
+    this.mediaManager.addClickOnPinEvent();
   }
 
   isStart() {

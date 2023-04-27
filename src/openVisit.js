@@ -309,6 +309,20 @@ export class OpenVisit extends Visit {
           cityObject &&
           cityObject.tile.layer.id == this.config.building_info.layer
         ) {
+          this.mediaManager.deletePins();
+
+          let offset = 40;
+          if (
+            cityObject.props['HAUTEUR'] &&
+            !isNaN(cityObject.props['HAUTEUR'])
+          )
+            offset = 20 + cityObject.props['HAUTEUR'];
+          this.mediaManager.createPin('../assets/icons/Pin.svg', {
+            x: cityObject.centroid.x,
+            y: cityObject.centroid.y,
+            z: cityObject.centroid.z + offset,
+          });
+
           this.setBuildingInfo(cityObject);
         }
       }.bind(this)
