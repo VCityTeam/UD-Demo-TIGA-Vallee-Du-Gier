@@ -1,3 +1,39 @@
+.pink {
+  background: #e5127b;
+  color: white;
+}
+
+.green {
+  background: #849130;
+  color: white;
+}
+
+.blue {
+  background: #537eb0;
+  color: white;
+}
+
+.grey {
+  background: #c0cbd3;
+  color: white;
+}
+
+.pink_hover:hover {
+  background: #b70e62;
+}
+
+.green_hover:hover {
+  background: #697426;
+}
+
+.blue_hover:hover {
+  background: #41648d;
+}
+
+.grey_hover:hover {
+  background: #90a3b1;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -77,7 +113,110 @@ p {
 }
 
 .visit_section {
-  width: 100vw;
   height: 100vh;
   position: relative;
+  padding: 5vh 10vw 0px 10vw;
+}
+
+.intro_div {
+  height: 20vh;
+  position: relative;
+}
+
+.intro_text {
+  width: 30vw;
+}
+
+.intro_text > h1 {
+  color: #e5127b;
+  font-weight: bold;
+  font-size: 2.5vw;
+  margin: 0px 0px 10px 0px;
+}
+
+.intro_text > h2 {
+  color: #e5127b;
+  font-weight: normal;
+  font-size: 1.5vw;
+}
+
+.intro_img {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%);
+}
+
+.title_div {
+  position: absolute;
+  top: 25vh;
+  height: 10vh;
+  width: 80vw;
+}
+
+.title_bg {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 0px 20px;
+  border-radius: 20px;
+  line-height: 1.5vw;
+  font-weight: bold;
+  background: #fcf9e8;
+  text-align: center;
+}
+
+.title_bg > h1 {
+  margin-bottom: 15px;
+  font-size: 2vw;
+  transform: translateY(-35%);
+}
+
+.visit_main_title_div {
+  width: 25vw;
+}
+
+.visit_sub_title_div {
+  width: 30vw;
+}
+
+.description_div {
+  position: absolute;
+  top: 35vh;
+  height: 10vh;
+  width: 80vw;
+}
+
+.visit_choice_div {
+  position: absolute;
+  top: 45vh;
+  height: 35vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+}
+
+.visit_button {
+  flex: 1 1 0px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.visit_button > p {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 5%;
+  margin: 0px;
+  text-align: left;
+}
+
+.open_visit_div {
+  position: absolute;
+  top: 85vh;
+  height: 15vh;
+  width: 80vw;
 }
