@@ -1,17 +1,57 @@
 .pink {
   background: #e5127b;
+  color: white;
 }
 
 .green {
   background: #849130;
+  color: white;
 }
 
 .blue {
   background: #537eb0;
+  color: white;
 }
 
 .grey {
   background: #c0cbd3;
+  color: white;
+}
+
+.pink_selected {
+  background: white;
+  border: 3px solid #e5127b;
+  color: #e5127b;
+}
+
+.green_selected {
+  background: white;
+  border: 3px solid #849130;
+  color: #849130;
+}
+
+.blue_selected {
+  background: white;
+  border: 3px solid #537eb0;
+  color: #537eb0;
+}
+
+.pink_selected_hover:hover {
+  background: #cccccc;
+  border: 3px solid #b70e62;
+  color: #b70e62;
+}
+
+.green_selected_hover:hover {
+  background: #cccccc;
+  border: 3px solid #697426;
+  color: #697426;
+}
+
+.blue_selected_hover:hover {
+  background: #cccccc;
+  border: 3px solid #41648d;
+  color: #41648d;
 }
 
 .pink_hover:hover {
