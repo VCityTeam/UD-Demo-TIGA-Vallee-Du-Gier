@@ -16,7 +16,6 @@ export class OpenVisit extends Visit {
   start(config, captionConfig) {
     this.config = config;
     this.captionConfig = captionConfig;
-    this.panel.setWidth('half');
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
     const mapButton = document.getElementById('map_button');
