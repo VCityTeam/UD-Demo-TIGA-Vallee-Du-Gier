@@ -1,3 +1,35 @@
+.pink {
+  background: #e5127b;
+}
+
+.green {
+  background: #849130;
+}
+
+.blue {
+  background: #537eb0;
+}
+
+.grey {
+  background: #c0cbd3;
+}
+
+.pink_hover:hover {
+  background: #b70e62;
+}
+
+.green_hover:hover {
+  background: #697426;
+}
+
+.blue_hover:hover {
+  background: #41648d;
+}
+
+.grey_hover:hover {
+  background: #90a3b1;
+}
+
 #menu_panel {
   position: absolute;
   top: 0px;
@@ -110,18 +142,6 @@
 
 .half_width {
   width: 46%;
-}
-
-.pink_panel {
-  background: #e5127b;
-}
-
-.green_panel {
-  background: #849130;
-}
-
-.blue_panel {
-  background: #537eb0;
 }
 
 #content_panel {
