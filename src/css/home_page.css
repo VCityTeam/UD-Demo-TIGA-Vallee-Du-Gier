@@ -2,6 +2,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   color: #000000;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 p {
@@ -9,102 +17,67 @@ p {
   font-size: 20px;
 }
 
-h3 {
-  font-weight: 700;
-  font-size: 32px;
+#home_section {
+  width: 100vw;
+  height: 100vh;
 }
 
-.btn {
-  margin: 5px;
+#home_img {
+  width: 100vw;
+  height: 55vh;
 }
 
-.btn:hover {
-  background-color: rgb(220, 221, 221);
-}
-
-#menu {
-  position: fixed;
-  top: 0;
-  z-index: 1030;
-  width: 100%;
-  background-color: rgb(255, 255, 255) !important;
-  border-bottom: solid 0.8px rgb(199, 197, 197);
-}
-
-#menu-nav {
+#home_content {
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  height: 70px;
+  background: linear-gradient(180deg, white 70%, #fcf9e8 30%);
 }
 
-#pills-tab {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-
-#titles {
-  padding: 270px 0px 100px 0px;
-}
-
-#main-title {
-  padding: 0px 0px 27px 0px;
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 77px;
-}
-
-#second-title {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
-}
-
-#image-container {
+#home_content > h1,
+#home_content > h2 {
   position: relative;
-  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 900;
 }
 
-#img-bg {
-  width: 100%;
-  background: linear-gradient(180deg, white 60%, #686868 40%)
+#main_title {
+  width: 33vw;
+  color: #e5127b;
+  font-size: 3vw;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
 }
 
-#intro {
-  background-color: #686868;
+#sub_title {
+  width: 70vw;
+  color: black;
+  font-size: 2vw;
+  margin-top: 0px;
+  margin-bottom: 4vh;
 }
 
-#intro-container {
-  padding: 0px 50px 70px 50px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-#intro-img {
-  width: 100%;
-  padding: 20px;
-}
-
-#intro-text-div {
+#home_content > button {
+  background: #849130;
+  border-radius: 25px;
   color: white;
-  padding: 20px;
+  width: 25vw;
+  height: 6vh;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 1vw;
+  border: 0px;
+  cursor: pointer;
 }
 
-#visit {
-  padding: 60px 70px 300px 70px;
-}
-
-#visits-grid {
-  padding: 0px 50px 0px 50x;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.visit-button {
-  width: 100%;
-  padding: 20px;
-}
-
-.img-fluid {
-  border-radius: 10%;
+.visit_section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
