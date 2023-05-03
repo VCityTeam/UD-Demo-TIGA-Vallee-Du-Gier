@@ -24,16 +24,31 @@
   color: #e5127b;
 }
 
+.pink_selected img {
+  filter: invert(19%) sepia(73%) saturate(5887%) hue-rotate(319deg)
+    brightness(91%) contrast(96%);
+}
+
 .green_selected {
   background: white;
   border: 3px solid #849130;
   color: #849130;
 }
 
+.green_selected img {
+  filter: invert(50%) sepia(94%) saturate(300%) hue-rotate(28deg)
+    brightness(90%) contrast(88%);
+}
+
 .blue_selected {
   background: white;
   border: 3px solid #537eb0;
   color: #537eb0;
+}
+
+.blue_selected img {
+  filter: invert(49%) sepia(6%) saturate(3584%) hue-rotate(172deg)
+    brightness(94%) contrast(83%);
 }
 
 .pink_selected_hover:hover {
@@ -170,6 +185,21 @@
   padding: 5%;
   margin: 0px;
   text-align: left;
+}
+
+.visit_button > img {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 274px;
+  height: 189px;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.img_reversed {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 #main_panel {
