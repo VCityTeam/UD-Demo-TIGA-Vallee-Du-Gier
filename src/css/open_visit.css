@@ -20,7 +20,7 @@
   margin-right: auto;
   padding: 0px 20px 0px 20px;
   border-radius: 20px;
-  line-height: 23px;
+  line-height: 2vh;
   font-weight: bold;
   background: #fcf9e8;
 }
@@ -34,8 +34,9 @@
 }
 
 .title_bg > h1 {
-  margin: 5px;
-  font-size: 1.5vw;
+  margin: 15px;
+  font-size: 3vh;
+  transform: translateY(-35%);
 }
 
 #panel_switch {
