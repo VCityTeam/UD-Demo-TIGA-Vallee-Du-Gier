@@ -209,7 +209,7 @@
   padding: 0px 0px 0px 50px;
   background: rgba(252, 249, 232, 0.8);
   display: none;
-  flex-wrap: wrap;
+  flex-direction: column;
   border-radius: 4px;
 }
 
