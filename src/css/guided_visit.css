@@ -104,6 +104,22 @@
   width: 15%;
 }
 
+#menu_mask {
+  position: fixed;
+  top: 0%;
+  left: 15%;
+  width: 85%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  display: none;
+  z-index: 10;
+}
+
+.menu_panel_open #menu_mask {
+  display: block;
+}
+
 #menu_header {
   height: 10%;
 }
