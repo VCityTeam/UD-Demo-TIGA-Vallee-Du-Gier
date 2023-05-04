@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcours questions</title>
+    <title>Parcours démo</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,18 +33,14 @@
         <div id="menu_content">
           <div id="visit_choice">
             <button
-              class="visit_button pink_selected pink_selected_hover"
+              class="visit_button pink pink_hover"
               onclick="location.href = './demo_questions.html';"
             >
               <p>
                 Parcours n°1<br />Au coeur d'une usine transformée en lieu de
                 loisirs.
               </p>
-              <img
-                class="pink_img"
-                src="../assets/logos/factory.png"
-                alt="factory logo"
-              />
+              <img src="../assets/logos/factory.png" alt="factory logo" />
             </button>
             <button
               class="visit_button green green_hover"
@@ -61,14 +57,18 @@
               />
             </button>
             <button
-              class="visit_button blue blue_hover"
+              class="visit_button blue_selected blue_selected_hover"
               onclick="location.href = './demo_vdg_blue.html';"
             >
               <p>
                 Parcours n°3<br />Sur le lieu de fabrication d'un aliment
                 incontournable de nos assiettes.
               </p>
-              <img src="../assets/logos/factory.png" alt="factory logo" />
+              <img
+                class="blue_img"
+                src="../assets/logos/factory.png"
+                alt="factory logo"
+              />
             </button>
           </div>
           <div id="open_visit_choice">
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <div id="home_panel" class="half_width pink">
+      <div id="home_panel" class="half_width blue">
         <div class="content_panel">
           <div class="text_panel panel"></div>
           <div class="caption_panel panel"></div>
@@ -102,7 +102,7 @@
           </div>
         </div>
       </div>
-      <div id="main_panel" class="pink_border">
+      <div id="main_panel" class="blue_border">
         <div class="content_panel">
           <div class="header_panel panel">
             <div id="categories_div"></div>
@@ -115,7 +115,7 @@
             <div id="progress_div">
               <button id="previous_button" class="arrow_button button_left">
                 <img
-                  class="arrow_img pink_img"
+                  class="arrow_img blue_img"
                   src="../assets/icons/Arrow.svg"
                   alt="arrow icon"
                 />
@@ -123,7 +123,7 @@
               <h3 id="progress_count"></h3>
               <button id="next_button" class="arrow_button button_right">
                 <img
-                  class="arrow_img pink_img"
+                  class="arrow_img blue_img"
                   src="../assets/icons/Arrow.svg"
                   alt="arrow icon"
                 />
@@ -191,7 +191,7 @@
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
 
-          const conf = visitConfig.visits.find((v) => v.id == 'P_QUESTIONS');
+          const conf = visitConfig.visits.find((v) => v.id == 'P_DEMO_VDG');
           visit.init(conf, captionConfig);
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {

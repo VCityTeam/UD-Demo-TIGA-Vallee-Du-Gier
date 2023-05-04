@@ -99,8 +99,8 @@
 }
 
 .blue_img {
-  filter: invert(49%) sepia(6%) saturate(3584%) hue-rotate(172deg)
-    brightness(94%) contrast(83%);
+  filter: invert(40%) sepia(9%) saturate(3501%) hue-rotate(172deg)
+    brightness(80%) contrast(72%);
 }
 
 button:hover .pink_img {
@@ -114,8 +114,8 @@ button:hover .green_img {
 }
 
 button:hover .blue_img {
-  filter: invert(40%) sepia(9%) saturate(3501%) hue-rotate(172deg)
-    brightness(80%) contrast(72%);
+  filter: invert(40%) sepia(5%) saturate(4110%) hue-rotate(172deg)
+    brightness(88%) contrast(88%);
 }
 
 #menu_panel {
