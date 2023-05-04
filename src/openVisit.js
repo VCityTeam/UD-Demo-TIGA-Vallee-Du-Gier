@@ -19,24 +19,30 @@ export class OpenVisit extends Visit {
     this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
     const mapButton = document.getElementById('map_button');
-    const infoButton = document.getElementById('info_button');
+    this.infoButton = document.getElementById('info_button');
     mapButton.addEventListener(
       'click',
       function () {
         if (mapButton.classList.contains('unselected_button')) {
           mapButton.classList.replace('unselected_button', 'selected_button');
-          infoButton.classList.replace('selected_button', 'unselected_button');
+          this.infoButton.classList.replace(
+            'selected_button',
+            'unselected_button'
+          );
           document.getElementById('media_container').style.display = 'none';
           document.getElementById('categories_container').style.display =
             'block';
         }
       }.bind(this)
     );
-    infoButton.addEventListener(
+    this.infoButton.addEventListener(
       'click',
       function () {
-        if (infoButton.classList.contains('unselected_button')) {
-          infoButton.classList.replace('unselected_button', 'selected_button');
+        if (this.infoButton.classList.contains('unselected_button')) {
+          this.infoButton.classList.replace(
+            'unselected_button',
+            'selected_button'
+          );
           mapButton.classList.replace('selected_button', 'unselected_button');
           document.getElementById('categories_container').style.display =
             'none';
@@ -76,7 +82,7 @@ export class OpenVisit extends Visit {
 
   addCategory(category, parentDiv) {
     const categoryDiv = document.createElement('div');
-    categoryDiv.id = 'ov_category_ ' + this.categories.length;
+    categoryDiv.id = 'ov_category_' + this.categories.length;
     this.categories.push({
       id: categoryDiv.id,
       displayed: false,
@@ -323,6 +329,7 @@ export class OpenVisit extends Visit {
           });
 
           this.setBuildingInfo(cityObject);
+          this.infoButton.dispatchEvent(new Event('click'));
         }
       }.bind(this)
     );
