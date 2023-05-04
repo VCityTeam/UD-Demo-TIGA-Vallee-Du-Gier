@@ -28,7 +28,7 @@
             "description": "Délimitations des communes",
             "id": "communes",
             "style": {
-                "color": "#585858",
+                "color": "#BBBBBB",
                 "type": "border"
             }
         },

@@ -65,11 +65,11 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#585858",
+          "color": "#DDDDDD",
           "opacity": 0.02
         },
         "stroke": {
-          "color": "#585858",
+          "color": "#DDDDDD",
           "width": 1.5
         }
       }
@@ -117,7 +117,7 @@
           "field": "{COMMUNE}",
           "color": "white",
           "transform": "uppercase",
-          "size": 25,
+          "size": 20,
           "haloColor": "rgba(20,20,20, 0.8)",
           "haloWidth": 3
         }
