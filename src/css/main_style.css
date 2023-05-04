@@ -80,7 +80,10 @@ audio {
 
 .content_panel {
   overflow: auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
 }
 
 .panel {
@@ -128,7 +131,6 @@ audio {
 }
 
 .caption_div {
-  height: 100%;
   display: flex;
   flex-direction: row;
   margin: 0px;

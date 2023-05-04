@@ -265,12 +265,12 @@
   padding: 0px 30px 0px 30px;
 }
 
-.header_panel {
-  border-bottom: 1px solid #585858;
-}
+.caption_panel {
+  flex-grow: 1;
+};
 
 .footer_panel {
-  border-top: 1px solid #585858;
+  bottom: 0%;
 }
 
 #close_button {
