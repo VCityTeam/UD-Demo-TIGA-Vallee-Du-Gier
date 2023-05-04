@@ -42,31 +42,16 @@
   color: #e5127b;
 }
 
-.pink_selected img {
-  filter: invert(19%) sepia(73%) saturate(5887%) hue-rotate(319deg)
-    brightness(91%) contrast(96%);
-}
-
 .green_selected {
   background: white;
   border: 3px solid #849130;
   color: #849130;
 }
 
-.green_selected img {
-  filter: invert(50%) sepia(94%) saturate(300%) hue-rotate(28deg)
-    brightness(90%) contrast(88%);
-}
-
 .blue_selected {
   background: white;
   border: 3px solid #537eb0;
   color: #537eb0;
-}
-
-.blue_selected img {
-  filter: invert(49%) sepia(6%) saturate(3584%) hue-rotate(172deg)
-    brightness(94%) contrast(83%);
 }
 
 .pink_selected_hover:hover {
@@ -101,6 +86,36 @@
 
 .grey_hover:hover {
   background: #90a3b1;
+}
+
+.pink_img {
+  filter: invert(42%) sepia(100%) saturate(7496%) hue-rotate(319deg)
+    brightness(91%) contrast(97%);
+}
+
+.green_img {
+  filter: invert(50%) sepia(94%) saturate(300%) hue-rotate(28deg)
+    brightness(90%) contrast(88%);
+}
+
+.blue_img {
+  filter: invert(49%) sepia(6%) saturate(3584%) hue-rotate(172deg)
+    brightness(94%) contrast(83%);
+}
+
+button:hover .pink_img {
+  filter: invert(25%) sepia(92%) saturate(7491%) hue-rotate(322deg)
+    brightness(73%) contrast(93%);
+}
+
+button:hover .green_img {
+  filter: invert(49%) sepia(7%) saturate(3653%) hue-rotate(28deg)
+    brightness(82%) contrast(84%);
+}
+
+button:hover .blue_img {
+  filter: invert(40%) sepia(9%) saturate(3501%) hue-rotate(172deg)
+    brightness(80%) contrast(72%);
 }
 
 #menu_panel {
@@ -267,10 +282,11 @@
 
 .caption_panel {
   flex-grow: 1;
-};
+}
 
 .footer_panel {
   bottom: 0%;
+  margin-bottom: 4vh;
 }
 
 #close_button {
@@ -328,39 +344,35 @@
   padding: 0px;
   margin: auto;
   font-size: 15px;
+  display: none;
 }
 
 .arrow_button {
-  border: solid black;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
+  border: 0px;
   background-color: transparent;
   cursor: pointer;
-  flex: 0 0 16px;
-  height: 16px;
-}
-
-.arrow_button:hover {
-  border: solid #a5a5a5;
-  border-width: 0 4px 4px 0;
+  height: 4vh;
+  width: 4vw;
 }
 
 .arrow_button:disabled {
-  border: solid #a5a5a5;
-  border-width: 0 4px 4px 0;
-  cursor: default;
+  display: none;
 }
 
 .button_right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 0px;
 }
 
 .button_left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  margin: auto;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
 }
 
 .radio-group,
