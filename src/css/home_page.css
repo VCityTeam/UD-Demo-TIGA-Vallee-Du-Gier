@@ -217,6 +217,7 @@ button {
   padding: 5%;
   margin: 0px;
   text-align: left;
+  font-size: 3vh;
 }
 
 .visit_button > img {
@@ -225,8 +226,8 @@ button {
   right: 5%;
   width: 274px;
   height: 189px;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .img_reversed {
