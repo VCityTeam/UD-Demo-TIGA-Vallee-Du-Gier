@@ -78,7 +78,7 @@ audio {
   flex-direction: column;
 }
 
-#content_panel {
+.content_panel {
   overflow: auto;
   display: block;
 }

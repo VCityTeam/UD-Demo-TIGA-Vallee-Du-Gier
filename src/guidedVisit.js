@@ -42,12 +42,22 @@ export class GuidedVisit extends Visit {
     );
   }
 
-  start(visitConfig, captionConfig) {
+  init(visitConfig, captionConfig) {
     this.config = visitConfig;
     this.captionConfig = captionConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
     this.panel.initHeader();
+    const menuButton = document.getElementById('menu_header_button');
+    menuButton.addEventListener('click', function () {
+      const menuPanel = document.getElementById('menu_panel');
+      if (menuPanel.classList.contains('menu_panel_closed'))
+        menuPanel.classList.replace('menu_panel_closed', 'menu_panel_open');
+      else menuPanel.classList.replace('menu_panel_open', 'menu_panel_closed');
+    });
+  }
+
+  start() {
     this.config.categories.forEach((category) => {
       const category_button = this.panel.createCategoryButton(category);
       category_button.addEventListener(
@@ -56,13 +66,6 @@ export class GuidedVisit extends Visit {
           this.goToNode(category.nodeIndex);
         }.bind(this)
       );
-    });
-    const menuButton = document.getElementById('menu_header_button');
-    menuButton.addEventListener('click', function () {
-      const menuPanel = document.getElementById('menu_panel');
-      if (menuPanel.classList.contains('menu_panel_closed'))
-        menuPanel.classList.replace('menu_panel_closed', 'menu_panel_open');
-      else menuPanel.classList.replace('menu_panel_open', 'menu_panel_closed');
     });
     this.addVisitPanelEvents();
     this.panel.start();

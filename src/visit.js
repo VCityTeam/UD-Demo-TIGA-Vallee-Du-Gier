@@ -92,7 +92,7 @@ export class Visit {
   }
 
   createLayersCaption() {
-    this.panel.footerPanel.innerHTML = '';
+    this.panel.captionPanel.innerHTML = '';
     this.view.layerManager.getLayers().forEach((layer) => {
       if (layer.visible) {
         const id = this.filterManager.layerIsFilter(layer.id)
@@ -100,7 +100,7 @@ export class Visit {
           : layer.id;
         for (const layerCaption of this.captionConfig.layers) {
           if (id == layerCaption.id) {
-            this.panel.footerPanel.appendChild(
+            this.panel.captionPanel.appendChild(
               this.panel.createCaption(
                 layerCaption.style,
                 layerCaption.description,

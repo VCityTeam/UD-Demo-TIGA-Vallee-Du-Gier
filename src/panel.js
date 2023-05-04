@@ -5,6 +5,7 @@ export class Panel {
     this.contentPanel = null;
     this.headerPanel = null;
     this.textPanel = null;
+    this.captionPanel = null;
     this.footerPanel = null;
     this.isClosed = false;
     this.width = 'half';
@@ -79,11 +80,12 @@ export class Panel {
 
   initPanel() {
     this.mainPanel = document.getElementById('main_panel');
-    this.contentPanel = document.getElementById('content_panel');
-    this.headerPanel = document.getElementById('header_panel');
-    this.textPanel = document.getElementById('text_panel');
+    this.contentPanel = this.mainPanel.querySelector('.content_panel');
+    this.headerPanel = this.mainPanel.querySelector('.header_panel');
+    this.textPanel = this.mainPanel.querySelector('.text_panel');
     this.mediaContainer = document.getElementById('media_container');
-    this.footerPanel = document.getElementById('footer_panel');
+    this.captionPanel = this.mainPanel.querySelector('.caption_panel');
+    this.footerPanel = this.mainPanel.querySelector('.footer_panel');
     this.closeButton = document.getElementById('close_button');
     this.closeButton.addEventListener(
       'click',

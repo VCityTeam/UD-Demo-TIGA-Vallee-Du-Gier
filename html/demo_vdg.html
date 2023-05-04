@@ -78,10 +78,29 @@
           </div>
         </div>
       </div>
-      <div id="main_panel" class="green">
-        <div id="content_panel">
-          <div id="header_panel" class="panel">
+      <div id="home_panel" class="half_width green">
+        <div class="content_panel">
+          <div class="text_panel panel"></div>
+          <div class="footer_panel panel">
+            <div>
+              <button
+                id="start_button"
+                class="arrow_button button_right"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main_panel" class="green_border">
+        <div class="content_panel">
+          <div class="header_panel panel">
             <div id="categories_div"></div>
+          </div>
+          <div class="text_panel panel">
+            <div id="media_container"></div>
+          </div>
+          <div class="caption_panel panel"></div>
+          <div class="footer_panel panel">
             <div id="progress_div">
               <button
                 id="previous_button"
@@ -94,10 +113,6 @@
               ></button>
             </div>
           </div>
-          <div id="text_panel" class="panel">
-            <div id="media_container"></div>
-          </div>
-          <div id="footer_panel" class="panel"></div>
         </div>
         <button id="close_button">
           <div id="close_arrow"></div>
@@ -111,8 +126,8 @@
         />
       </button>
     </div>
-    <script src="../dist/release/vdg_app.js"></script>
-    <!-- <script src="../dist/debug/vdg_app.js"></script> -->
+    <!-- <script src="../dist/release/vdg_app.js"></script> -->
+    <script src="../dist/debug/vdg_app.js"></script>
     <script type="text/javascript">
       const list = [];
       const urls = [
@@ -160,7 +175,13 @@
           window.dispatchEvent(new Event('resize'));
 
           const conf = visitConfig.visits.find((v) => v.id == 'P_DEMO_VDG');
-          visit.start(conf, captionConfig);
+          visit.init(conf, captionConfig);
+          const startButton = document.getElementById('start_button');
+          startButton.addEventListener('click', function () {
+            document.getElementById('home_panel').style.display = 'none';
+            document.getElementById('main_panel').style.display = 'flex';
+            visit.start();
+          });
         });
       });
     </script>
