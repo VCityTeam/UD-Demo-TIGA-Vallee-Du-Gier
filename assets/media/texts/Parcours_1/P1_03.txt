@@ -11,8 +11,8 @@
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
-            <label class="pink" for="radio-group-1670843415313-1">Des étudiant·e·s infirmier·e·s</label>
-            <output class="pink_text" for="radio-group-1670843415313-1">L’Institut de formation en soins infirmiers rassemble 300 étudiant·e·s.</output>
+            <label class="pink correct_answer" for="radio-group-1670843415313-1">Des étudiant·e·s infirmier·e·s</label>
+            <output class="pink_text">L’Institut de formation en soins infirmiers rassemble 300 étudiant·e·s.</output>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">

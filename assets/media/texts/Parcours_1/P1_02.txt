@@ -6,8 +6,8 @@
     <div class="radio-group">
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
-            <label class="pink" for="radio-group-1670843415313-0">Saint-Éloi, le patron des forgerons</label>
-            <output class="pink_text" for="radio-group-1670843415313-0">Saint-Eloi. La cloche est cachée mais bien présente (elle signalait les entrées et sorties des ouvriers).</output>
+            <label class="pink correct_answer" for="radio-group-1670843415313-0">Saint-Éloi, le patron des forgerons</label>
+            <output class="pink_text">Saint-Eloi. La cloche est cachée mais bien présente (elle signalait les entrées et sorties des ouvriers).</output>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">

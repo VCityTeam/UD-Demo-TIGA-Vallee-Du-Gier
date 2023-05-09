@@ -8,8 +8,8 @@
     <div class="radio-group">
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
-            <label class="green" for="radio-group-1670843415313-0">Le gobelet Gigogne®</label>
-            <output class="green_text" for="radio-group-1670843415313-0">Le premier gobelet Gigogne (baptisé ainsi car il s’empile facilement) est sorti en 1946 et il est toujours fabriqué par Duralex®.
+            <label class="green correct_answer" for="radio-group-1670843415313-0">Le gobelet Gigogne®</label>
+            <output class="green_text">Le premier gobelet Gigogne (baptisé ainsi car il s’empile facilement) est sorti en 1946 et il est toujours fabriqué par Duralex®.
 </output>
         </div>
         <div class="formbuilder-radio">

@@ -48,22 +48,19 @@
   color: black;
 }
 
-.pink_selected,
-input:checked + .pink {
+.pink_selected {
   background: white;
   border: 3px solid #e5127b;
   color: #e5127b;
 }
 
-.green_selected,
-input:checked + .green {
+.green_selected {
   background: white;
   border: 3px solid #849130;
   color: #849130;
 }
 
-.blue_selected,
-input:checked + .blue {
+.blue_selected {
   background: white;
   border: 3px solid #537eb0;
   color: #537eb0;
@@ -88,17 +85,17 @@ input:checked + .blue {
 }
 
 .pink_hover:hover,
-input:not(:checked):hover + .pink {
+input:not(:disabled):hover + .pink {
   background: #b70e62;
 }
 
 .green_hover:hover,
-input:not(:checked):hover + .green {
+input:not(:disabled):hover + .green {
   background: #697426;
 }
 
 .blue_hover:hover,
-input:not(:checked):hover + .blue {
+input:not(:disabled):hover + .blue {
   background: #41648d;
 }
 
@@ -119,6 +116,42 @@ input:not(:checked):hover + .blue {
 .blue_img {
   filter: invert(40%) sepia(9%) saturate(3501%) hue-rotate(172deg)
     brightness(80%) contrast(72%);
+}
+
+.resolved_form .pink {
+  background: #e5127b4d;
+  cursor: default;
+}
+
+.resolved_form .green {
+  background: #8491304d;
+  cursor: default;
+}
+
+.resolved_form .blue {
+  background: #537eb04d;
+  cursor: default;
+}
+
+.resolved_form .correct_answer.pink {
+  background: white;
+  border: 3px solid #e5127b;
+  color: #e5127b;
+  cursor: default;
+}
+
+.resolved_form .correct_answer.green {
+  background: white;
+  border: 3px solid #849130;
+  color: #849130;
+  cursor: default;
+}
+
+.resolved_form .correct_answer.blue {
+  background: white;
+  border: 3px solid #537eb0;
+  color: #537eb0;
+  cursor: default;
 }
 
 button:hover .pink_img {
@@ -408,8 +441,7 @@ button:hover .blue_img {
 
 .formbuilder-checkbox,
 .formbuilder-radio,
-.checkbox
-.radio {
+.checkbox .radio {
   margin: 10px auto 10px auto;
   width: 100%;
   display: flex;
@@ -443,7 +475,7 @@ output {
   display: none;
 }
 
-input:checked ~ output {
+.resolved_form output {
   display: block;
   margin: 10px 0px 10px 0px;
 }

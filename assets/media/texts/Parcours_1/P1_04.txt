@@ -11,11 +11,11 @@
         </div>
         <div class="formbuilder-checkbox">
             <input name="checkbox-group-1670843415313" access="false" id="checkbox-group-1670843415313-1" value="option-2" type="checkbox">
-            <label class="pink" for="checkbox-group-1670843415313-1">D'une séance de ciné</label>
+            <label class="pink correct_answer" for="checkbox-group-1670843415313-1">D'une séance de ciné</label>
         </div>
         <div class="formbuilder-checkbox">
             <input name="checkbox-group-1670843415313" access="false" id="checkbox-group-1670843415313-2" value="option-3" type="checkbox">
-            <label class="pink" for="checkbox-group-1670843415313-2">D'un skatepark</label>
+            <label class="pink correct_answer" for="checkbox-group-1670843415313-2">D'un skatepark</label>
             <output class="pink_text" for="checkbox-group-1670843415313-0">Il s’agit du plus grand skate-park de la Métropole de Saint-Etienne.<br/>
                 Tu trouveras aussi des toboggans géants en acier chromé qui relient le site à la rue située en surplomb.</output>
         </div>

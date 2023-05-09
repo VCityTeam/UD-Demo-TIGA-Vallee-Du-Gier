@@ -1,6 +1,7 @@
 export class Panel {
   constructor() {
     this.savedValues = [];
+    this.resolvedForms = [];
     this.mainPanel = null;
     this.contentPanel = null;
     this.headerPanel = null;
@@ -51,12 +52,25 @@ export class Panel {
   }
 
   setForm(nodeIndex) {
-    if (
-      this.savedValues &&
-      this.savedValues[nodeIndex] &&
-      this.savedValues[nodeIndex].length > 0
-    )
-      this.loadSavedValues(nodeIndex);
+    const fileDiv = this.mediaContainer.querySelector('.file_div');
+    if (fileDiv) {
+      const inputs = this.mediaContainer.querySelectorAll('input');
+      if (this.resolvedForms[nodeIndex]) {
+        fileDiv.classList.add('resolved_form');
+        for (const input of inputs) input.disabled = true;
+      } else {
+        for (const input of inputs) {
+          input.addEventListener(
+            'click',
+            function () {
+              this.resolvedForms[nodeIndex] = true;
+              fileDiv.classList.add('resolved_form');
+              for (const i of inputs) i.disabled = true;
+            }.bind(this)
+          );
+        }
+      }
+    }
   }
 
   initPanel() {

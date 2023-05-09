@@ -16,8 +16,8 @@
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
-            <label class="blue" for="radio-group-1670843415313-2">Panzani</label>
-            <output class="blue_text" for="radio-group-1670843415313-0">Il s’agit de la marque Panzani : son siège est basé à Lyon depuis les années 1960 - il se trouve actuellement dans le 8e arrondissement. 300 personnes y gèrent les activités des marques Panzani, Lustucru et Garofalo.
+            <label class="blue correct_answer" for="radio-group-1670843415313-2">Panzani</label>
         </div>
     </div>
+    <output class="blue_text">Il s’agit de la marque Panzani : son siège est basé à Lyon depuis les années 1960 - il se trouve actuellement dans le 8e arrondissement. 300 personnes y gèrent les activités des marques Panzani, Lustucru et Garofalo.
 </div>

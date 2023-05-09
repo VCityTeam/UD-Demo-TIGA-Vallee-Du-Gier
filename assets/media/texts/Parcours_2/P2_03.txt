@@ -14,8 +14,8 @@
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
-            <label class="green" for="radio-group-1670843415313-2">Fin du 18e siècle</label>
-            <output class="green_text" for="radio-group-1670843415313-0">En 1788, il existait déjà deux verreries à Rive-de-Gier : elles produisaient des bouteilles et des gobelets. La verrerie Hémain devint par la suite une des plus célèbres. Elle a changé de propriétaires à plusieurs reprises. Le dernier à l’exploiter sera Duralex. La production s'arrêtera définitivement en 2007, ce qui entraînera le licenciement de 103 salariés et une bataille juridique jusqu’en 2020.</output>
+            <label class="green correct_answer">Fin du 18e siècle</label>
         </div>
     </div>
+    <output class="green_text" for="radio-group-1670843415313-0">En 1788, il existait déjà deux verreries à Rive-de-Gier : elles produisaient des bouteilles et des gobelets. La verrerie Hémain devint par la suite une des plus célèbres. Elle a changé de propriétaires à plusieurs reprises. Le dernier à l’exploiter sera Duralex. La production s'arrêtera définitivement en 2007, ce qui entraînera le licenciement de 103 salariés et une bataille juridique jusqu’en 2020.</output>
 </div>

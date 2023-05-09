@@ -15,7 +15,7 @@
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
-            <label class="blue" for="radio-group-1670843415313-2">Manufacture des Vitriers de Lorette</label>
+            <label class="blue correct_answer" for="radio-group-1670843415313-2">Manufacture des Vitriers de Lorette</label>
             <output class="blue_text" for="radio-group-1670843415313-0">Dans les années 30, on fabriquait à Lorette des vilebrequins de moteurs : il s’agit d’une pièce maîtresse du moteur diesel et du moteur à explosion. L'usine, basée à l’Horme, devenue ThyssenKrupp Mavilor, a cessé son activité en juin 2010 : 373 personnes ont perdu leur emploi.<br/><br/>
 
 Le vilebrequin figure sur les armoiries de la ville de Lorette.
