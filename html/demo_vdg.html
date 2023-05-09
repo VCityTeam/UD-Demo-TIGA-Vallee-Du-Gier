@@ -189,6 +189,7 @@
 
           const conf = visitConfig.visits.find((v) => v.id == 'P_DEMO_VDG');
           visit.init(conf, captionConfig);
+          visit.filterLayers(['baseMapLayer_0', 'communes', 'noms_communes']);
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';
