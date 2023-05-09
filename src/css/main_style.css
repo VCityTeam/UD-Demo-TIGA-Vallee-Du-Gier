@@ -4,6 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-stretch: normal;
   font-style: normal;
+  font-size: 17px;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
@@ -69,7 +70,6 @@ audio {
 }
 
 #main_panel {
-  font-size: 17px;
   display: flex;
   position: absolute;
   top: 0px;
