@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcours n°1</title>
+    <title>Parcours n°2</title>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,36 +33,32 @@
         <div id="menu_content">
           <div id="visit_choice">
             <button
-              class="visit_button pink_selected pink_selected_hover"
-              onclick="location.href = './demo_questions.html';"
+              class="visit_button pink pink_hover"
+              onclick="location.href = './parcours_1.html';"
             >
               <p>
                 Parcours n°1<br />Au coeur d'une usine transformée en lieu de
                 loisirs.
               </p>
-              <img
-                class="pink_img"
-                src="../assets/logos/factory.png"
-                alt="factory logo"
-              />
+              <img src="../assets/logos/factory.png" alt="factory logo" />
             </button>
             <button
-              class="visit_button green green_hover"
-              onclick="location.href = './demo_vdg.html';"
+              class="visit_button green_selected green_selected_hover"
+              onclick="location.href = './parcours_2.html';"
             >
               <p>
                 Parcours n°2<br />Sur les traces d'un objet emblématique de la
                 cantine.
               </p>
               <img
-                class="img_reversed"
+                class="img_reversed green_img"
                 src="../assets/logos/factory.png"
                 alt="factory logo"
               />
             </button>
             <button
               class="visit_button blue blue_hover"
-              onclick="location.href = './demo_vdg_blue.html';"
+              onclick="location.href = './parcours_3.html';"
             >
               <p>
                 Parcours n°3<br />Sur le lieu de fabrication d'un aliment
@@ -85,15 +81,15 @@
           </div>
         </div>
       </div>
-      <div id="home_panel" class="half_width pink">
+      <div id="home_panel" class="half_width green">
         <div class="content_panel">
           <div class="text_panel panel">
-            <h1 class="visit_number">Parcours n°1</h1>
+            <h1 class="visit_number">Parcours n°2</h1>
             <h1 class="visit_title">
-              Au coeur d'une usine transformée en lieu de loisirs.
+              Sur les traces d'un objet emblématique de la cantine.
             </h1>
             <p>
-              Pour commencer, nous proposons de te rendre à Saint-Chamond, une
+              Pour commencer, nous proposons de te rendre à Rive de Gier, une
               petite commune de la Loire qui abrite le site qui nous intéresse
               dans ce parcours. <br /><br />Pour cela, trouve l'îcone de la
               couleur du parcours en te déplaçant avec la souris au coeur de la
@@ -118,7 +114,7 @@
           </div>
         </div>
       </div>
-      <div id="main_panel" class="pink_border">
+      <div id="main_panel" class="green_border">
         <div class="content_panel">
           <div class="header_panel panel">
             <div id="categories_div"></div>
@@ -131,7 +127,7 @@
             <div id="progress_div">
               <button id="previous_button" class="arrow_button button_left">
                 <img
-                  class="arrow_img pink_img"
+                  class="arrow_img green_img"
                   src="../assets/icons/Arrow.svg"
                   alt="arrow icon"
                 />
@@ -139,7 +135,7 @@
               <h3 id="progress_count"></h3>
               <button id="next_button" class="arrow_button button_right">
                 <img
-                  class="arrow_img pink_img"
+                  class="arrow_img green_img"
                   src="../assets/icons/Arrow.svg"
                   alt="arrow icon"
                 />
@@ -207,7 +203,7 @@
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
 
-          const conf = visitConfig.visits.find((v) => v.id == 'P_QUESTIONS');
+          const conf = visitConfig.visits.find((v) => v.id == 'P2');
           visit.init(conf, captionConfig);
           visit.filterLayers(['baseMapLayer_0', 'communes', 'noms_communes']);
           const startButton = document.getElementById('start_button');
