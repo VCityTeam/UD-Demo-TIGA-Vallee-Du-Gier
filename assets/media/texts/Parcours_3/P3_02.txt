@@ -1,0 +1,24 @@
+<h1>Bienvenue sur la friche Duralex®</h1>
+<p>Lorette ne doit pourtant pas son développement ni sa réputation à l’industrie agro-alimentaire. Elle est plutôt connue pour ses forges.</p><br/>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+        Quelle famille est connue pour avoir développé à Lorette le procédé de l'acier fondu ?
+<br/><br/>
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="blue" for="radio-group-1670843415313-0">Les frères Hanson</label>
+</output>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="blue" for="radio-group-1670843415313-1">Les frères Jackson</label>
+            <output class="blue_text" for="radio-group-1670843415313-0">Il s’agit des frères Jackson, qui possédaient l’aciérie d’Assailly. En 1854, la société Neyrand- Thollière, du nom de deux autres familles de maîtres de forges, fusionnera avec celle des frères Jackson et des entreprises Petin & Gaudet pour devenir la Compagnie des hauts fourneaux, forges et aciéries de la Marine et des Chemins de fer.
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="blue" for="radio-group-1670843415313-2">Les frères Jacquard</label>
+        </div>
+    </div>
+</div>

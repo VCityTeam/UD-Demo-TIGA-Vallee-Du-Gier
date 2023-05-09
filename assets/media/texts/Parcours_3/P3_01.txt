@@ -1,0 +1,22 @@
+<h1>Bienvenue sur la friche Duralex®</h1>
+<p>Dans la région lyonnaise, on compte trois usines Lustucru frais, qui produisent des pâtes fraîches, pâtes farcies, quenelles et gnocchis à poêler. Une à Saint-Genis-Laval, une à Communay et une à…</p><br/>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="blue" for="radio-group-1670843415313-0">Lorette</label>
+            <output class="blue_text" for="radio-group-1670843415313-0">À Saint-Paul-en-Jarez, on trouve <b><i>les Boulangeries Viennoises Françaises</i></b>, qui emploient près de 170 salariés. C’est une propriété du groupe lorrain Neuhaser, le leader européen de la viennoiserie industrielle.
+</output>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="blue" for="radio-group-1670843415313-1">Givors</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="blue" for="radio-group-1670843415313-2">Saint-Paul-en-Jarez</label>
+        </div>
+    </div>
+</div>
