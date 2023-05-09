@@ -58,15 +58,17 @@ export class GuidedVisit extends Visit {
   }
 
   start() {
-    this.config.categories.forEach((category) => {
-      const category_button = this.panel.createCategoryButton(category);
-      category_button.addEventListener(
-        'click',
-        function () {
-          this.goToNode(category.nodeIndex);
-        }.bind(this)
-      );
-    });
+    if (this.config.categories && this.config.categories.length > 0) {
+      this.config.categories.forEach((category) => {
+        const category_button = this.panel.createCategoryButton(category);
+        category_button.addEventListener(
+          'click',
+          function () {
+            this.goToNode(category.nodeIndex);
+          }.bind(this)
+        );
+      });
+    }
     this.addVisitPanelEvents();
     this.panel.start();
     this.goToNode(this.currentIndex);
@@ -84,21 +86,6 @@ export class GuidedVisit extends Visit {
     this.panel.setWidth(currentNode.type);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.setMedia(currentNode);
-    if (this.isEnd()) {
-      this.panel.initRecapButtons();
-      this.panel.restartButton.addEventListener(
-        'click',
-        function () {
-          location.href = '../index.html';
-        }.bind(this)
-      );
-      this.panel.visitButton.addEventListener(
-        'click',
-        function () {
-          location.href = './open_visit.html';
-        }.bind(this)
-      );
-    }
     this.filterLayers(currentNode.layers, currentNode.filters);
     this.createLayersCaption();
     this.travelToPosition(currentNode, this.view);
