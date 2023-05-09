@@ -18,6 +18,18 @@
   color: white;
 }
 
+.pink_text {
+  color: #e5127b;
+}
+
+.green_text {
+  color: #849130;
+}
+
+.blue_text {
+  color: #537eb0;
+}
+
 .pink_border {
   background: #fcf9e8;
   border-left: 10px solid #e5127b;
@@ -37,21 +49,21 @@
 }
 
 .pink_selected,
-input[type='radio']:checked + .pink {
+input:checked + .pink {
   background: white;
   border: 3px solid #e5127b;
   color: #e5127b;
 }
 
 .green_selected,
-input[type='radio']:checked + .green {
+input:checked + .green {
   background: white;
   border: 3px solid #849130;
   color: #849130;
 }
 
 .blue_selected,
-input[type='radio']:checked + .blue {
+input:checked + .blue {
   background: white;
   border: 3px solid #537eb0;
   color: #537eb0;
@@ -76,17 +88,17 @@ input[type='radio']:checked + .blue {
 }
 
 .pink_hover:hover,
-input[type='radio']:not(:checked):hover + .pink {
+input:not(:checked):hover + .pink {
   background: #b70e62;
 }
 
 .green_hover:hover,
-input[type='radio']:not(:checked):hover + .green {
+input:not(:checked):hover + .green {
   background: #697426;
 }
 
 .blue_hover:hover,
-input[type='radio']:not(:checked):hover + .blue {
+input:not(:checked):hover + .blue {
   background: #41648d;
 }
 
@@ -388,12 +400,15 @@ button:hover .blue_img {
   margin: 0px;
 }
 
-.radio-group {
+.radio-group,
+.checkbox-group {
   display: flex;
   flex-direction: column;
 }
 
+.formbuilder-checkbox,
 .formbuilder-radio,
+.checkbox
 .radio {
   margin: 10px auto 10px auto;
   width: 100%;
@@ -405,11 +420,11 @@ label {
   font-weight: bold;
 }
 
-input[type='radio'] {
+input {
   display: none;
 }
 
-input[type='radio'] + label {
+input + label {
   width: 100%;
   height: 30px;
   display: flex;
@@ -421,13 +436,14 @@ input[type='radio'] + label {
   text-align: center;
   border-radius: 25px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 output {
   display: none;
 }
 
-input[type='radio']:checked ~ output {
+input:checked ~ output {
   display: block;
   margin: 10px 0px 10px 0px;
 }
