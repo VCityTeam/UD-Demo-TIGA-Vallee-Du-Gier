@@ -18,7 +18,7 @@ export class MediaManager {
       raycaster.setFromCamera(mouse3D, this.view.getCamera());
       let intersects = raycaster.intersectObjects(this.pins);
       if (intersects.length > 0) {
-        callback();
+        callback(intersects[0].object);
       }
     });
   }

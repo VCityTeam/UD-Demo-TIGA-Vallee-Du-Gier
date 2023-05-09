@@ -209,7 +209,34 @@
 
           const conf = visitConfig.visits.find((v) => v.id == 'P1');
           visit.init(conf, captionConfig);
-          visit.filterLayers(['baseMapLayer_0', 'communes', 'noms_communes']);
+          visit.filterLayers(['baseMapLayer_1', 'communes']);
+          visit.mediaManager.createPin(
+            '../assets/icons/Pink_pin.png',
+            {
+              x: 1817853.56,
+              y: 5142405.79,
+              z: 550,
+            },
+            300
+          );
+          visit.mediaManager.createPin(
+            '../assets/icons/Green_pin.png',
+            {
+              x: 1827322.3,
+              y: 5149394.39,
+              z: 450,
+            },
+            300
+          );
+          visit.mediaManager.createPin(
+            '../assets/icons/Blue_pin.png',
+            {
+              x: 1823185.07,
+              y: 5146485.27,
+              z: 450,
+            },
+            300
+          );
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';

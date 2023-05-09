@@ -322,7 +322,7 @@ export class OpenVisit extends Visit {
             !isNaN(cityObject.props['HAUTEUR'])
           )
             offset = 20 + cityObject.props['HAUTEUR'];
-          this.mediaManager.createPin('../assets/icons/Pin.svg', {
+          this.mediaManager.createPin('../assets/icons/Pink_pin.svg', {
             x: cityObject.centroid.x,
             y: cityObject.centroid.y,
             z: cityObject.centroid.z + offset,
