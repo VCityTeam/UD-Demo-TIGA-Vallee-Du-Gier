@@ -1,0 +1,21 @@
+<h1>Bienvenue sur la friche Duralex®</h1>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+        Mais au fait, à quelle époque les premiers verriers se sont-ils installés à Rive-de-Gier ?<br/><br/>
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="green" for="radio-group-1670843415313-0">Milieu du 20e siècle</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="green" for="radio-group-1670843415313-1">Fin du 19e siècle</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="green" for="radio-group-1670843415313-2">Fin du 18e siècle</label>
+            <output class="green_text" for="radio-group-1670843415313-0">En 1788, il existait déjà deux verreries à Rive-de-Gier : elles produisaient des bouteilles et des gobelets. La verrerie Hémain devint par la suite une des plus célèbres. Elle a changé de propriétaires à plusieurs reprises. Le dernier à l’exploiter sera Duralex. La production s'arrêtera définitivement en 2007, ce qui entraînera le licenciement de 103 salariés et une bataille juridique jusqu’en 2020.</output>
+        </div>
+    </div>
+</div>
