@@ -20,3 +20,7 @@
         </div>
     </div>
 </div>
+<div class="img_div">
+    <img src="https://drive.google.com/uc?export=view&id=1li2Nx3J5gXmZjVXse2wea_hojT0raeST"/>
+    <img src="https://drive.google.com/uc?export=view&id=1Rg2PKAEAU_KuUF4ABVSLA09ekkCrFQ9g"/>
+</div>

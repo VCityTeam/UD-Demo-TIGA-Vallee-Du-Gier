@@ -7,8 +7,7 @@
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
             <label class="blue correct_answer" for="radio-group-1670843415313-0">Lorette</label>
-            <output class="blue_text">À Saint-Paul-en-Jarez, on trouve <b><i>les Boulangeries Viennoises Françaises</i></b>, qui emploient près de 170 salariés. C’est une propriété du groupe lorrain Neuhaser, le leader européen de la viennoiserie industrielle.
-</output>
+            <output class="blue_text">À Saint-Paul-en-Jarez, on trouve <b><i>les Boulangeries Viennoises Françaises</i></b>, qui emploient près de 170 salariés. C’est une propriété du groupe lorrain Neuhaser, le leader européen de la viennoiserie industrielle.</output>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
@@ -19,4 +18,7 @@
             <label class="blue" for="radio-group-1670843415313-2">Saint-Paul-en-Jarez</label>
         </div>
     </div>
+</div>
+<div class="img_div">
+    <img class="fit_height fit_width" src="https://drive.google.com/uc?export=view&id=1rLD9Z1DVtyx_uIjQ86aMJ3CV8Cy6tSnV"/>
 </div>

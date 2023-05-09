@@ -34,18 +34,21 @@
   background: #fcf9e8;
   border-left: 10px solid #e5127b;
   color: black;
+  box-sizing: border-box;
 }
 
 .green_border {
   background: #fcf9e8;
   border-left: 10px solid #849130;
   color: black;
+  box-sizing: border-box;
 }
 
 .blue_border {
   background: #fcf9e8;
   border-left: 10px solid #537eb0;
   color: black;
+  box-sizing: border-box;
 }
 
 .pink_selected {
@@ -464,7 +467,7 @@ input + label {
   align-items: center;
   line-height: 17px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   border-radius: 25px;
   cursor: pointer;
@@ -478,4 +481,33 @@ output {
 .resolved_form output {
   display: block;
   margin: 10px 0px 10px 0px;
+}
+
+.img_div {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg_white {
+  background: white;
+}
+
+.img_div img {
+  flex-grow: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fit_width {
+  width: 100%;
+}
+
+.fit_height {
+  height: 100%;
 }

@@ -8,8 +8,7 @@
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
             <label class="green correct_answer" for="radio-group-1670843415313-0">C’est le n° de la machine qui a fabriqué le verre</label>
-            <output class="green_text" for="radio-group-1670843415313-0">Le numéro au fond du verre correspond à celui de la machine qui l’a fabriqué (si un défaut est constaté sur le verre, on peut savoir rapidement quelle machine est défectueuse). Les numéros ne vont pas au-delà de 50, c’est le nombre de machines maximum.
-</output>
+            <output class="green_text" for="radio-group-1670843415313-0">Le numéro au fond du verre correspond à celui de la machine qui l’a fabriqué (si un défaut est constaté sur le verre, on peut savoir rapidement quelle machine est défectueuse). Les numéros ne vont pas au-delà de 50, c’est le nombre de machines maximum.</output>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
@@ -20,4 +19,7 @@
             <label class="green" for="radio-group-1670843415313-2">C’est un chiffre aléatoire</label>
         </div>
     </div>
+</div>
+<div class="img_div">
+    <img class="fit_height fit_width" src="https://drive.google.com/uc?export=view&id=1C8_jraQhMB4GuNqLXwobuoUs0Y8JEb8C"/>
 </div>

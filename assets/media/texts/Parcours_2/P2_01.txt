@@ -9,8 +9,7 @@
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
             <label class="green correct_answer" for="radio-group-1670843415313-0">Le gobelet Gigogne®</label>
-            <output class="green_text">Le premier gobelet Gigogne (baptisé ainsi car il s’empile facilement) est sorti en 1946 et il est toujours fabriqué par Duralex®.
-</output>
+            <output class="green_text">Le premier gobelet Gigogne (baptisé ainsi car il s’empile facilement) est sorti en 1946 et il est toujours fabriqué par Duralex®.</output>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
@@ -21,4 +20,7 @@
             <label class="green" for="radio-group-1670843415313-2">Le verre Provence®</label>
         </div>
     </div>
+</div>
+<div class="img_div">
+    <img class="fit_height fit_width" src="https://drive.google.com/uc?export=view&id=1W-E2w_gdU5HbcSZY68t6-2sKvwApJGeW"/>
 </div>

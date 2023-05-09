@@ -4,3 +4,7 @@
 Les 45 hectares ont été réaménagés en veillant à préserver leur identité.<br/><br/>
 
 Le quartier propose de l’habitat, des loisirs, des commerces et des entreprises, dans un cadre verdoyant.</p>
+<div class="img_div">
+    <img src="https://drive.google.com/uc?export=view&id=1Xu-yrs_DHVZQ1FZG9a1FZ44_VNRXqKDO"/>
+    <img src="https://drive.google.com/uc?export=view&id=1Xu-yrs_DHVZQ1FZG9a1FZ44_VNRXqKDO"/>
+</div>

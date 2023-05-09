@@ -19,3 +19,6 @@
         </div>
     </div>
 </div>
+<div class="img_div">
+    <img class="fit_height fit_width" src="https://drive.google.com/uc?export=view&id=1R_l5rTMIxPc25e2NPgWgq4dkKZnJ-Wp1"/>
+</div>

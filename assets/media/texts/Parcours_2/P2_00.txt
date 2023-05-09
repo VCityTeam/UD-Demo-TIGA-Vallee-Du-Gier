@@ -2,3 +2,7 @@
 <p>Dans la vallée du Gier, c’est à Rive-de-Gier que se trouvait l’unité de production Duralex. La voici, avant la démolition de la verrerie.<br/><br/>
 
 La cheminée de la verrerie Duralex, qui trônait à l'entrée de la commune de Rive-de-Gier, culminait à 60 m de haut. Elle a été détruite en 2021.</p>
+<div class="img_div">
+    <img src="https://drive.google.com/uc?export=view&id=16KTTv5Fn-uINl6__xjKmvRxFV6tMfxw6"/>
+    <img src="https://drive.google.com/uc?export=view&id=1F14x4EF4CsPhBnwAlfU8gNsL31yKOkE9"/>
+</div>
