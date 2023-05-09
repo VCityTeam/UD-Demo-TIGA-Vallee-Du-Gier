@@ -37,6 +37,7 @@
   margin: 15px;
   font-size: 3vh;
   transform: translateY(-35%);
+  text-align: center;
 }
 
 #panel_switch {
