@@ -447,37 +447,3 @@ input:checked ~ output {
   display: block;
   margin: 10px 0px 10px 0px;
 }
-
-#fs_image_background {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  grid-gap: 15px;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #0000004d;
-  backdrop-filter: blur(6px);
-  z-index: 9;
-}
-
-.fs_image {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  grid-row-start: 2;
-  grid-row-end: 9;
-  display: flex;
-  height: -webkit-fill-available;
-  height: -moz-available; /* TO FIX */
-}
-
-.fs_image_caption {
-  grid-column-start: 7;
-  grid-column-end: 10;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  padding: 15px;
-  height: fit-content;
-}
