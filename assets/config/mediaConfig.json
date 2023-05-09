@@ -1,248 +1,137 @@
 {
     "medias": [
         {
-            "id": "IMAGE1",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/IMAGE2_AcieriesMarine.jpg"
-                },
-                {
-                    "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
-                }
-            ]
-        },
-        {
-            "id": "IMAGE2",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg"
-                },
-                {
-                    "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
-                }
-            ]
-        },
-        {
-            "id": "IMAGE2_5",
-            "name": "Nom du media",
-            "contents": [
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg"
-                },
-                {
-                    "type": "text",
-                    "value": "Tincidunt arcu non sodales neque sodales ut etiam. Sapien et ligula ullamcorper malesuada proin libero nunc. Egestas congue quisque egestas diam in arcu. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Semper eget duis at tellus at urna condimentum mattis pellentesque. Malesuada fames ac turpis egestas integer eget aliquet nibh."
-                }
-            ]
-        },
-        {
-            "id": "IMAGE5",
-            "contents": [
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/IMAGE3_Duralex.jpg"
-                },
-                {
-                    "type": "text",
-                    "value": "La démolition des bâtiments de l'ancienne verrerie a débuté en 2021. Saint-Etienne Métropole y porte un projet de nouveau quartier récréatif et économique, valorisant le Gier.<br><a href='https://patrimoine.auvergnerhonealpes.fr/dossier/verrerie-de-rive-de-gier-actuellement-verrerie-duralex/8deec39f-cfe0-4710-be4b-d02e3e7489b7'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>"
-                }
-            ]
-        },
-        {
-            "id": "IMAGE6",
-            "contents": [
-                {
-                    "type": "audio",
-                    "value": "../assets/media/audios/2-GERALD-GAUDIN_20221012_LesbordsduGier.mp3"
-                },
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/IMAGE4_Duralex.jpg"
-                },
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/Gier.jpg"
-                },
-                {
-                    "type": "text",
-                    "value": "Photographies des auteurs, septembre 2022"
-                }
-            ]
-        },
-        {
-            "id": "PINS",
-            "contents": [
-                {
-                    "type": "pin",
-                    "value": "../assets/media/images/IMAGE1_HallesCouzon.jpg",
-                    "caption": "Portail des laminoirs, actuelle entrée de l'entreprise de métallurgie-mécanique Valmont.<br>Photographie des auteurs, septembre 2022",
-                    "position": {
-                        "x": 1826924.6322969063,
-                        "y": 5148677.232349239,
-                        "z": 266.6366424560547
-                    }
-                },
-                {
-                    "type": "pin",
-                    "value": "../assets/media/images/IMAGE2_HallesCouzon.jpg",
-                    "caption": "Grande Halle à la charpente en bois construite dans l'entre-deux-guerres, en attente de réaffectation.<br><a href='https://patrimoine.auvergnerhonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
-                    "position": {
-                        "x": 1826915.8258778045,
-                        "y": 5148571.276805021,
-                        "z": 269.35496520996094
-                    }
-                },
-                {
-                    "type": "pin",
-                    "value": "../assets/media/images/IMAGE3_HallesCouzon.jpg",
-                    "caption": "Extérieur de la grande halle des laminoirs du Couzon.<br><a href='https://patrimoine.auvergnerhpreviousonealpes.fr/dossier/laminoirs-de-couzon/478b13a0-8b50-4d39-a8ea-2265ad908023#description'>© Région Rhône-Alpes, Inventaire général du patrimoine culturel</a>",
-                    "position": {
-                        "x": 1826959.549938517,
-                        "y": 5148570.043722836,
-                        "z": 271.8705291748047
-                    }
-                },
-                {
-                    "type": "pin",
-                    "value": "../assets/media/images/IMAGE4_HallesCouzon.jpg",
-                    "caption": "L'entreprise Valmont spécialisée dans la production de mats d'éclairage en acier (occupe une vaste partie du site).<br>Photographie des auteurs, septembre 2022",
-                    "position": {
-                        "x": 1826890.4822390038,
-                        "y": 5148805.353186624,
-                        "z": 266.4672546386719
-                    }
-                }
-            ]
-        },
-        {
-            "id": "CHAUDRONNERIE",
-            "contents": [
-                {
-                    "type": "text",
-                    "value": "Les métiers de la forge, de la chaudronnerie et de la soudure sont très représentés."
-                },
-                {
-                    "type": "image",
-                    "value": "../assets/media/images/chaudronnier.jpeg"
-                },
-                {
-                    "type": "audio",
-                    "value": "../assets/media/audios/TRAINA-FRERES-20221020_CHAUDRONNIER.mp3"
-                }
-            ]
-        },
-        {
-            "id": "Q_01",
+            "id": "P1_00",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursQuestion/01.txt"
+                    "value": "../assets/media/texts/Parcours_1/P1_00.txt"
                 }
             ]
         },
         {
-            "id": "Q_02",
+            "id": "P1_01",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursQuestion/02.txt"
+                    "value": "../assets/media/texts/Parcours_1/P1_01.txt"
                 }
             ]
         },
         {
-            "id": "Q_03",
+            "id": "P1_02",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursQuestion/03.txt"
+                    "value": "../assets/media/texts/Parcours_1/P1_02.txt"
                 }
             ]
         },
         {
-            "id": "Q_04",
+            "id": "P1_03",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursQuestion/04.txt"
+                    "value": "../assets/media/texts/Parcours_1/P1_03.txt"
                 }
             ]
         },
         {
-            "id": "D_01",
+            "id": "P1_04",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/01.txt"
+                    "value": "../assets/media/texts/Parcours_1/P1_04.txt"
                 }
             ]
         },
         {
-            "id": "D_02",
+            "id": "P2_00",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/02.txt"
+                    "value": "../assets/media/texts/Parcours_2/P2_00.txt"
                 }
             ]
         },
         {
-            "id": "D_03",
+            "id": "P2_02",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/03.txt"
+                    "value": "../assets/media/texts/Parcours_2/P2_01.txt"
                 }
             ]
         },
         {
-            "id": "D_04",
+            "id": "P2_02",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/04.txt"
+                    "value": "../assets/media/texts/Parcours_2/P2_02.txt"
                 }
             ]
         },
         {
-            "id": "D_06",
+            "id": "P2_03",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/06.txt"
+                    "value": "../assets/media/texts/Parcours_2/P2_03.txt"
                 }
             ]
         },
         {
-            "id": "D_07",
+            "id": "P2_04",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/07.txt"
+                    "value": "../assets/media/texts/Parcours_2/P2_04.txt"
                 }
             ]
         },
         {
-            "id": "D_08",
+            "id": "P3_00",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/08.txt"
+                    "value": "../assets/media/texts/Parcours_3/P3_00.txt"
                 }
             ]
         },
         {
-            "id": "D_09",
+            "id": "P3_03",
             "contents": [
                 {
                     "type": "file",
-                    "value": "../assets/media/texts/ParcoursTest/09.txt"
+                    "value": "../assets/media/texts/Parcours_3/P3_01.txt"
+                }
+            ]
+        },
+        {
+            "id": "P3_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_3/P3_02.txt"
+                }
+            ]
+        },
+        {
+            "id": "P3_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_3/P3_03.txt"
+                }
+            ]
+        },
+        {
+            "id": "P3_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_3/P3_04.txt"
                 }
             ]
         }

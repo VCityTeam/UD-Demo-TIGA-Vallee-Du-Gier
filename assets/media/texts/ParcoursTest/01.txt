@@ -1,6 +1,0 @@
-<div class="rendered-form">
-    <h1>La vallée du Gier<br>Un territoire industriel en transformation</h1>
-    <p>
-    Au-delà des imaginaires historiques liés à l’industrie, la vallée du Gier, entre Lyon et Saint-Etienne, constitue un secteur géographique complexe et singulier, particulièrement travaillé par la question de l’intégration des industries dans les espaces urbains.
-    </p>
-</div>

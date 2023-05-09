@@ -1,5 +1,0 @@
-<div class="rendered-form">
-    <p>
-    A Rive de Gier, la verrerie Duralex fermée en 2006 est l’un des cinq sites d’intérêt métropolitain où se déploient de grands projets urbains qui transforment le territoire.
-    </p>
-</div>

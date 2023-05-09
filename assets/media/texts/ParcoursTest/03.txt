@@ -1,7 +1,0 @@
-<div class="rendered-form">
-    <p>
-    La vallée du Gier est caractérisée par un patrimoine industriel remarquable, en attente de projet ou toujours dédié à la production industrielle. Les laminoirs du Couzon sont représentatifs de ce patrimoine.
-<br><br>
-    Cliquez sur chacune des photographies pour découvrir les éléments patrimoniaux des laminoirs (son portail, ses halles, ses rails).
-    </p>
-</div>

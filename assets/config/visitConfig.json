@@ -1,38 +1,11 @@
 {
     "visits": [
         {
-            "id": "P_DEMO_VDG",
-            "name": "Parcours Demo",
-            "description": "La vallée du Gier, un territoire de tradition industrielle en transformation",
+            "id": "P1",
+            "name": "Parcours n°1",
+            "description": "",
             "startIndex": 0,
-            "endIndex": 7,
-            "categories": [
-                {
-                    "id": "INTRO",
-                    "name": "Introduction",
-                    "nodeIndex": 0
-                },
-                {
-                    "id": "FRICHE",
-                    "name": "Friches",
-                    "nodeIndex": 1
-                },
-                {
-                    "id": "PATRIMOINE",
-                    "name": "Patrimoine",
-                    "nodeIndex": 2
-                },
-                {
-                    "id": "DURALEX",
-                    "name": "Duralex",
-                    "nodeIndex": 3
-                },
-                {
-                    "id": "ACTIVITE",
-                    "name": "Activités",
-                    "nodeIndex": 5
-                }
-            ],
+            "endIndex": 4,
             "nodes": [
                 {
                     "previous": 0,
@@ -44,369 +17,207 @@
                         "zae"
                     ],
                     "medias": [
-                        "D_01"
-                    ],
-                    "position": {
-                        "x": 1815137.4389101316,
-                        "y": 5120561.345129335,
-                        "z": 74890.18365784828
-                    },
-                    "rotation": {
-                        "x": 0.20020493997826672,
-                        "y": 0.0010948816804666021,
-                        "z": 0.0053579998619824485,
-                        "w": 0.9797387790017721
-                    }
+                        "P1_00"
+                    ]
                 },
                 {
                     "previous": 0,
                     "next": 2,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
-                    ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
                     ],
                     "medias": [
-                        "D_02"
-                    ],
-                    "position": {
-                        "x": 1822544.8781920606,
-                        "y": 5146771.966404134,
-                        "z": 375.52081150802053
-                    },
-                    "rotation": {
-                        "x": 0.5486300526168828,
-                        "y": -0.23382461387190603,
-                        "z": -0.3147181875304633,
-                        "w": 0.7384331911221155
-                    }
+                        "P1_01"
+                    ]
                 },
                 {
                     "previous": 1,
                     "next": 3,
                     "type": "half",
-                    "medias": [
-                        "D_03",
-                        "PINS"
-                    ],
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
                     ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "position": {
-                        "x": 1826994.082722922,
-                        "y": 5148316.617360813,
-                        "z": 392.0532493205028
-                    },
-                    "rotation": {
-                        "x": 0.5475526267937699,
-                        "y": 0.08631597843110062,
-                        "z": 0.12960414841062862,
-                        "w": 0.822154752752473
-                    }
+                    "medias": [
+                        "P1_02"
+                    ]
                 },
                 {
                     "previous": 2,
                     "next": 4,
                     "type": "half",
-                    "medias": [
-                        "D_04",
-                        "IMAGE5"
-                    ],
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
                     ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "position": {
-                        "x": 1826349.3333048907,
-                        "y": 5148918.221996138,
-                        "z": 604.6163160012895
-                    },
-                    "rotation": {
-                        "x": 0.443703057340166,
-                        "y": -0.2838918863049038,
-                        "z": -0.4581167257836109,
-                        "w": 0.7160042313803298
-                    }
+                    "medias": [
+                        "P1_03"
+                    ]
                 },
                 {
                     "previous": 3,
-                    "next": 5,
+                    "next": 4,
                     "type": "half",
-                    "medias": [
-                        "D_04",
-                        "IMAGE6"
-                    ],
-                    "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
-                    ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "position": {
-                        "x": 1826349.3333048907,
-                        "y": 5148918.221996138,
-                        "z": 604.6163160012895
-                    },
-                    "rotation": {
-                        "x": 0.443703057340166,
-                        "y": -0.2838918863049038,
-                        "z": -0.4581167257836109,
-                        "w": 0.7160042313803298
-                    }
-                },
-                {
-                    "previous": 4,
-                    "next": 6,
-                    "type": "half",
-                    "medias": [
-                        "D_06"
-                    ],
                     "layers": [
                         "baseMapLayer_0",
-                        "zae",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
-                        "noms_communes"
+                        "communes",
+                        "zae"
                     ],
-                    "filters": [
-                        {
-                            "layer": "noms_communes",
-                            "properties": {
-                                "COMMUNE": {
-                                    "type": "string",
-                                    "enum": [
-                                        "Rive-de-Gier",
-                                        "Saint-Chamond"
-                                    ]
-                                }
-                            }
-                        },
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "position": {
-                        "x": 1820451.0500528857,
-                        "y": 5139918.123418849,
-                        "z": 12151.976236768156
-                    },
-                    "rotation": {
-                        "x": 0.19971037216658302,
-                        "y": 0.007913895721935208,
-                        "z": 0.0387968639385165,
-                        "w": 0.9790546158678398
-                    }
-                },
-                {
-                    "previous": 5,
-                    "next": 7,
-                    "type": "half",
                     "medias": [
-                        "D_08",
-                        "CHAUDRONNERIE"
-                    ],
-                    "layers": [
-                        "baseMapLayer_0",
-                        "zae",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
-                        "noms_communes"
-                    ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "position": {
-                        "x": 1820451.0500528857,
-                        "y": 5139918.123418849,
-                        "z": 12151.976236768156
-                    },
-                    "rotation": {
-                        "x": 0.19971037216658302,
-                        "y": 0.007913895721935208,
-                        "z": 0.0387968639385165,
-                        "w": 0.9790546158678398
-                    }
-                },
-                {
-                    "previous": 6,
-                    "type": "full",
-                    "medias": [
-                        "D_09"
-                    ],
-                    "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
-                    ],
-                    "filters": [
-                        {
-                            "layer": "BATI-INDUS",
-                            "properties": {
-                                "attribute": "USAGE1",
-                                "attribute_values": [
-                                    "Industriel"
-                                ],
-                                "style": {
-                                    "materialProps": {
-                                        "color": "#202020"
-                                    }
-                                }
-                            }
-                        }
+                        "P1_04"
                     ]
                 }
             ]
         },
         {
-            "id": "P_QUESTIONS",
-            "name": "Parcours Question",
-            "description": "Parcours avec questions",
+            "id": "P2",
+            "name": "Parcours n°2",
+            "description": "",
             "startIndex": 0,
-            "endIndex": 3,
-            "categories": [],
+            "endIndex": 4,
             "nodes": [
                 {
                     "previous": 0,
                     "next": 1,
-                    "type": "full",
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
                     "medias": [
-                        "Q_01"
+                        "P2_00"
                     ]
                 },
                 {
                     "previous": 0,
                     "next": 2,
                     "type": "half",
-                    "medias": [
-                        "Q_02"
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
                     ],
-                    "position": {
-                        "x": 1819972.2564841579,
-                        "y": 5142359.305112128,
-                        "z": 1551.8208461951795
-                    },
-                    "rotation": {
-                        "x": 0.48809164844536335,
-                        "y": -0.07255865325134192,
-                        "z": -0.12789286028412,
-                        "w": 0.8603169188412988
-                    }
+                    "medias": [
+                        "P2_01"
+                    ]
                 },
                 {
                     "previous": 1,
                     "next": 3,
                     "type": "half",
-                    "medias": [
-                        "Q_03"
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
                     ],
-                    "position": {
-                        "x": 1822710.2848260512,
-                        "y": 5146615.931828531,
-                        "z": 395.7348090155624
-                    },
-                    "rotation": {
-                        "x": 0.557761038886221,
-                        "y": 0.04349149769551212,
-                        "z": 0.06443499302976319,
-                        "w": 0.8263529783343309
-                    }
+                    "medias": [
+                        "P2_02"
+                    ]
                 },
                 {
                     "previous": 2,
-                    "type": "full",
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
                     "medias": [
-                        "Q_04"
+                        "P2_03"
+                    ]
+                },
+                {
+                    "previous": 3,
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P2_04"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "P3",
+            "name": "Parcours n°3",
+            "description": "",
+            "startIndex": 0,
+            "endIndex": 4,
+            "nodes": [
+                {
+                    "previous": 0,
+                    "next": 1,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P3_00"
+                    ]
+                },
+                {
+                    "previous": 0,
+                    "next": 2,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P3_01"
+                    ]
+                },
+                {
+                    "previous": 1,
+                    "next": 3,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P3_02"
+                    ]
+                },
+                {
+                    "previous": 2,
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P3_03"
+                    ]
+                },
+                {
+                    "previous": 3,
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_0",
+                        "communes",
+                        "zae"
+                    ],
+                    "medias": [
+                        "P3_04"
                     ]
                 }
             ]

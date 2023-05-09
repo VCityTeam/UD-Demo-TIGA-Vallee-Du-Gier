@@ -1,4 +1,0 @@
-<div class="rendered-form">
-    <h1>Félicitations, vous avez terminé le parcours Parcours Démo !</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed. Et magnis dis parturient montes nascetur ridiculus mus. Quam vulputate dignissim suspendisse in est ante in nibh mauris.</p>
-</div>
