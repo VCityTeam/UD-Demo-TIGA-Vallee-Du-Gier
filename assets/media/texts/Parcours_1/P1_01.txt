@@ -1,0 +1,22 @@
+<h1>Un projet de réhabiilitation</h1>
+<p>Te voici dans le quartier Novaciéries, au niveau du projet “Hall in One”.</p>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+        Quels symboles industriels ont été conservés dans cet espace, que l’on aperçoit sur la photo ?<br/><br/>
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="pink" for="radio-group-1670843415313-0">Les halles aux armatures métalliques géantes</label>
+            <output class="pink_text" for="radio-group-1670843415313-0">Une partie des halles (certaines ont été détruites) et la cheminée a été mise en lumière, pour souligner la valeur patrimoniale du lieu.</output>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="pink" for="radio-group-1670843415313-1">La cheminée rouge brique</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="pink" for="radio-group-1670843415313-2">Une partie de la forge</label>
+        </div>
+    </div>
+</div>

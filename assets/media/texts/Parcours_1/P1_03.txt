@@ -1,0 +1,22 @@
+<h1>Un projet de réhabiilitation</h1>
+<p>Le savais-tu ? Dans ce quartier, on peut croiser des étudiant·e·s, aussi !</p>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+        Lesquels ?<br/><br/>
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="pink" for="radio-group-1670843415313-0">Des étudiant·e·s en licence électromécanique</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="pink" for="radio-group-1670843415313-1">Des étudiant·e·s infirmier·e·s</label>
+            <output class="pink_text" for="radio-group-1670843415313-1">L’Institut de formation en soins infirmiers rassemble 300 étudiant·e·s.</output>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="pink" for="radio-group-1670843415313-2">Des étudiant·e·s en audiovisuel</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<h1>Un projet de réhabiilitation</h1>
+<div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
+    <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
+        Qu'observe-t-on de particulier sur la cheminée de Novaciéries?<br/><br/>
+    </label>
+    <div class="radio-group">
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-0" value="option-1" type="radio">
+            <label class="pink" for="radio-group-1670843415313-0">Saint-Éloi, le patron des forgerons</label>
+            <output class="pink_text" for="radio-group-1670843415313-0">Saint-Eloi. La cloche est cachée mais bien présente (elle signalait les entrées et sorties des ouvriers).</output>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
+            <label class="pink" for="radio-group-1670843415313-1">Le maître de forges Antoine Morel</label>
+        </div>
+        <div class="formbuilder-radio">
+            <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
+            <label class="pink" for="radio-group-1670843415313-2">Une cloche</label>
+        </div>
+    </div>
+</div>
