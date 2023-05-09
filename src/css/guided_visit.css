@@ -36,19 +36,22 @@
   color: black;
 }
 
-.pink_selected {
+.pink_selected,
+input[type='radio']:checked + .pink {
   background: white;
   border: 3px solid #e5127b;
   color: #e5127b;
 }
 
-.green_selected {
+.green_selected,
+input[type='radio']:checked + .green {
   background: white;
   border: 3px solid #849130;
   color: #849130;
 }
 
-.blue_selected {
+.blue_selected,
+input[type='radio']:checked + .blue {
   background: white;
   border: 3px solid #537eb0;
   color: #537eb0;
@@ -72,15 +75,18 @@
   color: #41648d;
 }
 
-.pink_hover:hover {
+.pink_hover:hover,
+input[type='radio']:not(:checked):hover + .pink {
   background: #b70e62;
 }
 
-.green_hover:hover {
+.green_hover:hover,
+input[type='radio']:not(:checked):hover + .green {
   background: #697426;
 }
 
-.blue_hover:hover {
+.blue_hover:hover,
+input[type='radio']:not(:checked):hover + .blue {
   background: #41648d;
 }
 
@@ -252,6 +258,10 @@ button:hover .blue_img {
   transform: scaleX(-1);
 }
 
+.header_panel {
+  padding: 0px;
+}
+
 #home_panel {
   display: flex;
   position: absolute;
@@ -263,17 +273,8 @@ button:hover .blue_img {
 }
 
 .visit_number {
-  text-align: left;
   font-weight: 400;
-  font-size: 5vh;
   margin: 0px;
-}
-
-.visit_title {
-  text-align: left;
-  font-weight: 700;
-  font-size: 5vh;
-  margin-top: 0px;
 }
 
 #main_panel {
@@ -332,7 +333,6 @@ button:hover .blue_img {
 #categories_div {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .category_button {
@@ -388,66 +388,48 @@ button:hover .blue_img {
   margin: 0px;
 }
 
-.radio-group,
-.checkbox-group {
+.radio-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.formbuilder-checkbox,
 .formbuilder-radio,
-.radio,
-.checkbox {
+.radio {
   margin: 10px auto 10px auto;
-  height: 60px;
-  width: 130px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  font-size: 22px;
   font-weight: bold;
 }
 
-input[type='radio'],
-input[type='checkbox'] {
+input[type='radio'] {
   display: none;
 }
 
-input[type='radio'] + label,
-input[type='checkbox'] + label {
+input[type='radio'] + label {
   width: 100%;
-  height: 100%;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 25px;
-  font-size: 15px;
+  line-height: 17px;
+  font-size: 17px;
   font-weight: bold;
   text-align: center;
-  color: #fff;
-  border-radius: 12px;
-  background-color: #a5a5a5;
-  border: solid 1px #bfbfbf;
+  border-radius: 25px;
   cursor: pointer;
-}
-
-input[type='radio']:checked + label,
-input[type='checkbox']:checked + label {
-  color: #a5a5a5;
-  background-color: #ffffff;
-}
-
-input[type='radio']:not(:checked):hover + label,
-input[type='checkbox']:hover + label {
-  background-color: #929292;
-}
-
-input[type='checkbox']:checked:hover + label {
-  background-color: rgb(235, 234, 234);
 }
 
 output {
   display: none;
+}
+
+input[type='radio']:checked ~ output {
+  display: block;
+  margin: 10px 0px 10px 0px;
 }
 
 #fs_image_background {

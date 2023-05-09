@@ -17,9 +17,10 @@ button {
 }
 
 h1 {
-  font-size: 27px;
+  font-size: 5vh;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  margin-top: 0px;
 }
 
 h2 {
