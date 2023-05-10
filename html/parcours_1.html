@@ -217,7 +217,8 @@
               y: 5142405.79,
               z: 550,
             },
-            300
+            300,
+            { linkedDemo: true }
           );
           visit.mediaManager.createPin(
             '../assets/icons/Green_pin.png',
@@ -226,7 +227,8 @@
               y: 5149394.39,
               z: 450,
             },
-            300
+            300,
+            { linkedDemo: false }
           );
           visit.mediaManager.createPin(
             '../assets/icons/Blue_pin.png',
@@ -235,8 +237,17 @@
               y: 5146485.27,
               z: 450,
             },
-            300
+            300,
+            { linkedDemo: false }
           );
+          visit.mediaManager.addClickOnPinEvent(function (sprite) {
+            if (sprite.userData.linkedDemo) {
+              document.getElementById('home_panel').style.display = 'none';
+              document.getElementById('main_panel').style.display = 'flex';
+              visit.start();
+              visit.mediaManager.deletePins();
+            }
+          });
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             visit.mediaManager.deletePins();
