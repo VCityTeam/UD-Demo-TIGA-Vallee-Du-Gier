@@ -1,4 +1,4 @@
-<h1>Bienvenue sur la friche Duralex®</h1>
+<h1>Bienvenue à Lorette</h1>
 <p>Lorette ne doit pourtant pas son développement ni sa réputation à l’industrie agro-alimentaire. Elle est plutôt connue pour ses forges.</p><br/>
 <div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
     <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">

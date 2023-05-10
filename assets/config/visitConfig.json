@@ -129,13 +129,40 @@
                     "next": 2,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_0",
+                        "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     "medias": [
                         "P3_01"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1823170.6548058966,
+                        "y": 5146167.556842434,
+                        "z": 500.1927985153311
+                    },
+                    "rotation": {
+                        "x": 0.4795521727812081,
+                        "y": 0.11642041798793054,
+                        "z": 0.2051898371442634,
+                        "w": 0.8452059693288072
+                    }
                 },
                 {
                     "previous": 1,
@@ -151,17 +178,33 @@
                     "next": 3,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_0",
+                        "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "P3_03"
                     ],
                     "position": {
-                        "x": 1822368.829010269,
-                        "y": 5141456.6010532165,
-                        "z": 6061.1887837830955
+                        "x": 1821259.8326373093,
+                        "y": 5144121.691983901,
+                        "z": 903.7458162464796
                     },
                     "rotation": {
                         "x": 0.3612924685427614,

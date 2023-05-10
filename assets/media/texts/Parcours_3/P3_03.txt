@@ -1,4 +1,4 @@
-<h1>Bienvenue sur la friche Duralex®</h1>
+<h1>Bienvenue à Lorette</h1>
 <p>Lorette est aussi célèbre pour Mavilor, qui signifie…</p><br/>
 <div class="formbuilder-radio-group form-group field-radio-group-1670843415313">
     <label for="radio-group-1670843415313" class="formbuilder-radio-group-label">
@@ -10,11 +10,11 @@
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-1" value="option-2" type="radio">
-            <label class="blue" for="radio-group-1670843415313-1">Manufacture des Vilebrequins de Lorette</label>
+            <label class="blue" for="radio-group-1670843415313-1">Manufacture des Vitriers de Lorette</label>
         </div>
         <div class="formbuilder-radio">
             <input name="radio-group-1670843415313" access="false" id="radio-group-1670843415313-2" value="option-3" type="radio">
-            <label class="blue correct_answer" for="radio-group-1670843415313-2">Manufacture des Vitriers de Lorette</label>
+            <label class="blue correct_answer" for="radio-group-1670843415313-2">Manufacture des Vilebrequins de Lorette</label>
             <output class="blue_text" for="radio-group-1670843415313-0">
                 <p>Dans les années 30, on fabriquait à Lorette des vilebrequins de moteurs : il s’agit d’une pièce maîtresse du moteur diesel et du moteur à explosion. L'usine, basée à l’Horme, devenue ThyssenKrupp Mavilor, a cessé son activité en juin 2010 : 373 personnes ont perdu leur emploi.<br/><br/>
 
