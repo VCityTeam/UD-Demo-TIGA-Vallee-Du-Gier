@@ -2,6 +2,6 @@
 <p>Et maintenant ?<br/><br/>
 Un projet de restauration écologique est en cours : 4,5 hectares (en zone inondable) ont été rendus “disponibles” après la démolition de l’ancienne verrerie Duralex. Sur cette zone, il est prévu que le Gier, qui était canalisé à cet endroit, puisse s’étendre à nouveau. En plus d’élargir le lit de la rivière, un projet de “renaturation” est prévu : les berges vont être arborées.</p>
 <div class="img_div">
-    <img src="https://drive.google.com/uc?export=view&id=1JmKXBd6vdb2XDq-LtrAjzBdvBl8g7-7O"/>
-    <img src="https://drive.google.com/uc?export=view&id=1VPlWb44yv4KtbWpfPOKM4KUMwdlNZUXu"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/image%205.png"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/image%206.png"/>
 </div>

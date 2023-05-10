@@ -20,5 +20,5 @@
     </div>
 </div>
 <div class="img_div">
-    <img class="fit_height fit_width" src="https://drive.google.com/uc?export=view&id=1rLD9Z1DVtyx_uIjQ86aMJ3CV8Cy6tSnV"/>
+    <img class="fit_height fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/lustucru%201.png"/>
 </div>

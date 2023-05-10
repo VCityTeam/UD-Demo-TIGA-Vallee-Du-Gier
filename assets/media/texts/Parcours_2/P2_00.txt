@@ -3,6 +3,6 @@
 
 La cheminée de la verrerie Duralex, qui trônait à l'entrée de la commune de Rive-de-Gier, culminait à 60 m de haut. Elle a été détruite en 2021.</p>
 <div class="img_div">
-    <img src="https://drive.google.com/uc?export=view&id=16KTTv5Fn-uINl6__xjKmvRxFV6tMfxw6"/>
-    <img src="https://drive.google.com/uc?export=view&id=1F14x4EF4CsPhBnwAlfU8gNsL31yKOkE9"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/cheminee%20verrerie%20duralex%20-%20Didier%20Gourbin%20-%20inventaire%20patrimoine%20auvergne%20rhone%20alpes%201.png"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/VUEDEL%7E1%201.png"/>
 </div>

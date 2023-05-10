@@ -22,6 +22,6 @@
     </div>
 </div>
 <div class="img_div">
-    <img src="https://drive.google.com/uc?export=view&id=1dyW05DnTv80CQvRKKabv5YK1H83sVMUs"/>
-    <img src="https://drive.google.com/uc?export=view&id=13CqD387L8NIqB9YxYfVQzSL0NUpMUJ-V"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/463-lorette-lorette-sortie-des-ouvries-des-acieries%201.png"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/Lorette_Loire__Aciries_de_la_Marine_dAssaillyLorette-2%201.png"/>
 </div>

@@ -21,6 +21,6 @@
     </div>
 </div>
 <div class="img_div">
-    <img src="https://drive.google.com/uc?export=view&id=1AU3llfTZJfW4aHlSI3Plze7kEE6rItad"/>
-    <img src="https://drive.google.com/uc?export=view&id=1bYCBJk7wdckeUqsgg-21f1r91dm-rDyD"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/novacieries%20cote%20halles%20Lucas%20Goy%20les%20%C3%A9claireurs.png"/>
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/vue%20d'ensemble%20nova%20by%20night%20Lucas%20Goy%20les%20%C3%A9claireurs.png"/>
 </div>

@@ -492,6 +492,7 @@ output {
   z-index: 9;
   display: flex;
   flex-direction: column;
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .bg_white {
