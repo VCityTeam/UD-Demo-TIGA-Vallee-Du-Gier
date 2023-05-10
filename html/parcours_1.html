@@ -239,6 +239,7 @@
           );
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
+            visit.mediaManager.deletePins();
             document.getElementById('home_panel').style.display = 'none';
             document.getElementById('main_panel').style.display = 'flex';
             visit.start();
