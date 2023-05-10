@@ -23,3 +23,8 @@
 <div class="img_div">
     <img class="fit_height fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/Les-trois-sites-de-production-et-le-site-logistique-repartis-entre-Lorette-L%201.png"/>
 </div>
+<output>
+    <div style="z-index: 10" class="img_div">
+        <img class="fit_height fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/panzani_siege%201.png"/>
+    </div>
+</output>

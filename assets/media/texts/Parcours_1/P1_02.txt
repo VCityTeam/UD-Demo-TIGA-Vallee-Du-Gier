@@ -22,3 +22,8 @@
 <div class="img_div">
     <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/novacieries%20Eric%20Dessert%20-%20inventaire%20patrimoine%20auvergne%20rhone%20alpes%201.png"/>
 </div>
+<output>
+    <div style="z-index: 10" class="img_div">
+        <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/saint%20eloi%201.png"/>
+    </div>
+</output>
