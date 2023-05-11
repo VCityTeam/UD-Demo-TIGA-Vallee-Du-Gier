@@ -1,0 +1,13 @@
+<h1 class="visit_number">Section 5</h1>
+<h1>La compagnie des hauts fourneaux, forges et aciéries de la Marine</h1>
+<p>
+Au milieu du XIXe siècle, le bassin stéphanois est le principal complexe houiller du pays, et la vallée du Gier le <b>principal centre sidérurgique de France</b>.<br/><br/>
+
+L’exploitation de l’acier se développe notamment au travers de la <b>création en 1854 de la Compagnie des hauts fourneaux, forges et aciéries de la Marine et des Chemins de fer, la plus importante de France</b> à cette date avec chiffres d’affaires de 24 millions de francs et 3000 ouvriers dont la moitié sur le site de Saint-Chamond.<br/><br/>
+
+La compagnie <b>associe les maitres des forges, Hippolyte Petin et Jean-Marie Gaudet aux frères Jackson, des industriels venus d’Angleterre (Birmingham)</b> pour s’installer à Lorette en 1829.<br/><br/>
+
+Hippolyte Petin et Jean-Marie Gaudet formés au travail de forge dans les ateliers familiaux de l’Ain, ont été encouragés par leur dernier employeur, le directeur des usines Frèrejean de Vienne, à monter leur propre société.<br/><br/>
+
+L’ingénieur Roland de Ravel, chargé du prolongement du canal de Givors à Grand-Croix, leur donne leur première commande, la <b>réalisation des armatures des écluses</b>.
+</p>

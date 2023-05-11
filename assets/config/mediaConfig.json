@@ -134,6 +134,222 @@
                     "value": "../assets/media/texts/Parcours_3/P3_04.txt"
                 }
             ]
+        },
+        {
+            "id": "PH1_00",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_00.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_01",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_01.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_02.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_03.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_04.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_05",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_05.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_06",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_06.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_07",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_07.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_08",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_08.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_09",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_09.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_10",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_10.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_11",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_11.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_12",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_12.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_13",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_13.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_14",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_14.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_15",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_15.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_16",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_16.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_17",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_17.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_18",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_18.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_19",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_19.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_20",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_20.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_21",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_21.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_22",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_22.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH1_23",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_23.txt"
+                }
+            ]
         }
     ]
 }

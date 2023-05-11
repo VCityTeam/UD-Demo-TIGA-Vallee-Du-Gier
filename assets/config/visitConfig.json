@@ -139,7 +139,16 @@
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
-                                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
                                 ],
                                 "style": {
                                     "materialProps": {
@@ -188,7 +197,16 @@
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
-                                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
                                 ],
                                 "style": {
                                     "materialProps": {
@@ -212,6 +230,327 @@
                         "z": 0.04333423694329667,
                         "w": 0.9312933336609123
                     }
+                }
+            ]
+        },
+        {
+            "id": "PH1",
+            "name": "Chapitre n°1",
+            "description": "",
+            "startIndex": 0,
+            "endIndex": 23,
+            "nodes": [
+                {
+                    "previous": 0,
+                    "next": 1,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_00"
+                    ]
+                },
+                {
+                    "previous": 0,
+                    "next": 2,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_01"
+                    ]
+                },
+                {
+                    "previous": 1,
+                    "next": 3,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_02"
+                    ]
+                },
+                {
+                    "previous": 2,
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_03"
+                    ]
+                },
+                {
+                    "previous": 3,
+                    "next": 5,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_04"
+                    ]
+                },
+                {
+                    "previous": 4,
+                    "next": 6,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_05"
+                    ]
+                },
+                {
+                    "previous": 5,
+                    "next": 7,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_06"
+                    ]
+                },
+                {
+                    "previous": 6,
+                    "next": 8,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_07"
+                    ]
+                },
+                {
+                    "previous": 7,
+                    "next": 9,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_08"
+                    ]
+                },
+                {
+                    "previous": 8,
+                    "next": 10,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_09"
+                    ]
+                },
+                {
+                    "previous": 9,
+                    "next": 11,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_10"
+                    ]
+                },
+                {
+                    "previous": 10,
+                    "next": 12,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_11"
+                    ]
+                },
+                {
+                    "previous": 11,
+                    "next": 13,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_12"
+                    ]
+                },
+                {
+                    "previous": 12,
+                    "next": 14,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_13"
+                    ]
+                },
+                {
+                    "previous": 13,
+                    "next": 15,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_14"
+                    ]
+                },
+                {
+                    "previous": 14,
+                    "next": 16,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_15"
+                    ]
+                },
+                {
+                    "previous": 15,
+                    "next": 17,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_16"
+                    ]
+                },
+                {
+                    "previous": 16,
+                    "next": 18,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_17"
+                    ]
+                },
+                {
+                    "previous": 17,
+                    "next": 19,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_18"
+                    ]
+                },
+                {
+                    "previous": 18,
+                    "next": 20,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_19"
+                    ]
+                },
+                {
+                    "previous": 19,
+                    "next": 21,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_20"
+                    ]
+                },
+                {
+                    "previous": 20,
+                    "next": 22,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_21"
+                    ]
+                },
+                {
+                    "previous": 21,
+                    "next": 23,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_22"
+                    ]
+                },
+                {
+                    "previous": 22,
+                    "next": 23,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
+                    ],
+                    "medias": [
+                        "PH1_23"
+                    ]
                 }
             ]
         }

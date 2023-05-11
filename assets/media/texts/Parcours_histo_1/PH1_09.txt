@@ -1,0 +1,9 @@
+<h1 class="visit_number">Section 4</h1>
+<h1>Une métallurgie à l’anglaise</h1>
+<p>
+Rapidement, <b>une nouvelle industrie se structure au gré de la circulation des techniciens, des ingénieurs civils et des capitaux</b> (en particulier lyonnais).<br/><br/>
+
+Les facilités offertes par le canal puis le chemin de fer pour l’approvisionnement de matières premières (sable, charbon et minerais) incitent en effet à l’investissement dans de nouveaux sites industriels métallurgiques qui transforment radicalement le territoire de la vallée du Gier.<br/><br/>
+
+Nous vous proposons d’en <b>découvrir les principaux</b> en redescendant la vallée de Saint-Chamond à Rive-de-Gier.
+</p>

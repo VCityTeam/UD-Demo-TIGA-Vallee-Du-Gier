@@ -1,0 +1,9 @@
+<h1 class="visit_number">Section 3</h1>
+<h1>Le premier bassin houiller exploité en France</h1>
+<p>
+La carte figure les puits recensés sur la carte topographique de l’IGN des années 1950. Au nombre d’une trentaine, ce sont les principaux puits de la vallée du Gier.<br/><br/>
+
+Ils seront exploité sur un siècle environ puisque <b>l’arrêt de l’exploitation d’une dernière concession remonte à 1953</b>.<br/><br/>
+
+Il s’agit de la fendue de la Catonnière entre Rive-de-Gier et Saint Martin la Plaine alors exploitée par les frères Faure.
+</p>

@@ -1,0 +1,9 @@
+<h1 class="visit_number">Section 2</h1>
+<h1>Le canal et l’industrie du verre</h1>
+<p>
+Les historiens considèrent que <b>la production industrielle du verre débute en France avec l’implantation à Givors en 1750 d’une verrerie royale</b>, associée à un monopole dans la production. L’établissement se distingue par sa taille, ses effectifs et le procédé technique de fabrication.<br/><br/>
+
+<b>La verrerie de Givors a la particularité d’utiliser le charbon plutôt que le bois</b>. Il permet d’atteindre les températures requises de fusion de la matière vitrifiée (à 1500 degrés), en consommant moins de ressources. Le choix par l’Etat de créer un monopole à Givors sur l’industrie du verre alimentée au charbon s’explique par le besoin de rationnaliser l’utilisation de plus en plus intensive du bois dans la région.<br/><br/>
+
+La production du verre relève jusque là d’une proto-industrie diffuse, souvent localisée en forêts (au plus près du combustible), et notamment en Franche-Comté. Les maitres verriers francs-comtois écoulent principalement leurs productions en région lyonnaise, ce qui favorise leur <b>projection dans la vallée du Gier</b>.
+</p>

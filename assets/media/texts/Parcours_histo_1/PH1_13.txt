@@ -1,0 +1,2 @@
+<h1 class="visit_number">Section 6</h1>
+<h1>Les forges de l'Horme</h1>

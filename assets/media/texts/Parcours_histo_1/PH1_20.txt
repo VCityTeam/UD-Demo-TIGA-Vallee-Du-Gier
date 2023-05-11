@@ -1,0 +1,9 @@
+<h1 class="visit_number">Section 10</h1>
+<h1>L’usine des Etaings</h1>
+<p>
+Dernier grand site industriel historique de Rive-de-Gier construit au XIXe siècle, le quartier du Couzon accueille les usines Arbel à partir des années 1870 pour la fabrication de grosses pièces de forges pour le marché du ferroviaire (roues de locomotives, wagons…).<br/><br/>
+
+Quelques 300 ouvriers travaillent alors aux forges du Couzon, équipées de marteaux pilons et laminoirs. Les marteaux pilon servent à frapper les pièces d’acier de grande dimension pour leur donner la forme souhaitée, tandis que les plaques de métal refroidies sont compressées entre les rouleaux des laminoirs pour en augmenter la résistance.<br/><br/>
+
+<b>L’évolution du site illustre l’évolution des débouchés de la métallurgie-mécanique</b> dans l’entre-deux-guerres. En 1934, la société Duralumin fondée en 1912 rachète les établissements pour en exploiter les laminoirs. La société tire son nom d’un nouvel alliage léger à base d’aluminium, de cuivre, de magnésium et de manganèse, breveté par ses ingénieurs : le duralumin. Avec cet alliage, la société forme des tôles et des barres imposantes pour <b>l’aéronautique</b> (carlingue, hélices…) ou <b>l’automobile</b> (pare-chocs). <b>Les transformations de la société s’imposent aux productions industrielles et introduisent une diversification des productions</b> (chapitre 2).
+</p>

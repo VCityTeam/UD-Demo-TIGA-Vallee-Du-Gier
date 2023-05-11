@@ -1,0 +1,15 @@
+<h1 class="visit_number">Section 1</h1>
+<h1>Approvisionner Lyon, un enjeu régional</h1>
+<p>
+En 1821, Lyon est la deuxième ville de France avec 150 000 habitants. Elle n’est ni une capitale ni un port maritime mais son poids démographique rejoint celui des plus grandes villes européennes du XIXe siècle.<br/><br/>
+
+Au XVIIIe siècle, le marché lyonnais en essor est devenu de plus en plus dépendant des productions du bassin stéphanois pour certains biens de consommation courante (bois, verre, armes).<br/><br/>
+
+<b>Un enjeu régional majeur est donc de pouvoir relier efficacement le bassin stéphanois au bassin lyonnais pour assurer l’approvisionnement de la ville de Lyon.</b><br/><br/>
+
+Au-delà, l’idée de construire un nouveau canal des deux mers par la Loire et le Rhône est ancienne et a régulièrement ressurgi dans les projets des corps des ingénieurs au cours du 16 et 17e siècle.<br/><br/>
+
+A la fin du 18ième siècle, cette préoccupation centrale de l’Etat se concrétise par le soutien au chantier d’un nouveau canal lancé en 1760 de Saint-Etienne au Rhône. Inauguré en 1780, il relie Givors à Rive-de-Gier.</p>
+<div class="img_div">
+    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
+</div>

@@ -1,0 +1,11 @@
+<h1 class="visit_number">Section 4</h1>
+<h1>Une métallurgie à l’anglaise</h1>
+<p>
+<b>La culture technique anglaise dans le domaine de l’industrie lourde et des transports industriels</b> a évolué radicalement dans les dernières décennies du XVIIIe siècle.<br/><br/>
+
+Les sites de production métallurgique (aciéries, fonderies), implantés à proximité des gisements miniers, se sont considérablement perfectionnés. Le charbon issu de l’exploitation minière est de plus en plus transporté par <b>des wagons sur rail (en bois), tirés par des chevaux ou utilisant la pente, ou encore à partir de 1802 et pour de rares installations, tractés au moyen de machines à vapeur</b>.<br/><br/>
+
+<b>Ce sont des ingénieurs du corps des Mines</b>, et en particulier les ingénieurs de Gallois et Beaunier, <b>qui introduisent le chemin de fer en France</b> dans les années 1820.<br/><br/>
+
+<b>L’ingénieur Beaunier</b> agit alors en relation avec l’exploitation du bassin houiller stéphanois dont il a la responsabilité. Il est également le fondateur et premier directeur de l’École des Mines de Saint-Etienne ouverte en 1816. <b>De Gallois investit</b> en parallèle dans des grands projets métallurgiques, notamment dans la localité de Terrenoire.
+</p>

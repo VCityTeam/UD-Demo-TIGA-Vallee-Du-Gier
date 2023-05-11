@@ -1,0 +1,18 @@
+<h1 class="visit_number">Section 1</h1>
+<h1>Approvisionner Lyon, un enjeu régional</h1>
+<p>
+Les abords du canal font l’objet d’une industrialisation rapide dans la première décennie qui suit son ouverture. <b>C’est une industrie du verre qui précède de plusieurs décennies l’industrie des maitres des forges.</b><br/><br/>
+
+Pour en savoir plus :<br/><br/>
+Laferrère Michel (1993), « L'industrie du verre dans la région Rhône-Alpes », Revue de géographie de Lyon, vol. 68, n°1, p. 41-50.<br/><br/>
+
+Garden Maurice (1973), « Les verriers de Givors au XVIIIe siècle. Les origines d'une population ouvrière spécialisée », Annales de démographie historique, p. 291-304.<br/><br/>
+
+<b>Les travaux et archives à l’origine de la cartographie :</b><br/><br/>
+
+Sodezza Guillaume (2014), Vers un atlas morphogénétique de la vallée du Gier : caractérisation des éléments et structures matériels hérités. Thèse de doctorat en géographie, Université Lumières Lyon 3. Financement CIFRE Agence d’Urbanisme de St-Etienne-Métropole (EPURE). 
+http://www.theses.fr/2014LYO30016
+</p>
+<br/>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
+<p>Sd. Projet de chemin de fer pour le prolongement du canal de Givors jusqu’à Grand Croix par Sorbier (la vallée du Gier vers 1840) – B.N.F, base <a href="https://gallica.bnf.fr/ark:/12148/btv1b53062061p/f1.item.r=canal%20de%20Givors.zoom">Gallica</a></p>

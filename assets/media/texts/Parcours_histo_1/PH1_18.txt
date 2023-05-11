@@ -1,0 +1,7 @@
+<h1 class="visit_number">Section 10</h1>
+<h1>L’usine des Etaings</h1>
+<p>
+Les choix de production effectués plusieurs générations auparavant sur les plus grands sites industriels de la vallée imposent encore leurs orientations. C’est manifeste pour l’usine des Etaings à Rive-de-Gier.<br/><br/>
+
+Si cette dernière est aujourd’hui encore spécialisée dans la production de plaques de tôles en acier de très grande dimension, c’est parce que les <b>frères Marrel l’ont construite en 1867 pour produire des plaques de blindage pour la marine</b>.
+</p>

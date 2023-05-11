@@ -1,0 +1,9 @@
+<h1 class="visit_number">Section 3</h1>
+<h1>Le premier bassin houiller exploité en France</h1>
+<p>
+Le bassin charbonnier de la Loire est <b>historiquement le premier bassin à être exploité avec les techniques</b> modernes en France. Il fournit la moitié de la production nationale dans la première moitié du XIXe siècle.<br/><br/>
+
+<b>La loi de 1810 reconnait un intérêt national à l’exploitation du charbon stéphanois</b> et en règlemente l’activité par l’institution d’un régime de concessions. Quelques années plus tard, l’École des Mines de Saint-Etienne est inaugurée pour constituer des corps d’ingénieurs dédiés à l’exploitation du bassin stéphanois.<br/><br/>
+
+<b>Le soutien de l’Etat à l’exploitation des gisements houillers du bassin stéphanois et de la vallée du Gier</b> s’explique par le caractère stratégique attribué à ces gisements. Ils doivent permettre de réduire la dépendance de la région lyonnaise aux ressources en bois, plus rares et plus chères. L’exploitation du charbon de la Loire doit surtout permettre de réduire la dépendance du territoire national aux importations de métaux bruts, en permettant le <b>développement d’une métallurgie à l’anglaise au début du 19e siècle</b>.
+</p>
