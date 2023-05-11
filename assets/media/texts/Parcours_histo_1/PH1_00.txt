@@ -1,7 +1,6 @@
-<h1 class="visit_number">Section 1</h1>
 <h1>Approvisionner Lyon, un enjeu régional</h1>
 <p>
-En 1821, Lyon est la deuxième ville de France avec 150 000 habitants. Elle n’est ni une capitale ni un port maritime mais son poids démographique rejoint celui des plus grandes villes européennes du XIXe siècle.<br/><br/>
+<b>En 1821, Lyon est la deuxième ville de France</b> avec 150 000 habitants. Elle n’est ni une capitale ni un port maritime mais son poids démographique rejoint celui des plus grandes villes européennes du XIXe siècle.<br/><br/>
 
 Au XVIIIe siècle, le marché lyonnais en essor est devenu de plus en plus dépendant des productions du bassin stéphanois pour certains biens de consommation courante (bois, verre, armes).<br/><br/>
 

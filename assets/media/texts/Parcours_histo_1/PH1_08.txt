@@ -1,4 +1,4 @@
-<h1 class="visit_number">Section 4</h1>
+
 <h1>Une métallurgie à l’anglaise</h1>
 <p>
 <b>La ligne de chemin de fer de Saint-Etienne à Lyon est inaugurée en 1832</b>.

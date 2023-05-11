@@ -1,4 +1,4 @@
-<h1 class="visit_number">Section 3</h1>
+
 <h1>Le premier bassin houiller exploité en France</h1>
 <p>
 Le bassin charbonnier de la Loire est <b>historiquement le premier bassin à être exploité avec les techniques</b> modernes en France. Il fournit la moitié de la production nationale dans la première moitié du XIXe siècle.<br/><br/>
