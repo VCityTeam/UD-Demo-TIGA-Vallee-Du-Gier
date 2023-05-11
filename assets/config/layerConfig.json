@@ -143,6 +143,20 @@
           "color": "#0000FF"
         }
       }
+    },
+    {
+      "id": "mines",
+      "url": "../assets/layers/PUITS_MINE_3946.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#FF0000",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#FF0000"
+        }
+      }
     }
   ],
   "LabelLayers": [

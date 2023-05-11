@@ -324,8 +324,7 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "mines"
                     ],
                     "medias": [
                         "PH1_06"
