@@ -13,6 +13,16 @@
   color: white;
 }
 
+.green_disabled {
+  background: #8491304d;
+  color: white;
+}
+
+.blue_disabled {
+  background: #537eb04d;
+  color: white;
+}
+
 .grey {
   background: #c0cbd3;
   color: white;
@@ -118,7 +128,15 @@ button {
 .visit_section {
   height: 100vh;
   position: relative;
+  padding: 0px 10vw 0px 10vw;
+}
+
+#visit_section_1 {
   padding: 5vh 10vw 0px 10vw;
+}
+
+#visit_section_2 {
+  height: 60vh;
 }
 
 .intro_div {
@@ -152,8 +170,7 @@ button {
 }
 
 .title_div {
-  position: absolute;
-  top: 25vh;
+  position: relative;
   height: 10vh;
   width: 80vw;
 }
@@ -184,16 +201,14 @@ button {
 }
 
 .description_div {
-  position: absolute;
-  top: 35vh;
+  position: relative;
   height: 10vh;
   width: 80vw;
   font-size: 2.3vh;
 }
 
 .visit_choice_div {
-  position: absolute;
-  top: 45vh;
+  position: relative;
   height: 35vh;
   width: 80vw;
   display: flex;
@@ -236,8 +251,7 @@ button {
 }
 
 .open_visit_div {
-  position: absolute;
-  top: 85vh;
+  position: relative;
   height: 12vh;
   width: 80vw;
   background: #fcf9e8;
@@ -245,6 +259,7 @@ button {
   border-bottom: 3px solid #e5127b;
   display: flex;
   flex-direction: row;
+  margin-top: 3vh;
 }
 
 .open_visit_desc {
