@@ -1,22 +1,6 @@
 {
     "layers": [
         {
-            "description": "Bâtiments industriels",
-            "id": "BATI-INDUS",
-            "style": {
-                "color": "#202020",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Bâtiments non industriels",
-            "id": "BATI-AUTRE",
-            "style": {
-                "color": "#F5F5F5",
-                "type": "plain"
-            }
-        },
-        {
             "description": "Zones d'activités économiques",
             "id": "zae",
             "style": {
@@ -47,49 +31,9 @@
                 "color": "rgb(255,150,150)",
                 "type": "text"
             }
-        },
-        {
-            "description": "Fond cartographique IGN",
-            "id": "baseMapLayer_0",
-            "style": {
-                "path": "../assets/logos/fond_carto.png",
-                "type": "image"
-            }
-        },
-        {
-            "description": "Fond orthophoto IGN",
-            "id": "baseMapLayer_1",
-            "style": {
-                "path": "../assets/logos/fond_ortho.png",
-                "type": "image"
-            }
         }
     ],
     "filters": [
-        {
-            "description": "Bâtiments industriels usage commercial",
-            "id": "BATI_INDUS_HAUTEUR",
-            "style": {
-                "color": "#ff0000",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Filtre noms communes",
-            "id": "NOMS_COM",
-            "style": {
-                "color": "green",
-                "type": "text"
-            }
-        },
-        {
-            "description": "Filtre communes",
-            "id": "COMS",
-            "style": {
-                "color": "blue",
-                "type": "border"
-            }
-        },
         {
             "description": "Entreprises individuelles",
             "id": "TypeEffect_1",
