@@ -87,6 +87,20 @@
           "color": "#C0CBD3"
         }
       }
+    },
+    {
+      "id": "bati_1812",
+      "url": "../assets/layers/Bati_vallee_du_Gier_1812_2022.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#FF0000",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "#FF0000"
+        }
+      }
     }
   ],
   "LabelLayers": [
