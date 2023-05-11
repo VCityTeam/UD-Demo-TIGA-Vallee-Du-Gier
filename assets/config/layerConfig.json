@@ -94,11 +94,11 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#FF00FF",
-          "opacity": 0.6
+          "color": "#EF9217",
+          "opacity": 1
         },
         "stroke": {
-          "color": "#FF00FF"
+          "color": "#EF9217"
         }
       }
     },
@@ -108,25 +108,25 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#FFFF00",
-          "opacity": 0.6
+          "color": "#6D53B0",
+          "opacity": 1
         },
         "stroke": {
-          "color": "#FFFF00"
+          "color": "#6D53B0"
         }
       }
     },
     {
-      "id": "bati_1812",
+      "id": "bati_1812_2022",
       "url": "../assets/layers/Bati_vallee_du_Gier_1812_2022.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#FF0000",
-          "opacity": 0.6
+          "color": "#F2F59F",
+          "opacity": 1
         },
         "stroke": {
-          "color": "#FF0000"
+          "color": "#F2F59F"
         }
       }
     },
@@ -136,11 +136,11 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#0000FF",
+          "color": "#71D2D1",
           "opacity": 0.6
         },
         "stroke": {
-          "color": "#0000FF"
+          "color": "#71D2D1"
         }
       }
     },
@@ -150,11 +150,53 @@
       "crs": "EPSG:3946",
       "style": {
         "fill": {
-          "color": "#FF0000",
+          "color": "#B7484B",
           "opacity": 1
         },
         "stroke": {
-          "color": "#FF0000"
+          "color": "#B7484B"
+        }
+      }
+    },
+    {
+      "id": "fleuves_gier",
+      "url": "../assets/layers/SURFACE_EAU_3946.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#71D2D1",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#71D2D1"
+        }
+      }
+    },
+    {
+      "id": "voies_ferrees",
+      "url": "../assets/layers/voies_ferrees.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#020202",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#020202"
+        }
+      }
+    },
+    {
+      "id": "ancien_trace_gier",
+      "url": "../assets/layers/ancien_trace_gier.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#71D2D1",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#71D2D1"
         }
       }
     }

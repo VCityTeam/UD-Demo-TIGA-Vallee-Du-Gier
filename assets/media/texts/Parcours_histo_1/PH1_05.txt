@@ -7,3 +7,6 @@ Le bassin charbonnier de la Loire est <b>historiquement le premier bassin à êt
 
 <b>Le soutien de l’Etat à l’exploitation des gisements houillers du bassin stéphanois et de la vallée du Gier</b> s’explique par le caractère stratégique attribué à ces gisements. Ils doivent permettre de réduire la dépendance de la région lyonnaise aux ressources en bois, plus rares et plus chères. L’exploitation du charbon de la Loire doit surtout permettre de réduire la dépendance du territoire national aux importations de métaux bruts, en permettant le <b>développement d’une métallurgie à l’anglaise au début du 19e siècle</b>.
 </p>
+<div class="img_div">
+    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/05.png"/>
+</div>
