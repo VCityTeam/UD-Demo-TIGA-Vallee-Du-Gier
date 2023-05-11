@@ -89,6 +89,34 @@
       }
     },
     {
+      "id": "sites_histo",
+      "url": "../assets/layers/Sites_industriels_historiques.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#FF00FF",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "#FF00FF"
+        }
+      }
+    },
+    {
+      "id": "zone_bati_1812",
+      "url": "../assets/layers/Zones_baties_en_1812.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#FFFF00",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "#FFFF00"
+        }
+      }
+    },
+    {
       "id": "bati_1812",
       "url": "../assets/layers/Bati_vallee_du_Gier_1812_2022.geojson",
       "crs": "EPSG:3946",
@@ -99,6 +127,20 @@
         },
         "stroke": {
           "color": "#FF0000"
+        }
+      }
+    },
+    {
+      "id": "canal",
+      "url": "../assets/layers/Canal_du_Gier_en_1850_POP_SCIENCES.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#0000FF",
+          "opacity": 0.6
+        },
+        "stroke": {
+          "color": "#0000FF"
         }
       }
     }
