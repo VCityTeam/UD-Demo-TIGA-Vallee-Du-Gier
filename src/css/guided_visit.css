@@ -338,6 +338,10 @@ button:hover .blue_img {
   width: 46%;
 }
 
+.smaller_width {
+  width: 30%;
+}
+
 .content_panel {
   padding: 0px 30px 0px 30px;
 }

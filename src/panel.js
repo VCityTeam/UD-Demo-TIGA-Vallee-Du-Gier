@@ -30,16 +30,24 @@ export class Panel {
     this.width = type;
     switch (type) {
       case 'half':
-        this.mainPanel.classList.add('half_width');
         this.mainPanel.classList.remove('full_width');
+        this.mainPanel.classList.remove('smaller_width');
+        this.mainPanel.classList.add('half_width');
         break;
       case 'full':
         this.mainPanel.classList.remove('half_width');
+        this.mainPanel.classList.remove('smaller_width');
         this.mainPanel.classList.add('full_width');
+        break;
+      case 'smaller':
+        this.mainPanel.classList.remove('half_width');
+        this.mainPanel.classList.remove('full_width');
+        this.mainPanel.classList.add('smaller_width');
         break;
       default:
         this.mainPanel.classList.remove('half_width');
         this.mainPanel.classList.remove('full_width');
+        this.mainPanel.classList.remove('smaller_width');
     }
   }
 

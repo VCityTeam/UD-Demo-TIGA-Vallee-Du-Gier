@@ -256,7 +256,7 @@
                 {
                     "previous": 0,
                     "next": 2,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -321,7 +321,7 @@
                 {
                     "previous": 5,
                     "next": 7,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -360,7 +360,7 @@
                 {
                     "previous": 8,
                     "next": 10,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -399,7 +399,7 @@
                 {
                     "previous": 11,
                     "next": 13,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -451,7 +451,7 @@
                 {
                     "previous": 15,
                     "next": 17,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -477,7 +477,7 @@
                 {
                     "previous": 17,
                     "next": 19,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
