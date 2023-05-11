@@ -331,7 +331,7 @@ button:hover .blue_img {
 }
 
 .full_width {
-  width: 90%;
+  width: 96%;
 }
 
 .half_width {
@@ -340,6 +340,11 @@ button:hover .blue_img {
 
 .content_panel {
   padding: 0px 30px 0px 30px;
+}
+
+.content_panel img {
+  display: block;
+  margin: 0px auto;
 }
 
 .caption_panel {
@@ -492,11 +497,7 @@ output {
   z-index: 9;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.95);
-}
-
-.bg_white {
-  background: white;
+  background: #fcf9e8;
 }
 
 .img_div img {
