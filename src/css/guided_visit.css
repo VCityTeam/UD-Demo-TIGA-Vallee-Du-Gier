@@ -508,6 +508,12 @@ output {
 
 .fit_width {
   width: 100%;
+  max-height: 100%;
+}
+
+.bigger_img {
+  width: 50%;
+  max-height: 100%;
 }
 
 .fit_height {

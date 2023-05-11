@@ -9,3 +9,6 @@ Les sites de production métallurgique (aciéries, fonderies), implantés à pro
 
 <b>L’ingénieur Beaunier</b> agit alors en relation avec l’exploitation du bassin houiller stéphanois dont il a la responsabilité. Il est également le fondateur et premier directeur de l’École des Mines de Saint-Etienne ouverte en 1816. <b>De Gallois investit</b> en parallèle dans des grands projets métallurgiques, notamment dans la localité de Terrenoire.
 </p>
+<div class="img_div">
+    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/07.png"/>
+</div>

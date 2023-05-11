@@ -14,5 +14,5 @@ Sodezza Guillaume (2014), Vers un atlas morphogénétique de la vallée du Gier 
 http://www.theses.fr/2014LYO30016
 </p>
 <br/>
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/01.png"/>
 <p>Sd. Projet de chemin de fer pour le prolongement du canal de Givors jusqu’à Grand Croix par Sorbier (la vallée du Gier vers 1840) – B.N.F, base <a href="https://gallica.bnf.fr/ark:/12148/btv1b53062061p/f1.item.r=canal%20de%20Givors.zoom">Gallica</a></p>

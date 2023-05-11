@@ -3,3 +3,4 @@
 <p>
 <b>Les productions s’orientent rapidement vers le matériel de guerre</b>. Un atelier est réservé à la production d’obus dès 1894, à l’artillerie à partir de 1900. La construction de locomotives dans les ateliers de Saint-Chamond, à destination de l’artillerie, débute pendant la Première guerre mondiale. <b>400 « char Saint-Chamond »</b> y sont également produits, les deuxièmes en France après les chars Renault.
 </p>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/11.jpg"/>

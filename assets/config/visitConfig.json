@@ -295,7 +295,7 @@
                 {
                     "previous": 3,
                     "next": 5,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -347,7 +347,7 @@
                 {
                     "previous": 7,
                     "next": 9,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -386,7 +386,7 @@
                 {
                     "previous": 10,
                     "next": 12,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -412,7 +412,7 @@
                 {
                     "previous": 12,
                     "next": 14,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -490,7 +490,7 @@
                 {
                     "previous": 18,
                     "next": 20,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -516,7 +516,7 @@
                 {
                     "previous": 20,
                     "next": 22,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
@@ -529,7 +529,7 @@
                 {
                     "previous": 21,
                     "next": 23,
-                    "type": "half",
+                    "type": "full",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
