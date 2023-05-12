@@ -90,7 +90,7 @@
     },
     {
       "id": "sites_histo",
-      "url": "../assets/layers/Sites_industriels_historiques.geojson",
+      "url": "../assets/layers/Industries_1830_1880.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {

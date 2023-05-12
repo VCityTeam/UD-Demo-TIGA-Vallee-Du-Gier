@@ -73,7 +73,7 @@
             }
         },
         {
-            "description": "Sites industriels historiques construits entre 1830 et 1880 (d'après différents plans historiques)",
+            "description": "Principaux sites industriels historiques construits entre 1830 et 1880 (d'après différents plans historiques)",
             "id": "sites_histo",
             "style": {
                 "color": "#EF9217",
