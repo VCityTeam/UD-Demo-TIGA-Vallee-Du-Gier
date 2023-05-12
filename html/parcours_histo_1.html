@@ -292,7 +292,7 @@
 
           const conf = visitConfig.visits.find((v) => v.id == 'PH1');
           visit.init(conf, captionConfig);
-          visit.filterLayers(['baseMapLayer_1', 'communes']);
+          visit.filterLayers(['baseMapLayer_1', 'communes', 'BATI-AUTRE', 'BATI-INDUS']);
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';
