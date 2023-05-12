@@ -129,7 +129,7 @@
                     "next": 2,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ],
@@ -187,7 +187,7 @@
                     "next": 3,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "BATI-INDUS",
                         "BATI-AUTRE"
                     ],
@@ -245,7 +245,7 @@
                     "next": 1,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_00"
@@ -256,15 +256,13 @@
                     "next": 2,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "communes",
                         "noms_communes",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
-                        "fleuves_gier",
-                        "trace_gier_1894"
+                        "fleuves_gier"
                     ],
                     "filters": [
                         {
@@ -316,7 +314,7 @@
                     "next": 3,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_02"
@@ -327,15 +325,13 @@
                     "next": 4,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "communes",
                         "noms_communes",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
-                        "fleuves_gier",
-                        "trace_gier_1894"
+                        "fleuves_gier"
                     ],
                     "filters": [
                         {
@@ -387,7 +383,7 @@
                     "next": 5,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_04"
@@ -398,7 +394,7 @@
                     "next": 6,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_05"
@@ -409,7 +405,7 @@
                     "next": 24,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "mines",
                         "communes",
                         "noms_communes"
@@ -463,7 +459,7 @@
                     "next": 8,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_07"
@@ -474,7 +470,7 @@
                     "next": 9,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_08"
@@ -485,16 +481,14 @@
                     "next": 10,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "noms_communes",
-                        "trace_gier_1894"
+                        "noms_communes"
                     ],
                     "filters": [
                         {
@@ -546,15 +540,14 @@
                     "next": 11,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -594,7 +587,7 @@
                     "next": 12,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_11"
@@ -605,15 +598,14 @@
                     "next": 13,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -653,7 +645,7 @@
                     "next": 14,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_13"
@@ -664,16 +656,15 @@
                     "next": 16,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
                         "noms_communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -726,15 +717,14 @@
                     "next": 16,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -763,15 +753,14 @@
                     "next": 17,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -811,15 +800,14 @@
                     "next": 18,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -859,15 +847,14 @@
                     "next": 19,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -907,7 +894,7 @@
                     "next": 20,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_19"
@@ -918,15 +905,14 @@
                     "next": 21,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -966,7 +952,7 @@
                     "next": 22,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_21"
@@ -977,7 +963,7 @@
                     "next": 23,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1"
+                        "Ortho_IGN"
                     ],
                     "medias": [
                         "PH1_22"
@@ -988,15 +974,14 @@
                     "next": 25,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "bati_1812_2022",
                         "zone_bati_1812",
-                        "canal",
                         "voies_ferrees",
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
-                        "trace_gier_1894"
+                        "canal"
                     ],
                     "filters": [
                         {
@@ -1036,7 +1021,7 @@
                     "next": 7,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
+                        "Ortho_IGN",
                         "mines",
                         "communes",
                         "noms_communes"
@@ -1090,15 +1075,14 @@
                     "next": 25,
                     "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1",
-                        "canal",
+                        "Ortho_IGN",
                         "voies_ferrees",
                         "fleuves_gier",
                         "communes",
-                        "trace_gier_1894",
                         "bati_1929_2022",
                         "bati_1929",
-                        "bati_indus_1929"
+                        "bati_indus_1929",
+                        "canal"
                     ],
                     "filters": [
                         {

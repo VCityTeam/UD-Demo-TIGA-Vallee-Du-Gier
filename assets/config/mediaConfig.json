@@ -359,6 +359,15 @@
                     "value": "../assets/media/texts/Parcours_histo_1/PH1_24.txt"
                 }
             ]
+        },
+        {
+            "id": "PH1_25",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_1/PH1_25.txt"
+                }
+            ]
         }
     ]
 }

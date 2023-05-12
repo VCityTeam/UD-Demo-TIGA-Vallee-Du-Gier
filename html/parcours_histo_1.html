@@ -263,15 +263,6 @@
         const app = new vdg_app.Templates.AllWidget();
 
         app.start('../assets/config/layerConfig.json').then((config) => {
-          ////// BaseMap Widget
-          const baseMap = new vdg_app.Widgets.BaseMap(
-            app.view3D.getItownsView(),
-            config['baseMapLayers'],
-            app.extent,
-            app.config['projection']
-          );
-          app.addModuleView('baseMap', baseMap);
-
           vdg_app.addLabelLayers(config, app.view3D.getItownsView());
 
           const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
@@ -292,7 +283,7 @@
 
           const conf = visitConfig.visits.find((v) => v.id == 'PH1');
           visit.init(conf, captionConfig);
-          visit.filterLayers(['baseMapLayer_1', 'communes', 'BATI-AUTRE', 'BATI-INDUS']);
+          visit.filterLayers(['Ortho_IGN', 'communes', 'BATI-AUTRE', 'BATI-INDUS']);
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';

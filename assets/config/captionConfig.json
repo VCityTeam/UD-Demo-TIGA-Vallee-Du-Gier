@@ -58,7 +58,7 @@
         },
         {
             "description": "Canal de Givors à Rive-de-Gier et rivière Gier",
-            "id": "canal",
+            "id": "fleuves_gier",
             "style": {
                 "color": "#71D2D1",
                 "type": "plain"

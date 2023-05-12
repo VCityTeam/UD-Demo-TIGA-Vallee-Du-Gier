@@ -33,31 +33,14 @@
     "layer_name": "wms_elevation_test"
   },
   "background_image_layer": {
-    "url": "https://wxs.ign.fr/cartes/geoportail/r/wms",
-    "name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
+    "url": "https://wxs.ign.fr/ortho/geoportail/r/wms",
+    "name": "ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO",
     "version": "1.3.0",
     "format": "image/jpeg",
-    "layer_name": "Carte_IGN_1",
+    "layer_name": "Ortho_IGN",
+    "image": "https://download.data.grandlyon.com/catalogue/srv/fre//resources.get?uuid=7e0bab06-ff3b-453e-9b72-e16b8f08d926&fname=ortho2018_s.png",
     "maxSubdivisionLevel": 15
   },
-  "baseMapLayers": [
-    {
-      "url": "https://wxs.ign.fr/cartes/geoportail/r/wms",
-      "name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
-      "version": "1.3.0",
-      "format": "image/jpeg",
-      "layer_name": "Carte_IGN_1",
-      "image": "../assets/img/ign_ortho.png"
-    },
-    {
-      "url": "https://wxs.ign.fr/ortho/geoportail/r/wms",
-      "name": "ORTHOIMAGERY.ORTHOPHOTOS.BDORTHO",
-      "version": "1.3.0",
-      "format": "image/jpeg",
-      "layer_name": "Ortho_IGN",
-      "image": "https://download.data.grandlyon.com/catalogue/srv/fre//resources.get?uuid=7e0bab06-ff3b-453e-9b72-e16b8f08d926&fname=ortho2018_s.png"
-    }
-  ],
   "GeoJSONLayers": [
     {
       "id": "communes",
@@ -131,20 +114,6 @@
       }
     },
     {
-      "id": "canal",
-      "url": "../assets/layers/Canal_du_Gier_en_1850_POP_SCIENCES.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#71D2D1",
-          "opacity": 0.6
-        },
-        "stroke": {
-          "color": "#71D2D1"
-        }
-      }
-    },
-    {
       "id": "mines",
       "url": "../assets/layers/PUITS_MINE_3946.geojson",
       "crs": "EPSG:3946",
@@ -160,12 +129,26 @@
     },
     {
       "id": "fleuves_gier",
-      "url": "../assets/layers/SURFACE_EAU_3946.geojson",
+      "url": "../assets/layers/surface_eau_gier.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
           "color": "#71D2D1",
           "opacity": 1
+        },
+        "stroke": {
+          "color": "#71D2D1"
+        }
+      }
+    },
+    {
+      "id": "canal",
+      "url": "../assets/layers/Canal_du_Gier_en_1850_POP_SCIENCES.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#71D2D1",
+          "opacity": 0.6
         },
         "stroke": {
           "color": "#71D2D1"
@@ -183,34 +166,6 @@
         },
         "stroke": {
           "color": "#020202"
-        }
-      }
-    },
-    {
-      "id": "ancien_trace_gier",
-      "url": "../assets/layers/ancien_trace_gier.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#71D2D1",
-          "opacity": 1
-        },
-        "stroke": {
-          "color": "#71D2D1"
-        }
-      }
-    },
-    {
-      "id": "trace_gier_1894",
-      "url": "../assets/layers/Trace_du Gier_1894_12052023.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#71D2D1",
-          "opacity": 1
-        },
-        "stroke": {
-          "color": "#71D2D1"
         }
       }
     },

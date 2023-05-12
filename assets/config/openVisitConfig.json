@@ -37,7 +37,7 @@
             "default": "show"
         },
         {
-            "id": "baseMapLayer_1",
+            "id": "Ortho_IGN",
             "default": "no_caption"
         }
     ],
