@@ -260,7 +260,12 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier"
                     ],
                     "medias": [
                         "PH1_01"
@@ -324,7 +329,27 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
                         "mines"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_06"
@@ -363,7 +388,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_09"
@@ -376,7 +407,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_10"
@@ -402,7 +439,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_12"
@@ -428,7 +471,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_14"
@@ -437,11 +486,17 @@
                 {
                     "previous": 14,
                     "next": 16,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_15"
@@ -450,11 +505,17 @@
                 {
                     "previous": 15,
                     "next": 17,
-                    "type": "smaller",
+                    "type": "half",
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_16"
@@ -467,7 +528,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_17"
@@ -480,7 +547,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_18"
@@ -506,7 +579,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_20"
@@ -545,7 +624,13 @@
                     "layers": [
                         "baseMapLayer_1",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "sites_histo"
                     ],
                     "medias": [
                         "PH1_23"
