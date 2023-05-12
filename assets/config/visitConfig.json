@@ -261,11 +261,30 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE",
+                        "communes",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_01"
@@ -331,7 +350,8 @@
                         "baseMapLayer_1",
                         "BATI-INDUS",
                         "BATI-AUTRE",
-                        "mines"
+                        "mines",
+                        "communes"
                     ],
                     "filters": [
                         {
@@ -394,7 +414,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_09"
@@ -413,7 +452,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_10"
@@ -445,7 +503,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_12"
@@ -477,7 +554,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_14"
@@ -496,7 +592,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_15"
@@ -515,7 +630,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_16"
@@ -534,7 +668,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_17"
@@ -553,7 +706,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_18"
@@ -585,7 +757,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_20"
@@ -630,7 +821,26 @@
                         "canal",
                         "voies_ferrees",
                         "fleuves_gier",
-                        "sites_histo"
+                        "sites_histo",
+                        "communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_23"

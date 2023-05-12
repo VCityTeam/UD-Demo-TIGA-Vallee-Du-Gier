@@ -98,6 +98,7 @@ export class Visit {
   createLayersCaption() {
     let hasCaption = false;
     const layerPanel = document.getElementById('layer_panel');
+    layerPanel.innerHTML = '';
     this.view.layerManager.getLayers().forEach((layer) => {
       if (layer.visible) {
         const id = this.filterManager.layerIsFilter(layer.id)
@@ -110,7 +111,7 @@ export class Visit {
               this.panel.createCaption(
                 layerCaption.style,
                 layerCaption.description,
-                15
+                10
               )
             );
             break;

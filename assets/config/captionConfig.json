@@ -31,6 +31,54 @@
                 "color": "rgb(255,150,150)",
                 "type": "text"
             }
+        },
+        {
+            "description": "Bati 1812 2022",
+            "id": "bati_1812_2022",
+            "style": {
+                "color": "#F2F59F",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Zones bati 1812",
+            "id": "zone_bati_1812",
+            "style": {
+                "color": "#6D53B0",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Mines",
+            "id": "mines",
+            "style": {
+                "color": "#B7484B",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Canal et fleuves",
+            "id": "canal",
+            "style": {
+                "color": "#71D2D1",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Voies ferrées",
+            "id": "voies_ferrees",
+            "style": {
+                "color": "#020202",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Sites histo",
+            "id": "sites_histo",
+            "style": {
+                "color": "#EF9217",
+                "type": "plain"
+            }
         }
     ],
     "filters": [
