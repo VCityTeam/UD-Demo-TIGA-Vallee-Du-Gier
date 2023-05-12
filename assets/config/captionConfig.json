@@ -52,7 +52,7 @@
             "description": "Mines",
             "id": "mines",
             "style": {
-                "color": "#B7484B",
+                "color": "#FF0000",
                 "type": "plain"
             }
         },
