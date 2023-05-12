@@ -534,3 +534,35 @@ output {
 #layer_button {
   background: #fcf9e8;
 }
+
+.info_button {
+  z-index: 11;
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  margin: 0px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+.info_div {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: fit-content;
+  max-width: 20%;
+  height: fit-content;
+  min-height: 30px;
+  background: rgba(252, 249, 232, 0.8);
+  border-radius: 10px;
+  margin-right: auto;
+  padding: 10px 35px 10px 10px;
+  font-size: 12px;
+}
+
+.info_button:hover + .info_div,
+.info_div:hover {
+  display: block;
+}
