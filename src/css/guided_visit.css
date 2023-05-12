@@ -366,10 +366,6 @@ button:hover .blue_img {
   margin-bottom: 4vh;
 }
 
-#close_button {
-  display: none !important;
-}
-
 .recap-button {
   position: relative;
   display: inline-block;
