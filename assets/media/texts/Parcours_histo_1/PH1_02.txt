@@ -9,4 +9,11 @@ La production du verre relève jusque là d’une proto-industrie diffuse, souve
 </p>
 <div class="img_div">
     <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/02.png"/>
+        <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">La verrerie royale de Givors, dans le centre-ville, vers 1890.<br/>
+Archives municipales de la villes de Givors.
+
+</div>
 </div>

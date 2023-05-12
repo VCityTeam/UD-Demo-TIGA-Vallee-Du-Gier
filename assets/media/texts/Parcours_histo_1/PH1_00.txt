@@ -11,4 +11,12 @@ Au-delà, l’idée de construire un nouveau canal des deux mers par la Loire et
 A la fin du 18ième siècle, cette préoccupation centrale de l’Etat se concrétise par le soutien au chantier d’un nouveau canal lancé en 1760 de Saint-Etienne au Rhône. Inauguré en 1780, il relie Givors à Rive-de-Gier.</p>
 <div class="img_div">
     <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/00.png"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">« Vue de l’entrée de la Ville de Lyon par le pont de la Guillotière », dessin de Pierre-Nicolas Wery (1770-1827), gravure de Benedikt Piringer (1780-1826), planche 1 dans François-Marie de Fortis (1768-1847), Atlas du voyage pittoresque et historique à Lyon et sur les rives du Rhône et de la Saône, Paris, Didot l’aîné, 1819.
+Bibliothèque municipale de Lyon, creative commons<br/>
+
+https://commons.wikimedia.org/wiki/Category:Lyon_in_the_1810s#/media/File:Vue_de_l%E2%80%99entr%C3%A9e_de_la_Ville_de_Lyon_par_le_pont_de_la_Guilloti%C3%A8re.jpg
+</div>
 </div>

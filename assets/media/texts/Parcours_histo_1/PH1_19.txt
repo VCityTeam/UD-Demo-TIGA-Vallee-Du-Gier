@@ -1,3 +1,6 @@
 
 <h1>L’usine des Etaings</h1>
 <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/19.png"/>
+<div class="info_text">
+Monsieur De Gallois, ingénieur en chef au Corps Royal des Mines, 1818, Des chemins de fer en Angleterre, notamment à Newcastle dans le Northumberland, Annales des Mines, Paris, p. 3. Droits : Creative commons.
+</div>

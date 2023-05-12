@@ -6,3 +6,8 @@
 Elle est la première ligne de chemin de fer à vapeur (locomotive des frères Seguin).
 </p>
 <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/08.png"/>
+<div class="info_text">
+Représentation du chemin de fer de Saint-Etienne à Lyon, tractée par des chevaux et les premières locomotives à vapeur. Wiki commons <br/>
+https://fr.wikipedia.org/wiki/Ligne_de_Saint-%C3%89tienne_%C3%A0_Lyon#/media/Fichier:Ch_de_fer_Lyon_StEtienne.png
+
+</div>

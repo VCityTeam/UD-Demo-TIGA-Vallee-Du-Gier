@@ -353,6 +353,10 @@ button:hover .blue_img {
   margin: 0px auto;
 }
 
+.info_text_panel {
+  bottom: 0%;
+}
+
 .caption_panel {
   flex-grow: 1;
 }
@@ -565,4 +569,8 @@ output {
 .info_button:hover + .info_div,
 .info_div:hover {
   display: block;
+}
+
+.info_text {
+  font-size: 12px;
 }

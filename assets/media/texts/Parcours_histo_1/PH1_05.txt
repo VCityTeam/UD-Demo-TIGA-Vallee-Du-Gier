@@ -9,4 +9,20 @@ Le bassin charbonnier de la Loire est <b>historiquement le premier bassin à êt
 </p>
 <div class="img_div">
     <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/05.png"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">Extrait de la carte du bassin houiller de Rive-de-Gier en 1850 centrée sur Rive-de-Gier. Les puits de mines, alors très nombruex, sont représentés par un point noir.
+Bibliothèque Nationale de France <br/><br/>
+
+https://gallica.bnf.fr/ark:/12148/btv1b8441781b/f1.item.r=rive%20de%20gier.zoom<br/><br/>
+
+
+
+Pour en savoir plus :<br/><br/>
+
+Morel Journel Christelle (1999), De la construction du bassin aux enjeux de la mémoire minière : les territoires du charbon en région stéphanoise (XIXème-XXème), Thèse de doctorat de géographie, Université Jean-Monnet de Saint-Etienne.
+
+
+    </div>
 </div>

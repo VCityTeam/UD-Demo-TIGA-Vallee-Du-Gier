@@ -11,4 +11,10 @@ Les sites de production métallurgique (aciéries, fonderies), implantés à pro
 </p>
 <div class="img_div">
     <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/07.png"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">
+    Monsieur De Gallois, ingénieur en chef au Corps Royal des Mines, 1818, Des chemins de fer en Angleterre, notamment à Newcastle dans le Northumberland, Annales des Mines, Paris, p. 3. Droits : Creative commons.
+    </div>
 </div>
