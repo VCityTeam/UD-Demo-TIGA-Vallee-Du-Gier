@@ -10,5 +10,5 @@ Au-delà, l’idée de construire un nouveau canal des deux mers par la Loire et
 
 A la fin du 18ième siècle, cette préoccupation centrale de l’Etat se concrétise par le soutien au chantier d’un nouveau canal lancé en 1760 de Saint-Etienne au Rhône. Inauguré en 1780, il relie Givors à Rive-de-Gier.</p>
 <div class="img_div">
-    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/00.jpg"/>
+    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/00.png"/>
 </div>

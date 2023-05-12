@@ -8,5 +8,5 @@ Les historiens considèrent que <b>la production industrielle du verre débute e
 La production du verre relève jusque là d’une proto-industrie diffuse, souvent localisée en forêts (au plus près du combustible), et notamment en Franche-Comté. Les maitres verriers francs-comtois écoulent principalement leurs productions en région lyonnaise, ce qui favorise leur <b>projection dans la vallée du Gier</b>.
 </p>
 <div class="img_div">
-    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/02.jpg"/>
+    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/02.png"/>
 </div>

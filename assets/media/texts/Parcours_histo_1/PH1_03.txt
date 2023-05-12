@@ -8,5 +8,5 @@ Dans les années 1760, à l’achèvement du monopole détenu par la verrerie ro
 Un historien local atteste d’une première fonte de verre en 1785. Dès 1830, Rive-de-Gier compte une trentaine de verreries qui emploient environ 1200 personnes, notamment dans les verreries de la famille Richarme spécialisées dans la fabrication de bouteilles.
 </p>
 <div class="img_div">
-    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/03.jpg"/>
+    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/03.png"/>
 </div>

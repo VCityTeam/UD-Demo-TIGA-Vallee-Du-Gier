@@ -5,4 +5,4 @@
 
 Elle est la première ligne de chemin de fer à vapeur (locomotive des frères Seguin).
 </p>
-<img class="bigger_img" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/08.png"/>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/08.png"/>
