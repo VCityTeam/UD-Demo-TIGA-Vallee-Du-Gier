@@ -245,9 +245,7 @@
                     "next": 1,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_00"
@@ -259,9 +257,8 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "communes",
+                        "noms_communes",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -284,20 +281,41 @@
                                     ]
                                 }
                             }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "Rive-de-Gier"
+                                    ]
+                                }
+                            }
                         }
                     ],
                     "medias": [
                         "PH1_01"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1817350.8127512932,
+                        "y": 5136556.153277763,
+                        "z": 6681.595047029804
+                    },
+                    "rotation": {
+                        "x": 0.4372485384286126,
+                        "y": -0.021137977602860868,
+                        "z": -0.04341426312873182,
+                        "w": 0.8980434863089272
+                    }
                 },
                 {
                     "previous": 1,
                     "next": 3,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_02"
@@ -308,9 +326,7 @@
                     "next": 4,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_03"
@@ -321,9 +337,7 @@
                     "next": 5,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_04"
@@ -334,9 +348,7 @@
                     "next": 6,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_05"
@@ -348,8 +360,6 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "mines",
                         "communes"
                     ],
@@ -380,9 +390,7 @@
                     "next": 8,
                     "type": "half",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_07"
@@ -393,9 +401,7 @@
                     "next": 9,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_08"
@@ -407,8 +413,6 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -445,8 +449,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -482,9 +484,7 @@
                     "next": 12,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_11"
@@ -496,8 +496,6 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -533,9 +531,7 @@
                     "next": 14,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_13"
@@ -547,8 +543,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -585,8 +579,6 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -623,8 +615,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -661,8 +651,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -699,8 +687,6 @@
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -736,9 +722,7 @@
                     "next": 20,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_19"
@@ -750,8 +734,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
@@ -787,9 +769,7 @@
                     "next": 22,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_21"
@@ -800,9 +780,7 @@
                     "next": 23,
                     "type": "full",
                     "layers": [
-                        "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "baseMapLayer_1"
                     ],
                     "medias": [
                         "PH1_22"
@@ -814,8 +792,6 @@
                     "type": "half",
                     "layers": [
                         "baseMapLayer_1",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
                         "bati_1812_2022",
                         "zone_bati_1812",
                         "canal",
