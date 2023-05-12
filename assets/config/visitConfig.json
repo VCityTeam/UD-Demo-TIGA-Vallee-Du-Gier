@@ -325,13 +325,62 @@
                 {
                     "previous": 2,
                     "next": 4,
-                    "type": "half",
+                    "type": "smaller",
                     "layers": [
-                        "baseMapLayer_1"
+                        "baseMapLayer_1",
+                        "communes",
+                        "noms_communes",
+                        "bati_1812_2022",
+                        "zone_bati_1812",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "trace_gier_1894"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "Rive-de-Gier"
+                                    ]
+                                }
+                            }
+                        }
                     ],
                     "medias": [
                         "PH1_03"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1825634.1155147378,
+                        "y": 5146988.429466115,
+                        "z": 1898.8259820362732
+                    },
+                    "rotation": {
+                        "x": 0.4372485384286126,
+                        "y": -0.021137977602860868,
+                        "z": -0.04341426312873182,
+                        "w": 0.8980434863089272
+                    }
                 },
                 {
                     "previous": 3,
@@ -444,6 +493,7 @@
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
+                        "noms_communes",
                         "trace_gier_1894"
                     ],
                     "filters": [
@@ -462,11 +512,34 @@
                                     ]
                                 }
                             }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "Rive-de-Gier"
+                                    ]
+                                }
+                            }
                         }
                     ],
                     "medias": [
                         "PH1_09"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1817350.8127512932,
+                        "y": 5136556.153277763,
+                        "z": 6681.595047029804
+                    },
+                    "rotation": {
+                        "x": 0.4372485384286126,
+                        "y": -0.021137977602860868,
+                        "z": -0.04341426312873182,
+                        "w": 0.8980434863089272
+                    }
                 },
                 {
                     "previous": 9,
@@ -503,7 +576,18 @@
                     ],
                     "medias": [
                         "PH1_10"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1817538.3881695361,
+                        "y": 5141514.648633239,
+                        "z": 1229.4871675562117
+                    },
+                    "rotation": {
+                        "x": 0.4105635176783608,
+                        "y": -0.012436998406938177,
+                        "z": -0.02760644476855162,
+                        "w": 0.9113291409965102
+                    }
                 },
                 {
                     "previous": 10,
@@ -551,7 +635,18 @@
                     ],
                     "medias": [
                         "PH1_12"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1820009.1263728342,
+                        "y": 5142322.755329827,
+                        "z": 2437.928344878265
+                    },
+                    "rotation": {
+                        "x": 0.3198940258060679,
+                        "y": 0.02687421680949098,
+                        "z": 0.07928400356464806,
+                        "w": 0.9437476545683301
+                    }
                 },
                 {
                     "previous": 12,
@@ -577,6 +672,7 @@
                         "fleuves_gier",
                         "sites_histo",
                         "communes",
+                        "noms_communes",
                         "trace_gier_1894"
                     ],
                     "filters": [
@@ -595,11 +691,35 @@
                                     ]
                                 }
                             }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "L'Horme",
+                                        "La Grand-Croix",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
                         }
                     ],
                     "medias": [
                         "PH1_14"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1819832.0088708946,
+                        "y": 5138798.2674899455,
+                        "z": 8775.998094950017
+                    },
+                    "rotation": {
+                        "x": 0.3198940258060679,
+                        "y": 0.02687421680949098,
+                        "z": 0.07928400356464806,
+                        "w": 0.9437476545683301
+                    }
                 },
                 {
                     "previous": 14,
