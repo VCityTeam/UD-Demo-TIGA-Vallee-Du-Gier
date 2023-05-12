@@ -199,6 +199,20 @@
           "color": "#71D2D1"
         }
       }
+    },
+    {
+      "id": "trace_gier_1894",
+      "url": "../assets/layers/Trace_du Gier_1894_12052023.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#71D2D1",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#71D2D1"
+        }
+      }
     }
   ],
   "LabelLayers": [
