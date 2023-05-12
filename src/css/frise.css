@@ -1,0 +1,92 @@
+/* Nav frise*/
+
+.container {
+  background: #fcf9e8 ;
+  width: 15%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 500px;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 5px;  
+}
+  
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px #d2cfc2; 
+border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #e31078; 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #b80d63; 
+}
+
+  /* Frise */
+.rb-container ul.rb {
+  margin: 2.5em 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.rb-container ul.rb li {
+  list-style: none;
+  margin: auto;
+  margin-left: 1em;
+  min-height: 50px;
+  border-left: 1px dashed #e31078;
+  padding: 0 0 15px 10px;
+  position: relative;
+}
+
+.rb-container ul.rb li:last-child {
+  border-left: 0;
+}
+
+.rb-container ul.rb li::before {
+  position: absolute;
+  left: -8px;
+  top: 0px;
+  content: " ";
+  border: 2px solid #e31078;
+  border-radius: 500%;
+  background: #ffffff;
+  height: 10px;
+  width: 10px;
+  transition: all 500ms ease-in-out;
+}
+
+.rb-container ul.rb li:hover::before {
+  border-color: #e31078;
+  background-color: #e31078;
+  transition: all 1000ms ease-in-out;
+}
+/* Textes frise */
+ul.rb li .timestamp {
+  color: #e31078;
+  font-size: 13px;
+  font-weight: bold;
+  width: 90%;
+}
+
+.item-title {
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  width: 90%;
+
+}
+.item-desc {
+  color: #000000;
+  font-size: 12px;
+  width: 90%;
+}
+
+
