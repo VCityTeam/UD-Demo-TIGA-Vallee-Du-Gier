@@ -357,12 +357,13 @@
                 },
                 {
                     "previous": 5,
-                    "next": 7,
+                    "next": 24,
                     "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "mines",
-                        "communes"
+                        "communes",
+                        "noms_communes"
                     ],
                     "filters": [
                         {
@@ -380,11 +381,33 @@
                                     ]
                                 }
                             }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "La Grand-Croix"
+                                    ]
+                                }
+                            }
                         }
                     ],
                     "medias": [
                         "PH1_06"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1820425.6252864152,
+                        "y": 5142177.305028924,
+                        "z": 3537.789594531906
+                    },
+                    "rotation": {
+                        "x": 0.44095917085305947,
+                        "y": -0.020611777481917285,
+                        "z": -0.041896349586455994,
+                        "w": 0.8963118096739258
+                    }
                 },
                 {
                     "previous": 6,
@@ -832,6 +855,60 @@
                     "medias": [
                         "PH1_23"
                     ]
+                },
+                {
+                    "previous": 6,
+                    "next": 7,
+                    "type": "half",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "mines",
+                        "communes",
+                        "noms_communes"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "layer": "noms_communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "La Grand-Croix"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "medias": [
+                        "PH1_24"
+                    ],
+                    "position": {
+                        "x": 1821783.5388509282,
+                        "y": 5146844.563426044,
+                        "z": 598.3751937386234
+                    },
+                    "rotation": {
+                        "x": 0.44095917085305947,
+                        "y": -0.020611777481917285,
+                        "z": -0.041896349586455994,
+                        "w": 0.8963118096739258
+                    }
                 }
             ]
         }
