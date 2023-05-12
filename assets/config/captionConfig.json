@@ -33,7 +33,7 @@
             }
         },
         {
-            "description": "Bati 1812 2022",
+            "description": "Bâtiments présents en 1812 et en 2022",
             "id": "bati_1812_2022",
             "style": {
                 "color": "#F2F59F",
@@ -41,7 +41,7 @@
             }
         },
         {
-            "description": "Zones bati 1812",
+            "description": "Zones urbanisées en 1812 (d'après le cadastre napoléonien, archives départementales de la Loire)",
             "id": "zone_bati_1812",
             "style": {
                 "color": "#6D53B0",
@@ -49,7 +49,7 @@
             }
         },
         {
-            "description": "Mines",
+            "description": "Puits de mine (carte topographique de l'IGN années 60)",
             "id": "mines",
             "style": {
                 "color": "#FF0000",
@@ -57,7 +57,7 @@
             }
         },
         {
-            "description": "Canal et fleuves",
+            "description": "Canal de Givors à Rive-de-Gier et rivière Gier",
             "id": "canal",
             "style": {
                 "color": "#71D2D1",
@@ -73,7 +73,7 @@
             }
         },
         {
-            "description": "Sites histo",
+            "description": "Sites industriels historiques construits entre 1830 et 1880 (d'après différents plans historiques)",
             "id": "sites_histo",
             "style": {
                 "color": "#EF9217",
