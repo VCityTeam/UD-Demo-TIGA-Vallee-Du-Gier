@@ -238,7 +238,7 @@
             "name": "Chapitre n°1",
             "description": "",
             "startIndex": 0,
-            "endIndex": 23,
+            "endIndex": 25,
             "nodes": [
                 {
                     "previous": 0,
@@ -985,8 +985,8 @@
                 },
                 {
                     "previous": 22,
-                    "next": 23,
-                    "type": "half",
+                    "next": 25,
+                    "type": "smaller",
                     "layers": [
                         "baseMapLayer_1",
                         "bati_1812_2022",
@@ -1018,7 +1018,18 @@
                     ],
                     "medias": [
                         "PH1_23"
-                    ]
+                    ],
+                    "position": {
+                        "x": 1817350.8127512932,
+                        "y": 5136556.153277763,
+                        "z": 6681.595047029804
+                    },
+                    "rotation": {
+                        "x": 0.4372485384286126,
+                        "y": -0.021137977602860868,
+                        "z": -0.04341426312873182,
+                        "w": 0.8980434863089272
+                    }
                 },
                 {
                     "previous": 6,
@@ -1072,6 +1083,54 @@
                         "y": -0.020611777481917285,
                         "z": -0.041896349586455994,
                         "w": 0.8963118096739258
+                    }
+                },
+                {
+                    "previous": 23,
+                    "next": 25,
+                    "type": "smaller",
+                    "layers": [
+                        "baseMapLayer_1",
+                        "canal",
+                        "voies_ferrees",
+                        "fleuves_gier",
+                        "communes",
+                        "trace_gier_1894",
+                        "bati_1929_2022",
+                        "bati_1929",
+                        "bati_indus_1929"
+                    ],
+                    "filters": [
+                        {
+                            "layer": "communes",
+                            "properties": {
+                                "COMMUNE": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Saint-Chamond",
+                                        "L'Horme",
+                                        "Rive-de-Gier",
+                                        "La Grand-Croix",
+                                        "Saint-Paul-en-Jarez",
+                                        "Lorette"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "medias": [
+                        "PH1_25"
+                    ],
+                    "position": {
+                        "x": 1817350.8127512932,
+                        "y": 5136556.153277763,
+                        "z": 6681.595047029804
+                    },
+                    "rotation": {
+                        "x": 0.4372485384286126,
+                        "y": -0.021137977602860868,
+                        "z": -0.04341426312873182,
+                        "w": 0.8980434863089272
                     }
                 }
             ]

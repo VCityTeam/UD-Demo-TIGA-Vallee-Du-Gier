@@ -570,3 +570,7 @@ output {
 .info_text {
   font-size: 12px;
 }
+
+.justify_right {
+  text-align: right;
+}
