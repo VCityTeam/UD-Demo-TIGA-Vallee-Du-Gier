@@ -73,6 +73,7 @@ export class Visit {
           layer.id == 'planar';
       }
     });
+    this.view.layerManager.notifyChange();
   }
 
   setMedia(node) {
