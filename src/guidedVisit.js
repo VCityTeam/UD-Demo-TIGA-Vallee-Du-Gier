@@ -54,6 +54,19 @@ export class GuidedVisit extends Visit {
         menuPanel.classList.replace('menu_panel_closed', 'menu_panel_open');
       else menuPanel.classList.replace('menu_panel_open', 'menu_panel_closed');
     });
+    const layerButton = document.getElementById('layer_button');
+    layerButton.addEventListener(
+      'click',
+      function () {
+        const layerPanel = document.getElementById('layer_panel');
+        if (this.layerPanelOpen) {
+          layerPanel.style.display = 'none';
+        } else {
+          layerPanel.style.display = 'flex';
+        }
+        this.layerPanelOpen = !this.layerPanelOpen;
+      }.bind(this)
+    );
   }
 
   start() {

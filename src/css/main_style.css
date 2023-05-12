@@ -172,3 +172,42 @@ audio {
   line-height: 15px;
   text-align: left;
 }
+
+
+#layer_div {
+  position: absolute;
+  display: block;
+  bottom: 3%;
+  right: -550px;
+  width: 530px;
+}
+
+#layer_div .ov_content {
+  max-width: 220px;
+  margin: 5px 10px 5px 10px;
+}
+
+#layer_button {
+  background: rgba(252, 249, 232, 0.8);
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0%;
+}
+
+#layer_button:hover {
+  background-color: rgba(253, 246, 205, 0.9) !important;
+}
+
+#layer_panel {
+  position: absolute;
+  bottom: 0%;
+  padding: 0px 0px 0px 50px;
+  background: rgba(252, 249, 232, 0.8);
+  display: none;
+  flex-direction: column;
+  border-radius: 4px;
+}

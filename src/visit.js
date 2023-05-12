@@ -88,8 +88,7 @@ export class Visit {
                 this.panel.setForm(this.currentIndex);
               });
           } else {
-            this.mediaManager
-              .addContent(media, this.panel.mediaContainer);
+            this.mediaManager.addContent(media, this.panel.mediaContainer);
           }
         }
       });
@@ -97,7 +96,8 @@ export class Visit {
   }
 
   createLayersCaption() {
-    this.panel.captionPanel.innerHTML = '';
+    let hasCaption = false;
+    const layerPanel = document.getElementById('layer_panel');
     this.view.layerManager.getLayers().forEach((layer) => {
       if (layer.visible) {
         const id = this.filterManager.layerIsFilter(layer.id)
@@ -105,7 +105,8 @@ export class Visit {
           : layer.id;
         for (const layerCaption of this.captionConfig.layers) {
           if (id == layerCaption.id) {
-            this.panel.captionPanel.appendChild(
+            hasCaption = true;
+            layerPanel.appendChild(
               this.panel.createCaption(
                 layerCaption.style,
                 layerCaption.description,
@@ -117,5 +118,8 @@ export class Visit {
         }
       }
     });
+    if (hasCaption)
+      document.getElementById('layer_div').style.display = 'block';
+    else document.getElementById('layer_div').style.display = 'none';
   }
 }

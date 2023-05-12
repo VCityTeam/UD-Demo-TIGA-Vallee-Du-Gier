@@ -525,3 +525,12 @@ output {
 .fit_height {
   height: 100%;
 }
+
+#layer_panel {
+  padding: 0px 0px 0px 65px;
+  background: #fcf9e8;
+}
+
+#layer_button {
+  background: #fcf9e8;
+}
