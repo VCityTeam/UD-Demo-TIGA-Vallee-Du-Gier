@@ -210,6 +210,15 @@ Example:
 
 ### Filters
 
+Filters can be used to style an existing layer or to display only specific parts of an existing layer. See [above](#filter) if you want to know what is a filter.
+
+A filter must have a `layer`, which is the **ID** of the layer on which the filter will be applied.
+
+A filter also has `properties`, used to set the filter. The configuration of the properties depends on the type on layer:
+
+- On a JSON layer, `properties` must be a [JSON Schema `properties`](https://json-schema.org/learn/getting-started-step-by-step#defining-the-properties). The JSON schema will be applied to each Feature of the layer. Only those accepted by the schema will be **displayed**.
+- On a 3D Tiles layer, `properties` can be used to apply a style on features depending on their [Batch Table properties](https://github.com/CesiumGS/3d-tiles/blob/main/specification/TileFormats/BatchTable/README.md). The properties must contain an `attribute` (the name of the attribute used by the filter), an `attribute_values` (the list of values accepted by the filter) and a `style`. The style must have a `materialProps` field, containing [THREE.JS MeshStandardMaterial properties](https://threejs.org/docs/#api/en/materials/MeshStandardMaterial) (such as `color`, `emissive`, `roughness`, etc.).
+
 | Attribute  | Required               |
 | ---------- | ---------------------- |
 | layer      | :white_check_mark: Yes |
@@ -229,6 +238,8 @@ Filter on JSON layer example:
 }
 ```
 
+It will filter the JSON layer by displaying only the features which have an attribute `"COMMUNE"` equal to `"AA"` or `"BB"`.
+
 Filter on 3D Tiles layer example:
 
 ```json
@@ -246,13 +257,21 @@ Filter on 3D Tiles layer example:
 }
 ```
 
+It will filter the 3D Tiles layer by applying a black color to the features which have an attribute `"attr_1"` equal to `"A"`.
+
 ### Medias
 
 The medias can be configured in [mediaConfig.json](./assets/config/mediaConfig.json).
 
+A media can be linked to different nodes to display a set of contents, such as texts, images, videos, etc. Each media must have **at least** one content.
+
+A media must have an ID, used to link the media to a node. The `name` can be used has a title and a description of the media.
+
+A media must have a list of [`contents`](#media-contents), described below.
+
 ```mermaid
 classDiagram
-    Media "1" o-- "0..n" Content
+    Media "1" o-- "1..n" Content
     Content <|-- Text
     Content <|-- Image
     Content <|-- Audio
@@ -279,7 +298,9 @@ Media example:
 
 #### Media Contents
 
-The configuration of a media content changes depending on the content type.
+A media content must have a `type`. This type is either a `text`, `image`, `audio`, `video`, `pin` or a `file`.
+
+The rest of the configuration depends on the content type, more information below.
 
 | Attribute | Required               |
 | --------- | ---------------------- |
