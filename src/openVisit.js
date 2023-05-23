@@ -312,7 +312,7 @@ export class OpenVisit extends Visit {
         const cityObject = this.view.layerManager.pickCityObject(e);
         if (
           cityObject &&
-          cityObject.tile.layer.id == this.config.building_info.layer
+          cityObject.tile.layer.id == this.config.selection_target
         ) {
           this.mediaManager.deletePins();
 

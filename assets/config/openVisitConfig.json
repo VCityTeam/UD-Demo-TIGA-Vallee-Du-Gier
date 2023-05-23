@@ -1,20 +1,7 @@
 {
     "name": "Open Visit",
     "description": "",
-    "building_info": {
-        "name": "DENOMINATION",
-        "layer": "BATI-INDUS",
-        "fields": [
-            {
-                "attribute": "LIB_EFF",
-                "name": "Effectif"
-            },
-            {
-                "attribute": "INT_CAT",
-                "name": "Filière"
-            }
-        ]
-    },
+    "selection_target": "BATI-INDUS",
     "layers": [
         {
             "id": "BATI-INDUS",

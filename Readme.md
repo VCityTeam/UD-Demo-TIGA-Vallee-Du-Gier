@@ -366,13 +366,13 @@ Example:
 
 The open visit can be configured in [openVisitConfig.json](./assets/config/openVisitConfig.json).
 
-| Attribute     | Required               |
-| ------------- | ---------------------- |
-| name          | :white_check_mark: Yes |
-| description   | :white_check_mark: Yes |
-| building_info | :white_check_mark: Yes |
-| layers        | :white_check_mark: Yes |
-| contents      | :white_check_mark: Yes |
+| Attribute        | Required               |
+| ---------------- | ---------------------- |
+| name             | :white_check_mark: Yes |
+| description      | :white_check_mark: Yes |
+| selection_target | :white_check_mark: Yes |
+| layers           | :white_check_mark: Yes |
+| contents         | :white_check_mark: Yes |
 
 Example:
 
@@ -380,7 +380,7 @@ Example:
 {
   "name": "Open Visit Example",
   "description": "This is an open visit example",
-  "building_info": {}, // See Building Info
+  "selection_target": "layer_id",
   "layers": [], // See Layers
   "contents": [] // See Open Visit Contents
 }
@@ -449,32 +449,5 @@ Example:
 {
   "id": "layer_id",
   "default": "show"
-}
-```
-
-### Building Info
-
-| Attribute | Required               |
-| --------- | ---------------------- |
-| name      | :white_check_mark: Yes |
-| layer     | :white_check_mark: Yes |
-| fields    | :white_check_mark: Yes |
-
-Example:
-
-```json
-{
-  "name": "NAME",
-  "layer": "layer_id",
-  "fields": [
-    {
-      "attribute": "attr_1",
-      "name": "Attribute 1"
-    },
-    {
-      "attribute": "attr_2",
-      "name": "Attribute 2"
-    }
-  ]
 }
 ```
