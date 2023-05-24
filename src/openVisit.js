@@ -16,7 +16,8 @@ export class OpenVisit extends Visit {
   start(config, captionConfig) {
     this.config = config;
     this.captionConfig = captionConfig;
-    this.fillContent(this.config.contents);
+    if (this.config.contents && this.config.contents.length > 0)
+      this.fillContent(this.config.contents);
     this.addLayers(this.config.layers);
     const mapButton = document.getElementById('map_button');
     this.infoButton = document.getElementById('info_button');

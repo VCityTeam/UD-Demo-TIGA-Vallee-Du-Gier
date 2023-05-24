@@ -81,8 +81,8 @@ If the caption has the type `image`, replace `color` by a `path`:
 
 ```json
 {
-  "description": "Layer 2",
-  "id": "layer_02",
+  "description": "Filter 1",
+  "id": "filter_01",
   "style": {
     "path": "../assets/logos/caption_img.png",
     "type": "image"
@@ -387,13 +387,29 @@ Example:
 
 The open visit can be configured in [openVisitConfig.json](./assets/config/openVisitConfig.json).
 
+In the open visit, we can explore freely the 3D scene and the data.
+
+The open visit allows to:
+
+- Show and hide layers
+- Apply pre-defined filters on layers
+- Click on buiildings to display their information
+
+The open visit can have a `name` and a `description`. Those fields are not mandatory.
+
+The open visit must have `layers`, which is the list of layers used. See [layers](#layers).
+
+A field `selection_target` must also be present, which is the ID of the 3D Tiles layer containing the buildings on which the user can click to display information. The ID of the targeted layer must be present in `layers`.
+
+The open visit can also have `contents`, allowing to create filters and categories of filters. See [contents](#open-visit-contents).
+
 | Attribute        | Required               |
 | ---------------- | ---------------------- |
-| name             | :white_check_mark: Yes |
-| description      | :white_check_mark: Yes |
+| name             | :red_circle: No        |
+| description      | :red_circle: No        |
 | selection_target | :white_check_mark: Yes |
 | layers           | :white_check_mark: Yes |
-| contents         | :white_check_mark: Yes |
+| contents         | :red_circle: No        |
 
 Example:
 
@@ -409,7 +425,15 @@ Example:
 
 ### Open Visit contents
 
+Open visit contents are either [categories](#category-content) or [filters](#filter-content). It allows to create pre-defined filters or categories of filters.
+
 #### _Category_ Content
+
+A category must have a `name`, which is a short description of what the category contains.
+
+A category must have `type` field equal to `category`. This type distinguishes categories from filters.
+
+A category can have `contents`, which are either categories or filters.
 
 | Attribute | Required               |
 | --------- | ---------------------- |
@@ -428,6 +452,16 @@ Example:
 ```
 
 #### _Filter_ Content
+
+A filter must have `type` field equal to `filter`. This type distinguishes filters from categories.
+
+A filter must have a `id`, this ID will be used to identify the filter and to link the filter to a [caption](#caption).
+
+A filter must have a `layer`, which is the ID of the layer on which the filter is applied.
+
+A filter must have a `default` value, either `show` or `hide`, indicating if the filter should be visible or invisible by default.
+
+A filter also has `properties`, used to set the filter. The configuration of the properties is explained in [Guided Visit Filters](#filters).
 
 | Attribute  | Required               |
 | ---------- | ---------------------- |
@@ -459,6 +493,12 @@ Example:
 
 ### Layers
 
+The `layers` list allows to set the layers of the open visit. Each layer configuration must have an `id` and a `default` value. The `default` value must be either:
+
+- `show`: the layer will be **visible** by default. The layer can be toggled on/off.
+- `hide`: the layer will be **invisible** by default. The layer can be toggled on/off.
+- `no_caption`: the layer will **always** be **visible** but won't have a caption. The layer **can't** be toggled on/off.
+
 | Attribute | Required               |
 | --------- | ---------------------- |
 | id        | :white_check_mark: Yes |
@@ -469,6 +509,13 @@ Example:
 ```json
 {
   "id": "layer_id",
-  "default": "show"
+  "default": "show" // Layer visible by default
+}
+```
+
+```json
+{
+  "id": "layer_id",
+  "default": "no_caption" // Layer visible but without caption
 }
 ```
