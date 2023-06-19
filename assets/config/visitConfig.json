@@ -1118,6 +1118,180 @@
                     }
                 }
             ]
+        },
+        {
+            "id": "PH2",
+            "name": "Chapitre n°2",
+            "description": "",
+            "startIndex": 0,
+            "endIndex": 14,
+            "nodes": [
+                {
+                    "previous": 0,
+                    "next": 1,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_00"
+                    ]
+                },
+                {
+                    "previous": 0,
+                    "next": 2,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_01"
+                    ]
+                },
+                {
+                    "previous": 1,
+                    "next": 3,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_02"
+                    ]
+                },
+                {
+                    "previous": 2,
+                    "next": 4,
+                    "type": "half",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_03"
+                    ]
+                },
+                {
+                    "previous": 3,
+                    "next": 5,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_04"
+                    ]
+                },
+                {
+                    "previous": 4,
+                    "next": 6,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_05"
+                    ]
+                },
+                {
+                    "previous": 5,
+                    "next": 7,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_06"
+                    ]
+                },
+                {
+                    "previous": 6,
+                    "next": 8,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_07"
+                    ]
+                },
+                {
+                    "previous": 7,
+                    "next": 9,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_08"
+                    ]
+                },
+                {
+                    "previous": 8,
+                    "next": 10,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_09"
+                    ]
+                },
+                {
+                    "previous": 9,
+                    "next": 11,
+                    "type": "half",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_10"
+                    ]
+                },
+                {
+                    "previous": 10,
+                    "next": 12,
+                    "type": "half",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_11"
+                    ]
+                },
+                {
+                    "previous": 11,
+                    "next": 13,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_12"
+                    ]
+                },
+                {
+                    "previous": 12,
+                    "next": 14,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_13"
+                    ]
+                },
+                {
+                    "previous": 13,
+                    "next": 14,
+                    "type": "half",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH2_14"
+                    ]
+                }
+            ]
         }
     ]
 }

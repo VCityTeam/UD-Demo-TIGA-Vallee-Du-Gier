@@ -368,6 +368,141 @@
                     "value": "../assets/media/texts/Parcours_histo_1/PH1_25.txt"
                 }
             ]
+        },
+        {
+            "id": "PH2_00",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_00.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_01",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_01.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_02.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_03.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_04.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_05",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_05.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_06",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_06.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_07",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_07.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_08",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_08.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_09",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_09.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_10",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_10.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_11",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_11.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_12",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_12.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_13",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_13.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH2_14",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_14.txt"
+                }
+            ]
         }
     ]
 }
