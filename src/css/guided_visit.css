@@ -541,14 +541,14 @@ output {
   background: transparent;
   cursor: pointer;
   margin: 0px;
-  position: fixed;
+  position: absolute;
   bottom: 2%;
   right: 2%;
 }
 
 .info_div {
   display: none;
-  position: fixed;
+  position: absolute;
   bottom: 2%;
   right: 2%;
   width: fit-content;
@@ -573,4 +573,10 @@ output {
 
 .justify_right {
   text-align: right;
+}
+
+.fullpage_img {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
 }

@@ -1,3 +1,9 @@
 
 <h1>Les forges de l'Horme</h1>
+<div class="fullpage_img">
 <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/13.png"/>
+<button class="info_button">
+    <img src="../assets/icons/Info.svg" />
+</button>
+<div class="info_div"></div>
+</div>

@@ -1,2 +1,8 @@
 <h1>Le quartier industriel et urbain Novaciéries​</h1>
+<div class="fullpage_img">
 <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/04.jpg"/>
+<button class="info_button">
+    <img src="../assets/icons/Info.svg" />
+</button>
+<div class="info_div">Cheminements publics réaménagés dans le quartier de Novaciéries, Saint-Chamond. Au premier plan, l’ancienne halle des aciéries de la Marine accueille un espace commercial. Au second plan, les halles centenaires sont occupées par Industeel France – Photographie des auteurs, 2023</div>
+</div>

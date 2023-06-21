@@ -1,5 +1,11 @@
 
 <h1>Le premier bassin houiller exploité en France</h1>
 <p> La commune de Grand-Croix concentre le plus de puits de mine dont celui représenté sur cette carte postale et localisé sur les versants.<br/><br/>
+<div class="fullpage_img">
 <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/24.jpg"/>
+<button class="info_button">
+    <img src="../assets/icons/Info.svg" />
+</button>
+<div class="info_div"></div>
+</div>
 </p>
