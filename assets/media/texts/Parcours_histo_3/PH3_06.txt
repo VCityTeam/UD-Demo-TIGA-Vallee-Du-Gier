@@ -1,2 +1,2 @@
 <h1>De l’Horme à Lorette</h1>
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/06.jpg"/>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/06.png"/>

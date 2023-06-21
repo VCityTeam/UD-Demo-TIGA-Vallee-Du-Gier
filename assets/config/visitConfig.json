@@ -1303,7 +1303,7 @@
                 {
                     "previous": 0,
                     "next": 1,
-                    "type": "smaller",
+                    "type": "half",
                     "layers": [
                         "Ortho_IGN"
                     ],
