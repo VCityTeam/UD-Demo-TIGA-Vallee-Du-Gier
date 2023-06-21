@@ -577,6 +577,7 @@ output {
 
 .fullpage_img {
   position: relative;
+  margin: 0px auto;
   height: fit-content;
   width: fit-content;
 }
