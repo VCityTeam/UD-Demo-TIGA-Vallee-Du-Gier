@@ -503,6 +503,87 @@
                     "value": "../assets/media/texts/Parcours_histo_2/PH2_14.txt"
                 }
             ]
+        },
+        {
+            "id": "PH3_00",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_00.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_01",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_01.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_02",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_02.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_03",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_03.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_04",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_04.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_05",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_05.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_06",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_06.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_07",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_07.txt"
+                }
+            ]
+        },
+        {
+            "id": "PH3_08",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_3/PH3_08.txt"
+                }
+            ]
         }
     ]
 }

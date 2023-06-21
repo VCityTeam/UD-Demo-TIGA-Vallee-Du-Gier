@@ -1,0 +1,222 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapitre n°3</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/css/main_style.css" rel="stylesheet" />
+    <link href="../src/css/guided_visit.css" rel="stylesheet" />
+    <link href="../src/css/frise.css" rel="stylesheet" />
+    <!-- Roboto Regular 400 font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main_div">
+      <div id="menu_panel" class="menu_panel_closed">
+        <div id="menu_mask"></div>
+        <div id="menu_header">
+          <button id="menu_header_button">
+            <img
+              id="menu_header_img"
+              src="../assets/icons/Vector.svg"
+              alt="Vector icon"
+            />
+          </button>
+        </div>
+        <div id="menu_content">
+          <div class="frise">
+            <div class="rightbox">
+              <div class="rb-container">
+                <ul class="rb">
+                  <li class="rb-item" ng-repeat="itembx" id="0">
+                    <div class="timestamp">
+                      Des industries prises dans le renouvellement urbain
+                    </div>
+                  </li>
+
+                  <li class="rb-item" ng-repeat="itembx" id="1">
+                    <div class="timestamp">
+                      250 établissements industriels dans la haute vallée du
+                      Gier
+                    </div>
+                  </li>
+
+                  <li class="rb-item" ng-repeat="itembx" id="2">
+                    <div class="timestamp">
+                      Une grande diversité des filières
+                    </div>
+                  </li>
+
+                  <li class="rb-item" ng-repeat="itembx" id="5">
+                    <div class="timestamp">
+                      De l'Horme à Lorette, un bandeau industriel dynamique
+                    </div>
+                  </li>
+
+                  <li class="rb-item" ng-repeat="itembx" id="7">
+                    <div class="timestamp">
+                      A Rive-de-Gier, l'usine des Etaings devenue Industeel
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="home_panel" class="half_width blue">
+        <div class="content_panel">
+          <div class="text_panel panel">
+            <h1 class="visit_number">Chapitre n°3</h1>
+            <h1 class="visit_title">
+              Un district de la métallurgie-mécanique
+            </h1>
+            <div class="img_div">
+              <img
+                src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/home.png"
+              />
+            </div>
+          </div>
+          <div class="caption_panel panel"></div>
+          <div class="info_text_panel panel">
+            <div class="info_text">
+              Machine de presse, industrie de la haute Vallée du Gier - Photographie des auteurs, 2022
+            </div>
+          </div>
+          <div class="footer_panel panel">
+            <div>
+              <button id="start_button" class="arrow_button button_right">
+                <img
+                  class="arrow_img"
+                  src="../assets/icons/Arrow.svg"
+                  alt="arrow icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main_panel" class="blue_border">
+        <div class="content_panel">
+          <div class="header_panel panel">
+            <div id="categories_div"></div>
+          </div>
+          <div class="text_panel panel">
+            <div id="media_container"></div>
+          </div>
+          <div class="caption_panel panel"></div>
+          <div class="footer_panel panel">
+            <div id="progress_div">
+              <button id="previous_button" class="arrow_button button_left">
+                <img
+                  class="arrow_img blue_img"
+                  src="../assets/icons/Arrow.svg"
+                  alt="arrow icon"
+                />
+              </button>
+              <h3 id="progress_count"></h3>
+              <button id="next_button" class="arrow_button button_right">
+                <img
+                  class="arrow_img blue_img"
+                  src="../assets/icons/Arrow.svg"
+                  alt="arrow icon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <button id="close_button">
+          <div id="close_arrow"></div>
+        </button>
+        <div id="layer_div">
+          <div id="layer_panel"></div>
+          <button id="layer_button">
+            <img
+              id="layer_button_icon"
+              src="../assets/icons/layerChoice.svg"
+              alt="Layer choice icon"
+            />
+          </button>
+        </div>
+      </div>
+      <button id="homepage_button" onclick="location.href = '../index.html';">
+        <img
+          id="homepage_img"
+          src="../assets/icons/Industry_building.svg"
+          alt="homepage button"
+        />
+      </button>
+    </div>
+    <script src="../dist/release/vdg_app.js"></script>
+    <!-- <script src="../dist/debug/vdg_app.js"></script> -->
+    <script type="text/javascript">
+      const list = [];
+      const urls = [
+        '../assets/config/visitConfig.json',
+        '../assets/config/mediaConfig.json',
+        '../assets/config/captionConfig.json',
+      ];
+      const configs = [];
+
+      urls.forEach(function (url, i) {
+        list.push(
+          fetch(url)
+            .then((response) => response.json())
+            .then((json) => {
+              configs[i] = json;
+            })
+        );
+      });
+
+      Promise.all(list).then(function () {
+        const visitConfig = configs[0];
+        const mediaConfig = configs[1];
+        const captionConfig = configs[2];
+        const app = new vdg_app.Templates.AllWidget();
+
+        app.start('../assets/config/layerConfig.json').then((config) => {
+          vdg_app.addLabelLayers(config, app.view3D.getItownsView());
+
+          const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
+
+          const timestamps = document.querySelectorAll('.rb-item');
+          for (const timestamp of timestamps) {
+            timestamp.addEventListener('click', function () {
+              visit.goToNode(parseInt(timestamp.id, 10));
+            });
+          }
+
+          let allWidgetPanel = document.getElementById(
+            '_all_widget_stuct_main_panel'
+          );
+          allWidgetPanel.style.display = 'block';
+          allWidgetPanel.querySelector('nav').style.display = 'none';
+          window.dispatchEvent(new Event('resize'));
+
+          const conf = visitConfig.visits.find((v) => v.id == 'PH3');
+          visit.init(conf, captionConfig);
+          visit.filterLayers([
+            'Ortho_IGN',
+            'communes',
+            'BATI-AUTRE',
+            'BATI-INDUS',
+          ]);
+          const startButton = document.getElementById('start_button');
+          startButton.addEventListener('click', function () {
+            document.getElementById('home_panel').style.display = 'none';
+            document.getElementById('main_panel').style.display = 'flex';
+            visit.start();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

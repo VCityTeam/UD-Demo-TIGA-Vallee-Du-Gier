@@ -1292,6 +1292,114 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "PH3",
+            "name": "Chapitre n°3",
+            "description": "",
+            "startIndex": 0,
+            "endIndex": 8,
+            "nodes": [
+                {
+                    "previous": 0,
+                    "next": 1,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_00"
+                    ]
+                },
+                {
+                    "previous": 0,
+                    "next": 2,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_01"
+                    ]
+                },
+                {
+                    "previous": 1,
+                    "next": 3,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_02"
+                    ]
+                },
+                {
+                    "previous": 2,
+                    "next": 4,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_03"
+                    ]
+                },
+                {
+                    "previous": 3,
+                    "next": 5,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_04"
+                    ]
+                },
+                {
+                    "previous": 4,
+                    "next": 6,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_05"
+                    ]
+                },
+                {
+                    "previous": 5,
+                    "next": 7,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_06"
+                    ]
+                },
+                {
+                    "previous": 6,
+                    "next": 8,
+                    "type": "smaller",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_07"
+                    ]
+                },
+                {
+                    "previous": 7,
+                    "next": 9,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH3_08"
+                    ]
+                }
+            ]
         }
     ]
 }
