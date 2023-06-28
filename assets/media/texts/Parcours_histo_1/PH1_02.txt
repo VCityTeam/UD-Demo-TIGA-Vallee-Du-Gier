@@ -1,4 +1,3 @@
-
 <h1>Le canal et l’industrie du verre</h1>
 <p>
 Les historiens considèrent que <b>la production industrielle du verre débute en France avec l’implantation à Givors en 1750 d’une verrerie royale</b>, associée à un monopole dans la production. L’établissement se distingue par sa taille, ses effectifs et le procédé technique de fabrication.<br/><br/>
@@ -13,7 +12,7 @@ La production du verre relève jusque là d’une proto-industrie diffuse, souve
         <img src="../assets/icons/Info.svg" />
     </button>
     <div class="info_div">La verrerie royale de Givors, dans le centre-ville, vers 1890.<br/>
-Archives municipales de la villes de Givors.
+Archives municipales de la ville de Givors.
 
 </div>
 </div>

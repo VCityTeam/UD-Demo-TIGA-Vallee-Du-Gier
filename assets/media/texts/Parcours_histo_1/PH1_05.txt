@@ -1,28 +1,20 @@
-
 <h1>Le premier bassin houiller exploité en France</h1>
 <p>
 Le bassin charbonnier de la Loire est <b>historiquement le premier bassin à être exploité avec les techniques</b> modernes en France. Il fournit la moitié de la production nationale dans la première moitié du XIXe siècle.<br/><br/>
 
 <b>La loi de 1810 reconnait un intérêt national à l’exploitation du charbon stéphanois</b> et en règlemente l’activité par l’institution d’un régime de concessions. Quelques années plus tard, l’École des Mines de Saint-Etienne est inaugurée pour constituer des corps d’ingénieurs dédiés à l’exploitation du bassin stéphanois.<br/><br/>
 
-<b>Le soutien de l’Etat à l’exploitation des gisements houillers du bassin stéphanois et de la vallée du Gier</b> s’explique par le caractère stratégique attribué à ces gisements. Ils doivent permettre de réduire la dépendance de la région lyonnaise aux ressources en bois, plus rares et plus chères. L’exploitation du charbon de la Loire doit surtout permettre de réduire la dépendance du territoire national aux importations de métaux bruts, en permettant le <b>développement d’une métallurgie à l’anglaise au début du 19e siècle</b>.
+<b>Le soutien de l’Etat à l’exploitation des gisements houillers du bassin stéphanois et de la vallée du Gier</b> s’explique par le caractère stratégique attribué à ces gisements. Ils doivent permettre de réduire la dépendance de la région lyonnaise aux ressources en bois, plus rares et plus chères. L’exploitation du charbon de la Loire doit surtout permettre de réduire la dépendance du territoire national aux importations de métaux bruts, en permettant le <b>développement d’une métallurgie à l’anglaise au début du 19e siècle</b>.<br/><br/>
+
+Le bassin charbonnier sera exploité sur un siècle environ puisque <b>l’arrêt de l’exploitation d’une dernière concession remonte à 1953</b>.
 </p>
 <div class="img_div">
     <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/05.png"/>
     <button class="info_button">
         <img src="../assets/icons/Info.svg" />
     </button>
-    <div class="info_div">Extrait de la carte du bassin houiller de Rive-de-Gier en 1850 centrée sur Rive-de-Gier. Les puits de mines, alors très nombruex, sont représentés par un point noir.
-Bibliothèque Nationale de France <br/><br/>
+    <div class="info_div">Extrait de la carte du bassin houiller de Rive-de-Gier en 1850 centrée sur Rive-de-Gier. Les puits de mines, alors très nombreux, sont représentés par un point noir. Bibliothèque Nationale de France [En ligne, plateforme Gallica]<br/><br/>
 
-https://gallica.bnf.fr/ark:/12148/btv1b8441781b/f1.item.r=rive%20de%20gier.zoom<br/><br/>
-
-
-
-Pour en savoir plus :<br/><br/>
-
-Morel Journel Christelle (1999), De la construction du bassin aux enjeux de la mémoire minière : les territoires du charbon en région stéphanoise (XIXème-XXème), Thèse de doctorat de géographie, Université Jean-Monnet de Saint-Etienne.
-
-
+Pour en savoir plus : Morel Journel Christelle (1999), De la construction du bassin aux enjeux de la mémoire minière : les territoires du charbon en région stéphanoise (XIXème-XXème), Thèse de doctorat de géographie, Université Jean-Monnet de Saint-Etienne.
     </div>
 </div>

@@ -5,5 +5,5 @@
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>
-<div class="info_div"></div>
+<div class="info_div">Sortie d’usine devant le portail des forges de l’Horme – carte postale ancienne, s.d., wiki commons.</div>
 </div>

@@ -155,21 +155,25 @@
               <img
                 src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/home.png"
               />
+              <button class="info_button">
+                <img src="../assets/icons/Info.svg" />
+              </button>
+              <div class="info_div">
+                Carte postale ancienne : vue générale de la vallée du Gier
+                depuis les établissements des aciéries de la Marine à
+                Assailly-Lorette. (non datée - probablement prise dans
+                l'entre-deux-guerres)<br />
+                Bibliothèque municipale de Lyon (creative commons). Retrouver la
+                photo
+                <a
+                  href="https://numelyo.bm-lyon.fr/BML:BML_01ICO00101B01CP42420_000003?&query%255B%255D=%2522rail%2522&hitStart=130&hitTotal=234&hitPageSize=16"
+                  >ici</a
+                >
+              </div>
             </div>
           </div>
           <div class="caption_panel panel"></div>
           <div class="info_text_panel panel">
-            <div class="info_text">
-              Carte postale ancienne : vue générale de la vallée du Gier depuis
-              les établissements des aciéries de la Marine à Assailly-Lorette.
-              (non datée - probablement prise dans l'entre-deux-guerres)<br />
-              Bibliothèque municipale de Lyon (creative commons). Retrouver la
-              photo
-              <a
-                href="https://numelyo.bm-lyon.fr/BML:BML_01ICO00101B01CP42420_000003?&query%255B%255D=%2522rail%2522&hitStart=130&hitTotal=234&hitPageSize=16"
-                >ici</a
-              >
-            </div>
           </div>
           <div class="footer_panel panel">
             <div>
@@ -283,7 +287,12 @@
 
           const conf = visitConfig.visits.find((v) => v.id == 'PH1');
           visit.init(conf, captionConfig);
-          visit.filterLayers(['Ortho_IGN', 'communes', 'BATI-AUTRE', 'BATI-INDUS']);
+          visit.filterLayers([
+            'Ortho_IGN',
+            'communes',
+            'BATI-AUTRE',
+            'BATI-INDUS',
+          ]);
           const startButton = document.getElementById('start_button');
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';

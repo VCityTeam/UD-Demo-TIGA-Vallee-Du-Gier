@@ -5,5 +5,5 @@
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>
-<div class="info_div"></div>
+<div class="info_div">Les forges d’Arbel dans le quartier du Couzon à Rive-de-Gier-Châteauneuf, site depuis occupé par l’entreprise Valmont père et fils – carte postale ancienne, s.d. (creative commons)</div>
 </div>

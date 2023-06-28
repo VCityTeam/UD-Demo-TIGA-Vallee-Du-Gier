@@ -15,8 +15,6 @@ A la fin du 18ième siècle, cette préoccupation centrale de l’Etat se concr�
         <img src="../assets/icons/Info.svg" />
     </button>
     <div class="info_div">« Vue de l’entrée de la Ville de Lyon par le pont de la Guillotière », dessin de Pierre-Nicolas Wery (1770-1827), gravure de Benedikt Piringer (1780-1826), planche 1 dans François-Marie de Fortis (1768-1847), Atlas du voyage pittoresque et historique à Lyon et sur les rives du Rhône et de la Saône, Paris, Didot l’aîné, 1819.
-Bibliothèque municipale de Lyon, creative commons<br/>
-
-https://commons.wikimedia.org/wiki/Category:Lyon_in_the_1810s#/media/File:Vue_de_l%E2%80%99entr%C3%A9e_de_la_Ville_de_Lyon_par_le_pont_de_la_Guilloti%C3%A8re.jpg
+Bibliothèque municipale de Lyon, creative commons [<a href="https://commons.wikimedia.org/wiki/Category:Lyon_in_the_1810s#/media/File:Vue_de_l%E2%80%99entr%C3%A9e_de_la_Ville_de_Lyon_par_le_pont_de_la_Guilloti%C3%A8re.jpg">En ligne</a>]
 </div>
 </div>

@@ -20,5 +20,9 @@
     <output class="green_text" for="radio-group-1670843415313-0">En 1788, il existait déjà deux verreries à Rive-de-Gier : elles produisaient des bouteilles et des gobelets. La verrerie Hémain devint par la suite une des plus célèbres. Elle a changé de propriétaires à plusieurs reprises. Le dernier à l’exploiter sera Duralex. La production s'arrêtera définitivement en 2007, ce qui entraînera le licenciement de 103 salariés et une bataille juridique jusqu’en 2020.</output>
 </div>
 <div class="img_div">
-    <img class="fit_height fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/facade%20verrerie%20Didier%20Gourbin%20-%20inventaire%20patrimoine%20auvergne%20rhone%20alpes%201.png"/>
+    <img class="fit_height fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/03.png"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">Verrerie de Rive de Gier actuellement verrerie Duralex, Façade de la verrerie le long du Gier. Gourbin Didier, Région Auvergne-Rhône-Alpes, Inventaire général du patrimoine culturel, 2007 [<a href="https://patrimoine.auvergnerhonealpes.fr/illustration/ivr8220074201053x/787be360-2a1c-47be-8bf1-6a68710ca79d">En ligne</a>]</div>
 </div>

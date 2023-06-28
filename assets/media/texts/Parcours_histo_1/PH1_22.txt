@@ -5,5 +5,5 @@
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>
-<div class="info_div"></div>
+<div class="info_div">La société Duralumin s’implante à partir de 1934 sur le site des anciennes forges d’Arbel à Rive-de-Gier-Châteauneuf – carte postale ancienne, s.d. (creative commons)</div>
 </div>

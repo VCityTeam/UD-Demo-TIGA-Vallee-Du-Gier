@@ -1,4 +1,3 @@
-
 <h1>Le canal et l’industrie du verre</h1>
 <p>
 Les seuls industriels ayant réellement été intéressés par le canal sont les verriers de Rive-de-Gier pour les sables et derniers utilisateurs du canal (soit deux-tiers du trafic en 1876). <b>En 1878, la navigation est abandonné sur le canal qui devient une infrastructure urbaine, utilisée pour les joutes</b> sur les bassins à Rive-de-Gier. Il est aussi utilisé pour alimenter les lavoirs, l’irrigation des jardins ouvriers ou la pêche.
@@ -8,5 +7,6 @@ Les seuls industriels ayant réellement été intéressés par le canal sont les
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>
-<div class="info_div"></div>
+<div class="info_div">Le bassin du canal de Givors à Rive-de-Gier devant la mairie de Rive-de-Gier – carte postale ancienne, s.d. (creative commons)
+</div>
 </div>

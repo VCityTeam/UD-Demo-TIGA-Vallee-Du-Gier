@@ -1,4 +1,4 @@
-<h1>Un projet de réhabiilitation</h1>
+<h1>Un projet de réhabilitation</h1>
 <div class="formbuilder-checkbox-group form-group field-checkbox-group-1670843415313">
     <label for="checkbox-group-1670843415313" class="formbuilder-checkbox-group-label">
         Si tu te rends dans le quartier un week-end, tu peux profiter :<br/>

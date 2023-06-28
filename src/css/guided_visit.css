@@ -504,6 +504,7 @@ output {
   display: flex;
   flex-direction: column;
   background: #fcf9e8;
+  color: black;
 }
 
 .img_div img {

@@ -1,8 +1,12 @@
 <h1>Bienvenue sur la friche Duralex®</h1>
 <p>Dans la vallée du Gier, c’est à Rive-de-Gier que se trouvait l’unité de production Duralex. La voici, avant la démolition de la verrerie.<br/><br/>
 
-La cheminée de la verrerie Duralex, qui trônait à l'entrée de la commune de Rive-de-Gier, culminait à 60 m de haut. Elle a été détruite en 2021.</p>
+La cheminée de la verrerie, qui trônait à l'entrée est de la commune de Rive-de-Gier, culminait à 60 m de haut. Elle a été détruite en 2021.</p>
 <div class="img_div">
     <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/cheminee%20verrerie%20duralex%20-%20Didier%20Gourbin%20-%20inventaire%20patrimoine%20auvergne%20rhone%20alpes%201.png"/>
     <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/VUEDEL%7E1%201.png"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">Verrerie de Rive de Gier actuellement verrerie Duralex : Vue d'ensemble de la verrerie avec la cheminée et vue de l'entrée latérale "entrée marchandises" Gourbin Didier, Région Auvergne-Rhône-Alpes, Inventaire général du patrimoine culturel, 2007 [<a href="https://patrimoine.auvergnerhonealpes.fr/dossier/verrerie-de-rive-de-gier-actuellement-verrerie-duralex/8deec39f-cfe0-4710-be4b-d02e3e7489b7">En ligne</a>]</div>
 </div>

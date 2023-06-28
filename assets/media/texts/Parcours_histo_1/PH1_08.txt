@@ -1,4 +1,3 @@
-
 <h1>Une métallurgie à l’anglaise</h1>
 <p>
 <b>La ligne de chemin de fer de Saint-Etienne à Lyon est inaugurée en 1832</b>.
@@ -10,6 +9,5 @@ Elle est la première ligne de chemin de fer à vapeur (locomotive des frères S
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>
-<div class="info_div">Représentation du chemin de fer de Saint-Etienne à Lyon, tractée par des chevaux et les premières locomotives à vapeur. Wiki commons <br/>
-https://fr.wikipedia.org/wiki/Ligne_de_Saint-%C3%89tienne_%C3%A0_Lyon#/media/Fichier:Ch_de_fer_Lyon_StEtienne.png</div>
+<div class="info_div">Représentation du chemin de fer de Saint-Etienne à Lyon, tractée par des chevaux et les premières locomotives à vapeur. Wiki commons</div>
 </div>
