@@ -2,3 +2,13 @@
 <p>
 Dans la haute vallée du Gier, les activités sidérurgiques se déploient au sein des différents établissements de la Compagnie des Forges et Aciéries de la Marine et d’Homécourt. A Rive-de-Gier, l’enfilade des verreries organisées le long du Gier débouche sur la vaste usine sidérurgique des Etaings, propriété des frères Marrel. L’agglomération de Saint-Chamond se distingue par l’importance des ateliers textiles, qui introduisent de plus en plus de procédés chimiques au sein des entreprises de la famille Gillet.
 </p>
+<div class="fullpage_img">
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/01.png"/>
+<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/01_bis.png"/>
+<button class="info_button">
+    <img src="../assets/icons/Info.svg" />
+</button>
+<div class="info_div">Extrait de la carte industrielle de France – Département de la Loire. Société de documentation industrielle (Paris, Strasbourg), 1932. Bibliothèque Nationale de France, Gallica [<a href="https://gallica.bnf.fr/ark:/12148/btv1b53213376t/f1.item.zoom">En ligne</a>]<br/><br/>
+Pour en savoir plus sur les cartes industrielles de l’entre-deux-guerres numérisées et mise en ligne sur Gallica par la Bibliothèque Nationale de France en 2021, retrouvez un billet de la revue de géomatique en ligne Cartographie(s) Numérique(s) rédigé par le géographe Sylvain Genevois, le 14 mars 2021 [<a href="https://cartonumerique.blogspot.com/2021/03/cartes-industrielles-france.html">En ligne</a>].
+</div>
+</div>
