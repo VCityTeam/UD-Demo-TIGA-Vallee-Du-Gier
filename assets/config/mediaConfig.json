@@ -514,6 +514,15 @@
             ]
         },
         {
+            "id": "PH2_15",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/Parcours_histo_2/PH2_15.txt"
+                }
+            ]
+        },
+        {
             "id": "PH3_00",
             "contents": [
                 {

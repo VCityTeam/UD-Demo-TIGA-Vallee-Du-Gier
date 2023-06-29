@@ -13,3 +13,10 @@ A la fin des années 1970, les ateliers polyvalents ont été recentrés sur des
 &ensp;-&ensp; L’usine d’Onzon effectue des travaux de laminage et des opérations spéciales sur acier Inox​
 <br/><br/>
 Le groupe s’est rapidement séparé des opérations métallurgiques spécifiques (forges et fonderies). En 1973, les activités de forge de villebrequins sont revendues à Mavilor, une ancienne filiale des Forges et Aciéries de la Marine. Dans la haute vallée du Gier, <b>le groupe Creusot-Loire est de loin le principal fournisseur d’emplois local</b>.​</p>
+<div class="img_div">
+    <img class="fit_heigth fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/05.jpg"/>
+    <button class="info_button">
+        <img src="../assets/icons/Info.svg" />
+    </button>
+    <div class="info_div">Photographie des auteurs, juin 2023</div>
+</div>
