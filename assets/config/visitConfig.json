@@ -1316,7 +1316,9 @@
                     "next": 1,
                     "type": "half",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_00"
@@ -1327,40 +1329,146 @@
                     "next": 2,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_01"
-                    ]
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "LIB_EFF",
+                                "attribute_values": [
+                                    "50-99",
+                                    "100-199",
+                                    "200-249",
+                                    "250-499",
+                                    "500-999",
+                                    "1000-1999"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#094B7A"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "position": {
+                        "x": 1818754.843393227,
+                        "y": 5135306.651890724,
+                        "z": 6552.945880318342
+                    },
+                    "rotation": {
+                        "x": 0.4454058134669782,
+                        "y": -0.0048718203565471544,
+                        "z": -0.009792318539667808,
+                        "w": 0.8952619936051405
+                    }
                 },
                 {
                     "previous": 1,
                     "next": 3,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_02"
-                    ]
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "position": {
+                        "x": 1818754.843393227,
+                        "y": 5135306.651890724,
+                        "z": 6552.945880318342
+                    },
+                    "rotation": {
+                        "x": 0.4454058134669782,
+                        "y": -0.0048718203565471544,
+                        "z": -0.009792318539667808,
+                        "w": 0.8952619936051405
+                    }
                 },
                 {
                     "previous": 2,
                     "next": 4,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_03"
-                    ]
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "position": {
+                        "x": 1817563.1767794592,
+                        "y": 5140970.033760544,
+                        "z": 1155.4095690538497
+                    },
+                    "rotation": {
+                        "x": 0.4454058134669782,
+                        "y": -0.0048718203565471544,
+                        "z": -0.009792318539667808,
+                        "w": 0.8952619936051405
+                    }
                 },
                 {
                     "previous": 3,
                     "next": 5,
                     "type": "full",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_04"
@@ -1371,18 +1479,61 @@
                     "next": 6,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE",
+                        "communes",
+                        "zae",
+                        "noms_communes"
                     ],
                     "medias": [
                         "PH3_05"
-                    ]
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "position": {
+                        "x": 1821012.6421856417,
+                        "y": 5140324.335798388,
+                        "z": 3229.8462122348333
+                    },
+                    "rotation": {
+                        "x": 0.4748669321275413,
+                        "y": 0.03120907996903962,
+                        "z": 0.057678103462661306,
+                        "w": 0.8776107488404035
+                    }
                 },
                 {
                     "previous": 5,
                     "next": 7,
                     "type": "full",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_06"
@@ -1393,18 +1544,58 @@
                     "next": 8,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_07"
-                    ]
+                    ],
+                    "filters": [
+                        {
+                            "layer": "BATI-INDUS",
+                            "properties": {
+                                "attribute": "CAT",
+                                "attribute_values": [
+                                    "1",
+                                    "2",
+                                    "3",
+                                    "4",
+                                    "5",
+                                    "6",
+                                    "7",
+                                    "8",
+                                    "9",
+                                    "10"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#202020"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "position": {
+                        "x": 1827701.1386381788,
+                        "y": 5147463.052755206,
+                        "z": 1790.0019489776237
+                    },
+                    "rotation": {
+                        "x": 0.4748669321275413,
+                        "y": 0.03120907996903962,
+                        "z": 0.057678103462661306,
+                        "w": 0.8776107488404035
+                    }
                 },
                 {
                     "previous": 7,
                     "next": 9,
                     "type": "full",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "BATI-INDUS",
+                        "BATI-AUTRE"
                     ],
                     "medias": [
                         "PH3_08"

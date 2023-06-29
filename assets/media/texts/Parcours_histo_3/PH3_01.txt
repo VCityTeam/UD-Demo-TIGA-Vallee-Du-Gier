@@ -1,4 +1,4 @@
 <h1>250 établissements industriels</h1>
 <p>
-Au total, ce sont quelques 250 établissements industriels qui sont implantés, dont 60 % comptent 1 à 9 salariés. <b>Les vingt établissements de plus de 50 salariés fournissent, quant à eux, un emploi industriel sur deux</b>.
+Au total, ce sont quelques 250 établissements industriels qui sont implantés, dont 60 % comptent 1 à 9 salariés. <b>Les vingt établissements de plus de 50 salariés, visibles sur la carte, fournissent, quant à eux, un emploi industriel sur deux</b>.
 </p>
