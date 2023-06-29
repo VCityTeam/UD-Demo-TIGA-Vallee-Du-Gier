@@ -72,9 +72,15 @@ button {
   height: 100vh;
 }
 
-#home_img {
+#home_img_div {
   width: 100vw;
   height: 55vh;
+  position: relative;
+}
+
+#home_img {
+  width: 100%;
+  height: 100%;
 }
 
 #home_content {
@@ -111,18 +117,26 @@ button {
   margin-bottom: 4vh;
 }
 
-.scroll_button {
+.home_button {
   background: #849130;
   border-radius: 25px;
   color: white;
-  width: 25vw;
+  width: 26vw;
   height: 6vh;
   position: absolute;
-  left: 50%;
   top: 70%;
-  transform: translate(-50%, -50%);
   font-size: 1vw;
   cursor: pointer;
+}
+
+#home_button_left {
+  left: 13vw;
+  transform: translateY(-50%);
+}
+
+#home_button_right {
+  left: 63vw;
+  transform: translateY(-50%);
 }
 
 .visit_section {
@@ -202,14 +216,14 @@ button {
 
 .description_div {
   position: relative;
-  height: 10vh;
+  height: 18vh;
   width: 80vw;
-  font-size: 2.3vh;
+  font-size: min(2.3vh, 1.2vw);
 }
 
 .visit_choice_div {
   position: relative;
-  height: 35vh;
+  height: 27vh;
   width: 80vw;
   display: flex;
   flex-direction: row;
@@ -298,4 +312,36 @@ button {
   font-weight: 700;
   font-style: normal;
   font-size: 0.9vw;
+}
+
+.info_button {
+  z-index: 11;
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  margin: 0px;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+.info_div {
+  display: none;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: fit-content;
+  max-width: 20%;
+  height: fit-content;
+  min-height: 30px;
+  background: rgba(252, 249, 232, 0.8);
+  border-radius: 10px;
+  margin-right: auto;
+  padding: 10px 35px 10px 10px;
+  font-size: 12px;
+}
+
+.info_button:hover + .info_div,
+.info_div:hover {
+  display: block;
 }

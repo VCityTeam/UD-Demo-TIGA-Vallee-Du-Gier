@@ -18,19 +18,41 @@
   </head>
   <body>
     <section id="home_section">
-      <img
-        id="home_img"
-        src="./assets/logos/homepage_img.png"
-        alt="homepage image"
-      />
+      <div id="home_img_div">
+        <img
+          id="home_img"
+          src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/LesEtaings_2.png"
+          alt="homepage image"
+        />
+        <button class="info_button">
+          <img src="../assets/icons/Info.svg" />
+        </button>
+        <div class="info_div">
+          Lithographie de François Caron, livret « Les trente-trois merveilles
+          de l'exposition universelle de 1900 », s.d. - Archives municipales de
+          Rive-de-Gier
+        </div>
+      </div>
       <div id="home_content">
         <h1 id="main_title">LA VALLÉE DU GIER</h1>
         <h2 id="sub_title">
-          SITUÉE ENTRE LYON ET SAINT-ÉTIENNE, ELLE EST HISTORIQUEMENT LA
-          PREMIÈRE VALLÉE INDUSTRIELLE DE FRANCE
+          ENTRE LYON ET SAINT-ÉTIENNE,<br />
+          UN HAUT-LIEU DISCRET DE L'INDUSTRIE EN FRANCE
         </h2>
-        <button class="scroll_button" name="visit_section_1">
-          J'EXPLORE LES LIEUX
+        <button
+          class="home_button scroll_button"
+          id="home_button_left"
+          name="visit_section_1"
+        >
+          Le territoire raconté
+        </button>
+        <button
+          class="home_button"
+          id="home_button_right"
+          name="visit_section_2"
+          onclick="location.href = './html/open_visit.html';"
+        >
+          Cartes des industries
         </button>
         <script type="text/javascript">
           document.querySelectorAll('.scroll_button').forEach((anchor) => {
@@ -62,11 +84,15 @@
         </div>
       </div>
       <div class="description_div">
-        Avant de commencer ton exploration, nous te proposons trois missions au
-        coeur de la vallée, afin d'aller à la découverte des personnes qui y
-        vivent et y travaillent, mais aussi des lieux et métiers phares qui
-        participent à l'histoire de ce territoire industriel. À toi de choisir
-        par quel parcours tu souhaites commencer à te balader :
+        <b
+          >Parcours construits pour un grand public - Festival Pop Sciences des
+          13 et 14 mai 2023, Villeurbanne.</b
+        ><br /><br />
+        Nous te proposons trois missions au coeur de la vallée, afin d'aller à
+        la découverte des personnes qui y vivent et y travaillent, mais aussi
+        des lieux et métiers phares qui participent à l'histoire de ce
+        territoire industriel. À toi de choisir par quel parcours tu souhaites
+        commencer à te balader.
       </div>
       <div class="visit_choice_div">
         <button
@@ -107,8 +133,8 @@
       <div class="open_visit_div">
         <div class="open_visit_desc">
           <p>
-            Si tu préfères te balader librement à la découverte de la vallée,
-            choisis la déambulation libre !
+            Retrouve ici la carte 3D du territoire de la haute vallée du Gier et
+            de ses industries :
           </p>
         </div>
         <div class="open_visit_button">
@@ -116,7 +142,7 @@
             class="grey grey_hover"
             onclick="location.href = './html/open_visit.html';"
           >
-            DÉAMBULATION LIBRE
+            CARTE DU TERRITOIRE
           </button>
         </div>
       </div>
@@ -132,13 +158,24 @@
         </div>
       </div>
       <div class="description_div">
+        <b
+          >Dans ce parcours en trois chapitres, découvrez l'histoire de
+          l'industrialisation de la haute vallée du Gier.</b
+        ><br /><br />
         La vallée du Gier présente au visiteur un paysage industriel
-        caractéristique, dominé par les formes de la grande usine métallurgique
-        implantée dans la seconde moitié du 19e siècle. La vallée du Gier
-        accueille quelques grands sites historiques de production métallurgique
-        restés en activité. La plupart ont été industrialisés dans la période de
-        1840 à 1860 qui succède à l'ouverture du chemin de fer de Saint-Etienne
-        à Lyon, première ligne à vapeur de France.
+        caractéristique, dominé par les formes de la
+        <b
+          >grande usine métallurgique implantée dans la seconde moitié du 19e
+          siècle</b
+        >. La plupart de ces sites historiques ont été industrialisés dans les
+        décennies qui succèdent à l'ouverture du chemin de fer de Saint-Etienne
+        à Lyon, première ligne de chemin de fer à vapeur de France. Ils
+        accueillent aujourd'hui des espaces de production qui ont perduré, pour
+        construire un
+        <b
+          >écosystème de TPE-PME de haute technicité dédiée à la production et
+          transformation du métal.</b
+        >
       </div>
       <div class="visit_choice_div">
         <button
