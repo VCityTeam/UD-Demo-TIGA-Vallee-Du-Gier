@@ -238,7 +238,7 @@
             "name": "Chapitre n°1",
             "description": "",
             "startIndex": 0,
-            "endIndex": 25,
+            "endIndex": 26,
             "nodes": [
                 {
                     "previous": 0,
@@ -391,7 +391,7 @@
                 },
                 {
                     "previous": 4,
-                    "next": 8,
+                    "next": 7,
                     "type": "half",
                     "layers": [
                         "Ortho_IGN"
@@ -455,7 +455,7 @@
                     }
                 },
                 {
-                    "previous": 24,
+                    "previous": 5,
                     "next": 8,
                     "type": "half",
                     "layers": [
@@ -466,7 +466,7 @@
                     ]
                 },
                 {
-                    "previous": 5,
+                    "previous": 7,
                     "next": 9,
                     "type": "full",
                     "layers": [
@@ -1116,6 +1116,17 @@
                         "z": -0.04341426312873182,
                         "w": 0.8980434863089272
                     }
+                },
+                {
+                    "previous": 25,
+                    "next": 26,
+                    "type": "full",
+                    "layers": [
+                        "Ortho_IGN"
+                    ],
+                    "medias": [
+                        "PH1_26"
+                    ]
                 }
             ]
         },
