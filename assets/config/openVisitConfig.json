@@ -25,7 +25,10 @@
             "name": "XXIe siècle",
             "type": "category",
             "legend": "OV_21e_siecle",
-            "layers": ["BATI-INDUS", "BATI-AUTRE"],
+            "layers": [
+                "BATI-INDUS",
+                "BATI-AUTRE"
+            ],
             "contents": [
                 {
                     "name": "Les différentes filières industrielles",
@@ -411,8 +414,48 @@
             "name": "Dans les années 1980",
             "type": "category",
             "legend": "OV_annees_1980",
-            "layers": ["Bati_detruit_1981", "Bati_conserve_1981"],
-            "contents": []
+            "layers": [
+                "Bati_detruit_1981",
+                "Bati_conserve_1981"
+            ],
+            "contents": [
+                {
+                    "name": "Le bati en 1981",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1981",
+                            "id": "BAT_CONSERVE_1981",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#00FF00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_detruit_1981",
+                            "id": "BAT_DETRUIT_1981",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#FF0000"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "Dans l'entre-deux-guerres",

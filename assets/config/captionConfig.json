@@ -265,6 +265,22 @@
                 "color": "#AAB835",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Bâti présent en 1981, conservé",
+            "id": "BAT_CONSERVE_1981",
+            "style": {
+                "color": "#00FF00",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Bâti présent en 1981, détruit",
+            "id": "BAT_DETRUIT_1981",
+            "style": {
+                "color": "#FF0000",
+                "type": "plain"
+            }
         }
     ]
 }
