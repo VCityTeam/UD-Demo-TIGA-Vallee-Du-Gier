@@ -128,7 +128,7 @@ export class FilterManager {
         tilesManager.tiles.forEach((tile) => {
           if (tile.cityObjects != null) {
             tile.cityObjects.forEach((cityObject) => {
-              if (attributeValues.includes(cityObject.props[attributeName])) {
+              if (attributeName == 'ANY' || attributeValues.includes(cityObject.props[attributeName])) {
                 tilesManager.setStyle(cityObject.cityObjectId, style);
               }
             });
