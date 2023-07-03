@@ -178,7 +178,8 @@ export class OpenVisit extends Visit {
     legendButton.classList.add('ov_legend_button');
     legendButton.addEventListener(
       'click',
-      function () {
+      function (event) {
+        event.stopImmediatePropagation();
         const legendDiv = document.getElementById('legend_div');
         legendDiv.innerHTML = '';
         const media = this.medias.find((m) => m.id == category.legend);
