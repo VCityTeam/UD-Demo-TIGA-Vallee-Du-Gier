@@ -612,6 +612,36 @@
                 }
             ]
             
+        },
+        {
+            "id": "OV_19e_siecle",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/OpenVisit/19e_siecle.txt"
+                }
+            ]
+            
+        },
+        {
+            "id": "OV_annees_1980",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/OpenVisit/annees_1980.txt"
+                }
+            ]
+            
+        },
+        {
+            "id": "OV_entre_deux_guerres",
+            "contents": [
+                {
+                    "type": "file",
+                    "value": "../assets/media/texts/OpenVisit/entre_deux_guerres.txt"
+                }
+            ]
+            
         }
     ]
 }
