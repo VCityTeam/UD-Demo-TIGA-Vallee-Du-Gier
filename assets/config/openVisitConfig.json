@@ -410,7 +410,7 @@
         {
             "name": "XXIe siècle",
             "type": "category",
-            "legend": "../media/texts/OpenVisit/21e_siecle.txt",
+            "legend": "OV_21e_siecle",
             "contents": [
                 {
                     "name": "Les différentes filières industrielles",
