@@ -101,7 +101,7 @@ export class OpenVisit extends Visit {
     const categoryButton = document.createElement('button');
     if (category.legend) {
       categoryButton.classList.add('ov_legended_category_button');
-      categoryButton.appendChild();
+      categoryButton.appendChild(this.addLegend(category));
     } else {
       categoryButton.classList.add('ov_category_button');
     }
