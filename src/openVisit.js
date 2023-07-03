@@ -94,6 +94,7 @@ export class OpenVisit extends Visit {
     this.categories.push({
       id: categoryDiv.id,
       displayed: false,
+      layers: category.layers,
     });
     categoryDiv.classList.add('ov_category');
     parentDiv.appendChild(categoryDiv);
@@ -211,6 +212,13 @@ export class OpenVisit extends Visit {
     categorySquare.classList.remove('square_right');
     categorySquare.classList.add('square_down');
     this.getCategory(categoryDiv.id).displayed = true;
+    const layers = this.getCategory(categoryDiv.id).layers;
+    if (layers && layers.length > 0) {
+      this.view.layerManager.getLayers().forEach((layer) => {
+        if (layers.includes(layer.id)) layer.visible = true;
+      });
+    }
+    this.view.layerManager.notifyChange();
   }
 
   closeCategory(categoryDiv) {
@@ -234,6 +242,13 @@ export class OpenVisit extends Visit {
     categorySquare.classList.remove('square_down');
     categorySquare.classList.add('square_right');
     this.getCategory(categoryDiv.id).displayed = false;
+    const layers = this.getCategory(categoryDiv.id).layers;
+    if (layers && layers.length > 0) {
+      this.view.layerManager.getLayers().forEach((layer) => {
+        if (layers.includes(layer.id)) layer.visible = false;
+      });
+      this.view.layerManager.notifyChange();
+    }
   }
 
   addFilter(contentButton) {

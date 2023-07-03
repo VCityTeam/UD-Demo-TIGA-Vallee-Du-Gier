@@ -4,14 +4,6 @@
     "selection_target": "BATI-INDUS",
     "layers": [
         {
-            "id": "BATI-INDUS",
-            "default": "no_caption"
-        },
-        {
-            "id": "BATI-AUTRE",
-            "default": "no_caption"
-        },
-        {
             "id": "zae",
             "default": "hide"
         },
@@ -33,6 +25,7 @@
             "name": "XXIe siècle",
             "type": "category",
             "legend": "OV_21e_siecle",
+            "layers": ["BATI-INDUS", "BATI-AUTRE"],
             "contents": [
                 {
                     "name": "Les différentes filières industrielles",
@@ -418,6 +411,7 @@
             "name": "Dans les années 1980",
             "type": "category",
             "legend": "OV_annees_1980",
+            "layers": ["Bati_detruit_1981", "Bati_conserve_1981"],
             "contents": []
         },
         {
