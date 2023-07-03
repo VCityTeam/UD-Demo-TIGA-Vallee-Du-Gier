@@ -64,6 +64,13 @@ export class OpenVisit extends Visit {
         this.layerPanelOpen = !this.layerPanelOpen;
       }.bind(this)
     );
+    const legendButton = document.getElementById('legend_button');
+    legendButton.addEventListener(
+      'click',
+      function () {
+        document.getElementById('legend_div').style.display = 'none';
+      }.bind(this)
+    );
     this.addClickOnBuildingEvent();
   }
 
@@ -92,7 +99,12 @@ export class OpenVisit extends Visit {
     parentDiv.appendChild(categoryDiv);
 
     const categoryButton = document.createElement('button');
-    categoryButton.classList.add('ov_category_button');
+    if (category.legend) {
+      categoryButton.classList.add('ov_legended_category_button');
+      categoryButton.appendChild();
+    } else {
+      categoryButton.classList.add('ov_category_button');
+    }
     categoryDiv.appendChild(categoryButton);
 
     const categoryName = document.createElement('h3');
@@ -159,6 +171,22 @@ export class OpenVisit extends Visit {
         }.bind(this)
       );
     }
+  }
+
+  addLegend(category) {
+    const legendButton = document.createElement('button');
+    legendButton.classList.add('ov_legend_button');
+    legendButton.addEventListener(
+      'click',
+      function () {
+        const legendPanel = document.getElementById('legend_panel');
+        legendPanel.innerHTML = '';
+        const media = this.medias.find((m) => m.id == category.legend);
+        this.mediaManager.addContent(media, legendPanel);
+        document.getElementById('legend_div').style.display = 'block';
+      }.bind(this)
+    );
+    return legendButton;
   }
 
   openCategory(categoryDiv) {
