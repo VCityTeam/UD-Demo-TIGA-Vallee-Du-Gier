@@ -68,7 +68,7 @@ export class OpenVisit extends Visit {
     legendButton.addEventListener(
       'click',
       function () {
-        document.getElementById('legend_div').style.display = 'none';
+        document.getElementById('legend_panel').style.display = 'none';
       }.bind(this)
     );
     this.addClickOnBuildingEvent();
@@ -179,11 +179,11 @@ export class OpenVisit extends Visit {
     legendButton.addEventListener(
       'click',
       function () {
-        const legendPanel = document.getElementById('legend_panel');
-        legendPanel.innerHTML = '';
+        const legendDiv = document.getElementById('legend_div');
+        legendDiv.innerHTML = '';
         const media = this.medias.find((m) => m.id == category.legend);
-        this.mediaManager.addContent(media, legendPanel);
-        document.getElementById('legend_div').style.display = 'block';
+        this.mediaManager.addContent(media, legendDiv);
+        document.getElementById('legend_panel').style.display = 'block';
       }.bind(this)
     );
     return legendButton;
