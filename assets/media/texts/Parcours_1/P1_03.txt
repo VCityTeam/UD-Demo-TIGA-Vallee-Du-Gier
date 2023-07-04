@@ -21,6 +21,5 @@
     </div>
 </div>
 <div class="img_div">
-    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/novacieries%20cote%20halles%20Lucas%20Goy%20les%20%C3%A9claireurs.png"/>
-    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/vue%20d'ensemble%20nova%20by%20night%20Lucas%20Goy%20les%20%C3%A9claireurs.png"/>
+    <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/03.jpg"/>
 </div>
