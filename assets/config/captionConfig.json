@@ -33,6 +33,22 @@
             }
         },
         {
+            "description": "Raisons sociales des entreprises en 1980",
+            "id": "RS_1980",
+            "style": {
+                "color": "#E5127B",
+                "type": "text"
+            }
+        },
+        {
+            "description": "Raisons sociales des entreprises à partir de 1985",
+            "id": "RS_1985",
+            "style": {
+                "color": "#537EB0",
+                "type": "text"
+            }
+        },
+        {
             "description": "Bâtiments présents en 1812 et en 2022",
             "id": "bati_1812_2022",
             "style": {

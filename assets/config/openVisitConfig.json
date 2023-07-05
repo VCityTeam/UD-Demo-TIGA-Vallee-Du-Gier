@@ -420,6 +420,18 @@
             ],
             "contents": [
                 {
+                    "type": "layer",
+                    "layer": "rs_1980",
+                    "id": "RS_1980",
+                    "default": "show"
+                },
+                {
+                    "type": "layer",
+                    "layer": "rs_1985_90",
+                    "id": "RS_1985",
+                    "default": "hide"
+                },
+                {
                     "name": "Le bati en 1981",
                     "type": "category",
                     "contents": [

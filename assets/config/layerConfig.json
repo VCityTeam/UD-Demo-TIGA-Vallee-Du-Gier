@@ -254,6 +254,41 @@
           "haloWidth": 3
         }
       }
+    },
+    {
+      "id": "rs_1980",
+      "url": "../assets/layers/RaisonsSociales_1980.geojson",
+      "zoom": {
+        "min": 4
+      },
+      "style": {
+        "text": {
+          "field": "{RS_v1980}",
+          "color": "#E5127B",
+          "transform": "uppercase",
+          "size": 15,
+          "haloColor": "rgba(20,20,20, 0.8)",
+          "haloWidth": 3
+        }
+      }
+    }
+    ,
+    {
+      "id": "rs_1985_90",
+      "url": "../assets/layers/RaisonsSociales_1985_90.geojson",
+      "zoom": {
+        "min": 4
+      },
+      "style": {
+        "text": {
+          "field": "{RS_V1985}",
+          "color": "#537EB0",
+          "transform": "uppercase",
+          "size": 15,
+          "haloColor": "rgba(20,20,20, 0.8)",
+          "haloWidth": 3
+        }
+      }
     }
   ],
   "camera": {
