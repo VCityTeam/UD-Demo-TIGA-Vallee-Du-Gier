@@ -420,18 +420,6 @@
             ],
             "contents": [
                 {
-                    "type": "layer",
-                    "layer": "rs_1980",
-                    "id": "RS_1980",
-                    "default": "show"
-                },
-                {
-                    "type": "layer",
-                    "layer": "rs_1985_90",
-                    "id": "RS_1985",
-                    "default": "hide"
-                },
-                {
                     "name": "Le bati en 1981",
                     "type": "category",
                     "contents": [
@@ -466,6 +454,18 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "layer",
+                    "layer": "rs_1980",
+                    "id": "RS_1980",
+                    "default": "show"
+                },
+                {
+                    "type": "layer",
+                    "layer": "rs_1985_90",
+                    "id": "RS_1985",
+                    "default": "hide"
                 }
             ]
         },
@@ -478,12 +478,6 @@
                 "Bati_conserve_1929"
             ],
             "contents": [
-                {
-                    "type": "layer",
-                    "layer": "rs_1930",
-                    "id": "RS_1930",
-                    "default": "show"
-                },
                 {
                     "name": "Le bati en 1929",
                     "type": "category",
@@ -519,6 +513,12 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "layer",
+                    "layer": "rs_1930",
+                    "id": "RS_1930",
+                    "default": "show"
                 }
             ]
         },
