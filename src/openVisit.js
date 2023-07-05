@@ -172,6 +172,28 @@ export class OpenVisit extends Visit {
         }.bind(this)
       );
     }
+    if (content.type == 'layer') {
+      for (const layerCaption of this.captionConfig.layers) {
+        if (content.id == layerCaption.id) {
+          contentButton.appendChild(
+            this.panel.createCaption(
+              layerCaption.style,
+              layerCaption.description
+            )
+          );
+          break;
+        }
+      }
+      this.contentConfigs[contentButton.id] = content;
+      contentButton.addEventListener(
+        'click',
+        function () {
+          const layer = getLayerById(this.view, content.layer);
+          if (layer.visible) this.removeLayer(layer, contentButton);
+          else this.addLayer(layer, contentButton);
+        }.bind(this)
+      );
+    }
   }
 
   addLegend(category) {
@@ -203,8 +225,11 @@ export class OpenVisit extends Visit {
     const categoryContent = categoryDiv.querySelector('.ov_category_content');
     const contents = categoryContent.querySelectorAll(':scope > .ov_content');
     for (const content of contents) {
-      if (this.contentConfigs[content.id].default == 'show') {
-        this.addFilter(content);
+      const contentConfig = this.contentConfigs[content.id];
+      if (contentConfig.default == 'show') {
+        if (contentConfig.type == 'layer')
+          this.addLayer(getLayerById(this.view, contentConfig.layer), content);
+        if (contentConfig.type == 'filter') this.addFilter(content);
       }
     }
     categoryContent.style.display = 'block';
@@ -276,6 +301,18 @@ export class OpenVisit extends Visit {
       layer.visible = !this.filterManager.layerHasFilter(layer.id);
     delete this.filters[contentButton.id];
     contentButton.classList.remove('ov_content_displayed');
+  }
+
+  addLayer(layer, contentButton) {
+    layer.visible = true;
+    contentButton.classList.add('ov_content_displayed');
+    this.view.layerManager.notifyChange();
+  }
+
+  removeLayer(layer, contentButton) {
+    layer.visible = false;
+    contentButton.classList.remove('ov_content_displayed');
+    this.view.layerManager.notifyChange();
   }
 
   addLayers(layers) {
