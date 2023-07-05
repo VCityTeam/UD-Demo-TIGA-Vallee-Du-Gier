@@ -305,6 +305,22 @@
                 "color": "#FF0000",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Bâti présent en 1929, conservé",
+            "id": "BAT_CONSERVE_1929",
+            "style": {
+                "color": "#00FF00",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Bâti présent en 1929, détruit",
+            "id": "BAT_DETRUIT_1929",
+            "style": {
+                "color": "#FF0000",
+                "type": "plain"
+            }
         }
     ]
 }

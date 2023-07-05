@@ -473,12 +473,52 @@
             "name": "Dans l'entre-deux-guerres",
             "type": "category",
             "legend": "OV_entre_deux_guerres",
+            "layers": [
+                "Bati_detruit_1929",
+                "Bati_conserve_1929"
+            ],
             "contents": [
                 {
                     "type": "layer",
                     "layer": "rs_1930",
                     "id": "RS_1930",
                     "default": "show"
+                },
+                {
+                    "name": "Le bati en 1929",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "BAT_CONSERVE_1929",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#00FF00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_detruit_1929",
+                            "id": "BAT_DETRUIT_1929",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#FF0000"
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         },
