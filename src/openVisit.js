@@ -272,6 +272,7 @@ export class OpenVisit extends Visit {
     this.getCategory(categoryDiv.id).displayed = false;
     const layers = this.getCategory(categoryDiv.id).layers;
     if (layers && layers.length > 0) {
+      this.mediaManager.deletePins();
       this.view.layerManager.getLayers().forEach((layer) => {
         if (layers.includes(layer.id)) layer.visible = false;
       });
