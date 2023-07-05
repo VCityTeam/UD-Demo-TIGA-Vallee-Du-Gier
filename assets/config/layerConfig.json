@@ -20,12 +20,11 @@
     },
     {
       "id": "Bati_detruit_1981",
-      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/2022/Vallee_Du_Gier_Bati_detruits_1981/tileset.json",
-      "color": "0xF5F5F5"
+      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_detruits_1981/tileset.json"
     },
     {
       "id": "Bati_conserve_1981",
-      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/2022/Vallee_Du_Gier_Bati_conserves_1981//tileset.json"
+      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_conserves_1981//tileset.json"
     }
   ],
   "extents": {
