@@ -230,15 +230,16 @@
   ],
   "LabelLayers": [
     {
-      "id": "noms_entreprises",
-      "url": "../assets/layers/1_Gier_centroides_bati_indus_3946.geojson",
+      "id": "rs_2022",
+      "url": "../assets/layers/RaisonsSociales_2022.geojson",
       "zoom": {
-        "min": 6
+        "min": 4
       },
       "style": {
         "text": {
-          "field": "{RaisonSoci}",
-          "color": "rgb(255,150,150)",
+          "field": "{DENOMINATION}",
+          "color": "#E5127B",
+          "transform": "uppercase",
           "size": 15,
           "haloColor": "rgba(20,20,20, 0.8)",
           "haloWidth": 3

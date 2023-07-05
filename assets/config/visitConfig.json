@@ -131,7 +131,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "filters": [
                         {
@@ -154,6 +155,17 @@
                                     "materialProps": {
                                         "color": "#202020"
                                     }
+                                }
+                            }
+                        },
+                        {
+                            "layer": "rs_2022",
+                            "properties": {
+                                "DENOMINATION": {
+                                    "type": "string",
+                                    "enum": [
+                                        "LUSTUCRU FRAIS"
+                                    ]
                                 }
                             }
                         }

@@ -25,10 +25,10 @@
             }
         },
         {
-            "description": "Noms des entreprises",
-            "id": "noms_entreprises",
+            "description": "Raisons sociales des entreprises en 2022",
+            "id": "RS_2022",
             "style": {
-                "color": "rgb(255,150,150)",
+                "color": "#E5127B",
                 "type": "text"
             }
         },

@@ -407,6 +407,12 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "layer",
+                    "layer": "rs_2022",
+                    "id": "RS_2022",
+                    "default": "show"
                 }
             ]
         },
