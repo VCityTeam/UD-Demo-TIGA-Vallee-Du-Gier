@@ -473,7 +473,14 @@
             "name": "Dans l'entre-deux-guerres",
             "type": "category",
             "legend": "OV_entre_deux_guerres",
-            "contents": []
+            "contents": [
+                {
+                    "type": "layer",
+                    "layer": "rs_1930",
+                    "id": "RS_1930",
+                    "default": "show"
+                }
+            ]
         },
         {
             "name": "Dans la première moitié du XIXe siècle",
