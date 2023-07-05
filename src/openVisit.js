@@ -229,7 +229,8 @@ export class OpenVisit extends Visit {
       if (contentConfig.default == 'show') {
         if (contentConfig.type == 'layer')
           this.addLayer(getLayerById(this.view, contentConfig.layer), content);
-        if (contentConfig.type == 'filter') this.addFilter(content);
+        if (contentConfig.type == 'filter')
+          if (!(content.id in this.filters)) this.addFilter(content);
       }
     }
     categoryContent.style.display = 'block';
@@ -258,9 +259,11 @@ export class OpenVisit extends Visit {
       ':scope > .ov_content_displayed'
     );
     for (const content of contents) {
-      if (content.id in this.filters) {
-        this.removeFilter(content);
-      }
+      const contentConfig = this.contentConfigs[content.id];
+      if (contentConfig.type == 'layer')
+        this.removeLayer(getLayerById(this.view, contentConfig.layer), content);
+      if (contentConfig.type == 'filter')
+        if (content.id in this.filters) this.removeFilter(content);
     }
     categoryContent.style.display = 'none';
     const categorySquare = categoryDiv.querySelector('.ov_category_square');
