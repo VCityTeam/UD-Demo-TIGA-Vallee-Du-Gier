@@ -57,6 +57,14 @@
             }
         },
         {
+            "description": "Raisons sociales des entreprises en 1870",
+            "id": "RS_1870",
+            "style": {
+                "color": "#E5127B",
+                "type": "text"
+            }
+        },
+        {
             "description": "Bâtiments présents en 1812 et en 2022",
             "id": "bati_1812_2022",
             "style": {

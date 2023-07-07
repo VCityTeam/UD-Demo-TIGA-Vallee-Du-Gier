@@ -313,6 +313,23 @@
           "haloWidth": 3
         }
       }
+    },
+    {
+      "id": "rs_1870",
+      "url": "../assets/layers/RaisonsSociales_1870.geojson",
+      "zoom": {
+        "min": 4
+      },
+      "style": {
+        "text": {
+          "field": "{RSv1870}",
+          "color": "#E5127B",
+          "transform": "uppercase",
+          "size": 15,
+          "haloColor": "rgba(20,20,20, 0.8)",
+          "haloWidth": 3
+        }
+      }
     }
   ],
   "camera": {

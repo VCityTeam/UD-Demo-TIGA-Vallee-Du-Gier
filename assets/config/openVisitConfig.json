@@ -532,7 +532,14 @@
             "name": "Dans la première moitié du XIXe siècle",
             "type": "category",
             "legend": "OV_19e_siecle",
-            "contents": []
+            "contents": [
+                {
+                    "type": "layer",
+                    "layer": "rs_1870",
+                    "id": "RS_1870",
+                    "default": "show"
+                }
+            ]
         }
     ]
 }
