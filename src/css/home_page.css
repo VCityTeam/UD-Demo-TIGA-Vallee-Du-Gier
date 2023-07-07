@@ -127,30 +127,17 @@ button {
   top: 70%;
   font-size: 1vw;
   cursor: pointer;
-}
-
-#home_button_left {
-  left: 13vw;
-  transform: translateY(-50%);
-}
-
-#home_button_right {
-  left: 63vw;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .visit_section {
-  height: 100vh;
   position: relative;
-  padding: 0px 10vw 0px 10vw;
+  padding: 0px 10vw 10vh 10vw;
 }
 
 #visit_section_1 {
-  padding: 5vh 10vw 0px 10vw;
-}
-
-#visit_section_2 {
-  height: 60vh;
+  margin-top: 10vh;
 }
 
 .intro_div {
@@ -264,19 +251,22 @@ button {
   transform: scaleX(-1);
 }
 
-.open_visit_div {
+#nav_section {
+  background: #fcf9e8;
+  position: relative;
+  padding: 0px 10vw 0px 10vw;
+}
+
+.nav_div {
   position: relative;
   height: 12vh;
   width: 80vw;
-  background: #fcf9e8;
   border-top: 3px solid #e5127b;
-  border-bottom: 3px solid #e5127b;
   display: flex;
   flex-direction: row;
-  margin-top: 3vh;
 }
 
-.open_visit_desc {
+.nav_desc {
   position: relative;
   width: 66%;
   height: 100%;
@@ -284,7 +274,7 @@ button {
   padding-left: 20px;
 }
 
-.open_visit_desc > p {
+.nav_desc > p {
   text-align: left;
   position: relative;
   top: 50%;
@@ -293,13 +283,13 @@ button {
   margin: 0px;
 }
 
-.open_visit_button {
+.nav_button {
   position: relative;
   width: 34%;
   height: 100%;
 }
 
-.open_visit_button > button {
+.nav_button > button {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -344,4 +334,44 @@ button {
 .info_button:hover + .info_div,
 .info_div:hover {
   display: block;
+}
+
+#more_section {
+  padding-bottom: 10vh;
+}
+
+.padding_div {
+  background: #fcf9e8;
+  height: 20vh;
+}
+
+.more_div {
+  padding: 5vh 10vw;
+}
+
+.more_title_1 {
+  color: #e5127b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.more_title_2 {
+  color: #e5127b;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.more_div > p {
+  font-size: 16px;
+}
+
+.more_button {
+  width: 10vw;
+  height: 4vh;
+  cursor: pointer;
+  border-radius: 25px;
+  color: black;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9vw;
 }

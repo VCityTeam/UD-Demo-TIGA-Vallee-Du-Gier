@@ -39,33 +39,51 @@
           ENTRE LYON ET SAINT-ÉTIENNE,<br />
           UN HAUT-LIEU DISCRET DE L'INDUSTRIE EN FRANCE
         </h2>
-        <button
-          class="home_button scroll_button"
-          id="home_button_left"
-          name="visit_section_1"
-        >
+        <button class="home_button scroll_button" name="visit_section_1">
           Le territoire raconté
         </button>
-        <button
-          class="home_button"
-          id="home_button_right"
-          name="visit_section_2"
-          onclick="location.href = './html/open_visit.html';"
-        >
-          Cartes des industries
-        </button>
-        <script type="text/javascript">
-          document.querySelectorAll('.scroll_button').forEach((anchor) => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-              document.querySelector('#' + anchor.name).scrollIntoView({
-                behavior: 'smooth',
-              });
-            });
-          });
-        </script>
       </div>
     </section>
+
+    <section id="nav_section">
+      <div class="nav_div">
+        <div class="nav_desc">
+          <p>
+            Retrouve ici la carte 3D du territoire de la haute vallée du Gier et
+            de ses industries
+          </p>
+        </div>
+        <div class="nav_button">
+          <button
+            class="grey grey_hover"
+            onclick="location.href = './html/open_visit.html';"
+          >
+            CARTE DU TERRITOIRE
+          </button>
+        </div>
+      </div>
+      <div class="nav_div">
+        <div class="nav_desc">
+          <p>Projet développé au sein du LabEx IMU pour le programme TIGA</p>
+        </div>
+        <div class="nav_button">
+          <button class="grey grey_hover scroll_button" name="more_section">
+            EN SAVOIR PLUS
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      document.querySelectorAll('.scroll_button').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector('#' + anchor.name).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+    </script>
 
     <section id="visit_section_1" class="visit_section">
       <div class="intro_div">
@@ -129,22 +147,6 @@
           </p>
           <img src="./assets/logos/factory.png" alt="factory logo" />
         </button>
-      </div>
-      <div class="open_visit_div">
-        <div class="open_visit_desc">
-          <p>
-            Retrouve ici la carte 3D du territoire de la haute vallée du Gier et
-            de ses industries :
-          </p>
-        </div>
-        <div class="open_visit_button">
-          <button
-            class="grey grey_hover"
-            onclick="location.href = './html/open_visit.html';"
-          >
-            CARTE DU TERRITOIRE
-          </button>
-        </div>
       </div>
     </section>
 
@@ -212,6 +214,41 @@
           </p>
           <img src="./assets/logos/factory.png" alt="factory logo" />
         </button>
+      </div>
+    </section>
+
+    <section id="more_section">
+      <div class="padding_div"></div>
+      <div class="more_div">
+        <h1 class="more_title_1">TIGA</h1>
+        <h2 class="more_title_2">SCIENCES, SOCIÉTÉ, INDUSTRIE</h2>
+        <p>
+          En 2019, les Métropoles de Lyon et Saint-Etienne remportent le
+          programme Territoires d'Innovation (PIA 3) avec un projet intitulé
+          L'industrie [Re]connectée et intégrée à son territoire et à ses
+          habitants, décliné en 17 actions.Le programme de l'action 14, Think
+          and do tank Sciences, Sociétés et Industries, est coordonné par
+          l'Université de Lyon - sous la responsabilité scientifique et
+          technique du <b>LabEx Intelligences des Mondes Urbains.</b
+          ><br /><br />
+
+          Trois objectifs clefs ont été définis :<br /><br />
+
+          &#x2022; favoriser l'ancrage et la transformation de l'industrie pour
+          le développement durable de la cité<br />
+          &#x2022; donner un cadre de confiance aux échanges pour créer de la
+          valeur<br />
+          &#x2022; développer la culture industrielle, adapter les compétences
+          et améliorer la mobilité<br />
+        </p>
+        <div class="round_button">
+          <button
+            class="grey grey_hover more_button"
+            onclick="location.href = 'https\://imu.universite-lyon.fr/tiga/';"
+          >
+            EN SAVOIR PLUS
+          </button>
+        </div>
       </div>
     </section>
   </body>
