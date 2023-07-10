@@ -198,34 +198,6 @@
           "color": "#EF9217"
         }
       }
-    },
-    {
-      "id": "bati_1929_2022",
-      "url": "../assets/layers/Bati_vallee_1929_2022.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#F2F59F",
-          "opacity": 1
-        },
-        "stroke": {
-          "color": "#F2F59F"
-        }
-      }
-    },
-    {
-      "id": "bati_1929",
-      "url": "../assets/layers/Bati_vallee_1929_pas_2022.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#6D53B0",
-          "opacity": 1
-        },
-        "stroke": {
-          "color": "#6D53B0"
-        }
-      }
     }
   ],
   "LabelLayers": [

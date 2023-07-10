@@ -119,22 +119,6 @@
                 "color": "#EF9217",
                 "type": "plain"
             }
-        },
-        {
-            "description": "Bâtiments conservés en 2022 (d'après les photographies aériennes de 1929 et 1941 pour la commune de Saint-Chamond)",
-            "id": "bati_1929_2022",
-            "style": {
-                "color": "#F2F59F",
-                "type": "plain"
-            }
-        },
-        {
-            "description": "Bâtiments présents dans l'entre-deux-guerres (d'après les photographies aériennes de 1929 et 1941 pour la commune de Saint-Chamond)",
-            "id": "bati_1929",
-            "style": {
-                "color": "#6D53B0",
-                "type": "plain"
-            }
         }
     ],
     "filters": [
