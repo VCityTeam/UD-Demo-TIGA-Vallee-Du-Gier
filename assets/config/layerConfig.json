@@ -88,20 +88,6 @@
       }
     },
     {
-      "id": "sites_histo",
-      "url": "../assets/layers/Industries_1840_1860_3D.geojson",
-      "crs": "EPSG:3946",
-      "style": {
-        "fill": {
-          "color": "#EF9217",
-          "opacity": 1
-        },
-        "stroke": {
-          "color": "#EF9217"
-        }
-      }
-    },
-    {
       "id": "zone_bati_1812",
       "url": "../assets/layers/ZonesBaties_1812_3D.geojson",
       "crs": "EPSG:3946",
@@ -112,6 +98,20 @@
         },
         "stroke": {
           "color": "#6D53B0"
+        }
+      }
+    },
+    {
+      "id": "sites_histo",
+      "url": "../assets/layers/Industries_1840_1860_3D.geojson",
+      "crs": "EPSG:3946",
+      "style": {
+        "fill": {
+          "color": "#EF9217",
+          "opacity": 1
+        },
+        "stroke": {
+          "color": "#EF9217"
         }
       }
     },
