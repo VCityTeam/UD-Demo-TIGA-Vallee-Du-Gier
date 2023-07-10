@@ -73,7 +73,7 @@
             }
         },
         {
-            "description": "Zones urbanisées en 1812 (d'après le cadastre napoléonien, archives départementales de la Loire)",
+            "description": "Zones urbanisées en 1812",
             "id": "zone_bati_1812",
             "style": {
                 "color": "#6D53B0",
@@ -105,7 +105,7 @@
             }
         },
         {
-            "description": "Principaux sites industriels historiques construits entre 1830 et 1880 (d'après différents plans historiques)",
+            "description": "Principaux sites industriels historiques entre 1840 et 1860",
             "id": "sites_histo",
             "style": {
                 "color": "#EF9217",

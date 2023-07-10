@@ -538,6 +538,24 @@
                     "layer": "rs_1870",
                     "id": "RS_1870",
                     "default": "show"
+                },
+                {
+                    "type": "layer",
+                    "layer": "zone_bati_1812",
+                    "id": "zone_bati_1812",
+                    "default": "show"
+                },
+                {
+                    "type": "layer",
+                    "layer": "bati_1812_2022",
+                    "id": "bati_1812_2022",
+                    "default": "show"
+                },
+                {
+                    "type": "layer",
+                    "layer": "sites_histo",
+                    "id": "sites_histo",
+                    "default": "show"
                 }
             ]
         }

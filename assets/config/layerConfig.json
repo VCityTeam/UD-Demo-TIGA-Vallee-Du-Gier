@@ -89,7 +89,7 @@
     },
     {
       "id": "sites_histo",
-      "url": "../assets/layers/Industries_1830_1880.geojson",
+      "url": "../assets/layers/Industries_1840_1860_3D.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
