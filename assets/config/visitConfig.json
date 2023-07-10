@@ -1547,7 +1547,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_03"
@@ -1596,7 +1597,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_04"
@@ -1612,7 +1614,8 @@
                         "BATI-AUTRE",
                         "communes",
                         "zae",
-                        "noms_communes"
+                        "noms_communes",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_05"
@@ -1661,7 +1664,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_06"
@@ -1674,7 +1678,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_07"
@@ -1723,7 +1728,8 @@
                     "layers": [
                         "Ortho_IGN",
                         "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "BATI-AUTRE",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH3_08"
