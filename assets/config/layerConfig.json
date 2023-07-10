@@ -103,7 +103,7 @@
     },
     {
       "id": "zone_bati_1812",
-      "url": "../assets/layers/Zones_baties_en_1812.geojson",
+      "url": "../assets/layers/ZonesBaties_1812_3D.geojson",
       "crs": "EPSG:3946",
       "style": {
         "fill": {
