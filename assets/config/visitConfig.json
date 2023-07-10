@@ -1091,8 +1091,8 @@
                         "voies_ferrees",
                         "fleuves_gier",
                         "communes",
-                        "bati_1929_2022",
-                        "bati_1929",
+                        "Bati_conserve_1929",
+                        "Bati_detruit_1929",
                         "bati_indus_1929",
                         "canal"
                     ],
