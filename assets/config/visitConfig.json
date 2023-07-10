@@ -1154,7 +1154,10 @@
                     "next": 1,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1930",
+                        "Bati_detruit_1929",
+                        "Bati_conserve_1929"
                     ],
                     "medias": [
                         "PH2_00"
@@ -1176,7 +1179,10 @@
                     "next": 2,
                     "type": "full",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1930",
+                        "Bati_detruit_1929",
+                        "Bati_conserve_1929"
                     ],
                     "medias": [
                         "PH2_01"
@@ -1187,7 +1193,10 @@
                     "next": 3,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1930",
+                        "Bati_detruit_1929",
+                        "Bati_conserve_1929"
                     ],
                     "medias": [
                         "PH2_02"
@@ -1209,7 +1218,10 @@
                     "next": 4,
                     "type": "half",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1930",
+                        "Bati_detruit_1929",
+                        "Bati_conserve_1929"
                     ],
                     "medias": [
                         "PH2_03"
@@ -1220,7 +1232,10 @@
                     "next": 5,
                     "type": "smaller",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1930",
+                        "Bati_detruit_1929",
+                        "Bati_conserve_1929"
                     ],
                     "medias": [
                         "PH2_04"
@@ -1242,7 +1257,10 @@
                     "next": 10,
                     "type": "half",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1980",
+                        "Bati_detruit_1981",
+                        "Bati_conserve_1981"
                     ],
                     "medias": [
                         "PH2_05"
@@ -1297,7 +1315,10 @@
                     "next": 11,
                     "type": "half",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1980",
+                        "Bati_detruit_1981",
+                        "Bati_conserve_1981"
                     ],
                     "medias": [
                         "PH2_10"
@@ -1319,7 +1340,10 @@
                     "next": 12,
                     "type": "half",
                     "layers": [
-                        "Ortho_IGN"
+                        "Ortho_IGN",
+                        "rs_1980",
+                        "Bati_detruit_1981",
+                        "Bati_conserve_1981"
                     ],
                     "medias": [
                         "PH2_11"
@@ -1344,7 +1368,8 @@
                         "Ortho_IGN",
                         "BATI-AUTRE",
                         "BATI-INDUS",
-                        "zae"
+                        "zae",
+                        "rs_2022"
                     ],
                     "medias": [
                         "PH2_12"
