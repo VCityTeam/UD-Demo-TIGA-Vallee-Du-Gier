@@ -33,6 +33,10 @@
     {
       "id": "Bati_conserve_1929",
       "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_conserves_1929/tileset.json"
+    },
+    {
+      "id": "Bati_indus_1840_1860",
+      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Indus_1840_1860/tileset.json"
     }
   ],
   "extents": {
