@@ -313,6 +313,190 @@
                 "color": "#FF0000",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Industrie extractive, eau et energie",
+            "id": "INDUS_ENERGIE",
+            "style": {
+                "color": "#CB8D23",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de briquerie",
+            "id": "INDUS_BRIQUE",
+            "style": {
+                "color": "#868A63",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie textile",
+            "id": "INDUS_TEXTILE",
+            "style": {
+                "color": "#404040",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Abattoirs",
+            "id": "INDUS_ABBATOIR",
+            "style": {
+                "color": "#ECDB00",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de teinturerie",
+            "id": "INDUS_TEINTURE",
+            "style": {
+                "color": "#8D9BA1",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de chimie",
+            "id": "INDUS_CHIMIE",
+            "style": {
+                "color": "#5395B0",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de métallurgie",
+            "id": "INDUS_METAL",
+            "style": {
+                "color": "#8A6663",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de verrerie",
+            "id": "INDUS_VERRE",
+            "style": {
+                "color": "#B75C73",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie agro-alimentaire",
+            "id": "INDUS_ALIMENT",
+            "style": {
+                "color": "#868A63",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie du bois, papier, meubles",
+            "id": "INDUS_BOIS",
+            "style": {
+                "color": "#ECDB00",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de tannerie",
+            "id": "INDUS_TANNERIE",
+            "style": {
+                "color": "#8D9BA1",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de produits minéraux non métalliques",
+            "id": "INDUS_MINERAL",
+            "style": {
+                "color": "#5395B0",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de plastique",
+            "id": "INDUS_PLASTIQUE",
+            "style": {
+                "color": "#B14E4E",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Garage",
+            "id": "INDUS_GARAGE",
+            "style": {
+                "color": "#404040",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Friche",
+            "id": "INDUS_FRICHE",
+            "style": {
+                "color": "#AAB835",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie d'aciérie",
+            "id": "INDUS_ACIER",
+            "style": {
+                "color": "#CB8D23",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de chaudronnerie",
+            "id": "INDUS_CHAUDRON",
+            "style": {
+                "color": "#AAB835",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de clouterie",
+            "id": "INDUS_CLOU",
+            "style": {
+                "color": "#ECDB00",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de mécanique",
+            "id": "INDUS_MECA",
+            "style": {
+                "color": "#8D9BA1",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de fabrication de tresses et lacets",
+            "id": "INDUS_TRESSE",
+            "style": {
+                "color": "#5395B0",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de fonderie",
+            "id": "INDUS_FONDRE",
+            "style": {
+                "color": "#B14E4E",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de forge",
+            "id": "INDUS_FORGE",
+            "style": {
+                "color": "#8A6663",
+                "type": "plain"
+            }
+        },
+        {
+            "description": "Industrie de tréfilerie",
+            "id": "INDUS_TREFILERIE",
+            "style": {
+                "color": "#404040",
+                "type": "plain"
+            }
         }
     ]
 }

@@ -426,6 +426,199 @@
             ],
             "contents": [
                 {
+                    "name": "Les différentes filières industrielles",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_ENERGIE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "ENERGIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_ALIMENT",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "AGROALIMENTAIRE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#868A63"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_TEXTILE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "TEXTILE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#404040"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_BOIS",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "BOIS ET MEUBLE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ECDB00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_TANNERIE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "CUIRS ET PEAUX"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8D9BA1"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_MINERAL",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "FABRICATION DE MINERAUX NON METALLIQUES"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#5395B0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_PLASTIQUE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "PLASTURGIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#B14E4E"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_METAL",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "METALLURGIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8A6663"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_VERRE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "VERRERIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#B75C73"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_GARAGE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "GARAGE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#404040"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_FRICHE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "FRICHE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#AAB835"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Le bati en 1981",
                     "type": "category",
                     "contents": [
@@ -485,6 +678,148 @@
             ],
             "contents": [
                 {
+                    "name": "Les différentes filières industrielles",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_ENERGIE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "ENERGIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_BRIQUE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "BRIQUERIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#868A63"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_TEXTILE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "TEXTILE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#404040"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_ABBATOIR",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "ABATTOIRS"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ECDB00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_TEINTURE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "TEINTURERIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8D9BA1"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_CHIMIE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "CHIMIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#5395B0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_METAL",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "METALLURGIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8A6663"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_conserve_1929",
+                            "id": "INDUS_VERRE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "FILIERE",
+                                "attribute_values": [
+                                    "VERRERIE"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#B75C73"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Le bati en 1929",
                     "type": "category",
                     "contents": [
@@ -532,7 +867,188 @@
             "name": "Dans la première moitié du XIXe siècle",
             "type": "category",
             "legend": "OV_19e_siecle",
+            "layers": [
+                "Bati_indus_1840_1860"
+            ],
             "contents": [
+                {
+                    "name": "Les différentes filières industrielles",
+                    "type": "category",
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_ACIER",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Acierie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_BRIQUE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Briquerie refractaire"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#868A63"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_CHAUDRON",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Chaudronnerie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#AAB835"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_CLOU",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Clouterie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#ECDB00"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_MECA",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Construction Mecanique",
+                                    "Mecanique"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8D9BA1"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_TRESSE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Fabrique de tresses et lacets",
+                                    "Fabrique de lacets"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#5395B0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_FONDRE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Fonderie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#B14E4E"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_FORGE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Forge"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#8A6663"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_TREFILERIE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Trefilerie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#404040"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1840_1860",
+                            "id": "INDUS_VERRE",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "1862_type",
+                                "attribute_values": [
+                                    "Verrerie"
+                                ],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#B75C73"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
                 {
                     "type": "layer",
                     "layer": "rs_1870",
