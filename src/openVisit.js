@@ -241,7 +241,8 @@ export class OpenVisit extends Visit {
     const layers = this.getCategory(categoryDiv.id).layers;
     if (layers && layers.length > 0) {
       this.view.layerManager.getLayers().forEach((layer) => {
-        if (layers.includes(layer.id)) layer.visible = true;
+        for (const layer_config of layers)
+          if (layer_config.id == layer.id) layer.visible = layer_config.visible;
       });
     }
     this.view.layerManager.notifyChange();
@@ -274,7 +275,8 @@ export class OpenVisit extends Visit {
     if (layers && layers.length > 0) {
       this.mediaManager.deletePins();
       this.view.layerManager.getLayers().forEach((layer) => {
-        if (layers.includes(layer.id)) layer.visible = false;
+        for (const layer_config of layers)
+          if (layer_config.id == layer.id) layer.visible = !layer_config.visible;
       });
       this.view.layerManager.notifyChange();
     }

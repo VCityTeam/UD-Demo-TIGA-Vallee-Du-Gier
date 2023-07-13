@@ -26,8 +26,14 @@
             "type": "category",
             "legend": "OV_21e_siecle",
             "layers": [
-                "BATI-INDUS",
-                "BATI-AUTRE"
+                {
+                    "id": "BATI-INDUS",
+                    "visible": true
+                },
+                {
+                    "id": "BATI-AUTRE",
+                    "visible": true
+                }
             ],
             "contents": [
                 {
@@ -421,8 +427,14 @@
             "type": "category",
             "legend": "OV_annees_1980",
             "layers": [
-                "Bati_detruit_1981",
-                "Bati_conserve_1981"
+                {
+                    "id": "Bati_detruit_1981",
+                    "visible": true
+                },
+                {
+                    "id": "Bati_conserve_1981",
+                    "visible": true
+                }
             ],
             "contents": [
                 {
@@ -673,21 +685,45 @@
             "type": "category",
             "legend": "OV_entre_deux_guerres",
             "layers": [
-                "Bati_detruit_1929",
-                "Bati_conserve_1929"
+                {
+                    "id": "Bati_detruit_1929",
+                    "visible": true
+                },
+                {
+                    "id": "Bati_conserve_1929",
+                    "visible": true
+                },
+                {
+                    "id": "Bati_indus_1929",
+                    "visible": true
+                }
             ],
             "contents": [
                 {
                     "name": "Les différentes filières industrielles",
                     "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1929",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_conserve_1929",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_indus_1929",
+                            "visible": true
+                        }
+                    ],
                     "contents": [
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_ENERGIE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "ENERGIE"
                                 ],
@@ -700,11 +736,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_BRIQUE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "BRIQUERIE"
                                 ],
@@ -717,11 +753,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_TEXTILE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "TEXTILE"
                                 ],
@@ -734,11 +770,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_ABBATOIR",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "ABATTOIRS"
                                 ],
@@ -751,11 +787,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_TEINTURE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "TEINTURERIE"
                                 ],
@@ -768,11 +804,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_CHIMIE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "CHIMIE"
                                 ],
@@ -785,11 +821,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_METAL",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "METALLURGIE"
                                 ],
@@ -802,11 +838,11 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1929",
                             "id": "INDUS_VERRE",
                             "default": "show",
                             "properties": {
-                                "attribute": "FILIERE",
+                                "attribute": "FILLIERE",
                                 "attribute_values": [
                                     "VERRERIE"
                                 ],
@@ -822,6 +858,20 @@
                 {
                     "name": "Le bati en 1929",
                     "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_conserve_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_indus_1929",
+                            "visible": false
+                        }
+                    ],
                     "contents": [
                         {
                             "type": "filter",
@@ -868,7 +918,10 @@
             "type": "category",
             "legend": "OV_19e_siecle",
             "layers": [
-                "Bati_indus_1840_1860"
+                {
+                    "id": "Bati_indus_1840_1860",
+                    "visible": true
+                }
             ],
             "contents": [
                 {
