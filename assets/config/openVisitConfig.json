@@ -434,16 +434,34 @@
                 {
                     "id": "Bati_conserve_1981",
                     "visible": true
+                },
+                {
+                    "id": "Bati_indus_1980",
+                    "visible": true
                 }
             ],
             "contents": [
                 {
                     "name": "Les différentes filières industrielles",
                     "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1981",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_conserve_1981",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_indus_1980",
+                            "visible": true
+                        }
+                    ],
                     "contents": [
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_ENERGIE",
                             "default": "show",
                             "properties": {
@@ -460,7 +478,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_ALIMENT",
                             "default": "show",
                             "properties": {
@@ -477,7 +495,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_TEXTILE",
                             "default": "show",
                             "properties": {
@@ -494,7 +512,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_BOIS",
                             "default": "show",
                             "properties": {
@@ -511,7 +529,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_TANNERIE",
                             "default": "show",
                             "properties": {
@@ -528,7 +546,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_MINERAL",
                             "default": "show",
                             "properties": {
@@ -545,7 +563,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_PLASTIQUE",
                             "default": "show",
                             "properties": {
@@ -562,7 +580,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_METAL",
                             "default": "show",
                             "properties": {
@@ -579,7 +597,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_VERRE",
                             "default": "show",
                             "properties": {
@@ -596,7 +614,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_GARAGE",
                             "default": "show",
                             "properties": {
@@ -613,7 +631,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "Bati_conserve_1929",
+                            "layer": "Bati_indus_1980",
                             "id": "INDUS_FRICHE",
                             "default": "show",
                             "properties": {
@@ -633,6 +651,20 @@
                 {
                     "name": "Le bati en 1981",
                     "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1981",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_conserve_1981",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_indus_1980",
+                            "visible": false
+                        }
+                    ],
                     "contents": [
                         {
                             "type": "filter",
