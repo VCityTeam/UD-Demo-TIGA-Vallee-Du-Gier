@@ -433,12 +433,18 @@ A category must have a `name`, which is a short description of what the category
 
 A category must have `type` field equal to `category`. This type distinguishes categories from filters.
 
+A category can have a `legend`, which is the ID of a [`file` Media](#media-contents). This file contains a long description of the category and its contents.
+
+A category can have `layers`, a list of layers that will be set visible or invisible when the category is displayed. Each layer should have an ID and a `visible` bolean. When the category is closed, layers that were set visible are set invisable and vice versa.
+
 A category can have `contents`, which are either categories or filters.
 
 | Attribute | Required               |
 | --------- | ---------------------- |
 | name      | :white_check_mark: Yes |
 | type      | :white_check_mark: Yes |
+| legend    | :red_circle: No        |
+| layers    | :red_circle: No        |
 | contents  | :red_circle: No        |
 
 Example:
@@ -447,6 +453,17 @@ Example:
 {
   "name": "Example category",
   "type": "category",
+  "legend": "CATEGORY_CAPTION",
+  "layers": [
+    {
+      "id": "Layer1",
+      "visible": true
+    },
+    {
+      "id": "Layer2",
+      "visible": false
+    }
+  ],
   "contents": [] // Each content of "contents" can be either Category or Filter
 }
 ```
