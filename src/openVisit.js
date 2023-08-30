@@ -1,10 +1,13 @@
-import { Visit } from './visit';
+import { Panel } from './panel';
+import { MediaManager } from './mediaManager';
+import { FilterManager } from './filterManager';
 import { getLayerById } from './layerUtils';
 import { createCaption } from './captionUtils';
 
-export class OpenVisit extends Visit {
+export class OpenVisit {
   constructor(view, medias) {
-    super(view, medias);
+    this.view = view;
+    this.medias = medias;
     this.id = 'OPEN';
     this.currentIndex = 0;
     this.categories = [];
@@ -12,6 +15,10 @@ export class OpenVisit extends Visit {
     this.contentConfigs = {};
     this.contentNumber = 0;
     this.layerPanelOpen = false;
+
+    this.panel = new Panel();
+    this.mediaManager = new MediaManager(view);
+    this.filterManager = new FilterManager(view);
   }
 
   start(config, captionConfig) {
@@ -153,10 +160,7 @@ export class OpenVisit extends Visit {
       for (const filterCaption of this.captionConfig.filters) {
         if (content.id == filterCaption.id) {
           contentButton.appendChild(
-            createCaption(
-              filterCaption.style,
-              filterCaption.description
-            )
+            createCaption(filterCaption.style, filterCaption.description)
           );
           break;
         }
@@ -177,10 +181,7 @@ export class OpenVisit extends Visit {
       for (const layerCaption of this.captionConfig.layers) {
         if (content.id == layerCaption.id) {
           contentButton.appendChild(
-            createCaption(
-              layerCaption.style,
-              layerCaption.description
-            )
+            createCaption(layerCaption.style, layerCaption.description)
           );
           break;
         }
@@ -277,7 +278,8 @@ export class OpenVisit extends Visit {
       this.mediaManager.deletePins();
       this.view.layerManager.getLayers().forEach((layer) => {
         for (const layer_config of layers)
-          if (layer_config.id == layer.id) layer.visible = !layer_config.visible;
+          if (layer_config.id == layer.id)
+            layer.visible = !layer_config.visible;
       });
       this.view.layerManager.notifyChange();
     }
@@ -338,10 +340,7 @@ export class OpenVisit extends Visit {
           for (const layerCaption of this.captionConfig.layers) {
             if (layerConfig.id == layerCaption.id) {
               layerButton.appendChild(
-                createCaption(
-                  layerCaption.style,
-                  layerCaption.description
-                )
+                createCaption(layerCaption.style, layerCaption.description)
               );
               break;
             }
