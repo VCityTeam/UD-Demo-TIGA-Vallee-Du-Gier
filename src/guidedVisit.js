@@ -1,4 +1,3 @@
-import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { FilterManager } from './filterManager';
 import { createCaption } from './captionUtils';
@@ -11,8 +10,8 @@ export class GuidedVisit {
     this.medias = medias;
     this.currentIndex = 0;
     this.view = view;
+    this.mediaContainer = null;
 
-    this.panel = new Panel();
     this.mediaManager = new MediaManager(view);
     this.filterManager = new FilterManager(view);
   }
@@ -29,73 +28,21 @@ export class GuidedVisit {
     return this.config.nodes[this.currentIndex];
   }
 
-  addVisitPanelEvents() {
-    this.panel.previousButton.addEventListener(
-      'click',
-      function () {
-        this.goToPreviousNode();
-      }.bind(this)
-    );
-    this.panel.nextButton.addEventListener(
-      'click',
-      function () {
-        this.goToNextNode();
-      }.bind(this)
-    );
-  }
-
-  init(visitConfig, captionConfig) {
+  init(visitConfig, captionConfig, mediaContainer) {
     this.config = visitConfig;
     this.captionConfig = captionConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
-    const menuButton = document.getElementById('menu_header_button');
-    menuButton.addEventListener('click', function () {
-      const menuPanel = document.getElementById('menu_panel');
-      if (menuPanel.classList.contains('menu_panel_closed'))
-        menuPanel.classList.replace('menu_panel_closed', 'menu_panel_open');
-      else menuPanel.classList.replace('menu_panel_open', 'menu_panel_closed');
-    });
-    const layerButton = document.getElementById('layer_button');
-    layerButton.addEventListener(
-      'click',
-      function () {
-        const layerPanel = document.getElementById('layer_panel');
-        if (this.layerPanelOpen) {
-          layerPanel.style.display = 'none';
-        } else {
-          layerPanel.style.display = 'flex';
-        }
-        this.layerPanelOpen = !this.layerPanelOpen;
-      }.bind(this)
-    );
+    this.mediaContainer = mediaContainer;
   }
 
-  start() {
-    this.addVisitPanelEvents();
-    this.goToNode(this.currentIndex);
-  }
-
-  goToNode(nodeIndex) {
-    this.panel.saveInputValues(this.currentIndex);
+  async goToNode(nodeIndex) {
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
-    this.panel.setWidth(currentNode.type);
-    this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.setMedia(currentNode);
     this.filterLayers(currentNode.layers, currentNode.filters);
     this.createLayersCaption();
     this.travelToPosition(currentNode, this.view);
-  }
-
-  goToPreviousNode() {
-    const previousIndex = this.getNode().previous;
-    this.goToNode(previousIndex);
-  }
-
-  goToNextNode() {
-    const nextIndex = this.getNode().next;
-    this.goToNode(nextIndex);
   }
 
   travelToPosition(node, view) {
@@ -146,21 +93,15 @@ export class GuidedVisit {
     this.view.layerManager.notifyChange();
   }
 
-  setMedia(node) {
-    this.panel.cleanMediaContainer();
+  async setMedia(node) {
+    this.mediaContainer.innerHTML = '';
     if (node.medias && node.medias.length > 0) {
       node.medias.forEach((nodeMedia) => {
         const media = this.medias.find((m) => m.id == nodeMedia);
         if (media) {
-          if (!media.context || media.context == 'left') {
-            this.mediaManager
-              .addContent(media, this.panel.mediaContainer)
-              .then(() => {
-                this.panel.setForm(this.currentIndex);
-              });
-          } else {
-            this.mediaManager.addContent(media, this.panel.mediaContainer);
-          }
+          this.mediaManager.addContent(media, this.mediaContainer).then(() => {
+            // this.panel.setForm(this.currentIndex);
+          });
         }
       });
     }

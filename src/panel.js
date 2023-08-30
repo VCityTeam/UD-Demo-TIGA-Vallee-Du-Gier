@@ -9,7 +9,12 @@ export class Panel {
     this.captionPanel = null;
     this.footerPanel = null;
     this.width = 'half';
+    this.visit = null;
     this.initPanel();
+  }
+
+  setVisit(visit) {
+    this.visit = visit;
   }
 
   setButtonsStyle(isStart, isEnd) {
@@ -73,7 +78,47 @@ export class Panel {
     this.captionPanel = this.mainPanel.querySelector('.caption_panel');
     this.footerPanel = this.mainPanel.querySelector('.footer_panel');
     this.previousButton = document.getElementById('previous_button');
+    this.previousButton.addEventListener(
+      'click',
+      function () {
+        const previousIndex = this.visit.getNode().previous;
+        this.goToVisitNode(previousIndex);
+      }.bind(this)
+    );
     this.nextButton = document.getElementById('next_button');
+    this.nextButton.addEventListener(
+      'click',
+      function () {
+        const nextIndex = this.visit.getNode().next;
+        this.goToVisitNode(nextIndex);
+      }.bind(this)
+    );
+    const menuButton = document.getElementById('menu_header_button');
+    menuButton.addEventListener('click', function () {
+      const menuPanel = document.getElementById('menu_panel');
+      if (menuPanel.classList.contains('menu_panel_closed'))
+        menuPanel.classList.replace('menu_panel_closed', 'menu_panel_open');
+      else menuPanel.classList.replace('menu_panel_open', 'menu_panel_closed');
+    });
+    const layerButton = document.getElementById('layer_button');
+    layerButton.addEventListener(
+      'click',
+      function () {
+        const layerPanel = document.getElementById('layer_panel');
+        if (layerPanel.style.display == 'flex') {
+          layerPanel.style.display = 'none';
+        } else {
+          layerPanel.style.display = 'flex';
+        }
+      }.bind(this)
+    );
+  }
+
+  goToVisitNode(nodeIndex) {
+    this.saveInputValues(this.visit.currentIndex);
+    this.visit.goToNode(nodeIndex);
+    this.setWidth(this.visit.getNode().type);
+    this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
   }
 
   saveInputValues(nodeIndex) {
@@ -123,9 +168,5 @@ export class Panel {
       }
       i++;
     });
-  }
-
-  cleanMediaContainer() {
-    this.mediaContainer.innerHTML = '';
   }
 }
