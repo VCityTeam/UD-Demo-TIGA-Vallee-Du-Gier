@@ -188,10 +188,13 @@
 
           const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
 
+          const panel = new vdg_app.Panel();
+          panel.setVisit(visit);
+
           const timestamps = document.querySelectorAll('.rb-item');
           for (const timestamp of timestamps) {
             timestamp.addEventListener('click', function () {
-              visit.goToNode(parseInt(timestamp.id, 10));
+              panel.goToVisitNode(parseInt(timestamp.id, 10));
             });
           }
 
@@ -203,7 +206,7 @@
           window.dispatchEvent(new Event('resize'));
 
           const conf = visitConfig.visits.find((v) => v.id == 'PH3');
-          visit.init(conf, captionConfig);
+          visit.init(conf, captionConfig, panel.mediaContainer);
           visit.filterLayers([
             'Ortho_IGN',
             'communes',
@@ -218,7 +221,7 @@
           startButton.addEventListener('click', function () {
             document.getElementById('home_panel').style.display = 'none';
             document.getElementById('main_panel').style.display = 'flex';
-            visit.start();
+            panel.goToVisitNode(visit.currentIndex);
           });
         });
       });
