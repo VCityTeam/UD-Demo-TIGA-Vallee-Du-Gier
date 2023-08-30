@@ -1,6 +1,7 @@
 import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { FilterManager } from './filterManager';
+import { createCaption } from './captionUtils';
 import { THREE } from 'ud-viz';
 
 export class Visit {
@@ -109,7 +110,7 @@ export class Visit {
           if (id == layerCaption.id) {
             hasCaption = true;
             layerPanel.appendChild(
-              this.panel.createCaption(
+              createCaption(
                 layerCaption.style,
                 layerCaption.description,
                 10

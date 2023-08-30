@@ -1,5 +1,6 @@
 import { Visit } from './visit';
 import { getLayerById } from './layerUtils';
+import { createCaption } from './captionUtils';
 
 export class OpenVisit extends Visit {
   constructor(view, medias) {
@@ -152,7 +153,7 @@ export class OpenVisit extends Visit {
       for (const filterCaption of this.captionConfig.filters) {
         if (content.id == filterCaption.id) {
           contentButton.appendChild(
-            this.panel.createCaption(
+            createCaption(
               filterCaption.style,
               filterCaption.description
             )
@@ -176,7 +177,7 @@ export class OpenVisit extends Visit {
       for (const layerCaption of this.captionConfig.layers) {
         if (content.id == layerCaption.id) {
           contentButton.appendChild(
-            this.panel.createCaption(
+            createCaption(
               layerCaption.style,
               layerCaption.description
             )
@@ -337,7 +338,7 @@ export class OpenVisit extends Visit {
           for (const layerCaption of this.captionConfig.layers) {
             if (layerConfig.id == layerCaption.id) {
               layerButton.appendChild(
-                this.panel.createCaption(
+                createCaption(
                   layerCaption.style,
                   layerCaption.description
                 )
