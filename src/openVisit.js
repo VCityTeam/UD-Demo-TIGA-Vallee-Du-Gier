@@ -36,7 +36,7 @@ export class OpenVisit {
             'selected_button',
             'unselected_button'
           );
-          document.getElementById('media_container').style.display = 'none';
+          document.getElementById('info_container').style.display = 'none';
           document.getElementById('categories_container').style.display =
             'block';
         }
@@ -53,7 +53,7 @@ export class OpenVisit {
           mapButton.classList.replace('selected_button', 'unselected_button');
           document.getElementById('categories_container').style.display =
             'none';
-          document.getElementById('media_container').style.display = 'flex';
+          document.getElementById('info_container').style.display = 'flex';
         }
       }.bind(this)
     );
