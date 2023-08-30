@@ -116,40 +116,6 @@ audio {
   flex-direction: column;
 }
 
-#close_button {
-  height: 50px;
-  width: 28px;
-  background: rgba(252, 249, 232, 0.8);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px 5px 5px 0px;
-  display: inline-block;
-  top: 10%;
-  right: -28px;
-  position: absolute;
-  cursor: pointer;
-  margin: 0;
-  display: none;
-  align-items: center;
-}
-
-#close_arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 5px;
-  background-color: transparent;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  position: absolute;
-  left: 9px;
-}
-
-#close_arrow:hover {
-  border: solid #a5a5a5;
-  border-width: 0 3px 3px 0;
-  padding: 7px;
-}
-
 .caption_div {
   display: flex;
   flex-direction: row;

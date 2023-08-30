@@ -8,7 +8,6 @@ export class Panel {
     this.textPanel = null;
     this.captionPanel = null;
     this.footerPanel = null;
-    this.isClosed = false;
     this.width = 'half';
     this.initPanel();
   }
