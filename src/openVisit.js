@@ -1,4 +1,3 @@
-import { Panel } from './panel';
 import { MediaManager } from './mediaManager';
 import { FilterManager } from './filterManager';
 import { getLayerById } from './layerUtils';
@@ -16,7 +15,6 @@ export class OpenVisit {
     this.contentNumber = 0;
     this.layerPanelOpen = false;
 
-    this.panel = new Panel();
     this.mediaManager = new MediaManager(view);
     this.filterManager = new FilterManager(view);
   }
