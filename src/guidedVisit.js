@@ -1,8 +1,20 @@
-import { Visit } from './visit';
+import { Panel } from './panel';
+import { MediaManager } from './mediaManager';
+import { FilterManager } from './filterManager';
+import { createCaption } from './captionUtils';
+import { THREE } from 'ud-viz';
 
-export class GuidedVisit extends Visit {
+export class GuidedVisit {
   constructor(view, medias) {
-    super(view, medias);
+    this.id = 'NONE';
+    this.config = null;
+    this.medias = medias;
+    this.currentIndex = 0;
+    this.view = view;
+
+    this.panel = new Panel();
+    this.mediaManager = new MediaManager(view);
+    this.filterManager = new FilterManager(view);
   }
 
   isStart() {
@@ -15,15 +27,6 @@ export class GuidedVisit extends Visit {
 
   getNode() {
     return this.config.nodes[this.currentIndex];
-  }
-
-  getCurrentCategory() {
-    if (this.config.categories && this.config.categories.length > 0) {
-      for (const category of [...this.config.categories].reverse()) {
-        if (this.currentIndex >= category.nodeIndex) return category.id;
-      }
-    }
-    return null;
   }
 
   addVisitPanelEvents() {
@@ -46,7 +49,6 @@ export class GuidedVisit extends Visit {
     this.captionConfig = captionConfig;
     this.id = this.config.id;
     this.currentIndex = this.config.startIndex;
-    this.panel.initHeader();
     const menuButton = document.getElementById('menu_header_button');
     menuButton.addEventListener('click', function () {
       const menuPanel = document.getElementById('menu_panel');
@@ -70,19 +72,7 @@ export class GuidedVisit extends Visit {
   }
 
   start() {
-    if (this.config.categories && this.config.categories.length > 0) {
-      this.config.categories.forEach((category) => {
-        const category_button = this.panel.createCategoryButton(category);
-        category_button.addEventListener(
-          'click',
-          function () {
-            this.goToNode(category.nodeIndex);
-          }.bind(this)
-        );
-      });
-    }
     this.addVisitPanelEvents();
-    this.panel.start();
     this.goToNode(this.currentIndex);
   }
 
@@ -90,11 +80,6 @@ export class GuidedVisit extends Visit {
     this.panel.saveInputValues(this.currentIndex);
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
-    this.panel.updateHeader(
-      this.currentIndex,
-      this.config.endIndex,
-      this.getCurrentCategory()
-    );
     this.panel.setWidth(currentNode.type);
     this.panel.setButtonsStyle(this.isStart(), this.isEnd());
     this.setMedia(currentNode);
@@ -111,5 +96,98 @@ export class GuidedVisit extends Visit {
   goToNextNode() {
     const nextIndex = this.getNode().next;
     this.goToNode(nextIndex);
+  }
+
+  travelToPosition(node, view) {
+    if (node.position && node.rotation) {
+      const newCameraCoordinates = new THREE.Vector3(
+        node.position.x,
+        node.position.y,
+        node.position.z
+      );
+      const newCameraQuaternion = new THREE.Quaternion(
+        node.rotation.x,
+        node.rotation.y,
+        node.rotation.z,
+        node.rotation.w
+      );
+      view
+        .getItownsView()
+        .controls.initiateTravel(
+          newCameraCoordinates,
+          'auto',
+          newCameraQuaternion,
+          true
+        );
+    }
+  }
+
+  filterLayers(layerIds, filters = undefined) {
+    this.filterManager.removeAllFilters();
+
+    this.view.layerManager.getLayers().forEach((layer) => {
+      if (filters && filters.length > 0) {
+        filters.forEach((filter) => {
+          if (filter.layer == layer.id) {
+            this.filterManager.addFilter(layer, filter);
+          }
+        });
+      }
+      if (this.filterManager.layerHasFilter(layer.id)) {
+        if (layer.isC3DTilesLayer) layer.visible = true;
+        else layer.visible = false;
+      } else {
+        layer.visible =
+          layerIds == undefined ||
+          layerIds.includes(layer.id) ||
+          layer.id == 'planar';
+      }
+    });
+    this.view.layerManager.notifyChange();
+  }
+
+  setMedia(node) {
+    this.panel.cleanMediaContainer();
+    if (node.medias && node.medias.length > 0) {
+      node.medias.forEach((nodeMedia) => {
+        const media = this.medias.find((m) => m.id == nodeMedia);
+        if (media) {
+          if (!media.context || media.context == 'left') {
+            this.mediaManager
+              .addContent(media, this.panel.mediaContainer)
+              .then(() => {
+                this.panel.setForm(this.currentIndex);
+              });
+          } else {
+            this.mediaManager.addContent(media, this.panel.mediaContainer);
+          }
+        }
+      });
+    }
+  }
+
+  createLayersCaption() {
+    let hasCaption = false;
+    const layerPanel = document.getElementById('layer_panel');
+    layerPanel.innerHTML = '';
+    this.view.layerManager.getLayers().forEach((layer) => {
+      if (layer.visible) {
+        const id = this.filterManager.layerIsFilter(layer.id)
+          ? this.filterManager.getSourceForFilteredLayer(layer.id).id
+          : layer.id;
+        for (const layerCaption of this.captionConfig.layers) {
+          if (id == layerCaption.id) {
+            hasCaption = true;
+            layerPanel.appendChild(
+              createCaption(layerCaption.style, layerCaption.description, 10)
+            );
+            break;
+          }
+        }
+      }
+    });
+    if (hasCaption)
+      document.getElementById('layer_div').style.display = 'block';
+    else document.getElementById('layer_div').style.display = 'none';
   }
 }

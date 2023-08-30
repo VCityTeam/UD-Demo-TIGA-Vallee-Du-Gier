@@ -13,14 +13,6 @@ export class Panel {
     this.initPanel();
   }
 
-  reset() {
-    this.savedValues = [];
-  }
-
-  start() {
-    this.setButtonsStyle(true, false);
-  }
-
   setButtonsStyle(isStart, isEnd) {
     this.previousButton.disabled = isStart;
     this.nextButton.disabled = isEnd;
@@ -49,14 +41,6 @@ export class Panel {
         this.mainPanel.classList.remove('full_width');
         this.mainPanel.classList.remove('smaller_width');
     }
-  }
-
-  updateHeader(currentIndex, endIndex, currentCategory) {
-    this.progressCount.innerHTML = currentIndex + 1 + ' / ' + (endIndex + 1);
-    this.categoryButtons.forEach((button) => {
-      if (button.id == currentCategory) button.style.fontWeight = 'bold';
-      else button.style.fontWeight = 'normal';
-    });
   }
 
   setForm(nodeIndex) {
@@ -89,59 +73,8 @@ export class Panel {
     this.mediaContainer = document.getElementById('media_container');
     this.captionPanel = this.mainPanel.querySelector('.caption_panel');
     this.footerPanel = this.mainPanel.querySelector('.footer_panel');
-    this.closeButton = document.getElementById('close_button');
-    this.closeButton.addEventListener(
-      'click',
-      function () {
-        if (this.isClosed) {
-          this.openPanel();
-        } else {
-          this.closePanel();
-        }
-      }.bind(this)
-    );
-    this.closeArrow = document.getElementById('close_arrow');
-  }
-
-  initHeader() {
-    this.categoriesDiv = document.getElementById('categories_div');
     this.previousButton = document.getElementById('previous_button');
-    this.progressCount = document.getElementById('progress_count');
     this.nextButton = document.getElementById('next_button');
-    this.categoryButtons = [];
-  }
-
-  initRecapButtons() {
-    this.restartButton = document.createElement('button');
-    this.restartButton.id = 'restart_button';
-    this.restartButton.classList.add('recap-button');
-    this.restartButton.innerHTML = 'Recommencer';
-    this.mediaContainer.appendChild(this.restartButton);
-
-    this.mediaContainer.appendChild(document.createElement('br'));
-
-    this.visitButton = document.createElement('button');
-    this.visitButton.id = 'visit_button';
-    this.visitButton.classList.add('recap-button');
-    this.visitButton.innerHTML = 'Visite Libre';
-    this.mediaContainer.appendChild(this.visitButton);
-  }
-
-  closePanel() {
-    this.contentPanel.style.display = 'none';
-    this.previousWidth = this.width;
-    this.setWidth();
-    this.closeArrow.style.transform = 'rotate(-45deg)';
-    this.closeArrow.style.left = '5px';
-    this.isClosed = true;
-  }
-
-  openPanel() {
-    this.contentPanel.style.display = 'block';
-    this.setWidth(this.previousWidth);
-    this.closeArrow.style.transform = 'rotate(135deg)';
-    this.closeArrow.style.left = '9px';
-    this.isClosed = false;
   }
 
   saveInputValues(nodeIndex) {
@@ -195,15 +128,5 @@ export class Panel {
 
   cleanMediaContainer() {
     this.mediaContainer.innerHTML = '';
-  }
-
-  createCategoryButton(category) {
-    const category_button = document.createElement('button');
-    category_button.id = category.id;
-    category_button.classList.add('category_button');
-    category_button.innerText = category.name;
-    this.categoriesDiv.appendChild(category_button);
-    this.categoryButtons.push(category_button);
-    return category_button;
   }
 }
