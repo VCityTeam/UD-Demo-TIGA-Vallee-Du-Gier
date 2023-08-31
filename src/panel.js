@@ -1,7 +1,5 @@
 export class Panel {
   constructor() {
-    this.savedValues = [];
-    this.resolvedForms = [];
     this.mainPanel = null;
     this.contentPanel = null;
     this.headerPanel = null;
@@ -44,28 +42,6 @@ export class Panel {
         this.mainPanel.classList.remove('half_width');
         this.mainPanel.classList.remove('full_width');
         this.mainPanel.classList.remove('smaller_width');
-    }
-  }
-
-  setForm(nodeIndex) {
-    const fileDiv = this.mediaContainer.querySelector('.file_div');
-    if (fileDiv) {
-      const inputs = this.mediaContainer.querySelectorAll('input');
-      if (this.resolvedForms[nodeIndex]) {
-        fileDiv.classList.add('resolved_form');
-        for (const input of inputs) input.disabled = true;
-      } else {
-        for (const input of inputs) {
-          input.addEventListener(
-            'click',
-            function () {
-              this.resolvedForms[nodeIndex] = true;
-              fileDiv.classList.add('resolved_form');
-              for (const i of inputs) i.disabled = true;
-            }.bind(this)
-          );
-        }
-      }
     }
   }
 
@@ -115,58 +91,8 @@ export class Panel {
   }
 
   goToVisitNode(nodeIndex) {
-    this.saveInputValues(this.visit.currentIndex);
     this.visit.goToNode(nodeIndex);
     this.setWidth(this.visit.getNode().type);
     this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
-  }
-
-  saveInputValues(nodeIndex) {
-    const formInputs = this.mediaContainer.querySelectorAll('input, select');
-    let values = [];
-    formInputs.forEach((input) => {
-      let value = { option: '', text: '' };
-      if (input.nodeName == 'INPUT') {
-        switch (input.type) {
-          case 'text':
-            value.text = input.value;
-            break;
-          default:
-            value.option = input.checked;
-            if (input.checked) {
-              value.text = document.querySelector(
-                'label[for=' + input.id + ']'
-              ).innerHTML;
-            }
-        }
-      }
-      if (input.nodeName == 'SELECT') {
-        value.text = input.options[input.selectedIndex].text;
-        value.option = input.options[input.selectedIndex].value;
-      }
-      values.push(value);
-    });
-    this.savedValues[nodeIndex] = values;
-  }
-
-  loadSavedValues(nodeIndex) {
-    const formInputs = this.mediaContainer.querySelectorAll('input, select');
-    let i = 0;
-    formInputs.forEach((input) => {
-      const value = this.savedValues[nodeIndex][i];
-      if (input.nodeName == 'INPUT') {
-        switch (input.type) {
-          case 'text':
-            input.value = value.text;
-            break;
-          default:
-            input.checked = value.option;
-        }
-      }
-      if (input.nodeName == 'SELECT') {
-        input.value = value.option;
-      }
-      i++;
-    });
   }
 }

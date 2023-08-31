@@ -39,10 +39,10 @@ export class GuidedVisit {
   async goToNode(nodeIndex) {
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
-    this.setMedia(currentNode);
     this.filterLayers(currentNode.layers, currentNode.filters);
     this.createLayersCaption();
     this.travelToPosition(currentNode, this.view);
+    await this.setMedia(currentNode);
   }
 
   travelToPosition(node, view) {
@@ -96,14 +96,12 @@ export class GuidedVisit {
   async setMedia(node) {
     this.mediaContainer.innerHTML = '';
     if (node.medias && node.medias.length > 0) {
-      node.medias.forEach((nodeMedia) => {
+      for (const nodeMedia of node.medias) {
         const media = this.medias.find((m) => m.id == nodeMedia);
         if (media) {
-          this.mediaManager.addContent(media, this.mediaContainer).then(() => {
-            // this.panel.setForm(this.currentIndex);
-          });
+          await this.mediaManager.addContent(media, this.mediaContainer);
         }
-      });
+      }
     }
   }
 
