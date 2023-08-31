@@ -186,9 +186,14 @@
         app.start('../assets/config/layerConfig.json').then((config) => {
           vdg_app.addLabelLayers(config, app.view3D.getItownsView());
 
-          const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
-
-          const panel = new vdg_app.Panel();
+          const conf = visitConfig.visits.find((v) => v.id == 'PH3');
+          const panel = new vdg_app.Panel(captionConfig);
+          const visit = new vdg_app.GuidedVisit(
+            app.view3D,
+            conf,
+            mediaConfig.medias,
+            panel.mediaContainer
+          );
           panel.setVisit(visit);
 
           const timestamps = document.querySelectorAll('.rb-item');
@@ -205,8 +210,6 @@
           allWidgetPanel.querySelector('nav').style.display = 'none';
           window.dispatchEvent(new Event('resize'));
 
-          const conf = visitConfig.visits.find((v) => v.id == 'PH3');
-          visit.init(conf, captionConfig, panel.mediaContainer);
           visit.filterLayers([
             'Ortho_IGN',
             'communes',
