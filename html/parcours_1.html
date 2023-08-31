@@ -198,6 +198,9 @@
 
           const visit = new vdg_app.GuidedVisit(app.view3D, mediaConfig.medias);
 
+          const panel = new vdg_app.FormPanel();
+          panel.setVisit(visit);
+
           let allWidgetPanel = document.getElementById(
             '_all_widget_stuct_main_panel'
           );
@@ -206,8 +209,13 @@
           window.dispatchEvent(new Event('resize'));
 
           const conf = visitConfig.visits.find((v) => v.id == 'P1');
-          visit.init(conf, captionConfig);
-          visit.filterLayers(['Ortho_IGN', 'communes', 'BATI-AUTRE', 'BATI-INDUS']);
+          visit.init(conf, captionConfig, panel.mediaContainer);
+          visit.filterLayers([
+            'Ortho_IGN',
+            'communes',
+            'BATI-AUTRE',
+            'BATI-INDUS',
+          ]);
           visit.mediaManager.createPin(
             '../assets/icons/Pink_pin.png',
             {
@@ -242,7 +250,7 @@
             if (sprite.userData.linkedDemo) {
               document.getElementById('home_panel').style.display = 'none';
               document.getElementById('main_panel').style.display = 'flex';
-              visit.start();
+              panel.goToVisitNode(visit.currentIndex);
               visit.mediaManager.deletePins();
             }
           });
@@ -251,7 +259,7 @@
             visit.mediaManager.deletePins();
             document.getElementById('home_panel').style.display = 'none';
             document.getElementById('main_panel').style.display = 'flex';
-            visit.start();
+            panel.goToVisitNode(visit.currentIndex);
           });
         });
       });
