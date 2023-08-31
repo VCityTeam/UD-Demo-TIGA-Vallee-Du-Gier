@@ -93,8 +93,8 @@ export class Panel {
     );
   }
 
-  goToVisitNode(nodeIndex) {
-    this.visit.goToNode(nodeIndex);
+  async goToVisitNode(nodeIndex) {
+    await this.visit.goToNode(nodeIndex);
     this.setWidth(this.visit.getNode().type);
     this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
     this.createLayersCaption(this.visit.view, this.visit.filterManager);

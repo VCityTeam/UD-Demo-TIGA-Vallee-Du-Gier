@@ -1,18 +1,15 @@
 import { Panel } from './panel';
 
 export class FormPanel extends Panel {
-  constructor() {
-    super();
+  constructor(captionConfig) {
+    super(captionConfig);
     this.resolvedForms = [];
   }
 
-  goToVisitNode(nodeIndex) {
-    this.visit.goToNode(nodeIndex).then(() => {
+  async goToVisitNode(nodeIndex) {
+    super.goToVisitNode(nodeIndex).then(() => {
       this.setForm(this.visit.currentIndex);
     });
-    this.setWidth(this.visit.getNode().type);
-    this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
-    this.createLayersCaption(this.visit.view, this.visit.filterManager);
   }
 
   setForm(nodeIndex) {
