@@ -1,5 +1,8 @@
+import { createCaption } from './captionUtils';
+
 export class Panel {
-  constructor() {
+  constructor(captionConfig) {
+    this.captionConfig = captionConfig;
     this.mainPanel = null;
     this.contentPanel = null;
     this.headerPanel = null;
@@ -94,5 +97,31 @@ export class Panel {
     this.visit.goToNode(nodeIndex);
     this.setWidth(this.visit.getNode().type);
     this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
+    this.createLayersCaption(this.visit.view, this.visit.filterManager);
+  }
+
+  createLayersCaption(view, filterManager) {
+    let hasCaption = false;
+    const layerPanel = document.getElementById('layer_panel');
+    layerPanel.innerHTML = '';
+    view.layerManager.getLayers().forEach((layer) => {
+      if (layer.visible) {
+        const id = filterManager.layerIsFilter(layer.id)
+          ? filterManager.getSourceForFilteredLayer(layer.id).id
+          : layer.id;
+        for (const layerCaption of this.captionConfig.layers) {
+          if (id == layerCaption.id) {
+            hasCaption = true;
+            layerPanel.appendChild(
+              createCaption(layerCaption.style, layerCaption.description, 10)
+            );
+            break;
+          }
+        }
+      }
+    });
+    if (hasCaption)
+      document.getElementById('layer_div').style.display = 'block';
+    else document.getElementById('layer_div').style.display = 'none';
   }
 }

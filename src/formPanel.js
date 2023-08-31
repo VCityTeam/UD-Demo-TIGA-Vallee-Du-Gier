@@ -12,6 +12,7 @@ export class FormPanel extends Panel {
     });
     this.setWidth(this.visit.getNode().type);
     this.setButtonsStyle(this.visit.isStart(), this.visit.isEnd());
+    this.createLayersCaption(this.visit.view, this.visit.filterManager);
   }
 
   setForm(nodeIndex) {

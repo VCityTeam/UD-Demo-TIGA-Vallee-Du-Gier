@@ -1,16 +1,15 @@
 import { MediaManager } from './mediaManager';
 import { FilterManager } from './filterManager';
-import { createCaption } from './captionUtils';
 import { THREE } from 'ud-viz';
 
 export class GuidedVisit {
-  constructor(view, medias) {
-    this.id = 'NONE';
-    this.config = null;
-    this.medias = medias;
-    this.currentIndex = 0;
+  constructor(view, config, medias, mediaContainer) {
     this.view = view;
-    this.mediaContainer = null;
+    this.config = config;
+    this.medias = medias;
+    this.mediaContainer = mediaContainer;
+    this.id = this.config.id;
+    this.currentIndex = this.config.startIndex;
 
     this.mediaManager = new MediaManager(view);
     this.filterManager = new FilterManager(view);
@@ -28,19 +27,10 @@ export class GuidedVisit {
     return this.config.nodes[this.currentIndex];
   }
 
-  init(visitConfig, captionConfig, mediaContainer) {
-    this.config = visitConfig;
-    this.captionConfig = captionConfig;
-    this.id = this.config.id;
-    this.currentIndex = this.config.startIndex;
-    this.mediaContainer = mediaContainer;
-  }
-
   async goToNode(nodeIndex) {
     this.currentIndex = nodeIndex;
     const currentNode = this.getNode();
     this.filterLayers(currentNode.layers, currentNode.filters);
-    this.createLayersCaption();
     this.travelToPosition(currentNode, this.view);
     await this.setMedia(currentNode);
   }
@@ -103,30 +93,5 @@ export class GuidedVisit {
         }
       }
     }
-  }
-
-  createLayersCaption() {
-    let hasCaption = false;
-    const layerPanel = document.getElementById('layer_panel');
-    layerPanel.innerHTML = '';
-    this.view.layerManager.getLayers().forEach((layer) => {
-      if (layer.visible) {
-        const id = this.filterManager.layerIsFilter(layer.id)
-          ? this.filterManager.getSourceForFilteredLayer(layer.id).id
-          : layer.id;
-        for (const layerCaption of this.captionConfig.layers) {
-          if (id == layerCaption.id) {
-            hasCaption = true;
-            layerPanel.appendChild(
-              createCaption(layerCaption.style, layerCaption.description, 10)
-            );
-            break;
-          }
-        }
-      }
-    });
-    if (hasCaption)
-      document.getElementById('layer_div').style.display = 'block';
-    else document.getElementById('layer_div').style.display = 'none';
   }
 }
