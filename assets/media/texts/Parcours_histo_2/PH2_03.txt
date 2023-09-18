@@ -9,5 +9,5 @@ A la date de sa constitution, en 1971, <b>le groupe Creusot-Loire compte 28 éta
 Le groupe est une organisation complexe, constituée de nombreuses filiales et des participations (notamment à hauteur de 38 % du capital de Framatome), qui assure au groupe une haute maitrise technologique en sidérurgie-métallurgie. Le groupe se positionne notamment sur les marchés de l’industrie nucléaire, de la construction industrielle, de la production de matériel hydraulique et dans l’industrie de l’armement.​
 </p>
 <div class="img_div">
-    <img class="fit_heigth fit_width" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/03.jpg"/>
+    <img class="fit_heigth fit_width" src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH2/03.jpg"/>
 </div>

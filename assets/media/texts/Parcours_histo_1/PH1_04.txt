@@ -3,7 +3,7 @@
 Les seuls industriels ayant réellement été intéressés par le canal sont les verriers de Rive-de-Gier pour les sables et derniers utilisateurs du canal (soit deux-tiers du trafic en 1876). <b>En 1878, la navigation est abandonné sur le canal qui devient une infrastructure urbaine, utilisée pour les joutes</b> sur les bassins à Rive-de-Gier. Il est aussi utilisé pour alimenter les lavoirs, l’irrigation des jardins ouvriers ou la pêche.
 </p>
 <div class="fullpage_img">
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/04.png"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH1/04.png"/>
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>

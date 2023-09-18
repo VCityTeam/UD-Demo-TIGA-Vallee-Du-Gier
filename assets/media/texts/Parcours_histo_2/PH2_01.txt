@@ -3,8 +3,8 @@
 Dans la haute vallée du Gier, les activités sidérurgiques se déploient au sein des différents établissements de la Compagnie des Forges et Aciéries de la Marine et d’Homécourt. A Rive-de-Gier, l’enfilade des verreries organisées le long du Gier débouche sur la vaste usine sidérurgique des Etaings, propriété des frères Marrel. L’agglomération de Saint-Chamond se distingue par l’importance des ateliers textiles, qui introduisent de plus en plus de procédés chimiques au sein des entreprises de la famille Gillet.
 </p>
 <div class="fullpage_img">
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/01.png"/>
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH2/01_bis.png"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH2/01.png"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH2/01_bis.png"/>
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>

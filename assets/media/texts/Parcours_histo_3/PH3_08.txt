@@ -1,6 +1,6 @@
 <h1>A Rive-de-Gier, l’usine des Etaings devenue Industeel</h1>
 <div class="fullpage_img">
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/08.jpg"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH3/08.jpg"/>
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>

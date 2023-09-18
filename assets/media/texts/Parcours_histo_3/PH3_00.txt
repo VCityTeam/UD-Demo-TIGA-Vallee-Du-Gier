@@ -5,7 +5,7 @@ Aujourd’hui, l’œil du visiteur s’arrête d’abord sur les <b>grandes hal
 Les activités productives se donnent à voir dans le paysage par une <b>succession de zones d’activités économiques</b> héritées et plus récentes en fond de vallée. Leur devenir est partagé entre valorisation patrimoniale d’usines désaffectées à travers des projets de reconversion des espaces centraux de villes moyennes (Novaciéries à Saint-Chamond), renouvellement urbain (friche Duralex à Rive de Gier) et affirmation d’une vocation industrielle.
 ​</p>
 <div class="img_div">
-    <img class="fit_heigth" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/00.jpg"/>
+    <img class="fit_heigth" src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH3/00.jpg"/>
     <button class="info_button">
         <img src="../assets/icons/Info.svg" />
     </button>

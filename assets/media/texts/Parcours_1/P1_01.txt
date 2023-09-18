@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="img_div">
-    <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/01.jpg"/>
+    <img class="fit_height" src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/P1/01.jpg"/>
     <button class="info_button">
         <img src="../assets/icons/Info.svg" />
     </button>

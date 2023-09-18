@@ -1,6 +1,6 @@
 <h1>De l’Horme à Lorette</h1>
 <div class="fullpage_img">
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH3/06.png"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH3/06.png"/>
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>

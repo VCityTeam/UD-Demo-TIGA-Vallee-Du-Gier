@@ -21,7 +21,7 @@
                     Le vilebrequin figure sur les armoiries de la ville de Lorette.
                 </p>
                 <div class="img_div bg_white">
-                    <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P3/manufacture-de-vilebrequins-de-lorette-mavilor%201.png"/>
+                    <img class="fit_height" src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/P3/manufacture-de-vilebrequins-de-lorette-mavilor%201.png"/>
                 </div>
             </output>
         </div>

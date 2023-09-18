@@ -5,7 +5,7 @@
 Elle est la première ligne de chemin de fer à vapeur (locomotive des frères Seguin).
 </p>
 <div class="fullpage_img">
-<img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/PH1/08.png"/>
+<img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/PH1/08.png"/>
 <button class="info_button">
     <img src="../assets/icons/Info.svg" />
 </button>

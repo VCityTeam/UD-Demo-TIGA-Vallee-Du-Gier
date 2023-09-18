@@ -5,8 +5,8 @@ Les 45 hectares ont été réaménagés en veillant à préserver leur identité
 
 Le quartier propose de l’habitat, des loisirs, des commerces et des entreprises, dans un cadre verdoyant.</p>
 <div class="img_div">
-    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
-    <img src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
+    <img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
+    <img src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/P1/SaintChamond_Loire__Vue_gnrale_des_aciries%202.png"/>
     <button class="info_button">
         <img src="../assets/icons/Info.svg" />
     </button>

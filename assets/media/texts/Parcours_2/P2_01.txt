@@ -22,5 +22,5 @@
     </div>
 </div>
 <div class="img_div bg_white">
-    <img class="fit_height" src="https://raw.githubusercontent.com/LorenzoMarnat/VDG_images/main/P2/verre%20gigogne%20duralex%201.png"/>
+    <img class="fit_height" src="https://projet.liris.cnrs.fr/vcitydata/UD-Demo-TIGA-Vallee-Du-Gier/P2/verre%20gigogne%20duralex%201.png"/>
 </div>
