@@ -100,29 +100,24 @@ The visits can be configured in [visitConfig.json](./assets/config/visitConfig.j
 
 A `Visit` has a set of [`Nodes`](#nodes), a `startIndex` and a `endIndex`. Thoses indexes indicate which is the first step and the last step of the visit.
 
-A `Visit` also has [`Categories`](#categories). Those categories allow to navigate through the visit by theme, without seeing all the steps of the visit.
-
 The `name` and the `description` attributes will be used to display information about the visit in the visit selection.
 
 ```mermaid
 classDiagram
     GuidedVisit *-- Node
-    GuidedVisit o-- Category
-    Node "1" -- "1" Category
     Node "1" o-- "0..n" Filter
     Node "1" o-- "0..n" Layer
-    Node "1" o-- "0..n" Position
+    Node "1" o-- "1" Position
     Node "1" o-- "0..n" Media
 ```
 
 | Attribute   | Required               |
 | ----------- | ---------------------- |
 | id          | :white_check_mark: Yes |
-| name        | :white_check_mark: Yes |
-| description | :white_check_mark: Yes |
+| name        | :red_circle: No        |
+| description | :red_circle: No        |
 | startIndex  | :white_check_mark: Yes |
 | endIndex    | :white_check_mark: Yes |
-| categories  | :red_circle: No        |
 | nodes       | :white_check_mark: Yes |
 
 Example:
@@ -134,28 +129,7 @@ Example:
   "description": "This is an example of visit config",
   "startIndex": 0,
   "endIndex": 10,
-  "categories": [], // See Categories
   "nodes": [] // See Nodes
-}
-```
-
-### Categories
-
-Categories allow to navigate through the visit without seeing all the nodes. Each category is linked to a [`Node`](#nodes) index. The categories will be displayed in the header of the HTML panel and clicking on a category allows to go directly to the targeted node.
-
-| Attribute | Required               |
-| --------- | ---------------------- |
-| id        | :white_check_mark: Yes |
-| name      | :white_check_mark: Yes |
-| nodeIndex | :white_check_mark: Yes |
-
-Example:
-
-```json
-{
-  "id": "INTRO",
-  "name": "Introduction",
-  "nodeIndex": 0
 }
 ```
 
