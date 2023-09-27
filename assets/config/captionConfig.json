@@ -513,6 +513,14 @@
                 "color": "#CB8D23",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Principaux bâtiments industriels au début des années 1980",
+            "id": "Bati_indus_princ_1980",
+            "style": {
+                "color": "#CB8D23",
+                "type": "plain"
+            }
         }
     ]
 }

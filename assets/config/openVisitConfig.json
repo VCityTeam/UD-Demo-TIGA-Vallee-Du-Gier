@@ -455,6 +455,49 @@
             ],
             "contents": [
                 {
+                    "name": "Principaux bâtiments industriels",
+                    "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1981",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_conserve_1981",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_indus_1980",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_conserves_1980",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_detruits_1980",
+                            "visible": true
+                        }
+                    ],
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1980",
+                            "id": "Bati_indus_princ_1980",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Les différentes filières industrielles",
                     "type": "category",
                     "layers": [
@@ -468,6 +511,14 @@
                         },
                         {
                             "id": "Bati_indus_1980",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_conserves_1980",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_detruits_1980",
                             "visible": true
                         }
                     ],

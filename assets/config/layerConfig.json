@@ -38,6 +38,14 @@
       "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_non_indus_detruits_1929/tileset.json"
     },
     {
+      "id": "Bati_non_indus_conserves_1980",
+      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_non_indus_conserves_1980/tileset.json"
+    },
+    {
+      "id": "Bati_non_indus_detruits_1980",
+      "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Bati_non_indus_detruits_1980/tileset.json"
+    },
+    {
       "id": "Bati_indus_1840_1860",
       "url": "https://dataset-dl.liris.cnrs.fr/three-d-tiles-lyon-metropolis/Undated/Vallee_Du_Gier_Indus_1840_1860/tileset.json"
     },
