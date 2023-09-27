@@ -737,6 +737,49 @@
             ],
             "contents": [
                 {
+                    "name": "Principaux bâtiments industriels",
+                    "type": "category",
+                    "layers": [
+                        {
+                            "id": "Bati_detruit_1929",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_conserve_1929",
+                            "visible": false
+                        },
+                        {
+                            "id": "Bati_indus_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_conserves_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_detruits_1929",
+                            "visible": true
+                        }
+                    ],
+                    "contents": [
+                        {
+                            "type": "filter",
+                            "layer": "Bati_indus_1929",
+                            "id": "Bati_indus_princ_1929",
+                            "default": "show",
+                            "properties": {
+                                "attribute": "ANY",
+                                "attribute_values": [],
+                                "style": {
+                                    "materialProps": {
+                                        "color": "#CB8D23"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "Les différentes filières industrielles",
                     "type": "category",
                     "layers": [
@@ -750,6 +793,14 @@
                         },
                         {
                             "id": "Bati_indus_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_conserves_1929",
+                            "visible": true
+                        },
+                        {
+                            "id": "Bati_non_indus_detruits_1929",
                             "visible": true
                         }
                     ],

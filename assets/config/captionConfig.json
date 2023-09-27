@@ -505,6 +505,14 @@
                 "color": "#CB8D23",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Principaux bâtiments industriels dans l'entre-deux-guerres",
+            "id": "Bati_indus_princ_1929",
+            "style": {
+                "color": "#CB8D23",
+                "type": "plain"
+            }
         }
     ]
 }
