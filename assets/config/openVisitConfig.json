@@ -1,7 +1,7 @@
 {
     "name": "Open Visit",
     "description": "",
-    "selection_target": "BATI-INDUS",
+    "selection_target": "Bati_2022",
     "layers": [
         {
             "id": "zae",
@@ -27,11 +27,7 @@
             "legend": "OV_21e_siecle",
             "layers": [
                 {
-                    "id": "BATI-INDUS",
-                    "visible": true
-                },
-                {
-                    "id": "BATI-AUTRE",
+                    "id": "Bati_2022",
                     "visible": true
                 }
             ],
@@ -42,7 +38,7 @@
                     "contents": [
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_1",
                             "default": "show",
                             "properties": {
@@ -59,7 +55,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_2",
                             "default": "show",
                             "properties": {
@@ -76,7 +72,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_3",
                             "default": "show",
                             "properties": {
@@ -93,7 +89,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_4",
                             "default": "show",
                             "properties": {
@@ -110,7 +106,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_5",
                             "default": "show",
                             "properties": {
@@ -127,7 +123,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_6",
                             "default": "show",
                             "properties": {
@@ -144,7 +140,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_7",
                             "default": "show",
                             "properties": {
@@ -161,7 +157,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_8",
                             "default": "show",
                             "properties": {
@@ -178,7 +174,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_9",
                             "default": "show",
                             "properties": {
@@ -195,7 +191,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "NAF_10",
                             "default": "show",
                             "properties": {
@@ -218,7 +214,7 @@
                     "contents": [
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "TypeEffect_1",
                             "default": "show",
                             "properties": {
@@ -235,7 +231,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "TypeEffect_2",
                             "default": "show",
                             "properties": {
@@ -254,7 +250,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "TypeEffect_3",
                             "default": "show",
                             "properties": {
@@ -272,7 +268,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "TypeEffect_4",
                             "default": "show",
                             "properties": {
@@ -290,7 +286,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "TypeEffect_5",
                             "default": "show",
                             "properties": {
@@ -316,7 +312,7 @@
                     "contents": [
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "CA_1",
                             "default": "show",
                             "properties": {
@@ -335,7 +331,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "CA_2",
                             "default": "show",
                             "properties": {
@@ -354,7 +350,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "CA_3",
                             "default": "show",
                             "properties": {
@@ -376,7 +372,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "CA_4",
                             "default": "show",
                             "properties": {
@@ -396,7 +392,7 @@
                         },
                         {
                             "type": "filter",
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "id": "CA_5",
                             "default": "show",
                             "properties": {
@@ -419,6 +415,23 @@
                     "layer": "rs_2022",
                     "id": "RS_2022",
                     "default": "show"
+                },
+                {
+                    "type": "filter",
+                    "layer": "Bati_2022",
+                    "id": "Bati_indus_2022",
+                    "default": "hide",
+                    "properties": {
+                        "attribute": "USAGE1",
+                        "attribute_values": [
+                            "Industriel"
+                        ],
+                        "style": {
+                            "materialProps": {
+                                "color": "#CB8D23"
+                            }
+                        }
+                    }
                 }
             ]
         },

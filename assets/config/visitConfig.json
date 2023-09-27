@@ -130,13 +130,12 @@
                     "type": "half",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -200,12 +199,11 @@
                     "type": "half",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "Bati_2022"
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1366,8 +1364,7 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-AUTRE",
-                        "BATI-INDUS",
+                        "Bati_2022",
                         "zae",
                         "rs_2022"
                     ],
@@ -1376,7 +1373,7 @@
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1470,8 +1467,7 @@
                     "type": "half",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "Bati_2022"
                     ],
                     "medias": [
                         "PH3_00"
@@ -1483,15 +1479,14 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "Bati_2022"
                     ],
                     "medias": [
                         "PH3_01"
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "LIB_EFF",
                                 "attribute_values": [
@@ -1528,15 +1523,14 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE"
+                        "Bati_2022"
                     ],
                     "medias": [
                         "PH3_02"
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1571,8 +1565,7 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "medias": [
@@ -1580,7 +1573,7 @@
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1621,8 +1614,7 @@
                     "type": "full",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "medias": [
@@ -1635,8 +1627,7 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "communes",
                         "zae",
                         "noms_communes",
@@ -1647,7 +1638,7 @@
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1688,8 +1679,7 @@
                     "type": "full",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "medias": [
@@ -1702,8 +1692,7 @@
                     "type": "smaller",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "medias": [
@@ -1711,7 +1700,7 @@
                     ],
                     "filters": [
                         {
-                            "layer": "BATI-INDUS",
+                            "layer": "Bati_2022",
                             "properties": {
                                 "attribute": "CAT",
                                 "attribute_values": [
@@ -1752,8 +1741,7 @@
                     "type": "full",
                     "layers": [
                         "Ortho_IGN",
-                        "BATI-INDUS",
-                        "BATI-AUTRE",
+                        "Bati_2022",
                         "rs_2022"
                     ],
                     "medias": [

@@ -497,6 +497,14 @@
                 "color": "#404040",
                 "type": "plain"
             }
+        },
+        {
+            "description": "Principaux bâtiments industriels (BDTopo, 2022)",
+            "id": "Bati_indus_2022",
+            "style": {
+                "color": "#CB8D23",
+                "type": "plain"
+            }
         }
     ]
 }
