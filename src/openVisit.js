@@ -398,7 +398,8 @@ export class OpenVisit {
         const cityObject = this.view.layerManager.pickCityObject(e);
         if (
           cityObject &&
-          cityObject.tile.layer.id == this.config.selection_target
+          cityObject.tile.layer.id == this.config.selection_target &&
+          cityObject.props['DENOMINATION']
         ) {
           this.mediaManager.deletePins();
 
