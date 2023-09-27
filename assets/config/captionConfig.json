@@ -286,7 +286,7 @@
             "description": "Bâti présent en 1981, conservé",
             "id": "BAT_CONSERVE_1981",
             "style": {
-                "color": "#00FF00",
+                "color": "#FFFFFF",
                 "type": "plain"
             }
         },
@@ -294,7 +294,7 @@
             "description": "Bâti présent en 1981, détruit",
             "id": "BAT_DETRUIT_1981",
             "style": {
-                "color": "#FF0000",
+                "color": "#444444",
                 "type": "plain"
             }
         },
@@ -302,7 +302,7 @@
             "description": "Bâti présent en 1929, conservé",
             "id": "BAT_CONSERVE_1929",
             "style": {
-                "color": "#00FF00",
+                "color": "#FFFFFF",
                 "type": "plain"
             }
         },
@@ -310,7 +310,7 @@
             "description": "Bâti présent en 1929, détruit",
             "id": "BAT_DETRUIT_1929",
             "style": {
-                "color": "#FF0000",
+                "color": "#444444",
                 "type": "plain"
             }
         },

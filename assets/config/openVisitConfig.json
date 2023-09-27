@@ -689,7 +689,7 @@
                                 "attribute_values": [],
                                 "style": {
                                     "materialProps": {
-                                        "color": "#00FF00"
+                                        "color": "#FFFFFF"
                                     }
                                 }
                             }
@@ -704,7 +704,7 @@
                                 "attribute_values": [],
                                 "style": {
                                     "materialProps": {
-                                        "color": "#FF0000"
+                                        "color": "#333333"
                                     }
                                 }
                             }
@@ -928,7 +928,7 @@
                                 "attribute_values": [],
                                 "style": {
                                     "materialProps": {
-                                        "color": "#00FF00"
+                                        "color": "#FFFFFF"
                                     }
                                 }
                             }
@@ -943,7 +943,7 @@
                                 "attribute_values": [],
                                 "style": {
                                     "materialProps": {
-                                        "color": "#FF0000"
+                                        "color": "#333333"
                                     }
                                 }
                             }
