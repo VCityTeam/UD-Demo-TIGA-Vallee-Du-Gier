@@ -666,14 +666,6 @@
                     "type": "category",
                     "layers": [
                         {
-                            "id": "Bati_detruit_1981",
-                            "visible": true
-                        },
-                        {
-                            "id": "Bati_conserve_1981",
-                            "visible": true
-                        },
-                        {
                             "id": "Bati_indus_1980",
                             "visible": false
                         }
@@ -904,14 +896,6 @@
                     "name": "Le bati en 1929",
                     "type": "category",
                     "layers": [
-                        {
-                            "id": "Bati_detruit_1929",
-                            "visible": true
-                        },
-                        {
-                            "id": "Bati_conserve_1929",
-                            "visible": true
-                        },
                         {
                             "id": "Bati_indus_1929",
                             "visible": false
