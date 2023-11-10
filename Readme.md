@@ -1,10 +1,19 @@
 # Vallée du Gier
 
+This work is part of the [TIGA project](https://www.banquedesterritoires.fr/24-territoires-dinnovation-vont-beneficier-dune-enveloppe-de-450-millions-deuros-sur-dix-ans). The goals of the project are to:
+
+- Study industrial hitory and heritage
+- Reconnect inhabitants with their territory
+
 This demo offers tools to create 3D and geographic storytellings with urban data, geographic layers and medias. The demo uses [UD-Viz](https://github.com/VCityTeam/UD-Viz) to create the 3D view and to host it on the web.
 
 Different examples are available with the demo (see [install and run the demo](#installing-and-running-the-demo)). Those examples are about [Vallée du Gier](./assets/layers/COMMUNES_GIER_4326.geojson)'s industry.
 
 ![image](https://user-images.githubusercontent.com/32875283/234228860-e7ed0424-776d-4e3a-98b8-b97926342d60.png)
+
+An online demonstration can be found [here](https://www.imuvirtuel.fr/vcity/valleedugier/).
+
+A Docker verison is also available in [UD-Demo-TIGA-Vallee-Du-Gier-docker](https://github.com/VCityTeam/UD-Demo-TIGA-Vallee-Du-Gier-docker).
 
 ## Installing and running the demo
 
