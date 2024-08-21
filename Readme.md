@@ -11,7 +11,7 @@ Different examples are available with the demo (see [install and run the demo](#
 
 ![image](https://user-images.githubusercontent.com/32875283/234228860-e7ed0424-776d-4e3a-98b8-b97926342d60.png)
 
-An online demonstration can be found [here](https://www.imuvirtuel.fr/vcity/valleedugier/).
+An online demonstration can be found [here](https://projet.liris.cnrs.fr/vcity/permalink/demo-story-telling-gier.html).
 
 A Docker verison is also available in [UD-Demo-TIGA-Vallee-Du-Gier-docker](https://github.com/VCityTeam/UD-Demo-TIGA-Vallee-Du-Gier-docker).
 
